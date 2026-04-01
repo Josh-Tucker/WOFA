@@ -1,0 +1,23 @@
+# Claude Code internal files
+.claude/
+PLAN.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# Pipeline cache (downloaded CVRF docs — can be regenerated)
+.cache/
+
+# Generated output (committed separately or served from CI)
+output/
+
+# Editor
+.idea/
+.vscode/
+*.swp
