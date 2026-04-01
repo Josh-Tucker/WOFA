@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}WOFA — Windows Organized Feed for Admins{% endblock %}</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0d1117;
+      --surface:  #161b22;
+      --border:   #30363d;
+      --text:     #e6edf3;
+      --muted:    #8b949e;
+      --accent:   #388bfd;
+      --red:      #f85149;
+      --orange:   #d29922;
+      --green:    #3fb950;
+      --tag-bg:   #21262d;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Layout */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      height: 56px;
+      position: relative;
+      z-index: 100;
+    }
+    header .logo { font-weight: 700; font-size: 16px; color: var(--text); margin-right: 8px; }
+    header .logo:hover { text-decoration: none; }
+    header .spacer { flex: 1; }
+    header .meta { color: var(--muted); font-size: 12px; }
+
+    /* Nav groups */
+    .nav-group { position: relative; }
+    .nav-group-btn {
+      display: flex; align-items: center; gap: 4px;
+      padding: 6px 10px; border-radius: 6px;
+      font-size: 13px; color: var(--muted);
+      background: none; border: none; cursor: pointer;
+      white-space: nowrap;
+    }
+    .nav-group-btn:hover, .nav-group-btn.active { color: var(--text); background: var(--tag-bg); }
+    .nav-group-btn svg { width: 10px; height: 10px; transition: transform .15s; }
+    .nav-group-btn.open svg { transform: rotate(180deg); }
+
+    .nav-dropdown {
+      position: absolute; top: calc(100% + 6px); left: 0;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 8px; padding: 6px; min-width: 140px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.4);
+    }
+    .nav-dropdown a {
+      display: block; padding: 7px 12px; border-radius: 5px;
+      font-size: 13px; color: var(--muted);
+    }
+    .nav-dropdown a:hover { background: var(--tag-bg); color: var(--text); text-decoration: none; }
+    .nav-dropdown a.active { color: var(--text); font-weight: 600; }
+
+    main { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 20px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* Utilities */
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+    }
+    .badge.red    { color: var(--red);    border-color: var(--red); }
+    .badge.orange { color: var(--orange); border-color: var(--orange); }
+    .badge.green  { color: var(--green);  border-color: var(--green); }
+    .badge.blue   { color: var(--accent); border-color: var(--accent); }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    table { width: 100%; border-collapse: collapse; }
+    th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px;
+         padding: 8px 12px; border-bottom: 1px solid var(--border); }
+    td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+
+    .mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 12px; }
+  </style>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <header x-data>
+    <a class="logo" href="index.html">WOFA</a>
+
+    {% for group in nav_groups %}
+    {% set group_active = current_slug and group.versions | selectattr("slug", "equalto", current_slug) | list | length > 0 %}
+    <div class="nav-group" x-data="{ open: false }" @click.outside="open = false">
+      <button class="nav-group-btn {% if group_active %}active{% endif %}"
+              :class="{ open: open }"
+              @click="open = !open">
+        {{ group.name }}
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="nav-dropdown" x-show="open" x-transition @click="open = false">
+        {% for v in group.versions %}
+        <a href="{{ v.slug }}.html"
+           class="{% if current_slug == v.slug %}active{% endif %}">
+          {{ v.version_label }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
+    <span class="spacer"></span>
+    <span class="meta">Updated {{ last_check }}</span>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    Windows Organized Feed for Admins &nbsp;·&nbsp;
+    Data from <a href="https://api.msrc.microsoft.com">MSRC</a> and <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a> &nbsp;·&nbsp;
+    <a href="v1/windows_data_feed.json">JSON feed</a> &nbsp;·&nbsp;
+    <a href="windows_release_feed.rss">RSS</a>
+  </footer>
+</body>
+</html>
