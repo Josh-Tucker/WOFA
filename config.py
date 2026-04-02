@@ -7,7 +7,7 @@ MONTHS_TO_FETCH = 12
 
 # Public URL of the deployed site (no trailing slash).
 # Used in code examples and feed endpoint references.
-SITE_URL = "https://wofa.example.com"
+SITE_URL = "https://wofa.jtucker.me.uk"
 
 # Output directory for generated feed files
 OUTPUT_DIR = "output"
