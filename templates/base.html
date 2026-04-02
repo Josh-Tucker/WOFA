@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}WOFA — Windows Organized Feed for Admins{% endblock %}</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4/dist/full.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -19,85 +20,184 @@
 </head>
 <body class="min-h-screen">
 
-  <header class="navbar bg-base-200 border-b border-base-300 px-6 gap-1 min-h-14"
-          x-data="{ dark: localStorage.getItem('wofa-theme') !== 'cupcake' }"
-          x-init="$watch('dark', v => { var t = v ? 'business' : 'cupcake'; document.documentElement.setAttribute('data-theme', t); localStorage.setItem('wofa-theme', t); })">
-    <a class="font-bold text-base mr-2 hover:no-underline" href="index.html">
-      <span style="color:#F25022">W</span><span style="color:#7FBA00">O</span><span style="color:#00A4EF">F</span><span style="color:#FFB900">A</span>
-    </a>
+<div class="drawer min-h-screen"
+     x-data="{ dark: localStorage.getItem('wofa-theme') !== 'cupcake' }"
+     x-init="$watch('dark', v => { var t = v ? 'business' : 'cupcake'; document.documentElement.setAttribute('data-theme', t); localStorage.setItem('wofa-theme', t); })">
+  <input id="nav-drawer" type="checkbox" class="drawer-toggle">
 
-    {% for group in nav_groups %}
-    {% set group_active = current_slug and group.versions | selectattr("slug", "equalto", current_slug) | list | length > 0 %}
-    <div class="relative" x-data="{ open: false }" @click.outside="open = false">
-      <button class="btn btn-ghost btn-sm gap-1 {% if group_active %}text-base-content{% else %}text-base-content/60{% endif %}"
-              @click="open = !open">
-        {{ group.name }}
-        <svg class="w-3 h-3 transition-transform duration-150" :class="{ 'rotate-180': open }"
-             fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
-        </svg>
-      </button>
-      <ul class="absolute top-full left-0 mt-1 z-50 bg-base-200 border border-base-300 rounded-lg shadow-xl p-1.5 min-w-36"
-          x-show="open" x-transition @click="open = false">
-        {% for v in group.versions %}
-        <li>
-          <a href="{{ v.slug }}.html"
-             class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
-                    {% if current_slug == v.slug %}font-semibold text-base-content{% else %}text-base-content/60{% endif %}">
-            {{ v.version_label }}
-          </a>
-        </li>
+  <div class="drawer-content flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <header class="navbar bg-base-200 border-b border-base-300 px-4 min-h-14">
+
+      <!-- Mobile: hamburger -->
+      <div class="navbar-start lg:hidden">
+        <label for="nav-drawer" class="btn btn-ghost btn-sm btn-square">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </label>
+      </div>
+
+      <!-- Logo -->
+      <div class="navbar-start hidden lg:flex">
+        <a class="font-bold text-base mr-2 hover:no-underline" href="index.html">
+          <span style="color:#F25022">W</span><span style="color:#7FBA00">O</span><span style="color:#00A4EF">F</span><span style="color:#FFB900">A</span>
+        </a>
+
+        <!-- Desktop nav items -->
+        {% for group in nav_groups %}
+        {% set group_active = current_slug and group.versions | selectattr("slug", "equalto", current_slug) | list | length > 0 %}
+        <div class="relative" x-data="{ open: false }" @click.outside="open = false">
+          <button class="btn btn-ghost btn-sm gap-1 {% if group_active %}text-base-content{% else %}text-base-content/60{% endif %}"
+                  @click="open = !open">
+            {{ group.name }}
+            <svg class="w-3 h-3 transition-transform duration-150" :class="{ 'rotate-180': open }"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <ul class="absolute top-full left-0 mt-1 z-50 bg-base-200 border border-base-300 rounded-lg shadow-xl p-1.5 min-w-36"
+              x-show="open" x-transition @click="open = false">
+            {% for v in group.versions %}
+            <li>
+              <a href="{{ v.slug }}.html"
+                 class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
+                        {% if current_slug == v.slug %}font-semibold text-base-content{% else %}text-base-content/60{% endif %}">
+                {{ v.version_label }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
         {% endfor %}
-      </ul>
-    </div>
-    {% endfor %}
 
-    <a href="cve-search.html"
-       class="btn btn-ghost btn-sm {% if current_slug == 'cve-search' %}text-base-content{% else %}text-base-content/60{% endif %}">
-      CVE Search
-    </a>
-    <a href="resources.html"
-       class="btn btn-ghost btn-sm {% if current_slug == 'resources' %}text-base-content{% else %}text-base-content/60{% endif %}">
-      Resources
-    </a>
+        <a href="cve-search.html"
+           class="btn btn-ghost btn-sm {% if current_slug == 'cve-search' %}text-base-content{% else %}text-base-content/60{% endif %}">
+          CVE Search
+        </a>
+        <a href="resources.html"
+           class="btn btn-ghost btn-sm {% if current_slug == 'resources' %}text-base-content{% else %}text-base-content/60{% endif %}">
+          Resources
+        </a>
+      </div>
 
-    <div class="flex-1"></div>
-    <div class="hidden sm:flex items-center gap-1 mr-2">
-      <a href="v1/windows_data_feed.json" class="btn btn-ghost btn-xs text-base-content/50 hover:text-base-content" title="JSON Feed">
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-        JSON
+      <!-- Mobile: centred logo -->
+      <div class="navbar-center lg:hidden">
+        <a class="font-bold text-base hover:no-underline" href="index.html">
+          <span style="color:#F25022">W</span><span style="color:#7FBA00">O</span><span style="color:#00A4EF">F</span><span style="color:#FFB900">A</span>
+        </a>
+      </div>
+
+      <!-- Right side: feed links, timestamp, theme toggle -->
+      <div class="navbar-end gap-1">
+        <div class="hidden sm:flex items-center gap-1 mr-2">
+          <a href="v1/windows_data_feed.json" class="btn btn-ghost btn-xs text-base-content/50 hover:text-base-content" title="JSON Feed">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            JSON
+          </a>
+          <a href="windows_release_feed.rss" class="btn btn-ghost btn-xs text-base-content/50 hover:text-base-content" title="RSS Feed">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7M6 17a1 1 0 110 2 1 1 0 010-2z"/></svg>
+            RSS
+          </a>
+        </div>
+        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated {{ last_check }}</span>
+        <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
+          <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/>
+          </svg>
+          <svg x-show="!dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+        </button>
+      </div>
+
+    </header>
+
+    <!-- Page content -->
+    <main class="max-w-5xl mx-auto px-6 py-8 pb-16 w-full flex-1">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="border-t border-base-300 py-5 px-6 text-center text-xs text-base-content/40">
+      Windows Organized Feed for Admins &nbsp;·&nbsp;
+      Data from <a href="https://api.msrc.microsoft.com" class="link link-hover">MSRC</a> and
+      <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" class="link link-hover">CISA KEV</a>
+      &nbsp;·&nbsp;
+      <a href="v1/windows_data_feed.json" class="link link-hover">JSON feed</a> &nbsp;·&nbsp;
+      <a href="windows_release_feed.rss" class="link link-hover">RSS</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/Josh-Tucker/WOFA" class="link link-hover">GitHub</a>
+      &nbsp;·&nbsp;
+      Inspired by <a href="https://sofa.macadmins.io" class="link link-hover">SOFA</a>
+    </footer>
+
+  </div><!-- /drawer-content -->
+
+  <!-- Mobile drawer sidebar -->
+  <div class="drawer-side z-50">
+    <label for="nav-drawer" class="drawer-overlay"></label>
+    <nav class="menu bg-base-200 min-h-full w-64 p-4 gap-1">
+
+      <a class="font-bold text-base mb-2 hover:no-underline" href="index.html">
+        <span style="color:#F25022">W</span><span style="color:#7FBA00">O</span><span style="color:#00A4EF">F</span><span style="color:#FFB900">A</span>
       </a>
-      <a href="windows_release_feed.rss" class="btn btn-ghost btn-xs text-base-content/50 hover:text-base-content" title="RSS Feed">
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7M6 17a1 1 0 110 2 1 1 0 010-2z"/></svg>
-        RSS
+
+      {% for group in nav_groups %}
+      {% set group_active = current_slug and group.versions | selectattr("slug", "equalto", current_slug) | list | length > 0 %}
+      <div x-data="{ open: {{ 'true' if group_active else 'false' }} }">
+        <button class="flex items-center justify-between w-full px-3 py-2 rounded-lg text-sm font-medium
+                       {% if group_active %}text-base-content{% else %}text-base-content/60{% endif %}
+                       hover:bg-base-300"
+                @click="open = !open">
+          {{ group.name }}
+          <svg class="w-3 h-3 transition-transform duration-150" :class="{ 'rotate-180': open }"
+               fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <ul x-show="open" class="pl-3 mt-0.5 space-y-0.5">
+          {% for v in group.versions %}
+          <li>
+            <a href="{{ v.slug }}.html"
+               class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
+                      {% if current_slug == v.slug %}font-semibold text-base-content{% else %}text-base-content/60{% endif %}">
+              {{ v.version_label }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+
+      <a href="cve-search.html"
+         class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-base-300 hover:no-underline
+                {% if current_slug == 'cve-search' %}text-base-content{% else %}text-base-content/60{% endif %}">
+        CVE Search
       </a>
-    </div>
-    <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated {{ last_check }}</span>
-    <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
-      <!-- sun (shown in dark mode) -->
-      <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/>
-      </svg>
-      <!-- moon (shown in light mode) -->
-      <svg x-show="!dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
-      </svg>
-    </button>
-  </header>
+      <a href="resources.html"
+         class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-base-300 hover:no-underline
+                {% if current_slug == 'resources' %}text-base-content{% else %}text-base-content/60{% endif %}">
+        Resources
+      </a>
 
-  <main class="max-w-5xl mx-auto px-6 py-8 pb-16">
-    {% block content %}{% endblock %}
-  </main>
+      <div class="mt-4 pt-4 border-t border-base-300 flex items-center gap-2">
+        <a href="v1/windows_data_feed.json" class="btn btn-ghost btn-xs text-base-content/50 hover:text-base-content" title="JSON Feed">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          JSON
+        </a>
+        <a href="windows_release_feed.rss" class="btn btn-ghost btn-xs text-base-content/50 hover:text-base-content" title="RSS Feed">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7M6 17a1 1 0 110 2 1 1 0 010-2z"/></svg>
+          RSS
+        </a>
+      </div>
 
-  <footer class="border-t border-base-300 py-5 px-6 text-center text-xs text-base-content/40">
-    Windows Organized Feed for Admins &nbsp;·&nbsp;
-    Data from <a href="https://api.msrc.microsoft.com" class="link link-hover">MSRC</a> and
-    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" class="link link-hover">CISA KEV</a>
-    &nbsp;·&nbsp;
-    <a href="v1/windows_data_feed.json" class="link link-hover">JSON feed</a> &nbsp;·&nbsp;
-    <a href="windows_release_feed.rss" class="link link-hover">RSS</a>
-  </footer>
+    </nav>
+  </div><!-- /drawer-side -->
+
+</div><!-- /drawer -->
+
 </body>
 </html>

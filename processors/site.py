@@ -17,6 +17,7 @@ import config
 logger = logging.getLogger(__name__)
 
 TEMPLATES_DIR = Path("templates")
+STATIC_DIR = Path("static")
 OUTPUT_DIR = Path(config.OUTPUT_DIR)
 
 
@@ -105,6 +106,15 @@ def _summary(exploited: list, cve_count: int) -> str:
     return "Maintenance update with no published CVE entries"
 
 
+def _out_of_support(os_entry: dict) -> bool:
+    """True if the most relevant support end date has already passed."""
+    support = os_entry.get("SupportEndDate") or {}
+    today = date.today().isoformat()
+    # HomePro is the earlier (consumer) date; Server OS only has EnterpriseEducation
+    relevant = support.get("HomePro") or support.get("EnterpriseEducation")
+    return bool(relevant and relevant < today)
+
+
 def _risk_level(exploited: list, kev_count: int) -> str:
     """'critical', 'high', or ''"""
     if kev_count:
@@ -112,6 +122,15 @@ def _risk_level(exploited: list, kev_count: int) -> str:
     if exploited:
         return "high"
     return ""
+
+
+def _msrc_release_url(release_date: str) -> str:
+    """Link to the MSRC monthly release note for this update."""
+    try:
+        d = date.fromisoformat(release_date)
+        return f"https://msrc.microsoft.com/update-guide/releaseNote/{d.strftime('%Y-%b')}"
+    except (ValueError, TypeError):
+        return "https://msrc.microsoft.com/update-guide"
 
 
 def _enrich_release(rel: dict, is_latest: bool) -> dict:
@@ -132,6 +151,7 @@ def _enrich_release(rel: dict, is_latest: bool) -> dict:
         "recommendation": _recommendation(exploited, kev_count, cve_count),
         "summary": _summary(exploited, cve_count),
         "risk_level": _risk_level(exploited, kev_count),
+        "msrc_url": _msrc_release_url(rel.get("ReleaseDate", "")),
         "is_latest": is_latest,
     }
 
@@ -276,6 +296,7 @@ def generate(feed: dict) -> None:
                 "slug": _slug(os_entry["OSVersion"]),
                 "group": os_entry.get("Group", os_entry["OSVersion"]),
                 "version_label": os_entry.get("VersionLabel", os_entry["OSVersion"]),
+                "out_of_support": _out_of_support(enriched),
             }
         )
 
@@ -322,3 +343,9 @@ def generate(feed: dict) -> None:
     html = tmpl.render(**base_ctx, current_slug="resources")
     (OUTPUT_DIR / "resources.html").write_text(html)
     logger.info("Written output/resources.html")
+
+    # Copy static assets
+    for static_file in STATIC_DIR.iterdir():
+        dest = OUTPUT_DIR / static_file.name
+        dest.write_bytes(static_file.read_bytes())
+        logger.info("Copied static/%s → output/%s", static_file.name, static_file.name)

@@ -63,9 +63,10 @@
                     'badge-ghost':   cve.severity === 'Moderate' || cve.severity === 'Low' || !cve.severity
                   }"
                   x-text="cve.severity || 'Unknown'"></span>
-            <span x-show="cve.cvss_score" class="text-xs text-base-content/50">
-              CVSS <span class="font-semibold text-base-content/70" x-text="cve.cvss_score"></span>
-            </span>
+            <span x-show="cve.cvss_score"
+                  class="badge badge-sm badge-outline"
+                  :class="cvssClass(cve.cvss_score)"
+                  x-text="'CVSS ' + cve.cvss_score"></span>
           </div>
 
           <!-- affected versions -->
@@ -128,6 +129,14 @@ document.addEventListener('alpine:init', () => {
     loading: true,
     index: {},
     results: [],
+
+    cvssClass(score) {
+      if (!score) return 'badge-ghost';
+      if (score >= 9.0) return 'badge-error';
+      if (score >= 7.0) return 'badge-warning';
+      if (score >= 4.0) return 'badge-info';
+      return 'badge-success';
+    },
 
     async init() {
       const resp = await fetch('v1/cve_index.json');

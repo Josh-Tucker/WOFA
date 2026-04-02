@@ -12,11 +12,32 @@
   <h1 class="text-2xl font-bold">{{ os.OSVersion }}</h1>
 </div>
 
+{% if os.out_of_support %}
+<div role="alert" class="alert alert-error mb-6">
+  <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+  </svg>
+  <div>
+    <div class="font-semibold">This version of Windows is no longer supported</div>
+    <div class="text-sm opacity-80">Microsoft no longer issues security updates for {{ os.OSVersion }}. Devices running this version are exposed to unpatched vulnerabilities.</div>
+  </div>
+</div>
+{% endif %}
+
 <!-- top info grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-9">
 
   <!-- Latest release card -->
-  <div class="card bg-base-200 border border-base-300">
+  <div class="indicator w-full">
+    {% if os.out_of_support %}
+    <span class="indicator-item badge badge-error">End of Life</span>
+    {% endif %}
+    {% if latest_rel and latest_rel.kev_count %}
+    <span class="indicator-item badge badge-error {% if os.out_of_support %}indicator-middle{% endif %}">{{ latest_rel.kev_count }} KEV</span>
+    {% elif latest.ActivelyExploitedCVEs %}
+    <span class="indicator-item badge badge-warning {% if os.out_of_support %}indicator-middle{% endif %}">Exploited</span>
+    {% endif %}
+  <div class="card bg-base-200 border border-base-300 w-full">
     <div class="card-body p-5 gap-0">
       <h2 class="text-xs font-semibold text-base-content/50 uppercase tracking-widest flex items-center gap-2 mb-4">
         <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,17 +73,35 @@
         </div>
         <div class="flex flex-col gap-0.5">
           <span class="text-xs text-base-content/50 uppercase tracking-wide">CVEs Fixed</span>
-          <span class="font-semibold">{{ latest.UniqueCVEsCount }}</span>
+          <span class="font-semibold">
+            <span class="badge badge-sm
+              {% if latest_rel and latest_rel.kev_count %}badge-error
+              {% elif latest.ActivelyExploitedCVEs %}badge-warning badge-outline
+              {% elif latest.UniqueCVEsCount %}badge-info badge-outline
+              {% else %}badge-ghost{% endif %}">
+              {{ latest.UniqueCVEsCount }}
+            </span>
+          </span>
         </div>
         <div class="flex flex-col gap-0.5">
           <span class="text-xs text-base-content/50 uppercase tracking-wide">Exploited</span>
           <span class="font-semibold {% if latest.ActivelyExploitedCVEs %}text-error{% endif %}">
             {{ latest.ActivelyExploitedCVEs | length }}
             {% if latest_rel and latest_rel.kev_count %}
-            <span class="badge badge-warning badge-sm ml-1">{{ latest_rel.kev_count }} KEV</span>
+            <span class="badge badge-warning ml-1">{{ latest_rel.kev_count }} KEV</span>
             {% endif %}
           </span>
         </div>
+        {% if latest_rel %}
+        <div class="flex flex-col gap-0.5 col-span-2">
+          <span class="text-xs text-base-content/50 uppercase tracking-wide">Release Type</span>
+          {% if latest_rel.PatchTuesdayRelease %}
+          <span class="badge badge-info badge-outline w-fit">Patch Tuesday</span>
+          {% else %}
+          <span class="badge badge-warning badge-outline w-fit">Out of Band</span>
+          {% endif %}
+        </div>
+        {% endif %}
         {% if os.SupportEndDate %}
         {% if 'Server' not in os.OSVersion %}
         <div class="flex flex-col gap-0.5">
@@ -89,13 +128,15 @@
           KB Article
         </a>
         {% endif %}
-        <a class="btn btn-sm btn-outline gap-1.5" href="https://msrc.microsoft.com/update-guide" target="_blank" rel="noopener">
+        <a class="btn btn-sm btn-outline gap-1.5" href="{{ latest_rel.msrc_url if latest_rel else 'https://msrc.microsoft.com/update-guide' }}" target="_blank" rel="noopener">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
           MSRC
         </a>
       </div>
     </div>
   </div>
+
+  </div><!-- /indicator -->
 
   <!-- Resources card -->
   <div class="card bg-base-200 border border-base-300">
@@ -108,7 +149,7 @@
       <div class="mb-4">
         <h3 class="text-xs text-base-content/50 font-medium mb-2">{{ os.OSVersion }}</h3>
         <ul class="flex flex-col gap-1.5 text-sm">
-          <li><a href="https://msrc.microsoft.com/update-guide" target="_blank" rel="noopener" class="link link-hover">Microsoft Security Update Guide</a></li>
+          <li><a href="{{ latest_rel.msrc_url if latest_rel else 'https://msrc.microsoft.com/update-guide' }}" target="_blank" rel="noopener" class="link link-hover">Microsoft Security Update Guide</a></li>
           {% if 'Server' not in os.OSVersion %}
           <li><a href="https://learn.microsoft.com/en-us/windows/release-health/windows{{ '11' if '11' in os.OSVersion else '10' }}-release-information" target="_blank" rel="noopener" class="link link-hover">Windows Release Health</a></li>
           {% else %}
@@ -164,19 +205,22 @@
       {% endif %}
       <span class="text-base-content/30 text-xs">•</span>
       <div class="flex gap-1.5 items-center flex-wrap">
-        {% if rel.PatchTuesdayRelease %}
-        <span class="badge badge-sm badge-info badge-outline">Patch Tuesday</span>
-        {% else %}
-        <span class="badge badge-sm badge-warning badge-outline">Out of Band</span>
+        {% if os.out_of_support %}
+        <span class="badge badge-error badge-outline">Out of Support</span>
         {% endif %}
-        <span class="badge badge-sm {% if rel.UniqueCVEsCount %}badge-info badge-outline{% else %}badge-ghost{% endif %}">{{ rel.UniqueCVEsCount }} CVEs</span>
+        {% if rel.PatchTuesdayRelease %}
+        <span class="badge badge-info badge-outline">Patch Tuesday</span>
+        {% else %}
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        {% endif %}
+        <span class="badge {% if rel.UniqueCVEsCount %}badge-info badge-outline{% else %}badge-ghost{% endif %}">{{ rel.UniqueCVEsCount }} CVEs</span>
         {% if rel.kev_count %}
-        <span class="badge badge-sm badge-warning badge-outline">{{ rel.kev_count }} KEV</span>
+        <span class="badge badge-warning">{{ rel.kev_count }} KEV</span>
         {% endif %}
         {% if rel.risk_level == 'critical' %}
-        <span class="badge badge-sm badge-error">Critical Risk</span>
+        <span class="badge badge-error">Critical Risk</span>
         {% elif rel.risk_level == 'high' %}
-        <span class="badge badge-sm badge-warning">Active Exploitation</span>
+        <span class="badge badge-warning">Active Exploitation</span>
         {% endif %}
       </div>
       <div class="flex-1"></div>
@@ -263,15 +307,17 @@
           </div>
           <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
             {% for cve in group.cves %}
-            <a class="inline-flex items-center gap-1 font-mono text-xs px-2 py-0.5 rounded border hover:no-underline
-                      {% if cve.in_kev %}border-warning/50 text-warning bg-warning/5 hover:border-warning
-                      {% elif cve.actively_exploited %}border-error/50 text-error bg-error/5 hover:border-error
-                      {% else %}border-base-300 text-base-content/80 hover:border-info/60{% endif %}"
+            <a class="badge font-mono hover:no-underline
+                      {% if cve.cvss_score and cve.cvss_score >= 9.0 %}badge-error
+                      {% elif cve.cvss_score and cve.cvss_score >= 7.0 %}badge-warning
+                      {% elif cve.cvss_score and cve.cvss_score >= 4.0 %}badge-info
+                      {% elif cve.cvss_score %}badge-success
+                      {% else %}badge-ghost{% endif %}
+                      {% if not cve.in_kev %}badge-outline{% endif %}"
                href="https://nvd.nist.gov/vuln/detail/{{ cve.id }}"
                target="_blank" rel="noopener"
-               title="{{ cve.severity or '' }}{% if cve.cvss_score %} · CVSS {{ cve.cvss_score }}{% endif %}{% if cve.in_kev %} · CISA KEV{% endif %}">
-              {% if cve.in_kev %}🔴{% elif cve.actively_exploited %}🟠{% endif %}
-              {{ cve.id }}
+               title="{{ cve.severity or 'Unknown' }}{% if cve.cvss_score %} · CVSS {{ cve.cvss_score }}{% endif %}{% if cve.in_kev %} · CISA KEV{% elif cve.actively_exploited %} · Actively Exploited{% endif %}">
+              {% if cve.in_kev %}⚑ {% elif cve.actively_exploited %}! {% endif %}{{ cve.id }}
             </a>
             {% endfor %}
           </div>
