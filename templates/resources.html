@@ -304,6 +304,7 @@ if ($entry) {
             <tr><td>UniqueCVEsCount</td><td class="text-success">number</td><td class="font-sans text-base-content/70">Total distinct CVEs patched in this release</td></tr>
             <tr><td>DaysSincePreviousRelease</td><td class="text-success">number</td><td class="font-sans text-base-content/70">Days elapsed since the previous release for this OS version</td></tr>
             <tr><td>Supersedes</td><td class="text-info">string</td><td class="font-sans text-base-content/70">KB number of the update this release supersedes</td></tr>
+            <tr><td>PatchTuesdayRelease</td><td class="text-success">boolean</td><td class="font-sans text-base-content/70"><code>true</code> for regular monthly Patch Tuesday releases; <code>false</code> for out-of-band updates</td></tr>
           </tbody>
         </table>
       </div>
@@ -365,7 +366,8 @@ if ($entry) {
             }
           },
           "DaysSincePreviousRelease": 28,
-          "Supersedes": "5051987"
+          "Supersedes": "5051987",
+          "PatchTuesdayRelease": true
         }
       ]
     }

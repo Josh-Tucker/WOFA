@@ -60,6 +60,19 @@ def _kb_from_update_name(update_name: str) -> str:
     return match.group(1) if match else ""
 
 
+def _release_label(update_name: str) -> str:
+    """
+    Extract the month/year portion from a full UpdateName.
+    "Windows 11 24H2 - March 2026 Security Update (KB5079473)"
+    → "March 2026 Security Update"
+    """
+    # Strip OS prefix (everything up to and including " - ")
+    if " - " in update_name:
+        update_name = update_name.split(" - ", 1)[1]
+    # Strip trailing KB reference
+    return re.sub(r"\s*\(KB\d+\)\s*$", "", update_name).strip()
+
+
 def _group_cves(cves: dict) -> list[dict]:
     """
     Group CVEs by their CVE-YEAR-NNxx prefix for display.
@@ -112,6 +125,7 @@ def _enrich_release(rel: dict, is_latest: bool) -> dict:
     return {
         **rel,
         "kb": kb,
+        "release_label": _release_label(rel.get("UpdateName", "")),
         "age_days": _age_days(rel.get("ReleaseDate")),
         "kev_count": kev_count,
         "cve_groups": _group_cves(cves),

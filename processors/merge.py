@@ -6,6 +6,7 @@ Produces both a v2 feed (full CVE detail) and a v1 feed (summary only).
 """
 
 import logging
+import re
 from datetime import date, datetime, timedelta, timezone
 
 import config
@@ -13,6 +14,14 @@ from collectors import cisa_kev, lifecycle, msrc
 from collectors import os_versions as os_versions_collector
 
 logger = logging.getLogger(__name__)
+
+# Regular Patch Tuesday IDs are exactly "YYYY-Mon" (e.g. "2025-Mar").
+# Out-of-band releases append a letter suffix, e.g. "2025-Mar-B".
+_RE_PATCH_TUESDAY_ID = re.compile(r"^\d{4}-[A-Za-z]{3}$")
+
+
+def _is_patch_tuesday(update_id: str) -> bool:
+    return bool(_RE_PATCH_TUESDAY_ID.match(update_id))
 
 
 def _months_to_fetch(n: int) -> list[str]:
@@ -90,8 +99,10 @@ def build_feed() -> dict:
             continue
 
         extracted = msrc.extract_os_releases(cvrf_doc, os_version_configs)
+        patch_tuesday = _is_patch_tuesday(uid)
 
         for sname, rel in extracted.items():
+            rel["patch_tuesday_release"] = patch_tuesday
             # Cross-reference CVEs with KEV
             for cve_id, cve_data in rel["cves"].items():
                 if cve_id in kev_ids:
@@ -145,6 +156,7 @@ def build_feed() -> dict:
                     "UniqueCVEsCount": len(cves),
                     "DaysSincePreviousRelease": rel["days_since_previous"],
                     "Supersedes": rel["supersedes"],
+                    "PatchTuesdayRelease": rel["patch_tuesday_release"],
                 }
             )
 

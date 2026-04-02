@@ -153,8 +153,8 @@
          @click="open = !open">
       <span class="font-semibold text-sm">
         {% if rel.SecurityInfo %}
-        <a href="{{ rel.SecurityInfo }}" target="_blank" rel="noopener" @click.stop class="link link-hover">KB{{ rel.kb }}</a>
-        {% else %}KB{{ rel.kb }}{% endif %}
+        <a href="{{ rel.SecurityInfo }}" target="_blank" rel="noopener" @click.stop class="link link-hover">{{ rel.release_label }}</a>
+        {% else %}{{ rel.release_label }}{% endif %}
       </span>
       <span class="text-base-content/30 text-xs">•</span>
       <span class="text-xs text-base-content/50 whitespace-nowrap">{{ rel.ReleaseDate }}</span>
@@ -164,6 +164,11 @@
       {% endif %}
       <span class="text-base-content/30 text-xs">•</span>
       <div class="flex gap-1.5 items-center flex-wrap">
+        {% if rel.PatchTuesdayRelease %}
+        <span class="badge badge-sm badge-info badge-outline">Patch Tuesday</span>
+        {% else %}
+        <span class="badge badge-sm badge-warning badge-outline">Out of Band</span>
+        {% endif %}
         <span class="badge badge-sm {% if rel.UniqueCVEsCount %}badge-info badge-outline{% else %}badge-ghost{% endif %}">{{ rel.UniqueCVEsCount }} CVEs</span>
         {% if rel.kev_count %}
         <span class="badge badge-sm badge-warning badge-outline">{{ rel.kev_count }} KEV</span>
