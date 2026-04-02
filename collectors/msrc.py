@@ -219,7 +219,7 @@ def extract_os_releases(cvrf_doc: dict, os_version_configs: list[dict]) -> dict[
         fixed_build:  str | None,
         support_url:  str,
         supersedes:   str | None,
-        cves:         {cve_id: {severity, cvss_score, actively_exploited, in_kev}},
+        cves:         {cve_id: {severity, cvss_score, actively_exploited, in_kev, nist_url}},
       }
 
     OS versions with no matching KB in this document are omitted.
@@ -300,6 +300,7 @@ def extract_os_releases(cvrf_doc: dict, os_version_configs: list[dict]) -> dict[
                 "cvss_score": cvss_score,
                 "actively_exploited": actively_exploited,
                 "in_kev": False,  # Filled by merge processor
+                "nist_url": f"https://nvd.nist.gov/vuln/detail/{cve_id}",
             }
 
         results[sname] = {

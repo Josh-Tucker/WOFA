@@ -278,6 +278,9 @@ if ($entry) {
           <thead><tr><th>Field</th><th>Type</th><th class="font-sans font-normal text-base-content/60">Description</th></tr></thead>
           <tbody>
             <tr><td>OSVersion</td><td class="text-info">string</td><td class="font-sans text-base-content/70">Human-readable OS name, e.g. <code>Windows 11 24H2</code></td></tr>
+            <tr><td>SupportEndDate</td><td class="text-warning">object</td><td class="font-sans text-base-content/70">End-of-servicing dates by edition — see below. <code>null</code> if unavailable.</td></tr>
+            <tr><td>SupportEndDate.HomePro</td><td class="text-info">string</td><td class="font-sans text-base-content/70">End date for Home/Pro editions (<code>YYYY-MM-DD</code>). <code>null</code> for Server.</td></tr>
+            <tr><td>SupportEndDate.EnterpriseEducation</td><td class="text-info">string</td><td class="font-sans text-base-content/70">End date for Enterprise/Education editions, or Extended End Date for Server.</td></tr>
             <tr><td>Latest</td><td class="text-warning">object</td><td class="font-sans text-base-content/70">Snapshot of the most recent release's key fields</td></tr>
             <tr><td>SecurityReleases</td><td class="text-warning">array</td><td class="font-sans text-base-content/70">All tracked monthly security releases, newest first</td></tr>
           </tbody>
@@ -317,6 +320,7 @@ if ($entry) {
             <tr><td>cvss_score</td><td class="text-success">number</td><td class="font-sans text-base-content/70">CVSS v3 base score (0.0–10.0)</td></tr>
             <tr><td>actively_exploited</td><td class="text-success">boolean</td><td class="font-sans text-base-content/70"><code>true</code> if exploitation in the wild is confirmed</td></tr>
             <tr><td>in_kev</td><td class="text-success">boolean</td><td class="font-sans text-base-content/70"><code>true</code> if listed in the CISA Known Exploited Vulnerabilities catalog</td></tr>
+            <tr><td>nist_url</td><td class="text-info">string</td><td class="font-sans text-base-content/70">Direct link to the NVD entry at <code>nvd.nist.gov</code></td></tr>
           </tbody>
         </table>
       </div>
@@ -332,6 +336,10 @@ if ($entry) {
   "OSVersions": [
     {
       "OSVersion": "Windows 11 24H2",
+      "SupportEndDate": {
+        "HomePro": "2026-10-13",
+        "EnterpriseEducation": "2027-10-13"
+      },
       "Latest": {
         "ReleaseDate": "2025-03-11",
         "ProductVersion": "10.0.26100.3476",
@@ -352,7 +360,8 @@ if ($entry) {
               "severity": "Important",
               "cvss_score": 7.8,
               "actively_exploited": true,
-              "in_kev": true
+              "in_kev": true,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-24985"
             }
           },
           "DaysSincePreviousRelease": 28,

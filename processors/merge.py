@@ -9,7 +9,7 @@ import logging
 from datetime import date, datetime, timedelta, timezone
 
 import config
-from collectors import cisa_kev, msrc
+from collectors import cisa_kev, lifecycle, msrc
 from collectors import os_versions as os_versions_collector
 
 logger = logging.getLogger(__name__)
@@ -155,6 +155,7 @@ def build_feed() -> dict:
                 "OSVersion": os_name,
                 "Group": os_cfg["group"],
                 "VersionLabel": os_cfg["version_label"],
+                "SupportEndDate": lifecycle.get_support_end_dates(os_cfg),
                 "Latest": {
                     "UpdateName": latest.get("UpdateName"),
                     "ProductVersion": latest.get("ProductVersion"),

@@ -63,6 +63,23 @@
             {% endif %}
           </span>
         </div>
+        {% if os.SupportEndDate %}
+        {% if 'Server' not in os.OSVersion %}
+        <div class="flex flex-col gap-0.5">
+          <span class="text-xs text-base-content/50 uppercase tracking-wide">End of Support (Home/Pro)</span>
+          <span class="font-semibold">{{ os.SupportEndDate.HomePro or '—' }}</span>
+        </div>
+        <div class="flex flex-col gap-0.5">
+          <span class="text-xs text-base-content/50 uppercase tracking-wide">End of Support (Ent/Edu)</span>
+          <span class="font-semibold">{{ os.SupportEndDate.EnterpriseEducation or '—' }}</span>
+        </div>
+        {% else %}
+        <div class="flex flex-col gap-0.5 col-span-2">
+          <span class="text-xs text-base-content/50 uppercase tracking-wide">End of Support</span>
+          <span class="font-semibold">{{ os.SupportEndDate.EnterpriseEducation or '—' }}</span>
+        </div>
+        {% endif %}
+        {% endif %}
       </div>
 
       <div class="flex flex-wrap gap-2">
