@@ -7,7 +7,7 @@ Renders Jinja2 templates against feed data and writes HTML files to the output d
 import logging
 import re
 from collections import defaultdict
-from datetime import date, datetime
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -44,6 +44,26 @@ def _format_timestamp(iso: str) -> str:
         return dt.strftime("%d %b %Y %H:%M UTC")
     except (ValueError, TypeError):
         return iso or ""
+
+
+def _next_check(last_check_iso: str) -> str:
+    """Return the next scheduled pipeline run time after last_check."""
+    try:
+        last = datetime.fromisoformat(last_check_iso)
+        if last.tzinfo is None:
+            last = last.replace(tzinfo=timezone.utc)
+        # Schedule: 0:30, 6:30, 12:30, 18:30 UTC daily
+        for delta_days in range(3):
+            base = (last + timedelta(days=delta_days)).replace(
+                hour=0, minute=0, second=0, microsecond=0
+            )
+            for h in (0, 6, 12, 18):
+                candidate = base.replace(hour=h, minute=30)
+                if candidate > last:
+                    return candidate.strftime("%d %b %Y %H:%M UTC")
+    except (ValueError, TypeError):
+        pass
+    return "Unknown"
 
 
 def _age_days(date_str: str | None) -> int | None:
@@ -302,10 +322,25 @@ def generate(feed: dict) -> None:
 
     nav_groups = _nav_groups(os_versions)
 
+    total_cves = sum(
+        r.get("UniqueCVEsCount", 0) for os in os_versions for r in os.get("SecurityReleases", [])
+    )
+    total_exploited = sum(
+        len(r.get("ActivelyExploitedCVEs", []))
+        for os in os_versions
+        for r in os.get("SecurityReleases", [])
+    )
+    total_releases = sum(len(os.get("SecurityReleases", [])) for os in os_versions)
+
     base_ctx = {
         "os_versions": os_versions,
         "nav_groups": nav_groups,
         "last_check": last_check,
+        "next_check": _next_check(feed.get("LastCheck", "")),
+        "update_hash": (feed.get("UpdateHash") or "")[:12],
+        "total_cves": total_cves,
+        "total_exploited": total_exploited,
+        "total_releases": total_releases,
         "site_url": config.SITE_URL,
     }
 

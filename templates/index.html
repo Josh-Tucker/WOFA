@@ -2,9 +2,56 @@
 {% block title %}WOFA — Windows Organized Feed for Admins{% endblock %}
 
 {% block content %}
-<div class="mb-10">
+<div class="mb-8">
   <h1 class="text-2xl font-bold mb-2">Windows Organized Feed for Admins</h1>
   <p class="text-base-content/60 max-w-2xl text-sm">Machine-readable Windows security update data — CVEs, exploitation status, and build versions per OS release. Sourced from MSRC and CISA KEV.</p>
+</div>
+
+<!-- Feed metadata widgets -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+
+  <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
+    <span class="text-xs text-base-content/50 uppercase tracking-wide">Last Updated</span>
+    <span class="font-semibold text-sm">{{ last_check }}</span>
+  </div>
+
+  <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
+    <span class="text-xs text-base-content/50 uppercase tracking-wide">Next Check</span>
+    <span class="font-semibold text-sm">{{ next_check }}</span>
+  </div>
+
+  <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
+    <span class="text-xs text-base-content/50 uppercase tracking-wide">Build Status</span>
+    <span class="flex items-center gap-1.5 mt-0.5">
+      <span class="badge badge-success badge-sm">Success</span>
+    </span>
+  </div>
+
+  <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
+    <span class="text-xs text-base-content/50 uppercase tracking-wide">Feed Hash</span>
+    <code class="font-mono text-sm text-base-content/70">{{ update_hash }}</code>
+  </div>
+
+  <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
+    <span class="text-xs text-base-content/50 uppercase tracking-wide">OS Versions</span>
+    <span class="font-semibold text-sm">{{ os_versions | length }}</span>
+  </div>
+
+  <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
+    <span class="text-xs text-base-content/50 uppercase tracking-wide">Security Releases</span>
+    <span class="font-semibold text-sm">{{ total_releases }}</span>
+  </div>
+
+  <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
+    <span class="text-xs text-base-content/50 uppercase tracking-wide">CVEs Tracked</span>
+    <span class="font-semibold text-sm">{{ total_cves }}</span>
+  </div>
+
+  <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
+    <span class="text-xs text-base-content/50 uppercase tracking-wide">Actively Exploited</span>
+    <span class="font-semibold text-sm {% if total_exploited %}text-error{% endif %}">{{ total_exploited }}</span>
+  </div>
+
 </div>
 
 {% for group in nav_groups %}

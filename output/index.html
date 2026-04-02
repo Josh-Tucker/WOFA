@@ -229,7 +229,7 @@
             RSS
           </a>
         </div>
-        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 02 Apr 2026 15:11 UTC</span>
+        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 02 Apr 2026 15:20 UTC</span>
         <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
           <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -247,9 +247,56 @@
     <!-- Page content -->
     <main class="max-w-5xl mx-auto px-6 py-8 pb-16 w-full flex-1">
       
-<div class="mb-10">
+<div class="mb-8">
   <h1 class="text-2xl font-bold mb-2">Windows Organized Feed for Admins</h1>
   <p class="text-base-content/60 max-w-2xl text-sm">Machine-readable Windows security update data — CVEs, exploitation status, and build versions per OS release. Sourced from MSRC and CISA KEV.</p>
+</div>
+
+<!-- Feed metadata widgets -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+
+  <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
+    <span class="text-xs text-base-content/50 uppercase tracking-wide">Last Updated</span>
+    <span class="font-semibold text-sm">02 Apr 2026 15:20 UTC</span>
+  </div>
+
+  <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
+    <span class="text-xs text-base-content/50 uppercase tracking-wide">Next Check</span>
+    <span class="font-semibold text-sm">02 Apr 2026 18:30 UTC</span>
+  </div>
+
+  <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
+    <span class="text-xs text-base-content/50 uppercase tracking-wide">Build Status</span>
+    <span class="flex items-center gap-1.5 mt-0.5">
+      <span class="badge badge-success badge-sm">Success</span>
+    </span>
+  </div>
+
+  <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
+    <span class="text-xs text-base-content/50 uppercase tracking-wide">Feed Hash</span>
+    <code class="font-mono text-sm text-base-content/70">9d5464052867</code>
+  </div>
+
+  <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
+    <span class="text-xs text-base-content/50 uppercase tracking-wide">OS Versions</span>
+    <span class="font-semibold text-sm">13</span>
+  </div>
+
+  <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
+    <span class="text-xs text-base-content/50 uppercase tracking-wide">Security Releases</span>
+    <span class="font-semibold text-sm">132</span>
+  </div>
+
+  <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
+    <span class="text-xs text-base-content/50 uppercase tracking-wide">CVEs Tracked</span>
+    <span class="font-semibold text-sm">6641</span>
+  </div>
+
+  <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
+    <span class="text-xs text-base-content/50 uppercase tracking-wide">Actively Exploited</span>
+    <span class="font-semibold text-sm text-error">208</span>
+  </div>
+
 </div>
 
 
