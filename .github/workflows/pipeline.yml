@@ -1,0 +1,82 @@
+name: WOFA Pipeline
+
+on:
+  schedule:
+    - cron: '30 0,6,12,18 * * *'  # every 6h: 00:30, 06:30, 12:30, 18:30 UTC
+    - cron: '30 14-19 * * 2'       # hourly 14:30–19:30 UTC on Tuesdays (Patch Tuesday window)
+  workflow_dispatch:                # manual trigger
+
+# Prevent concurrent runs from trampling each other's commits
+concurrency:
+  group: pipeline
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # push output/ back to main
+  pages: write      # deploy to GitHub Pages
+  id-token: write   # OIDC token for Pages deployment
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # Run the pipeline and commit any changed output back to main
+  # ---------------------------------------------------------------------------
+  pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      # Cache downloaded CVRF docs and lifecycle pages between runs.
+      # Key is fixed so successive runs share the same cache entry;
+      # the pipeline's own TTL logic decides when to re-fetch.
+      - name: Restore pipeline cache
+        uses: actions/cache@v4
+        with:
+          path: .cache/
+          key: wofa-cache-${{ runner.os }}
+          restore-keys: wofa-cache-
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        run: python pipeline.py
+
+      - name: Commit output if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # output/ is in .gitignore; force-add so CI can commit it
+          git add --force output/
+          if git diff --staged --quiet; then
+            echo "Feed unchanged — nothing to commit"
+          else
+            git commit -m "chore: update feed $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
+
+      # Upload the output directory as a Pages artifact for the deploy job
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: output/
+
+  # ---------------------------------------------------------------------------
+  # Deploy the static site to GitHub Pages
+  # ---------------------------------------------------------------------------
+  deploy:
+    needs: pipeline
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4

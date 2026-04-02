@@ -2,7 +2,6 @@
 Feed merge processor.
 
 Combines data from MSRC CVRF and CISA KEV into the WOFA feed structure.
-Produces both a v2 feed (full CVE detail) and a v1 feed (summary only).
 """
 
 import logging
