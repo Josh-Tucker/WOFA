@@ -1,161 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="business">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}WOFA — Windows Organized Feed for Admins{% endblock %}</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:       #0d1117;
-      --surface:  #161b22;
-      --border:   #30363d;
-      --text:     #e6edf3;
-      --muted:    #8b949e;
-      --accent:   #388bfd;
-      --red:      #f85149;
-      --orange:   #d29922;
-      --green:    #3fb950;
-      --tag-bg:   #21262d;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* Layout */
-    header {
-      border-bottom: 1px solid var(--border);
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      height: 56px;
-      position: relative;
-      z-index: 100;
-    }
-    header .logo { font-weight: 700; font-size: 16px; color: var(--text); margin-right: 8px; }
-    header .logo:hover { text-decoration: none; }
-    header .spacer { flex: 1; }
-    header .meta { color: var(--muted); font-size: 12px; }
-
-    /* Nav groups */
-    .nav-group { position: relative; }
-    .nav-group-btn {
-      display: flex; align-items: center; gap: 4px;
-      padding: 6px 10px; border-radius: 6px;
-      font-size: 13px; color: var(--muted);
-      background: none; border: none; cursor: pointer;
-      white-space: nowrap;
-    }
-    .nav-group-btn:hover, .nav-group-btn.active { color: var(--text); background: var(--tag-bg); }
-    .nav-group-btn svg { width: 10px; height: 10px; transition: transform .15s; }
-    .nav-group-btn.open svg { transform: rotate(180deg); }
-
-    .nav-dropdown {
-      position: absolute; top: calc(100% + 6px); left: 0;
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 8px; padding: 6px; min-width: 140px;
-      box-shadow: 0 8px 24px rgba(0,0,0,.4);
-    }
-    .nav-dropdown a {
-      display: block; padding: 7px 12px; border-radius: 5px;
-      font-size: 13px; color: var(--muted);
-    }
-    .nav-dropdown a:hover { background: var(--tag-bg); color: var(--text); text-decoration: none; }
-    .nav-dropdown a.active { color: var(--text); font-weight: 600; }
-
-    main { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 20px 24px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    /* Utilities */
-    .badge {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 12px;
-      font-size: 11px;
-      font-weight: 600;
-      background: var(--tag-bg);
-      border: 1px solid var(--border);
-    }
-    .badge.red    { color: var(--red);    border-color: var(--red); }
-    .badge.orange { color: var(--orange); border-color: var(--orange); }
-    .badge.green  { color: var(--green);  border-color: var(--green); }
-    .badge.blue   { color: var(--accent); border-color: var(--accent); }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 20px;
-    }
-
-    table { width: 100%; border-collapse: collapse; }
-    th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px;
-         padding: 8px 12px; border-bottom: 1px solid var(--border); }
-    td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
-    tr:last-child td { border-bottom: none; }
-    tr:hover td { background: rgba(255,255,255,0.02); }
-
-    .mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 12px; }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4/dist/full.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Apply saved theme before Alpine loads to avoid flash
+    (function() {
+      var t = localStorage.getItem('wofa-theme') || 'business';
+      if (t === 'cupcake') t = 'cupcake'; // migrate old preference
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   {% block head %}{% endblock %}
 </head>
-<body>
-  <header x-data>
-    <a class="logo" href="index.html">WOFA</a>
+<body class="min-h-screen">
+
+  <header class="navbar bg-base-200 border-b border-base-300 px-6 gap-1 min-h-14"
+          x-data="{ dark: localStorage.getItem('wofa-theme') !== 'cupcake' }"
+          x-init="$watch('dark', v => { var t = v ? 'business' : 'cupcake'; document.documentElement.setAttribute('data-theme', t); localStorage.setItem('wofa-theme', t); })">
+    <a class="font-bold text-base mr-2 hover:no-underline" href="index.html">
+      <span style="color:#F25022">W</span><span style="color:#7FBA00">O</span><span style="color:#00A4EF">F</span><span style="color:#FFB900">A</span>
+    </a>
 
     {% for group in nav_groups %}
     {% set group_active = current_slug and group.versions | selectattr("slug", "equalto", current_slug) | list | length > 0 %}
-    <div class="nav-group" x-data="{ open: false }" @click.outside="open = false">
-      <button class="nav-group-btn {% if group_active %}active{% endif %}"
-              :class="{ open: open }"
+    <div class="relative" x-data="{ open: false }" @click.outside="open = false">
+      <button class="btn btn-ghost btn-sm gap-1 {% if group_active %}text-base-content{% else %}text-base-content/60{% endif %}"
               @click="open = !open">
         {{ group.name }}
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-3 h-3 transition-transform duration-150" :class="{ 'rotate-180': open }"
+             fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
         </svg>
       </button>
-      <div class="nav-dropdown" x-show="open" x-transition @click="open = false">
+      <ul class="absolute top-full left-0 mt-1 z-50 bg-base-200 border border-base-300 rounded-lg shadow-xl p-1.5 min-w-36"
+          x-show="open" x-transition @click="open = false">
         {% for v in group.versions %}
-        <a href="{{ v.slug }}.html"
-           class="{% if current_slug == v.slug %}active{% endif %}">
-          {{ v.version_label }}
-        </a>
+        <li>
+          <a href="{{ v.slug }}.html"
+             class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
+                    {% if current_slug == v.slug %}font-semibold text-base-content{% else %}text-base-content/60{% endif %}">
+            {{ v.version_label }}
+          </a>
+        </li>
         {% endfor %}
-      </div>
+      </ul>
     </div>
     {% endfor %}
 
-    <span class="spacer"></span>
-    <span class="meta">Updated {{ last_check }}</span>
+    <a href="cve-search.html"
+       class="btn btn-ghost btn-sm {% if current_slug == 'cve-search' %}text-base-content{% else %}text-base-content/60{% endif %}">
+      CVE Search
+    </a>
+    <a href="resources.html"
+       class="btn btn-ghost btn-sm {% if current_slug == 'resources' %}text-base-content{% else %}text-base-content/60{% endif %}">
+      Resources
+    </a>
+
+    <div class="flex-1"></div>
+    <div class="hidden sm:flex items-center gap-1 mr-2">
+      <a href="v1/windows_data_feed.json" class="btn btn-ghost btn-xs text-base-content/50 hover:text-base-content" title="JSON Feed">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        JSON
+      </a>
+      <a href="windows_release_feed.rss" class="btn btn-ghost btn-xs text-base-content/50 hover:text-base-content" title="RSS Feed">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7M6 17a1 1 0 110 2 1 1 0 010-2z"/></svg>
+        RSS
+      </a>
+    </div>
+    <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated {{ last_check }}</span>
+    <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
+      <!-- sun (shown in dark mode) -->
+      <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/>
+      </svg>
+      <!-- moon (shown in light mode) -->
+      <svg x-show="!dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+      </svg>
+    </button>
   </header>
 
-  <main>
+  <main class="max-w-5xl mx-auto px-6 py-8 pb-16">
     {% block content %}{% endblock %}
   </main>
 
-  <footer>
+  <footer class="border-t border-base-300 py-5 px-6 text-center text-xs text-base-content/40">
     Windows Organized Feed for Admins &nbsp;·&nbsp;
-    Data from <a href="https://api.msrc.microsoft.com">MSRC</a> and <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a> &nbsp;·&nbsp;
-    <a href="v1/windows_data_feed.json">JSON feed</a> &nbsp;·&nbsp;
-    <a href="windows_release_feed.rss">RSS</a>
+    Data from <a href="https://api.msrc.microsoft.com" class="link link-hover">MSRC</a> and
+    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" class="link link-hover">CISA KEV</a>
+    &nbsp;·&nbsp;
+    <a href="v1/windows_data_feed.json" class="link link-hover">JSON feed</a> &nbsp;·&nbsp;
+    <a href="windows_release_feed.rss" class="link link-hover">RSS</a>
   </footer>
 </body>
 </html>

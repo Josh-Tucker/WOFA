@@ -1,0 +1,506 @@
+{% extends "base.html" %}
+{% block title %}Resources & API Reference — WOFA{% endblock %}
+
+{% block head %}
+<link id="hljs-theme" rel="stylesheet" href="">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/powershell.min.js"></script>
+<script>
+  (function () {
+    var DARK  = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css';
+    var LIGHT = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css';
+    var el = document.getElementById('hljs-theme');
+
+    function applyTheme() {
+      el.href = document.documentElement.getAttribute('data-theme') === 'autumn' ? LIGHT : DARK;
+    }
+
+    applyTheme();
+    new MutationObserver(applyTheme).observe(document.documentElement, {
+      attributes: true, attributeFilter: ['data-theme']
+    });
+
+    document.addEventListener('DOMContentLoaded', function () { hljs.highlightAll(); });
+  })();
+</script>
+<style>
+  pre code.hljs { border-radius: 0.5rem; font-size: 0.8rem; line-height: 1.6; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="mb-10">
+  <h1 class="text-2xl font-bold mb-2">Resources &amp; API Reference</h1>
+  <p class="text-base-content/60 text-sm max-w-2xl">
+    WOFA publishes free, machine-readable JSON feeds updated every 6 hours.
+    No API keys, no authentication, no rate limits.
+  </p>
+</div>
+
+<!-- ── Feed Endpoints ── -->
+<section class="mb-12">
+  <h2 class="text-lg font-semibold mb-4 pb-2 border-b border-base-300">Feed Endpoints</h2>
+  <div class="flex flex-col gap-3" x-data="{ base: location.origin + location.pathname.replace(/[^/]*$/, '') }">
+
+    <div class="card bg-base-200 border border-base-300">
+      <div class="card-body p-5 gap-1">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="badge badge-success badge-sm font-mono">GET</span>
+          <code class="font-mono text-sm" x-text="base + 'v1/windows_data_feed.json'">v1/windows_data_feed.json</code>
+          <a href="v1/windows_data_feed.json" target="_blank" class="btn btn-xs btn-ghost ml-auto">Open ↗</a>
+        </div>
+        <p class="text-sm text-base-content/60 mt-1">
+          Full security feed — all tracked OS versions with per-release CVE data, exploitation status, and build versions.
+          Updated every 6 hours.
+        </p>
+      </div>
+    </div>
+
+    <div class="card bg-base-200 border border-base-300">
+      <div class="card-body p-5 gap-1">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="badge badge-success badge-sm font-mono">GET</span>
+          <code class="font-mono text-sm" x-text="base + 'v1/cve_index.json'">v1/cve_index.json</code>
+          <a href="v1/cve_index.json" target="_blank" class="btn btn-xs btn-ghost ml-auto">Open ↗</a>
+        </div>
+        <p class="text-sm text-base-content/60 mt-1">
+          Flat CVE index keyed by CVE ID. Each entry lists severity, CVSS score, exploitation flags, and all
+          affected Windows versions with KB article links. Optimised for client-side search.
+        </p>
+      </div>
+    </div>
+
+    <div class="card bg-base-200 border border-base-300">
+      <div class="card-body p-5 gap-1">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="badge badge-success badge-sm font-mono">GET</span>
+          <code class="font-mono text-sm" x-text="base + 'metadata.json'">metadata.json</code>
+          <a href="metadata.json" target="_blank" class="btn btn-xs btn-ghost ml-auto">Open ↗</a>
+        </div>
+        <p class="text-sm text-base-content/60 mt-1">
+          Lightweight summary — update hash, last check timestamp, and aggregate counts.
+          Poll this to detect feed changes without downloading the full feed.
+        </p>
+      </div>
+    </div>
+
+    <div class="card bg-base-200 border border-base-300">
+      <div class="card-body p-5 gap-1">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="badge badge-success badge-sm font-mono">GET</span>
+          <code class="font-mono text-sm" x-text="base + 'windows_release_feed.rss'">windows_release_feed.rss</code>
+          <a href="windows_release_feed.rss" target="_blank" class="btn btn-xs btn-ghost ml-auto">Open ↗</a>
+        </div>
+        <p class="text-sm text-base-content/60 mt-1">
+          RSS 2.0 feed — one item per OS version for the latest security release. Subscribe in any RSS reader
+          to get notified when new patches drop.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Usage Examples ── -->
+<section class="mb-12">
+  <h2 class="text-lg font-semibold mb-4 pb-2 border-b border-base-300">Usage Examples</h2>
+
+  <div x-data="{ tab: 'curl' }">
+    <div class="tabs tabs-boxed bg-base-200 mb-4 w-fit">
+      <button class="tab" :class="{ 'tab-active': tab === 'curl' }"       @click="tab = 'curl'">curl + jq</button>
+      <button class="tab" :class="{ 'tab-active': tab === 'python' }"     @click="tab = 'python'">Python</button>
+      <button class="tab" :class="{ 'tab-active': tab === 'powershell' }" @click="tab = 'powershell'">PowerShell</button>
+    </div>
+
+    <!-- curl -->
+    <div x-show="tab === 'curl'" class="flex flex-col gap-4">
+      <div>
+        <p class="text-sm text-base-content/60 mb-2">Get the latest build number for Windows 11 24H2:</p>
+        <pre><code class="language-bash">curl -s {{ site_url }}/v1/windows_data_feed.json \
+  | jq '.OSVersions[] | select(.OSVersion == "Windows 11 24H2") | .Latest.ProductVersion'</code></pre>
+      </div>
+      <div>
+        <p class="text-sm text-base-content/60 mb-2">List all actively exploited CVEs across every tracked version:</p>
+        <pre><code class="language-bash">curl -s {{ site_url }}/v1/windows_data_feed.json \
+  | jq '[.OSVersions[].SecurityReleases[].ActivelyExploitedCVEs[]] | unique | sort[]'</code></pre>
+      </div>
+      <div>
+        <p class="text-sm text-base-content/60 mb-2">Check when the feed was last updated:</p>
+        <pre><code class="language-bash">curl -s {{ site_url }}/metadata.json | jq '{LastCheck, UpdateHash}'</code></pre>
+      </div>
+      <div>
+        <p class="text-sm text-base-content/60 mb-2">Look up a specific CVE across all versions:</p>
+        <pre><code class="language-bash">CVE="CVE-2025-21333"
+curl -s {{ site_url }}/v1/cve_index.json \
+  | jq --arg cve "$CVE" '.[$cve] | {severity, cvss_score, in_kev, affected: [.affected[].os]}'</code></pre>
+      </div>
+    </div>
+
+    <!-- python -->
+    <div x-show="tab === 'python'" class="flex flex-col gap-4">
+      <div>
+        <p class="text-sm text-base-content/60 mb-2">Fetch the feed and print exploited CVEs per OS version:</p>
+        <pre><code class="language-python">import requests
+
+FEED_URL = "{{ site_url }}/v1/windows_data_feed.json"
+
+feed = requests.get(FEED_URL, timeout=30).json()
+
+for os_entry in feed["OSVersions"]:
+    latest = os_entry["Latest"]
+    exploited = latest.get("ActivelyExploitedCVEs", [])
+    print(f"{os_entry['OSVersion']}: {len(exploited)} exploited CVEs")
+    for cve in exploited:
+        print(f"  {cve}")</code></pre>
+      </div>
+      <div>
+        <p class="text-sm text-base-content/60 mb-2">Alert when a new patch drops by polling the metadata hash:</p>
+        <pre><code class="language-python">import requests, time
+
+METADATA_URL = "{{ site_url }}/metadata.json"
+
+def get_hash():
+    return requests.get(METADATA_URL, timeout=10).json()["UpdateHash"]
+
+last_hash = get_hash()
+print(f"Watching for updates (current hash: {last_hash[:12]})")
+
+while True:
+    time.sleep(3600)  # check every hour
+    current = get_hash()
+    if current != last_hash:
+        print(f"Feed updated! New hash: {current[:12]}")
+        last_hash = current
+        # trigger your downstream workflow here</code></pre>
+      </div>
+      <div>
+        <p class="text-sm text-base-content/60 mb-2">Search the CVE index for CISA KEV entries:</p>
+        <pre><code class="language-python">import requests
+
+INDEX_URL = "{{ site_url }}/v1/cve_index.json"
+
+index = requests.get(INDEX_URL, timeout=30).json()
+
+kev_cves = {
+    cve_id: data
+    for cve_id, data in index.items()
+    if data.get("in_kev")
+}
+
+print(f"CISA KEV CVEs in current feed: {len(kev_cves)}")
+for cve_id, data in sorted(kev_cves.items()):
+    versions = [a["os"] for a in data["affected"]]
+    print(f"  {cve_id} ({data['severity']}) — {', '.join(set(versions))}")</code></pre>
+      </div>
+    </div>
+
+    <!-- powershell -->
+    <div x-show="tab === 'powershell'" class="flex flex-col gap-4">
+      <div>
+        <p class="text-sm text-base-content/60 mb-2">Get the latest build number for all tracked versions:</p>
+        <pre><code class="language-powershell">$feed = Invoke-RestMethod "{{ site_url }}/v1/windows_data_feed.json"
+
+$feed.OSVersions | Select-Object OSVersion, @{
+    Name = "LatestBuild"; Expression = { $_.Latest.ProductVersion }
+}, @{
+    Name = "ReleaseDate"; Expression = { $_.Latest.ReleaseDate }
+} | Format-Table -AutoSize</code></pre>
+      </div>
+      <div>
+        <p class="text-sm text-base-content/60 mb-2">Find all actively exploited CVEs and output a report:</p>
+        <pre><code class="language-powershell">$feed = Invoke-RestMethod "{{ site_url }}/v1/windows_data_feed.json"
+
+$feed.OSVersions | ForEach-Object {
+    $os = $_.OSVersion
+    $_.SecurityReleases | ForEach-Object {
+        $rel = $_
+        $rel.ActivelyExploitedCVEs | ForEach-Object {
+            [PSCustomObject]@{
+                OSVersion   = $os
+                CVE         = $_
+                KB          = $rel.UpdateName
+                ReleaseDate = $rel.ReleaseDate
+            }
+        }
+    }
+} | Sort-Object CVE -Unique | Format-Table -AutoSize</code></pre>
+      </div>
+      <div>
+        <p class="text-sm text-base-content/60 mb-2">Check if a specific CVE affects any tracked version:</p>
+        <pre><code class="language-powershell">$cveId = "CVE-2025-21333"
+$index = Invoke-RestMethod "{{ site_url }}/v1/cve_index.json"
+
+$entry = $index.$cveId
+if ($entry) {
+    Write-Host "$cveId found:" -ForegroundColor Yellow
+    Write-Host "  Severity : $($entry.severity)"
+    Write-Host "  CVSS     : $($entry.cvss_score)"
+    Write-Host "  CISA KEV : $($entry.in_kev)"
+    Write-Host "  Affected :"
+    $entry.affected | ForEach-Object {
+        Write-Host "    $($_.os) — KB$($_.kb) ($($_.release_date))"
+    }
+} else {
+    Write-Host "$cveId not found in current feed." -ForegroundColor Green
+}</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Feed Schema ── -->
+<section class="mb-12">
+  <h2 class="text-lg font-semibold mb-4 pb-2 border-b border-base-300">Feed Schema</h2>
+
+  <div class="flex flex-col gap-4">
+
+    <!-- Root -->
+    <div>
+      <h3 class="text-sm font-semibold text-base-content/70 uppercase tracking-wide mb-2">Root</h3>
+      <div class="card bg-base-200 border border-base-300 overflow-auto">
+        <table class="table table-sm font-mono text-sm">
+          <thead><tr><th>Field</th><th>Type</th><th class="font-sans font-normal text-base-content/60">Description</th></tr></thead>
+          <tbody>
+            <tr><td>Version</td><td class="text-info">string</td><td class="font-sans text-base-content/70">Feed schema version</td></tr>
+            <tr><td>UpdateHash</td><td class="text-info">string</td><td class="font-sans text-base-content/70">SHA-256 of the canonical feed content — use to detect changes</td></tr>
+            <tr><td>LastCheck</td><td class="text-info">string</td><td class="font-sans text-base-content/70">ISO 8601 UTC timestamp of last pipeline run</td></tr>
+            <tr><td>OSVersions</td><td class="text-warning">array</td><td class="font-sans text-base-content/70">One entry per tracked Windows version</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- OSVersions entry -->
+    <div>
+      <h3 class="text-sm font-semibold text-base-content/70 uppercase tracking-wide mb-2">OSVersions[ ]</h3>
+      <div class="card bg-base-200 border border-base-300 overflow-auto">
+        <table class="table table-sm font-mono text-sm">
+          <thead><tr><th>Field</th><th>Type</th><th class="font-sans font-normal text-base-content/60">Description</th></tr></thead>
+          <tbody>
+            <tr><td>OSVersion</td><td class="text-info">string</td><td class="font-sans text-base-content/70">Human-readable OS name, e.g. <code>Windows 11 24H2</code></td></tr>
+            <tr><td>Latest</td><td class="text-warning">object</td><td class="font-sans text-base-content/70">Snapshot of the most recent release's key fields</td></tr>
+            <tr><td>SecurityReleases</td><td class="text-warning">array</td><td class="font-sans text-base-content/70">All tracked monthly security releases, newest first</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SecurityRelease entry -->
+    <div>
+      <h3 class="text-sm font-semibold text-base-content/70 uppercase tracking-wide mb-2">SecurityReleases[ ]</h3>
+      <div class="card bg-base-200 border border-base-300 overflow-auto">
+        <table class="table table-sm font-mono text-sm">
+          <thead><tr><th>Field</th><th>Type</th><th class="font-sans font-normal text-base-content/60">Description</th></tr></thead>
+          <tbody>
+            <tr><td>UpdateName</td><td class="text-info">string</td><td class="font-sans text-base-content/70">KB article title, e.g. <code>2025-03 Cumulative Update for Windows 11 (KB5053598)</code></td></tr>
+            <tr><td>ReleaseDate</td><td class="text-info">string</td><td class="font-sans text-base-content/70">Release date in <code>YYYY-MM-DD</code> format</td></tr>
+            <tr><td>ProductVersion</td><td class="text-info">string</td><td class="font-sans text-base-content/70">Full OS build string, e.g. <code>10.0.26100.3476</code></td></tr>
+            <tr><td>SecurityInfo</td><td class="text-info">string</td><td class="font-sans text-base-content/70">URL to the Microsoft KB support article</td></tr>
+            <tr><td>CVEs</td><td class="text-warning">object</td><td class="font-sans text-base-content/70">Map of CVE ID → CVE detail object</td></tr>
+            <tr><td>ActivelyExploitedCVEs</td><td class="text-warning">array</td><td class="font-sans text-base-content/70">CVE IDs that are actively exploited in the wild</td></tr>
+            <tr><td>UniqueCVEsCount</td><td class="text-success">number</td><td class="font-sans text-base-content/70">Total distinct CVEs patched in this release</td></tr>
+            <tr><td>DaysSincePreviousRelease</td><td class="text-success">number</td><td class="font-sans text-base-content/70">Days elapsed since the previous release for this OS version</td></tr>
+            <tr><td>Supersedes</td><td class="text-info">string</td><td class="font-sans text-base-content/70">KB number of the update this release supersedes</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CVE entry -->
+    <div>
+      <h3 class="text-sm font-semibold text-base-content/70 uppercase tracking-wide mb-2">CVEs{ "CVE-YYYY-NNNNN": … }</h3>
+      <div class="card bg-base-200 border border-base-300 overflow-auto">
+        <table class="table table-sm font-mono text-sm">
+          <thead><tr><th>Field</th><th>Type</th><th class="font-sans font-normal text-base-content/60">Description</th></tr></thead>
+          <tbody>
+            <tr><td>severity</td><td class="text-info">string</td><td class="font-sans text-base-content/70"><code>Critical</code>, <code>Important</code>, <code>Moderate</code>, or <code>Low</code></td></tr>
+            <tr><td>cvss_score</td><td class="text-success">number</td><td class="font-sans text-base-content/70">CVSS v3 base score (0.0–10.0)</td></tr>
+            <tr><td>actively_exploited</td><td class="text-success">boolean</td><td class="font-sans text-base-content/70"><code>true</code> if exploitation in the wild is confirmed</td></tr>
+            <tr><td>in_kev</td><td class="text-success">boolean</td><td class="font-sans text-base-content/70"><code>true</code> if listed in the CISA Known Exploited Vulnerabilities catalog</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Example snippet -->
+    <div>
+      <h3 class="text-sm font-semibold text-base-content/70 uppercase tracking-wide mb-2">Example Response (abbreviated)</h3>
+      <pre><code class="language-json">{
+  "Version": "1.0",
+  "UpdateHash": "a3f9c2...",
+  "LastCheck": "2025-03-12T06:00:00+00:00",
+  "OSVersions": [
+    {
+      "OSVersion": "Windows 11 24H2",
+      "Latest": {
+        "ReleaseDate": "2025-03-11",
+        "ProductVersion": "10.0.26100.3476",
+        "SecurityInfo": "https://support.microsoft.com/help/5053598",
+        "UniqueCVEsCount": 41,
+        "ActivelyExploitedCVEs": ["CVE-2025-24985", "CVE-2025-24993"]
+      },
+      "SecurityReleases": [
+        {
+          "UpdateName": "2025-03 Cumulative Update for Windows 11 (KB5053598)",
+          "ReleaseDate": "2025-03-11",
+          "ProductVersion": "10.0.26100.3476",
+          "SecurityInfo": "https://support.microsoft.com/help/5053598",
+          "UniqueCVEsCount": 41,
+          "ActivelyExploitedCVEs": ["CVE-2025-24985", "CVE-2025-24993"],
+          "CVEs": {
+            "CVE-2025-24985": {
+              "severity": "Important",
+              "cvss_score": 7.8,
+              "actively_exploited": true,
+              "in_kev": true
+            }
+          },
+          "DaysSincePreviousRelease": 28,
+          "Supersedes": "5051987"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Essential Resources ── -->
+<section class="mb-12">
+  <h2 class="text-lg font-semibold mb-4 pb-2 border-b border-base-300">Essential Resources</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+    <div class="card bg-base-200 border border-base-300">
+      <div class="card-body p-5 gap-3">
+        <h3 class="font-semibold text-sm">Microsoft Official</h3>
+        <ul class="flex flex-col gap-2 text-sm">
+          <li>
+            <a href="https://msrc.microsoft.com/update-guide" target="_blank" rel="noopener" class="link link-hover font-medium">Microsoft Security Update Guide</a>
+            <p class="text-xs text-base-content/50 mt-0.5">Authoritative source for all Microsoft security advisories and KB articles</p>
+          </li>
+          <li>
+            <a href="https://api.msrc.microsoft.com/cvrf/v3.0/" target="_blank" rel="noopener" class="link link-hover font-medium">MSRC CVRF API</a>
+            <p class="text-xs text-base-content/50 mt-0.5">Public API used to source WOFA data — monthly security update documents in CVRF format</p>
+          </li>
+          <li>
+            <a href="https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information" target="_blank" rel="noopener" class="link link-hover font-medium">Windows 11 Release Health</a>
+            <p class="text-xs text-base-content/50 mt-0.5">Official release history and known issues for Windows 11</p>
+          </li>
+          <li>
+            <a href="https://learn.microsoft.com/en-us/windows/release-health/windows-server-release-info" target="_blank" rel="noopener" class="link link-hover font-medium">Windows Server Release Health</a>
+            <p class="text-xs text-base-content/50 mt-0.5">Official release history and known issues for Windows Server editions</p>
+          </li>
+          <li>
+            <a href="https://www.catalog.update.microsoft.com" target="_blank" rel="noopener" class="link link-hover font-medium">Microsoft Update Catalog</a>
+            <p class="text-xs text-base-content/50 mt-0.5">Download individual updates and get supersedence information</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card bg-base-200 border border-base-300">
+      <div class="card-body p-5 gap-3">
+        <h3 class="font-semibold text-sm">Security Intelligence</h3>
+        <ul class="flex flex-col gap-2 text-sm">
+          <li>
+            <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener" class="link link-hover font-medium">CISA Known Exploited Vulnerabilities</a>
+            <p class="text-xs text-base-content/50 mt-0.5">Authoritative catalog of CVEs confirmed exploited in the wild — highest patching priority</p>
+          </li>
+          <li>
+            <a href="https://nvd.nist.gov/" target="_blank" rel="noopener" class="link link-hover font-medium">NIST National Vulnerability Database</a>
+            <p class="text-xs text-base-content/50 mt-0.5">CVSS scores, CWE classifications, and detailed technical analysis per CVE</p>
+          </li>
+          <li>
+            <a href="https://www.cve.org/" target="_blank" rel="noopener" class="link link-hover font-medium">CVE.org</a>
+            <p class="text-xs text-base-content/50 mt-0.5">The official CVE Program — authoritative CVE IDs and descriptions</p>
+          </li>
+          <li>
+            <a href="https://msrc.microsoft.com/blog/" target="_blank" rel="noopener" class="link link-hover font-medium">MSRC Blog</a>
+            <p class="text-xs text-base-content/50 mt-0.5">In-depth technical write-ups on critical vulnerabilities from Microsoft's security team</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card bg-base-200 border border-base-300">
+      <div class="card-body p-5 gap-3">
+        <h3 class="font-semibold text-sm">Patch Management &amp; Deployment</h3>
+        <ul class="flex flex-col gap-2 text-sm">
+          <li>
+            <a href="https://learn.microsoft.com/en-us/windows/deployment/update/waas-manage-updates-wufb" target="_blank" rel="noopener" class="link link-hover font-medium">Windows Update for Business</a>
+            <p class="text-xs text-base-content/50 mt-0.5">Microsoft's built-in policy-based update management for enterprise</p>
+          </li>
+          <li>
+            <a href="https://learn.microsoft.com/en-us/mem/intune/protect/windows-update-for-business-configure" target="_blank" rel="noopener" class="link link-hover font-medium">Intune Windows Update Policies</a>
+            <p class="text-xs text-base-content/50 mt-0.5">Configure update rings and deferral policies via Microsoft Intune</p>
+          </li>
+          <li>
+            <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus" target="_blank" rel="noopener" class="link link-hover font-medium">Windows Server Update Services (WSUS)</a>
+            <p class="text-xs text-base-content/50 mt-0.5">On-premises update distribution and approval management</p>
+          </li>
+          <li>
+            <a href="https://www.pdq.com/pdq-deploy/" target="_blank" rel="noopener" class="link link-hover font-medium">PDQ Deploy</a>
+            <p class="text-xs text-base-content/50 mt-0.5">Third-party tool for silent software and patch deployment across Windows endpoints</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card bg-base-200 border border-base-300">
+      <div class="card-body p-5 gap-3">
+        <h3 class="font-semibold text-sm">Understanding Windows Updates</h3>
+        <ul class="flex flex-col gap-2 text-sm">
+          <li>
+            <a href="https://learn.microsoft.com/en-us/windows/deployment/update/waas-overview" target="_blank" rel="noopener" class="link link-hover font-medium">Windows as a Service overview</a>
+            <p class="text-xs text-base-content/50 mt-0.5">Microsoft's servicing model — quality updates, feature updates, and servicing channels explained</p>
+          </li>
+          <li>
+            <a href="https://learn.microsoft.com/en-us/windows/deployment/update/quality-updates-overview" target="_blank" rel="noopener" class="link link-hover font-medium">Quality Update overview</a>
+            <p class="text-xs text-base-content/50 mt-0.5">How cumulative updates work, what "B", "C", "D" week releases mean, and preview vs. stable</p>
+          </li>
+          <li>
+            <a href="https://learn.microsoft.com/en-us/windows/deployment/update/waas-servicing-channels-windows-10-updates" target="_blank" rel="noopener" class="link link-hover font-medium">Servicing Channels</a>
+            <p class="text-xs text-base-content/50 mt-0.5">General Availability, Long-Term Servicing Channel (LTSC), and Windows Insider explained</p>
+          </li>
+          <li>
+            <a href="https://techcommunity.microsoft.com/category/windows-it-pro/blog/windows-it-pro-blog" target="_blank" rel="noopener" class="link link-hover font-medium">Windows IT Pro Blog</a>
+            <p class="text-xs text-base-content/50 mt-0.5">Patch Tuesday announcements, deployment guidance, and known issue tracking</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Data Sources ── -->
+<section class="mb-4">
+  <h2 class="text-lg font-semibold mb-4 pb-2 border-b border-base-300">Data Sources</h2>
+  <div class="card bg-base-200 border border-base-300">
+    <div class="card-body p-5 gap-4">
+      <p class="text-sm text-base-content/60">WOFA aggregates data from two public sources, refreshed every 6 hours. No authentication or API keys are required to access either source.</p>
+      <div class="flex flex-col gap-4 sm:flex-row">
+        <div class="flex-1">
+          <div class="font-semibold text-sm mb-1">MSRC CVRF API</div>
+          <p class="text-xs text-base-content/60 mb-1">
+            <code class="font-mono">api.msrc.microsoft.com/cvrf/v3.0/</code>
+          </p>
+          <p class="text-xs text-base-content/50">Microsoft's monthly security update documents in Common Vulnerability Reporting Framework (CVRF) format. Provides CVE IDs, severity ratings, CVSS scores, and KB article mappings.</p>
+        </div>
+        <div class="divider sm:divider-horizontal m-0"></div>
+        <div class="flex-1">
+          <div class="font-semibold text-sm mb-1">CISA KEV Catalog</div>
+          <p class="text-xs text-base-content/60 mb-1">
+            <code class="font-mono">cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json</code>
+          </p>
+          <p class="text-xs text-base-content/50">CISA's authoritative list of CVEs with confirmed exploitation in the wild. Used to flag <code>in_kev: true</code> on any CVE present in the catalog.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

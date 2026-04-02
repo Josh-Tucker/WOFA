@@ -1,384 +1,250 @@
 {% extends "base.html" %}
 {% block title %}{{ os.OSVersion }} — WOFA{% endblock %}
 
-{% block head %}
-<style>
-  /* ── page header ── */
-  .os-header { margin-bottom: 32px; }
-  .os-header h1 { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
-  .os-header .breadcrumb { color: var(--muted); font-size: 13px; }
-  .os-header .breadcrumb a { color: var(--muted); }
-
-  /* ── top grid ── */
-  .top-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 36px;
-  }
-  @media (max-width: 700px) { .top-grid { grid-template-columns: 1fr; } }
-
-  .info-card h2 {
-    font-size: 12px; font-weight: 600; color: var(--muted);
-    text-transform: uppercase; letter-spacing: .06em;
-    margin-bottom: 18px; display: flex; align-items: center; gap: 8px;
-  }
-  .info-card h2 svg { width: 14px; height: 14px; opacity: .6; }
-
-  /* latest release card */
-  .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
-  .detail-item { display: flex; flex-direction: column; gap: 2px; }
-  .detail-item .lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
-  .detail-item .val { font-size: 14px; font-weight: 600; }
-  .detail-item .val.mono { font-family: monospace; font-weight: 400; }
-  .detail-item .val.age  { color: var(--muted); font-size: 13px; font-weight: 400; }
-
-  .action-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
-  .action-link {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 6px 14px; border-radius: 6px; font-size: 13px;
-    border: 1px solid var(--border); color: var(--text);
-  }
-  .action-link:hover { background: rgba(255,255,255,.05); text-decoration: none; }
-  .action-link svg { width: 14px; height: 14px; }
-
-  /* resources card */
-  .res-section { margin-bottom: 16px; }
-  .res-section h3 { font-size: 12px; color: var(--muted); font-weight: 500; margin-bottom: 8px; }
-  .res-section ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
-  .res-section li a { font-size: 13px; }
-
-  /* ── section heading ── */
-  .section-heading {
-    font-size: 15px; font-weight: 600;
-    padding-bottom: 10px; margin-bottom: 16px;
-    border-bottom: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .section-heading .controls { display: flex; gap: 8px; }
-  .ctrl-btn {
-    font-size: 12px; padding: 4px 10px; border-radius: 5px; cursor: pointer;
-    background: var(--tag-bg); border: 1px solid var(--border); color: var(--muted);
-  }
-  .ctrl-btn:hover { color: var(--text); }
-
-  /* ── release cards ── */
-  .release-card { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
-
-  .release-header {
-    background: var(--surface);
-    padding: 14px 18px;
-    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-    cursor: pointer; user-select: none;
-  }
-  .release-header:hover { background: rgba(255,255,255,.03); }
-
-  .rh-title { font-size: 14px; font-weight: 600; margin-right: 4px; }
-  .rh-date  { color: var(--muted); font-size: 12px; white-space: nowrap; }
-  .rh-sep   { color: var(--border); }
-  .rh-badges { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
-  .rh-spacer { flex: 1; }
-  .rh-gap   { color: var(--muted); font-size: 12px; white-space: nowrap; }
-  .rh-arrow { color: var(--muted); font-size: 11px; transition: transform .15s; }
-  .rh-arrow.open { transform: rotate(180deg); }
-
-  .risk-badge {
-    font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px;
-  }
-  .risk-critical { background: rgba(248,81,73,.15); color: var(--red);    border: 1px solid rgba(248,81,73,.4); }
-  .risk-high     { background: rgba(210,153,34,.15); color: var(--orange); border: 1px solid rgba(210,153,34,.4); }
-
-  /* collapsed extra line */
-  .collapsed-extra { font-size: 12px; color: var(--muted); width: 100%; margin-top: -4px; }
-
-  /* body */
-  .release-body { padding: 0 18px 18px; border-top: 1px solid var(--border); }
-
-  .update-summary {
-    margin: 14px 0 12px;
-    padding: 10px 14px;
-    border-radius: 6px;
-    background: var(--tag-bg);
-    border-left: 3px solid var(--border);
-    font-size: 13px;
-  }
-  .update-summary.critical { border-left-color: var(--red); }
-  .update-summary.high     { border-left-color: var(--orange); }
-  .update-summary .summary-text { margin-bottom: 4px; }
-  .update-summary .recommendation { color: var(--muted); font-size: 12px; }
-  .update-summary .recommendation strong { color: var(--text); }
-
-  .meta-row { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 16px; }
-  .meta-item .lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 2px; }
-  .meta-item .val { font-size: 13px; }
-
-  /* CVE groups */
-  .cve-section-title {
-    font-size: 12px; font-weight: 600; color: var(--muted);
-    text-transform: uppercase; letter-spacing: .05em;
-    margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;
-  }
-  .cve-groups { display: flex; flex-direction: column; gap: 6px; }
-
-  .cve-group-header {
-    display: flex; align-items: center; gap: 8px;
-    padding: 7px 12px;
-    background: var(--tag-bg); border: 1px solid var(--border); border-radius: 6px;
-    cursor: pointer; font-size: 13px;
-  }
-  .cve-group-header:hover { background: rgba(255,255,255,.04); }
-  .cve-group-name { font-family: monospace; font-weight: 600; }
-  .cve-group-count { color: var(--muted); font-size: 12px; }
-  .cve-group-arrow { margin-left: auto; color: var(--muted); font-size: 11px; transition: transform .15s; }
-  .cve-group-arrow.open { transform: rotate(180deg); }
-
-  .cve-group-body { padding: 8px 12px; display: flex; flex-wrap: wrap; gap: 6px; }
-
-  .cve-chip {
-    display: inline-flex; align-items: center; gap: 4px;
-    font-size: 12px; font-family: monospace;
-    padding: 2px 8px; border-radius: 4px;
-    background: var(--tag-bg); border: 1px solid var(--border);
-    color: var(--text);
-  }
-  .cve-chip:hover { border-color: var(--accent); text-decoration: none; }
-  .cve-chip.exploited { border-color: rgba(248,81,73,.5); color: var(--red); }
-  .cve-chip.kev       { border-color: rgba(210,153,34,.5); color: var(--orange); }
-</style>
-{% endblock %}
-
 {% block content %}
 {% set latest_rel = os.SecurityReleases[0] if os.SecurityReleases else none %}
 {% set latest = os.Latest %}
 
-<div class="os-header">
-  <div class="breadcrumb"><a href="index.html">← All versions</a></div>
-  <h1>{{ os.OSVersion }}</h1>
+<div class="mb-8">
+  <div class="text-sm text-base-content/50 mb-1">
+    <a href="index.html" class="link link-hover">← All versions</a>
+  </div>
+  <h1 class="text-2xl font-bold">{{ os.OSVersion }}</h1>
 </div>
 
-<!-- ── top info grid ── -->
-<div class="top-grid">
+<!-- top info grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-9">
 
-  <!-- Latest release -->
-  <div class="card info-card">
-    <h2>
-      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-      Latest Release
-    </h2>
+  <!-- Latest release card -->
+  <div class="card bg-base-200 border border-base-300">
+    <div class="card-body p-5 gap-0">
+      <h2 class="text-xs font-semibold text-base-content/50 uppercase tracking-widest flex items-center gap-2 mb-4">
+        <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+        Latest Release
+      </h2>
 
-    <div class="detail-grid">
-      <div class="detail-item">
-        <span class="lbl">KB Article</span>
+      <div class="grid grid-cols-2 gap-3 mb-5">
+        <div class="flex flex-col gap-0.5">
+          <span class="text-xs text-base-content/50 uppercase tracking-wide">KB Article</span>
+          {% if latest.SecurityInfo %}
+          <a class="font-semibold link link-hover" href="{{ latest.SecurityInfo }}">KB{{ latest_rel.kb if latest_rel else '' }}</a>
+          {% else %}
+          <span class="font-semibold">KB{{ latest_rel.kb if latest_rel else '—' }}</span>
+          {% endif %}
+        </div>
+        <div class="flex flex-col gap-0.5">
+          <span class="text-xs text-base-content/50 uppercase tracking-wide">Build</span>
+          <code class="font-mono text-sm">{{ latest.ProductVersion or '—' }}</code>
+        </div>
+        <div class="flex flex-col gap-0.5">
+          <span class="text-xs text-base-content/50 uppercase tracking-wide">Released</span>
+          <span class="font-semibold">{{ latest.ReleaseDate or '—' }}</span>
+        </div>
+        <div class="flex flex-col gap-0.5">
+          <span class="text-xs text-base-content/50 uppercase tracking-wide">Age</span>
+          <span class="text-sm text-base-content/50">
+            {% if latest_rel and latest_rel.age_days is not none %}
+              {{ latest_rel.age_days }} day{{ 's' if latest_rel.age_days != 1 else '' }} ago
+            {% else %}—{% endif %}
+          </span>
+        </div>
+        <div class="flex flex-col gap-0.5">
+          <span class="text-xs text-base-content/50 uppercase tracking-wide">CVEs Fixed</span>
+          <span class="font-semibold">{{ latest.UniqueCVEsCount }}</span>
+        </div>
+        <div class="flex flex-col gap-0.5">
+          <span class="text-xs text-base-content/50 uppercase tracking-wide">Exploited</span>
+          <span class="font-semibold {% if latest.ActivelyExploitedCVEs %}text-error{% endif %}">
+            {{ latest.ActivelyExploitedCVEs | length }}
+            {% if latest_rel and latest_rel.kev_count %}
+            <span class="badge badge-warning badge-sm ml-1">{{ latest_rel.kev_count }} KEV</span>
+            {% endif %}
+          </span>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-2">
         {% if latest.SecurityInfo %}
-        <a class="val" href="{{ latest.SecurityInfo }}">KB{{ latest_rel.kb if latest_rel else '' }}</a>
-        {% else %}
-        <span class="val">KB{{ latest_rel.kb if latest_rel else '—' }}</span>
+        <a class="btn btn-sm btn-outline gap-1.5" href="{{ latest.SecurityInfo }}" target="_blank" rel="noopener">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          KB Article
+        </a>
         {% endif %}
+        <a class="btn btn-sm btn-outline gap-1.5" href="https://msrc.microsoft.com/update-guide" target="_blank" rel="noopener">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          MSRC
+        </a>
       </div>
-      <div class="detail-item">
-        <span class="lbl">Build</span>
-        <span class="val mono">{{ latest.ProductVersion or '—' }}</span>
-      </div>
-      <div class="detail-item">
-        <span class="lbl">Released</span>
-        <span class="val">{{ latest.ReleaseDate or '—' }}</span>
-      </div>
-      <div class="detail-item">
-        <span class="lbl">Age</span>
-        <span class="val age">
-          {% if latest_rel and latest_rel.age_days is not none %}
-            {{ latest_rel.age_days }} day{{ 's' if latest_rel.age_days != 1 else '' }} ago
-          {% else %}—{% endif %}
-        </span>
-      </div>
-      <div class="detail-item">
-        <span class="lbl">CVEs fixed</span>
-        <span class="val">{{ latest.UniqueCVEsCount }}</span>
-      </div>
-      <div class="detail-item">
-        <span class="lbl">Exploited</span>
-        <span class="val {% if latest.ActivelyExploitedCVEs %}" style="color:var(--red){% endif %}">
-          {{ latest.ActivelyExploitedCVEs | length }}
-          {% if latest_rel and latest_rel.kev_count %}&nbsp;<span class="badge orange">{{ latest_rel.kev_count }} KEV</span>{% endif %}
-        </span>
-      </div>
-    </div>
-
-    <div class="action-links">
-      {% if latest.SecurityInfo %}
-      <a class="action-link" href="{{ latest.SecurityInfo }}" target="_blank" rel="noopener">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-        KB Article
-      </a>
-      {% endif %}
-      <a class="action-link" href="https://msrc.microsoft.com/update-guide" target="_blank" rel="noopener">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        MSRC
-      </a>
     </div>
   </div>
 
-  <!-- Windows resources -->
-  <div class="card info-card">
-    <h2>
-      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-      Resources
-    </h2>
+  <!-- Resources card -->
+  <div class="card bg-base-200 border border-base-300">
+    <div class="card-body p-5 gap-0">
+      <h2 class="text-xs font-semibold text-base-content/50 uppercase tracking-widest flex items-center gap-2 mb-4">
+        <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+        Resources
+      </h2>
 
-    <div class="res-section">
-      <h3>{{ os.OSVersion }}</h3>
-      <ul>
-        <li><a href="https://msrc.microsoft.com/update-guide" target="_blank" rel="noopener">Microsoft Security Update Guide</a></li>
-        {% if 'Server' not in os.OSVersion %}
-        <li><a href="https://learn.microsoft.com/en-us/windows/release-health/windows{{ '11' if '11' in os.OSVersion else '10' }}-release-information" target="_blank" rel="noopener">Windows Release Health</a></li>
-        {% else %}
-        <li><a href="https://learn.microsoft.com/en-us/windows/release-health/windows-server-release-info" target="_blank" rel="noopener">Windows Server Release Health</a></li>
-        {% endif %}
-        <li><a href="https://www.catalog.update.microsoft.com/Search.aspx?q={{ os.OSVersion | urlencode }}" target="_blank" rel="noopener">Microsoft Update Catalog</a></li>
-      </ul>
-    </div>
+      <div class="mb-4">
+        <h3 class="text-xs text-base-content/50 font-medium mb-2">{{ os.OSVersion }}</h3>
+        <ul class="flex flex-col gap-1.5 text-sm">
+          <li><a href="https://msrc.microsoft.com/update-guide" target="_blank" rel="noopener" class="link link-hover">Microsoft Security Update Guide</a></li>
+          {% if 'Server' not in os.OSVersion %}
+          <li><a href="https://learn.microsoft.com/en-us/windows/release-health/windows{{ '11' if '11' in os.OSVersion else '10' }}-release-information" target="_blank" rel="noopener" class="link link-hover">Windows Release Health</a></li>
+          {% else %}
+          <li><a href="https://learn.microsoft.com/en-us/windows/release-health/windows-server-release-info" target="_blank" rel="noopener" class="link link-hover">Windows Server Release Health</a></li>
+          {% endif %}
+          <li><a href="https://www.catalog.update.microsoft.com/Search.aspx?q={{ os.OSVersion | urlencode }}" target="_blank" rel="noopener" class="link link-hover">Microsoft Update Catalog</a></li>
+        </ul>
+      </div>
 
-    <div class="res-section">
-      <h3>Security Intelligence</h3>
-      <ul>
-        <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">CISA Known Exploited Vulnerabilities</a></li>
-        <li><a href="https://nvd.nist.gov/" target="_blank" rel="noopener">NIST National Vulnerability Database</a></li>
-        <li><a href="https://www.microsoft.com/en-us/msrc/security-researcher-acknowledgments" target="_blank" rel="noopener">MSRC Researcher Acknowledgments</a></li>
-      </ul>
+      <div>
+        <h3 class="text-xs text-base-content/50 font-medium mb-2">Security Intelligence</h3>
+        <ul class="flex flex-col gap-1.5 text-sm">
+          <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener" class="link link-hover">CISA Known Exploited Vulnerabilities</a></li>
+          <li><a href="https://nvd.nist.gov/" target="_blank" rel="noopener" class="link link-hover">NIST National Vulnerability Database</a></li>
+          <li><a href="https://www.microsoft.com/en-us/msrc/security-researcher-acknowledgments" target="_blank" rel="noopener" class="link link-hover">MSRC Researcher Acknowledgments</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 
 </div>
 
-<!-- ── security information ── -->
+<!-- Security Information section -->
 <div x-data="{ expandAll: false }" @expand-all.window="expandAll = true" @collapse-all.window="expandAll = false">
 
-  <div class="section-heading">
-    <span>Security Information</span>
-    <div class="controls">
-      <button class="ctrl-btn" @click="$dispatch('expand-all')">+ Expand All</button>
-      <button class="ctrl-btn" @click="$dispatch('collapse-all')">− Collapse All</button>
+  <div class="flex items-center justify-between mb-4 pb-2.5 border-b border-base-300">
+    <span class="font-semibold">Security Information</span>
+    <div class="flex gap-2">
+      <button class="btn btn-xs btn-ghost" @click="$dispatch('expand-all')">+ Expand All</button>
+      <button class="btn btn-xs btn-ghost" @click="$dispatch('collapse-all')">− Collapse All</button>
     </div>
   </div>
 
   {% for rel in os.SecurityReleases %}
-  <div class="release-card"
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
        x-data="{ open: {{ 'true' if loop.first else 'false' }} }"
-       x-effect="if (expandAll !== undefined) open = $root.__x?.$data.expandAll ?? open"
        @expand-all.window="open = true"
        @collapse-all.window="open = false">
 
-    <!-- header row -->
-    <div class="release-header" @click="open = !open">
-      <span class="rh-title">
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
         {% if rel.SecurityInfo %}
-        <a href="{{ rel.SecurityInfo }}" target="_blank" rel="noopener" @click.stop>KB{{ rel.kb }}</a>
+        <a href="{{ rel.SecurityInfo }}" target="_blank" rel="noopener" @click.stop class="link link-hover">KB{{ rel.kb }}</a>
         {% else %}KB{{ rel.kb }}{% endif %}
       </span>
-      <span class="rh-sep">•</span>
-      <span class="rh-date">{{ rel.ReleaseDate }}</span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">{{ rel.ReleaseDate }}</span>
       {% if rel.ProductVersion %}
-      <span class="rh-sep">•</span>
-      <span class="mono" style="font-size:12px;color:var(--muted)">{{ rel.ProductVersion }}</span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">{{ rel.ProductVersion }}</code>
       {% endif %}
-      <span class="rh-sep">•</span>
-      <div class="rh-badges">
-        {% if rel.UniqueCVEsCount %}
-        <span class="badge {% if rel.UniqueCVEsCount %}blue{% endif %}">{{ rel.UniqueCVEsCount }} CVEs</span>
-        {% else %}
-        <span class="badge">0 CVEs</span>
-        {% endif %}
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        <span class="badge badge-sm {% if rel.UniqueCVEsCount %}badge-info badge-outline{% else %}badge-ghost{% endif %}">{{ rel.UniqueCVEsCount }} CVEs</span>
         {% if rel.kev_count %}
-        <span class="badge orange">{{ rel.kev_count }} KEV</span>
+        <span class="badge badge-sm badge-warning badge-outline">{{ rel.kev_count }} KEV</span>
         {% endif %}
         {% if rel.risk_level == 'critical' %}
-        <span class="risk-badge risk-critical">Mitigates Critical Risk</span>
+        <span class="badge badge-sm badge-error">Critical Risk</span>
         {% elif rel.risk_level == 'high' %}
-        <span class="risk-badge risk-high">Active Exploitation</span>
+        <span class="badge badge-sm badge-warning">Active Exploitation</span>
         {% endif %}
       </div>
-      <span class="rh-spacer"></span>
+      <div class="flex-1"></div>
       {% if rel.DaysSincePreviousRelease and not loop.last %}
-      <span class="rh-gap">+{{ rel.DaysSincePreviousRelease }}d</span>
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+{{ rel.DaysSincePreviousRelease }}d</span>
       {% endif %}
-      <span class="rh-arrow" :class="{ open: open }">▼</span>
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
     </div>
 
     <!-- collapsed hint -->
-    <div class="collapsed-extra" x-show="!open" style="padding: 0 18px 10px">
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
       {% if rel.DaysSincePreviousRelease and not loop.last %}{{ rel.DaysSincePreviousRelease }} days since previous release &nbsp;·&nbsp; {% endif %}
       {{ rel.summary }}
     </div>
 
     <!-- expanded body -->
-    <div class="release-body" x-show="open" x-transition>
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
 
       <!-- summary banner -->
-      <div class="update-summary {{ rel.risk_level }}">
-        <div class="summary-text">
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  {% if rel.risk_level == 'critical' %}border-error
+                  {% elif rel.risk_level == 'high' %}border-warning
+                  {% else %}border-neutral{% endif %}">
+        <div class="mb-1">
           {% if rel.risk_level %}⚠️{% else %}ℹ️{% endif %}
           {{ rel.summary }}
         </div>
-        <div class="recommendation">
-          <strong>Recommendation:</strong> {{ rel.recommendation }}
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> {{ rel.recommendation }}
         </div>
       </div>
 
       <!-- meta row -->
-      <div class="meta-row">
-        <div class="meta-item">
-          <div class="lbl">KB Article</div>
-          <div class="val">
-            {% if rel.SecurityInfo %}<a href="{{ rel.SecurityInfo }}" target="_blank" rel="noopener">KB{{ rel.kb }}</a>
-            {% else %}KB{{ rel.kb }}{% endif %}
-          </div>
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          {% if rel.SecurityInfo %}<a href="{{ rel.SecurityInfo }}" target="_blank" rel="noopener" class="link link-hover">KB{{ rel.kb }}</a>
+          {% else %}KB{{ rel.kb }}{% endif %}
         </div>
         {% if rel.ProductVersion %}
-        <div class="meta-item">
-          <div class="lbl">Build</div>
-          <div class="val mono">{{ rel.ProductVersion }}</div>
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">{{ rel.ProductVersion }}</code>
         </div>
         {% endif %}
-        <div class="meta-item">
-          <div class="lbl">Vulnerabilities</div>
-          <div class="val">{{ rel.UniqueCVEsCount }}</div>
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          {{ rel.UniqueCVEsCount }}
         </div>
         {% if rel.kev_count %}
-        <div class="meta-item">
-          <div class="lbl">CISA KEV</div>
-          <div class="val" style="color:var(--orange)">{{ rel.kev_count }}</div>
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">CISA KEV</div>
+          <span class="text-warning">{{ rel.kev_count }}</span>
         </div>
         {% endif %}
         {% if rel.DaysSincePreviousRelease and not loop.last %}
-        <div class="meta-item">
-          <div class="lbl">Days to Prev.</div>
-          <div class="val">{{ rel.DaysSincePreviousRelease }}</div>
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          {{ rel.DaysSincePreviousRelease }}
         </div>
         {% endif %}
         {% if rel.Supersedes %}
-        <div class="meta-item">
-          <div class="lbl">Supersedes</div>
-          <div class="val mono">KB{{ rel.Supersedes }}</div>
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Supersedes</div>
+          <code class="font-mono">KB{{ rel.Supersedes }}</code>
         </div>
         {% endif %}
       </div>
 
       <!-- CVE groups -->
       {% if rel.cve_groups %}
-      <div class="cve-section-title">
-        <span>CVEs ({{ rel.UniqueCVEsCount }})</span>
+      <div class="text-xs font-semibold text-base-content/50 uppercase tracking-wide mb-2.5">
+        CVEs ({{ rel.UniqueCVEsCount }})
       </div>
-      <div class="cve-groups">
+      <div class="flex flex-col gap-1.5">
         {% for group in rel.cve_groups %}
         <div x-data="{ gopen: {{ 'true' if rel.is_latest else 'false' }} }">
-          <div class="cve-group-header" @click="gopen = !gopen">
-            <span class="cve-group-name">{{ group.name }}</span>
-            <span class="cve-group-count">({{ group.cves | length }} CVE{{ 's' if group.cves | length != 1 else '' }})</span>
-            <span class="cve-group-arrow" :class="{ open: gopen }">▼</span>
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">{{ group.name }}</code>
+            <span class="text-xs text-base-content/50">({{ group.cves | length }} CVE{{ 's' if group.cves | length != 1 else '' }})</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
           </div>
-          <div class="cve-group-body" x-show="gopen" x-transition>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
             {% for cve in group.cves %}
-            <a class="cve-chip {% if cve.in_kev %}kev{% elif cve.actively_exploited %}exploited{% endif %}"
+            <a class="inline-flex items-center gap-1 font-mono text-xs px-2 py-0.5 rounded border hover:no-underline
+                      {% if cve.in_kev %}border-warning/50 text-warning bg-warning/5 hover:border-warning
+                      {% elif cve.actively_exploited %}border-error/50 text-error bg-error/5 hover:border-error
+                      {% else %}border-base-300 text-base-content/80 hover:border-info/60{% endif %}"
                href="https://nvd.nist.gov/vuln/detail/{{ cve.id }}"
                target="_blank" rel="noopener"
                title="{{ cve.severity or '' }}{% if cve.cvss_score %} · CVSS {{ cve.cvss_score }}{% endif %}{% if cve.in_kev %} · CISA KEV{% endif %}">

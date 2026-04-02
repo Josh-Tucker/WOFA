@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+{% block title %}CVE Search — WOFA{% endblock %}
+
+{% block content %}
+<div class="mb-8">
+  <h1 class="text-2xl font-bold mb-2">CVE Search</h1>
+  <p class="text-base-content/60 text-sm max-w-2xl">Search for a CVE to see which Windows versions and security releases are affected.</p>
+</div>
+
+<div x-data="cveSearch()" x-init="init()">
+
+  <div class="flex gap-2 mb-4">
+    <input type="text"
+           x-model="query"
+           @input.debounce.150ms="search()"
+           @keydown.escape="query = ''; results = []"
+           placeholder="CVE ID, e.g. CVE-2025-21333 or 21333"
+           class="input input-bordered flex-1 font-mono"
+           autofocus>
+    <button class="btn btn-ghost" @click="query = ''; results = []; pushState()" x-show="query">Clear</button>
+  </div>
+
+  <div class="flex items-center gap-5 mb-6 text-sm flex-wrap">
+    <label class="flex items-center gap-2 cursor-pointer select-none">
+      <input type="checkbox" x-model="kevOnTop" @change="search()" class="checkbox checkbox-sm checkbox-warning">
+      <span>KEV on Top</span>
+    </label>
+    <span class="text-base-content/40 text-xs" x-show="query && !loading">
+      <span x-text="results.length"></span> result<span x-show="results.length !== 1">s</span>
+    </span>
+    <span class="loading loading-spinner loading-xs text-base-content/40" x-show="loading"></span>
+  </div>
+
+  <!-- empty state -->
+  <div x-show="!query && !loading" class="text-center py-20 text-base-content/30 select-none">
+    <div class="text-5xl mb-4">🔍</div>
+    <div class="text-sm">Enter a CVE ID to search across all tracked Windows versions</div>
+  </div>
+
+  <!-- no results -->
+  <div x-show="query && results.length === 0 && !loading" class="text-center py-20 text-base-content/30">
+    <div class="text-sm">No results for <code class="font-mono" x-text="query"></code></div>
+  </div>
+
+  <!-- results -->
+  <div class="flex flex-col gap-3">
+    <template x-for="cve in results" :key="cve.id">
+      <div class="card bg-base-200 border border-base-300">
+        <div class="card-body p-5 gap-3">
+
+          <!-- CVE header row -->
+          <div class="flex items-center gap-2.5 flex-wrap">
+            <a :href="'https://nvd.nist.gov/vuln/detail/' + cve.id"
+               target="_blank" rel="noopener"
+               class="font-mono font-bold text-base link link-hover"
+               x-text="cve.id"></a>
+            <span x-show="cve.in_kev" class="badge badge-warning badge-sm">CISA KEV</span>
+            <span x-show="cve.actively_exploited && !cve.in_kev" class="badge badge-error badge-outline badge-sm">Actively Exploited</span>
+            <span class="badge badge-outline badge-sm"
+                  :class="{
+                    'badge-error':   cve.severity === 'Critical',
+                    'badge-warning': cve.severity === 'Important',
+                    'badge-ghost':   cve.severity === 'Moderate' || cve.severity === 'Low' || !cve.severity
+                  }"
+                  x-text="cve.severity || 'Unknown'"></span>
+            <span x-show="cve.cvss_score" class="text-xs text-base-content/50">
+              CVSS <span class="font-semibold text-base-content/70" x-text="cve.cvss_score"></span>
+            </span>
+          </div>
+
+          <!-- affected versions -->
+          <div>
+            <div class="text-xs text-base-content/50 uppercase tracking-wide mb-2">Affected Versions</div>
+            <div class="flex flex-col gap-1.5">
+              <template x-for="a in cve.affected" :key="a.os + a.kb">
+                <div class="flex items-center gap-2 text-sm flex-wrap">
+                  <a :href="a.slug + '.html'"
+                     class="text-base-content/80 hover:text-base-content hover:no-underline text-sm"
+                     x-text="a.os"></a>
+                  <span class="text-base-content/30 text-xs">·</span>
+                  <template x-if="a.security_info">
+                    <a :href="a.security_info" target="_blank" rel="noopener"
+                       class="link link-hover font-mono text-xs">KB<span x-text="a.kb"></span></a>
+                  </template>
+                  <template x-if="!a.security_info">
+                    <span class="font-mono text-xs text-base-content/60">KB<span x-text="a.kb"></span></span>
+                  </template>
+                  <span class="text-base-content/30 text-xs">·</span>
+                  <span class="text-xs text-base-content/50" x-text="a.release_date"></span>
+                  <code x-show="a.product_version"
+                        class="font-mono text-xs text-base-content/40"
+                        x-text="a.product_version"></code>
+                </div>
+              </template>
+            </div>
+          </div>
+
+          <!-- external links -->
+          <div class="flex gap-2 pt-1 flex-wrap">
+            <a :href="'https://nvd.nist.gov/vuln/detail/' + cve.id"
+               target="_blank" rel="noopener"
+               class="btn btn-xs btn-outline">NVD</a>
+            <a :href="'https://www.cve.org/CVERecord?id=' + cve.id"
+               target="_blank" rel="noopener"
+               class="btn btn-xs btn-outline">CVE.org</a>
+            <a :href="'https://msrc.microsoft.com/update-guide/vulnerability/' + cve.id"
+               target="_blank" rel="noopener"
+               class="btn btn-xs btn-outline">MSRC</a>
+            <template x-if="cve.in_kev">
+              <a :href="'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=' + cve.id"
+                 target="_blank" rel="noopener"
+                 class="btn btn-xs btn-warning btn-outline">CISA KEV</a>
+            </template>
+          </div>
+
+        </div>
+      </div>
+    </template>
+  </div>
+
+</div>
+
+<script>
+document.addEventListener('alpine:init', () => {
+  Alpine.data('cveSearch', () => ({
+    query: new URLSearchParams(location.search).get('q') || '',
+    kevOnTop: false,
+    loading: true,
+    index: {},
+    results: [],
+
+    async init() {
+      const resp = await fetch('v1/cve_index.json');
+      this.index = await resp.json();
+      this.loading = false;
+      if (this.query) this.search();
+    },
+
+    pushState() {
+      const q = this.query.trim();
+      history.replaceState(null, '', q ? '?q=' + encodeURIComponent(q) : location.pathname);
+    },
+
+    search() {
+      const q = this.query.trim().toUpperCase();
+      this.pushState();
+      if (!q) { this.results = []; return; }
+
+      this.results = Object.entries(this.index)
+        .filter(([id]) => id.includes(q))
+        .map(([id, data]) => ({ id, ...data }));
+
+      this.results.sort((a, b) => {
+        if (this.kevOnTop) {
+          if (b.in_kev !== a.in_kev) return b.in_kev - a.in_kev;
+          if (b.actively_exploited !== a.actively_exploited) return b.actively_exploited - a.actively_exploited;
+        }
+        return a.id.localeCompare(b.id);
+      });
+    },
+  }));
+});
+</script>
+{% endblock %}

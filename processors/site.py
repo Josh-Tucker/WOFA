@@ -129,6 +129,60 @@ def _enrich_os(os_entry: dict) -> dict:
     return {**os_entry, "SecurityReleases": enriched}
 
 
+def _patch_tuesday_summary(os_versions: list[dict]) -> dict | None:
+    """
+    Build a summary of the most recent Patch Tuesday across all OS versions.
+    Uses the latest release date that appears in any OS version's releases.
+    """
+    latest_date = None
+    for os_entry in os_versions:
+        releases = os_entry.get("SecurityReleases", [])
+        if releases:
+            d = releases[0].get("ReleaseDate")  # sorted newest first
+            if d and (latest_date is None or d > latest_date):
+                latest_date = d
+
+    if not latest_date:
+        return None
+
+    rows = []
+    all_exploited: set[str] = set()
+    total_cves = 0
+    total_kev = 0
+
+    for os_entry in os_versions:
+        for rel in os_entry.get("SecurityReleases", []):
+            if rel.get("ReleaseDate") == latest_date:
+                rows.append({
+                    "os_name": os_entry["OSVersion"],
+                    "slug": os_entry["slug"],
+                    **rel,
+                })
+                total_cves += rel.get("UniqueCVEsCount", 0)
+                all_exploited.update(rel.get("ActivelyExploitedCVEs", []))
+                total_kev += rel.get("kev_count", 0)
+                break
+
+    if not rows:
+        return None
+
+    try:
+        month_label = date.fromisoformat(latest_date).strftime("%B %Y")
+    except ValueError:
+        month_label = latest_date
+
+    return {
+        "date": latest_date,
+        "month_label": month_label,
+        "rows": rows,
+        "total_cves": total_cves,
+        "exploited_cves": sorted(all_exploited),
+        "total_exploited": len(all_exploited),
+        "total_kev": total_kev,
+        "versions_updated": len(rows),
+    }
+
+
 def _recent_releases(os_versions: list[dict], limit: int = 30) -> list[dict]:
     rows = []
     for os_entry in os_versions:
@@ -142,8 +196,47 @@ def _recent_releases(os_versions: list[dict], limit: int = 30) -> list[dict]:
     return rows[:limit]
 
 
+def build_cve_index(os_versions: list[dict]) -> dict:
+    """
+    Build a flat CVE index for client-side search.
+    Returns { cve_id: { severity, cvss_score, actively_exploited, in_kev, affected: [...] } }
+    where each affected entry is one OS version + KB release.
+    """
+    index: dict[str, dict] = {}
+    for os_entry in os_versions:
+        os_name = os_entry["OSVersion"]
+        slug = os_entry["slug"]
+        for rel in os_entry.get("SecurityReleases", []):
+            for cve_id, cve_data in (rel.get("CVEs") or {}).items():
+                if cve_id not in index:
+                    index[cve_id] = {
+                        "severity": cve_data.get("severity"),
+                        "cvss_score": cve_data.get("cvss_score"),
+                        "actively_exploited": bool(cve_data.get("actively_exploited")),
+                        "in_kev": bool(cve_data.get("in_kev")),
+                        "affected": [],
+                    }
+                entry = index[cve_id]
+                if cve_data.get("actively_exploited"):
+                    entry["actively_exploited"] = True
+                if cve_data.get("in_kev"):
+                    entry["in_kev"] = True
+                entry["affected"].append({
+                    "os": os_name,
+                    "slug": slug,
+                    "kb": rel.get("kb", ""),
+                    "release_date": rel.get("ReleaseDate"),
+                    "security_info": rel.get("SecurityInfo"),
+                    "product_version": rel.get("ProductVersion"),
+                })
+    for entry in index.values():
+        entry["affected"].sort(key=lambda x: x.get("release_date") or "", reverse=True)
+    return index
+
+
 def generate(feed: dict) -> None:
     """Render all site pages from the feed dict and write to output/."""
+    import json
     from urllib.parse import quote_plus
 
     env = Environment(
@@ -156,13 +249,12 @@ def generate(feed: dict) -> None:
 
     os_versions = []
     for os_entry in feed.get("OSVersions", []):
-        cfg = next((c for c in config.OS_VERSIONS if c["name"] == os_entry["OSVersion"]), {})
         enriched = _enrich_os(os_entry)
         os_versions.append({
             **enriched,
             "slug": _slug(os_entry["OSVersion"]),
-            "group": cfg.get("group", os_entry["OSVersion"]),
-            "version_label": cfg.get("version_label", os_entry["OSVersion"]),
+            "group": os_entry.get("Group", os_entry["OSVersion"]),
+            "version_label": os_entry.get("VersionLabel", os_entry["OSVersion"]),
         })
 
     nav_groups = _nav_groups(os_versions)
@@ -171,12 +263,18 @@ def generate(feed: dict) -> None:
         "os_versions": os_versions,
         "nav_groups": nav_groups,
         "last_check": last_check,
+        "site_url": config.SITE_URL,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     tmpl = env.get_template("index.html")
-    html = tmpl.render(**base_ctx, current_slug=None, recent_releases=_recent_releases(os_versions))
+    html = tmpl.render(
+        **base_ctx,
+        current_slug=None,
+        recent_releases=_recent_releases(os_versions),
+        patch_tuesday=_patch_tuesday_summary(os_versions),
+    )
     (OUTPUT_DIR / "index.html").write_text(html)
     logger.info("Written output/index.html")
 
@@ -186,3 +284,19 @@ def generate(feed: dict) -> None:
         page_path = OUTPUT_DIR / f"{os_entry['slug']}.html"
         page_path.write_text(html)
         logger.info("Written output/%s.html", os_entry["slug"])
+
+    cve_index = build_cve_index(os_versions)
+    index_path = OUTPUT_DIR / "v1" / "cve_index.json"
+    index_path.parent.mkdir(parents=True, exist_ok=True)
+    index_path.write_text(json.dumps(cve_index, ensure_ascii=False))
+    logger.info("Written output/v1/cve_index.json (%d CVEs)", len(cve_index))
+
+    tmpl = env.get_template("cve_search.html")
+    html = tmpl.render(**base_ctx, current_slug="cve-search")
+    (OUTPUT_DIR / "cve-search.html").write_text(html)
+    logger.info("Written output/cve-search.html")
+
+    tmpl = env.get_template("resources.html")
+    html = tmpl.render(**base_ctx, current_slug="resources")
+    (OUTPUT_DIR / "resources.html").write_text(html)
+    logger.info("Written output/resources.html")

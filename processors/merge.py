@@ -9,7 +9,7 @@ import logging
 from datetime import datetime, date, timezone, timedelta
 
 import config
-from collectors import msrc, cisa_kev
+from collectors import msrc, cisa_kev, os_versions as os_versions_collector
 
 logger = logging.getLogger(__name__)
 
@@ -55,9 +55,29 @@ def build_feed() -> dict:
     update_ids = _months_to_fetch(config.MONTHS_TO_FETCH)
     logger.info("Processing %d MSRC monthly releases", len(update_ids))
 
+    # Derive OS version list from the most recent available CVRF document
+    os_version_configs: list[dict] = []
+    for uid in update_ids:
+        try:
+            doc = msrc.get_cvrf_document(uid)
+            os_version_configs = os_versions_collector.from_cvrf_document(doc)
+            if os_version_configs:
+                logger.info(
+                    "Tracking %d OS versions (discovered from %s): %s",
+                    len(os_version_configs),
+                    uid,
+                    ", ".join(c["name"] for c in os_version_configs),
+                )
+                break
+        except Exception as exc:
+            logger.warning("Skipping %s for OS version discovery: %s", uid, exc)
+
+    if not os_version_configs:
+        raise RuntimeError("Could not discover any OS versions from CVRF documents")
+
     # {short_name: [release_dict, ...]}  — accumulate across months
     releases_by_os: dict[str, list[dict]] = {
-        os_cfg["short_name"]: [] for os_cfg in config.OS_VERSIONS
+        os_cfg["short_name"]: [] for os_cfg in os_version_configs
     }
 
     for uid in update_ids:
@@ -67,7 +87,7 @@ def build_feed() -> dict:
             logger.warning("Skipping %s (fetch error: %s)", uid, exc)
             continue
 
-        extracted = msrc.extract_os_releases(cvrf_doc, config.OS_VERSIONS)
+        extracted = msrc.extract_os_releases(cvrf_doc, os_version_configs)
 
         for sname, rel in extracted.items():
             # Cross-reference CVEs with KEV
@@ -81,7 +101,7 @@ def build_feed() -> dict:
     # --- Build per-OS-version output ---
     os_version_entries = []
 
-    os_cfg_by_sname = {os["short_name"]: os for os in config.OS_VERSIONS}
+    os_cfg_by_sname = {os["short_name"]: os for os in os_version_configs}
 
     for sname, releases in releases_by_os.items():
         if not releases:
@@ -128,6 +148,8 @@ def build_feed() -> dict:
 
         os_version_entries.append({
             "OSVersion": os_name,
+            "Group": os_cfg["group"],
+            "VersionLabel": os_cfg["version_label"],
             "Latest": {
                 "UpdateName": latest.get("UpdateName"),
                 "ProductVersion": latest.get("ProductVersion"),

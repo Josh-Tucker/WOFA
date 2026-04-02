@@ -1,159 +1,187 @@
 {% extends "base.html" %}
-
 {% block title %}WOFA — Windows Organized Feed for Admins{% endblock %}
 
-{% block head %}
-<style>
-  .hero { margin-bottom: 40px; }
-  .hero h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
-  .hero p { color: var(--muted); max-width: 600px; }
-  .hero .links { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; }
-  .hero .links a {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 6px 14px; border-radius: 6px;
-    border: 1px solid var(--border); font-size: 13px; color: var(--text);
-  }
-  .hero .links a:hover { background: var(--surface); text-decoration: none; }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 16px;
-    margin-bottom: 48px;
-  }
-
-  .os-card h2 { font-size: 15px; margin-bottom: 12px; }
-  .os-card .build { color: var(--muted); font-size: 12px; margin-bottom: 12px; }
-
-  .os-card .stats { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
-  .os-card .stat { text-align: center; }
-  .os-card .stat .num { font-size: 22px; font-weight: 700; }
-  .os-card .stat .num.red { color: var(--red); }
-  .os-card .stat .lbl { color: var(--muted); font-size: 11px; }
-
-  .os-card .kb-link { font-size: 13px; }
-  .os-card .date { color: var(--muted); font-size: 12px; margin-top: 4px; }
-
-  .os-card .exploited-list { margin-top: 12px; }
-  .os-card .exploited-list .lbl { font-size: 11px; color: var(--muted); margin-bottom: 6px; }
-  .os-card .exploited-list .cves { display: flex; flex-wrap: wrap; gap: 4px; }
-
-  .section-title {
-    font-size: 16px; font-weight: 600;
-    margin-bottom: 16px; padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .release-table .severity-Critical { color: var(--red); }
-  .release-table .severity-Important { color: var(--orange); }
-  .release-table .severity-Moderate { color: var(--muted); }
-</style>
-{% endblock %}
-
 {% block content %}
-<div class="hero">
-  <h1>Windows Organized Feed for Admins</h1>
-  <p>Machine-readable Windows security update data — CVEs, exploitation status, and build versions per OS release. Sourced from MSRC and CISA KEV.</p>
-  <div class="links">
-    <a href="v1/windows_data_feed.json">&#x1f4c4; JSON Feed</a>
-    <a href="windows_release_feed.rss">&#x1f4e1; RSS</a>
-    <a href="metadata.json">&#x23f1; Metadata</a>
-  </div>
+<div class="mb-10">
+  <h1 class="text-2xl font-bold mb-2">Windows Organized Feed for Admins</h1>
+  <p class="text-base-content/60 max-w-2xl text-sm">Machine-readable Windows security update data — CVEs, exploitation status, and build versions per OS release. Sourced from MSRC and CISA KEV.</p>
 </div>
 
-<div class="grid">
-  {% for os in os_versions %}
-  {% set latest = os.Latest %}
-  <div class="card os-card">
-    <h2><a href="{{ os.slug }}.html">{{ os.OSVersion }}</a></h2>
+{% for group in nav_groups %}
+<section class="mb-10"
+         x-data="{ canLeft: false, canRight: false, update(el) { this.canLeft = el.scrollLeft > 4; this.canRight = el.scrollLeft + el.clientWidth < el.scrollWidth - 4; } }"
+         x-init="$nextTick(() => update($refs.carousel)); $refs.carousel.addEventListener('scroll', () => update($refs.carousel))">
 
-    <div class="stats">
-      <div class="stat">
-        <div class="num">{{ latest.UniqueCVEsCount }}</div>
-        <div class="lbl">CVEs</div>
-      </div>
-      <div class="stat">
-        <div class="num {% if latest.ActivelyExploitedCVEs %}red{% endif %}">
-          {{ latest.ActivelyExploitedCVEs | length }}
+  <div class="flex items-center gap-3 mb-3">
+    <h2 class="text-base font-semibold">{{ group.name }}</h2>
+    <span class="text-xs text-base-content/40">{{ group.versions | length }} version{{ 's' if group.versions | length != 1 else '' }}</span>
+    <div class="flex gap-1 ml-auto">
+      <button class="btn btn-ghost btn-xs btn-square transition-opacity"
+              :class="canLeft ? 'opacity-100' : 'opacity-25 cursor-default'"
+              @click="$refs.carousel.scrollBy({ left: -320, behavior: 'smooth' })">&#8592;</button>
+      <button class="btn btn-ghost btn-xs btn-square transition-opacity"
+              :class="canRight ? 'opacity-100' : 'opacity-25 cursor-default'"
+              @click="$refs.carousel.scrollBy({ left: 320, behavior: 'smooth' })">&#8594;</button>
+    </div>
+  </div>
+
+  <div x-ref="carousel"
+       class="flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory scroll-smooth"
+       style="scrollbar-width: none;">
+
+    {% for os in group.versions %}
+    {% set latest = os.Latest %}
+    <div class="card bg-base-200 border border-base-300 shrink-0 w-72 snap-start">
+      <div class="card-body p-5 gap-3">
+
+        <h3 class="font-semibold text-sm leading-tight">
+          <a href="{{ os.slug }}.html" class="link link-hover">{{ os.version_label }}</a>
+        </h3>
+
+        <div class="flex gap-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold">{{ latest.UniqueCVEsCount }}</div>
+            <div class="text-xs text-base-content/50">CVEs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold {% if latest.ActivelyExploitedCVEs %}text-error{% endif %}">
+              {{ latest.ActivelyExploitedCVEs | length }}
+            </div>
+            <div class="text-xs text-base-content/50">Exploited</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold">{{ os.SecurityReleases | length }}</div>
+            <div class="text-xs text-base-content/50">Releases</div>
+          </div>
         </div>
-        <div class="lbl">Exploited</div>
+
+        <div class="text-xs text-base-content/60 leading-relaxed">
+          {% if latest.SecurityInfo %}
+          <a href="{{ latest.SecurityInfo }}" class="link link-hover">{{ latest.UpdateName }}</a>
+          {% else %}
+          {{ latest.UpdateName }}
+          {% endif %}
+        </div>
+
+        <div class="text-xs text-base-content/40">
+          {{ latest.ReleaseDate }}
+          {% if latest.ProductVersion %}
+            &nbsp;·&nbsp; <code class="font-mono">{{ latest.ProductVersion }}</code>
+          {% endif %}
+        </div>
+
+        {% if latest.ActivelyExploitedCVEs %}
+        <div class="flex flex-wrap gap-1 pt-1 border-t border-base-300">
+          {% for cve in latest.ActivelyExploitedCVEs[:4] %}
+          <span class="badge badge-error badge-sm">{{ cve }}</span>
+          {% endfor %}
+          {% if latest.ActivelyExploitedCVEs | length > 4 %}
+          <span class="badge badge-ghost badge-sm">+{{ latest.ActivelyExploitedCVEs | length - 4 }} more</span>
+          {% endif %}
+        </div>
+        {% endif %}
+
       </div>
-      <div class="stat">
-        <div class="num">{{ os.SecurityReleases | length }}</div>
-        <div class="lbl">Releases</div>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+{% endfor %}
+
+{% if patch_tuesday %}
+<div class="flex items-baseline gap-3 mb-4 pb-2 border-b border-base-300">
+  <h2 class="text-base font-semibold">Latest Patch Tuesday</h2>
+  <span class="text-sm text-base-content/50">{{ patch_tuesday.month_label }} &nbsp;·&nbsp; {{ patch_tuesday.date }}</span>
+</div>
+
+<div class="card bg-base-200 border border-base-300">
+  <div class="card-body p-5 gap-5">
+
+    <!-- Aggregate stats -->
+    <div class="flex flex-wrap gap-8">
+      <div>
+        <div class="text-3xl font-bold">{{ patch_tuesday.total_cves }}</div>
+        <div class="text-xs text-base-content/50 mt-0.5">Total CVEs</div>
+      </div>
+      <div>
+        <div class="text-3xl font-bold {% if patch_tuesday.total_exploited %}text-error{% endif %}">
+          {{ patch_tuesday.total_exploited }}
+        </div>
+        <div class="text-xs text-base-content/50 mt-0.5">Actively Exploited</div>
+      </div>
+      {% if patch_tuesday.total_kev %}
+      <div>
+        <div class="text-3xl font-bold text-warning">{{ patch_tuesday.total_kev }}</div>
+        <div class="text-xs text-base-content/50 mt-0.5">CISA KEV</div>
+      </div>
+      {% endif %}
+      <div>
+        <div class="text-3xl font-bold">{{ patch_tuesday.versions_updated }}</div>
+        <div class="text-xs text-base-content/50 mt-0.5">Versions Updated</div>
       </div>
     </div>
 
-    <div class="kb-link">
-      {% if latest.SecurityInfo %}
-      <a href="{{ latest.SecurityInfo }}">{{ latest.UpdateName }}</a>
-      {% else %}
-      {{ latest.UpdateName }}
-      {% endif %}
-    </div>
-    <div class="date">
-      {{ latest.ReleaseDate }}
-      {% if latest.ProductVersion %}
-        &nbsp;·&nbsp; <span class="mono">{{ latest.ProductVersion }}</span>
-      {% endif %}
+    <!-- Per-version breakdown -->
+    <div class="overflow-auto">
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th>OS Version</th>
+            <th>KB Article</th>
+            <th>Build</th>
+            <th>CVEs</th>
+            <th>Exploited</th>
+            <th>KEV</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in patch_tuesday.rows %}
+          <tr>
+            <td><a href="{{ row.slug }}.html" class="link link-hover">{{ row.os_name }}</a></td>
+            <td>
+              {% if row.SecurityInfo %}
+              <a href="{{ row.SecurityInfo }}" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB{{ row.kb }}</a>
+              {% else %}
+              <span class="font-mono text-sm">KB{{ row.kb }}</span>
+              {% endif %}
+            </td>
+            <td><code class="font-mono text-xs text-base-content/60">{{ row.ProductVersion or '—' }}</code></td>
+            <td>{{ row.UniqueCVEsCount }}</td>
+            <td>
+              {% if row.ActivelyExploitedCVEs %}
+              <span class="badge badge-error badge-sm">{{ row.ActivelyExploitedCVEs | length }}</span>
+              {% else %}
+              <span class="text-base-content/30">—</span>
+              {% endif %}
+            </td>
+            <td>
+              {% if row.kev_count %}
+              <span class="badge badge-warning badge-sm">{{ row.kev_count }}</span>
+              {% else %}
+              <span class="text-base-content/30">—</span>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
 
-    {% if latest.ActivelyExploitedCVEs %}
-    <div class="exploited-list">
-      <div class="lbl">Actively exploited</div>
-      <div class="cves">
-        {% for cve in latest.ActivelyExploitedCVEs %}
-        <span class="badge red">{{ cve }}</span>
+    <!-- Exploited CVEs -->
+    {% if patch_tuesday.exploited_cves %}
+    <div class="border-t border-base-300 pt-4">
+      <div class="text-xs text-base-content/50 uppercase tracking-wide mb-2.5">Actively Exploited This Month</div>
+      <div class="flex flex-wrap gap-1.5">
+        {% for cve in patch_tuesday.exploited_cves %}
+        <a href="cve-search.html?q={{ cve }}"
+           class="badge badge-error badge-outline badge-sm font-mono hover:no-underline">{{ cve }}</a>
         {% endfor %}
       </div>
     </div>
     {% endif %}
-  </div>
-  {% endfor %}
-</div>
 
-<div class="section-title">Recent Security Releases</div>
-<div class="card">
-  <table class="release-table">
-    <thead>
-      <tr>
-        <th>OS Version</th>
-        <th>Update</th>
-        <th>Date</th>
-        <th>CVEs</th>
-        <th>Exploited</th>
-        <th>Days Gap</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for row in recent_releases %}
-      <tr>
-        <td>{{ row.os_name }}</td>
-        <td>
-          {% if row.SecurityInfo %}
-          <a href="{{ row.SecurityInfo }}">KB{{ row.kb }}</a>
-          {% else %}
-          KB{{ row.kb }}
-          {% endif %}
-          {% if row.ProductVersion %}
-          <br><span class="mono muted">{{ row.ProductVersion }}</span>
-          {% endif %}
-        </td>
-        <td style="white-space:nowrap">{{ row.ReleaseDate }}</td>
-        <td>{{ row.UniqueCVEsCount }}</td>
-        <td>
-          {% if row.ActivelyExploitedCVEs %}
-          <span class="badge red">{{ row.ActivelyExploitedCVEs | length }}</span>
-          {% else %}
-          <span style="color:var(--muted)">—</span>
-          {% endif %}
-        </td>
-        <td style="color:var(--muted)">
-          {% if row.DaysSincePreviousRelease %}{{ row.DaysSincePreviousRelease }}d{% else %}—{% endif %}
-        </td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+  </div>
 </div>
+{% endif %}
 {% endblock %}
