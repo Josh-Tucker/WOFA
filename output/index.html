@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="business">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WOFA — Windows Organized Feed for Admins</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4/dist/full.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Apply saved theme before Alpine loads to avoid flash
+    (function() {
+      var t = localStorage.getItem('wofa-theme') || 'business';
+      if (t === 'cupcake') t = 'cupcake'; // migrate old preference
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  
+</head>
+<body class="min-h-screen">
+
+  <header class="navbar bg-base-200 border-b border-base-300 px-6 gap-1 min-h-14"
+          x-data="{ dark: localStorage.getItem('wofa-theme') !== 'cupcake' }"
+          x-init="$watch('dark', v => { var t = v ? 'business' : 'cupcake'; document.documentElement.setAttribute('data-theme', t); localStorage.setItem('wofa-theme', t); })">
+    <a class="font-bold text-base mr-2 hover:no-underline" href="index.html">
+      <span style="color:#F25022">W</span><span style="color:#7FBA00">O</span><span style="color:#00A4EF">F</span><span style="color:#FFB900">A</span>
+    </a>
+
+    
+    
+    <div class="relative" x-data="{ open: false }" @click.outside="open = false">
+      <button class="btn btn-ghost btn-sm gap-1 text-base-content/60"
+              @click="open = !open">
+        Windows 11
+        <svg class="w-3 h-3 transition-transform duration-150" :class="{ 'rotate-180': open }"
+             fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <ul class="absolute top-full left-0 mt-1 z-50 bg-base-200 border border-base-300 rounded-lg shadow-xl p-1.5 min-w-36"
+          x-show="open" x-transition @click="open = false">
+        
+        <li>
+          <a href="windows-11-26h1.html"
+             class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
+                    text-base-content/60">
+            26H1
+          </a>
+        </li>
+        
+        <li>
+          <a href="windows-11-25h2.html"
+             class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
+                    text-base-content/60">
+            25H2
+          </a>
+        </li>
+        
+        <li>
+          <a href="windows-11-24h2.html"
+             class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
+                    text-base-content/60">
+            24H2
+          </a>
+        </li>
+        
+        <li>
+          <a href="windows-11-23h2.html"
+             class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
+                    text-base-content/60">
+            23H2
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+    
+    
+    <div class="relative" x-data="{ open: false }" @click.outside="open = false">
+      <button class="btn btn-ghost btn-sm gap-1 text-base-content/60"
+              @click="open = !open">
+        Windows 10
+        <svg class="w-3 h-3 transition-transform duration-150" :class="{ 'rotate-180': open }"
+             fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <ul class="absolute top-full left-0 mt-1 z-50 bg-base-200 border border-base-300 rounded-lg shadow-xl p-1.5 min-w-36"
+          x-show="open" x-transition @click="open = false">
+        
+        <li>
+          <a href="windows-10-1809.html"
+             class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
+                    text-base-content/60">
+            1809
+          </a>
+        </li>
+        
+        <li>
+          <a href="windows-10-1607.html"
+             class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
+                    text-base-content/60">
+            1607
+          </a>
+        </li>
+        
+        <li>
+          <a href="windows-10-22h2.html"
+             class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
+                    text-base-content/60">
+            22H2
+          </a>
+        </li>
+        
+        <li>
+          <a href="windows-10-21h2.html"
+             class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
+                    text-base-content/60">
+            21H2
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+    
+    
+    <div class="relative" x-data="{ open: false }" @click.outside="open = false">
+      <button class="btn btn-ghost btn-sm gap-1 text-base-content/60"
+              @click="open = !open">
+        Windows Server
+        <svg class="w-3 h-3 transition-transform duration-150" :class="{ 'rotate-180': open }"
+             fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <ul class="absolute top-full left-0 mt-1 z-50 bg-base-200 border border-base-300 rounded-lg shadow-xl p-1.5 min-w-36"
+          x-show="open" x-transition @click="open = false">
+        
+        <li>
+          <a href="windows-server-2025.html"
+             class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
+                    text-base-content/60">
+            2025
+          </a>
+        </li>
+        
+        <li>
+          <a href="windows-server-2022.html"
+             class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
+                    text-base-content/60">
+            2022
+          </a>
+        </li>
+        
+        <li>
+          <a href="windows-server-2019.html"
+             class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
+                    text-base-content/60">
+            2019
+          </a>
+        </li>
+        
+        <li>
+          <a href="windows-server-2016.html"
+             class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
+                    text-base-content/60">
+            2016
+          </a>
+        </li>
+        
+        <li>
+          <a href="windows-server-2012.html"
+             class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
+                    text-base-content/60">
+            2012
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+    
+
+    <a href="cve-search.html"
+       class="btn btn-ghost btn-sm text-base-content/60">
+      CVE Search
+    </a>
+    <a href="resources.html"
+       class="btn btn-ghost btn-sm text-base-content/60">
+      Resources
+    </a>
+
+    <div class="flex-1"></div>
+    <div class="hidden sm:flex items-center gap-1 mr-2">
+      <a href="v1/windows_data_feed.json" class="btn btn-ghost btn-xs text-base-content/50 hover:text-base-content" title="JSON Feed">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        JSON
+      </a>
+      <a href="windows_release_feed.rss" class="btn btn-ghost btn-xs text-base-content/50 hover:text-base-content" title="RSS Feed">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7M6 17a1 1 0 110 2 1 1 0 010-2z"/></svg>
+        RSS
+      </a>
+    </div>
+    <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 02 Apr 2026 09:36 UTC</span>
+    <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
+      <!-- sun (shown in dark mode) -->
+      <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/>
+      </svg>
+      <!-- moon (shown in light mode) -->
+      <svg x-show="!dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+      </svg>
+    </button>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-8 pb-16">
+    
+<div class="mb-10">
+  <h1 class="text-2xl font-bold mb-2">Windows Organized Feed for Admins</h1>
+  <p class="text-base-content/60 max-w-2xl text-sm">Machine-readable Windows security update data — CVEs, exploitation status, and build versions per OS release. Sourced from MSRC and CISA KEV.</p>
+</div>
+
+
+<section class="mb-10"
+         x-data="{ canLeft: false, canRight: false, update(el) { this.canLeft = el.scrollLeft > 4; this.canRight = el.scrollLeft + el.clientWidth < el.scrollWidth - 4; } }"
+         x-init="$nextTick(() => update($refs.carousel)); $refs.carousel.addEventListener('scroll', () => update($refs.carousel))">
+
+  <div class="flex items-center gap-3 mb-3">
+    <h2 class="text-base font-semibold">Windows 11</h2>
+    <span class="text-xs text-base-content/40">4 versions</span>
+    <div class="flex gap-1 ml-auto">
+      <button class="btn btn-ghost btn-xs btn-square transition-opacity"
+              :class="canLeft ? 'opacity-100' : 'opacity-25 cursor-default'"
+              @click="$refs.carousel.scrollBy({ left: -320, behavior: 'smooth' })">&#8592;</button>
+      <button class="btn btn-ghost btn-xs btn-square transition-opacity"
+              :class="canRight ? 'opacity-100' : 'opacity-25 cursor-default'"
+              @click="$refs.carousel.scrollBy({ left: 320, behavior: 'smooth' })">&#8594;</button>
+    </div>
+  </div>
+
+  <div x-ref="carousel"
+       class="flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory scroll-smooth"
+       style="scrollbar-width: none;">
+
+    
+    
+    <div class="card bg-base-200 border border-base-300 shrink-0 w-72 snap-start">
+      <div class="card-body p-5 gap-3">
+
+        <h3 class="font-semibold text-sm leading-tight">
+          <a href="windows-11-26h1.html" class="link link-hover">26H1</a>
+        </h3>
+
+        <div class="flex gap-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold">40</div>
+            <div class="text-xs text-base-content/50">CVEs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold ">
+              0
+            </div>
+            <div class="text-xs text-base-content/50">Exploited</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold">3</div>
+            <div class="text-xs text-base-content/50">Releases</div>
+          </div>
+        </div>
+
+        <div class="text-xs text-base-content/60 leading-relaxed">
+          
+          <a href="https://support.microsoft.com/help/5079466" class="link link-hover">Windows 11 26H1 - March 2026 Security Update (KB5079466)</a>
+          
+        </div>
+
+        <div class="text-xs text-base-content/40">
+          2026-03-10
+          
+            &nbsp;·&nbsp; <code class="font-mono">10.0.28000.1719</code>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+    
+    <div class="card bg-base-200 border border-base-300 shrink-0 w-72 snap-start">
+      <div class="card-body p-5 gap-3">
+
+        <h3 class="font-semibold text-sm leading-tight">
+          <a href="windows-11-25h2.html" class="link link-hover">25H2</a>
+        </h3>
+
+        <div class="flex gap-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold">41</div>
+            <div class="text-xs text-base-content/50">CVEs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold ">
+              0
+            </div>
+            <div class="text-xs text-base-content/50">Exploited</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold">7</div>
+            <div class="text-xs text-base-content/50">Releases</div>
+          </div>
+        </div>
+
+        <div class="text-xs text-base-content/60 leading-relaxed">
+          
+          <a href="https://support.microsoft.com/help/5079473" class="link link-hover">Windows 11 25H2 - March 2026 Security Update (KB5079473)</a>
+          
+        </div>
+
+        <div class="text-xs text-base-content/40">
+          2026-03-10
+          
+            &nbsp;·&nbsp; <code class="font-mono">10.0.26200.8037</code>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+    
+    <div class="card bg-base-200 border border-base-300 shrink-0 w-72 snap-start">
+      <div class="card-body p-5 gap-3">
+
+        <h3 class="font-semibold text-sm leading-tight">
+          <a href="windows-11-24h2.html" class="link link-hover">24H2</a>
+        </h3>
+
+        <div class="flex gap-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold">41</div>
+            <div class="text-xs text-base-content/50">CVEs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold ">
+              0
+            </div>
+            <div class="text-xs text-base-content/50">Exploited</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold">12</div>
+            <div class="text-xs text-base-content/50">Releases</div>
+          </div>
+        </div>
+
+        <div class="text-xs text-base-content/60 leading-relaxed">
+          
+          <a href="https://support.microsoft.com/help/5079473" class="link link-hover">Windows 11 24H2 - March 2026 Security Update (KB5079473)</a>
+          
+        </div>
+
+        <div class="text-xs text-base-content/40">
+          2026-03-10
+          
+            &nbsp;·&nbsp; <code class="font-mono">10.0.26100.8037</code>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+    
+    <div class="card bg-base-200 border border-base-300 shrink-0 w-72 snap-start">
+      <div class="card-body p-5 gap-3">
+
+        <h3 class="font-semibold text-sm leading-tight">
+          <a href="windows-11-23h2.html" class="link link-hover">23H2</a>
+        </h3>
+
+        <div class="flex gap-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold">41</div>
+            <div class="text-xs text-base-content/50">CVEs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold ">
+              0
+            </div>
+            <div class="text-xs text-base-content/50">Exploited</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold">12</div>
+            <div class="text-xs text-base-content/50">Releases</div>
+          </div>
+        </div>
+
+        <div class="text-xs text-base-content/60 leading-relaxed">
+          
+          <a href="https://support.microsoft.com/help/5078883" class="link link-hover">Windows 11 23H2 - March 2026 Security Update (KB5078883)</a>
+          
+        </div>
+
+        <div class="text-xs text-base-content/40">
+          2026-03-10
+          
+            &nbsp;·&nbsp; <code class="font-mono">10.0.22631.6783</code>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+
+  </div>
+</section>
+
+<section class="mb-10"
+         x-data="{ canLeft: false, canRight: false, update(el) { this.canLeft = el.scrollLeft > 4; this.canRight = el.scrollLeft + el.clientWidth < el.scrollWidth - 4; } }"
+         x-init="$nextTick(() => update($refs.carousel)); $refs.carousel.addEventListener('scroll', () => update($refs.carousel))">
+
+  <div class="flex items-center gap-3 mb-3">
+    <h2 class="text-base font-semibold">Windows 10</h2>
+    <span class="text-xs text-base-content/40">4 versions</span>
+    <div class="flex gap-1 ml-auto">
+      <button class="btn btn-ghost btn-xs btn-square transition-opacity"
+              :class="canLeft ? 'opacity-100' : 'opacity-25 cursor-default'"
+              @click="$refs.carousel.scrollBy({ left: -320, behavior: 'smooth' })">&#8592;</button>
+      <button class="btn btn-ghost btn-xs btn-square transition-opacity"
+              :class="canRight ? 'opacity-100' : 'opacity-25 cursor-default'"
+              @click="$refs.carousel.scrollBy({ left: 320, behavior: 'smooth' })">&#8594;</button>
+    </div>
+  </div>
+
+  <div x-ref="carousel"
+       class="flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory scroll-smooth"
+       style="scrollbar-width: none;">
+
+    
+    
+    <div class="card bg-base-200 border border-base-300 shrink-0 w-72 snap-start">
+      <div class="card-body p-5 gap-3">
+
+        <h3 class="font-semibold text-sm leading-tight">
+          <a href="windows-10-1809.html" class="link link-hover">1809</a>
+        </h3>
+
+        <div class="flex gap-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold">40</div>
+            <div class="text-xs text-base-content/50">CVEs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold ">
+              0
+            </div>
+            <div class="text-xs text-base-content/50">Exploited</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold">12</div>
+            <div class="text-xs text-base-content/50">Releases</div>
+          </div>
+        </div>
+
+        <div class="text-xs text-base-content/60 leading-relaxed">
+          
+          <a href="https://support.microsoft.com/help/5078752" class="link link-hover">Windows 10 1809 - March 2026 Security Update (KB5078752)</a>
+          
+        </div>
+
+        <div class="text-xs text-base-content/40">
+          2026-03-10
+          
+            &nbsp;·&nbsp; <code class="font-mono">10.0.17763.8511</code>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+    
+    <div class="card bg-base-200 border border-base-300 shrink-0 w-72 snap-start">
+      <div class="card-body p-5 gap-3">
+
+        <h3 class="font-semibold text-sm leading-tight">
+          <a href="windows-10-1607.html" class="link link-hover">1607</a>
+        </h3>
+
+        <div class="flex gap-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold">35</div>
+            <div class="text-xs text-base-content/50">CVEs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold ">
+              0
+            </div>
+            <div class="text-xs text-base-content/50">Exploited</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold">12</div>
+            <div class="text-xs text-base-content/50">Releases</div>
+          </div>
+        </div>
+
+        <div class="text-xs text-base-content/60 leading-relaxed">
+          
+          <a href="https://support.microsoft.com/help/5078938" class="link link-hover">Windows 10 1607 - March 2026 Security Update (KB5078938)</a>
+          
+        </div>
+
+        <div class="text-xs text-base-content/40">
+          2026-03-10
+          
+            &nbsp;·&nbsp; <code class="font-mono">10.0.14393.8957</code>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+    
+    <div class="card bg-base-200 border border-base-300 shrink-0 w-72 snap-start">
+      <div class="card-body p-5 gap-3">
+
+        <h3 class="font-semibold text-sm leading-tight">
+          <a href="windows-10-22h2.html" class="link link-hover">22H2</a>
+        </h3>
+
+        <div class="flex gap-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold">43</div>
+            <div class="text-xs text-base-content/50">CVEs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold ">
+              0
+            </div>
+            <div class="text-xs text-base-content/50">Exploited</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold">12</div>
+            <div class="text-xs text-base-content/50">Releases</div>
+          </div>
+        </div>
+
+        <div class="text-xs text-base-content/60 leading-relaxed">
+          
+          <a href="https://support.microsoft.com/help/5078885" class="link link-hover">Windows 10 22H2 - March 2026 Security Update (KB5078885)</a>
+          
+        </div>
+
+        <div class="text-xs text-base-content/40">
+          2026-03-10
+          
+            &nbsp;·&nbsp; <code class="font-mono">10.0.19045.7058</code>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+    
+    <div class="card bg-base-200 border border-base-300 shrink-0 w-72 snap-start">
+      <div class="card-body p-5 gap-3">
+
+        <h3 class="font-semibold text-sm leading-tight">
+          <a href="windows-10-21h2.html" class="link link-hover">21H2</a>
+        </h3>
+
+        <div class="flex gap-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold">43</div>
+            <div class="text-xs text-base-content/50">CVEs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold ">
+              0
+            </div>
+            <div class="text-xs text-base-content/50">Exploited</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold">12</div>
+            <div class="text-xs text-base-content/50">Releases</div>
+          </div>
+        </div>
+
+        <div class="text-xs text-base-content/60 leading-relaxed">
+          
+          <a href="https://support.microsoft.com/help/5078885" class="link link-hover">Windows 10 21H2 - March 2026 Security Update (KB5078885)</a>
+          
+        </div>
+
+        <div class="text-xs text-base-content/40">
+          2026-03-10
+          
+            &nbsp;·&nbsp; <code class="font-mono">10.0.19044.7058</code>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+
+  </div>
+</section>
+
+<section class="mb-10"
+         x-data="{ canLeft: false, canRight: false, update(el) { this.canLeft = el.scrollLeft > 4; this.canRight = el.scrollLeft + el.clientWidth < el.scrollWidth - 4; } }"
+         x-init="$nextTick(() => update($refs.carousel)); $refs.carousel.addEventListener('scroll', () => update($refs.carousel))">
+
+  <div class="flex items-center gap-3 mb-3">
+    <h2 class="text-base font-semibold">Windows Server</h2>
+    <span class="text-xs text-base-content/40">5 versions</span>
+    <div class="flex gap-1 ml-auto">
+      <button class="btn btn-ghost btn-xs btn-square transition-opacity"
+              :class="canLeft ? 'opacity-100' : 'opacity-25 cursor-default'"
+              @click="$refs.carousel.scrollBy({ left: -320, behavior: 'smooth' })">&#8592;</button>
+      <button class="btn btn-ghost btn-xs btn-square transition-opacity"
+              :class="canRight ? 'opacity-100' : 'opacity-25 cursor-default'"
+              @click="$refs.carousel.scrollBy({ left: 320, behavior: 'smooth' })">&#8594;</button>
+    </div>
+  </div>
+
+  <div x-ref="carousel"
+       class="flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory scroll-smooth"
+       style="scrollbar-width: none;">
+
+    
+    
+    <div class="card bg-base-200 border border-base-300 shrink-0 w-72 snap-start">
+      <div class="card-body p-5 gap-3">
+
+        <h3 class="font-semibold text-sm leading-tight">
+          <a href="windows-server-2025.html" class="link link-hover">2025</a>
+        </h3>
+
+        <div class="flex gap-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold">39</div>
+            <div class="text-xs text-base-content/50">CVEs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold ">
+              0
+            </div>
+            <div class="text-xs text-base-content/50">Exploited</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold">12</div>
+            <div class="text-xs text-base-content/50">Releases</div>
+          </div>
+        </div>
+
+        <div class="text-xs text-base-content/60 leading-relaxed">
+          
+          <a href="https://support.microsoft.com/help/5078740" class="link link-hover">Windows Server 2025 - March 2026 Security Update (KB5078740)</a>
+          
+        </div>
+
+        <div class="text-xs text-base-content/40">
+          2026-03-10
+          
+            &nbsp;·&nbsp; <code class="font-mono">10.0.26100.32522</code>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+    
+    <div class="card bg-base-200 border border-base-300 shrink-0 w-72 snap-start">
+      <div class="card-body p-5 gap-3">
+
+        <h3 class="font-semibold text-sm leading-tight">
+          <a href="windows-server-2022.html" class="link link-hover">2022</a>
+        </h3>
+
+        <div class="flex gap-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold">42</div>
+            <div class="text-xs text-base-content/50">CVEs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold ">
+              0
+            </div>
+            <div class="text-xs text-base-content/50">Exploited</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold">12</div>
+            <div class="text-xs text-base-content/50">Releases</div>
+          </div>
+        </div>
+
+        <div class="text-xs text-base-content/60 leading-relaxed">
+          
+          <a href="https://support.microsoft.com/help/5078766" class="link link-hover">Windows Server 2022 - March 2026 Security Update (KB5078766)</a>
+          
+        </div>
+
+        <div class="text-xs text-base-content/40">
+          2026-03-10
+          
+            &nbsp;·&nbsp; <code class="font-mono">10.0.20348.4893</code>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+    
+    <div class="card bg-base-200 border border-base-300 shrink-0 w-72 snap-start">
+      <div class="card-body p-5 gap-3">
+
+        <h3 class="font-semibold text-sm leading-tight">
+          <a href="windows-server-2019.html" class="link link-hover">2019</a>
+        </h3>
+
+        <div class="flex gap-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold">38</div>
+            <div class="text-xs text-base-content/50">CVEs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold ">
+              0
+            </div>
+            <div class="text-xs text-base-content/50">Exploited</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold">12</div>
+            <div class="text-xs text-base-content/50">Releases</div>
+          </div>
+        </div>
+
+        <div class="text-xs text-base-content/60 leading-relaxed">
+          
+          <a href="https://support.microsoft.com/help/5078752" class="link link-hover">Windows Server 2019 - March 2026 Security Update (KB5078752)</a>
+          
+        </div>
+
+        <div class="text-xs text-base-content/40">
+          2026-03-10
+          
+            &nbsp;·&nbsp; <code class="font-mono">10.0.17763.8511</code>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+    
+    <div class="card bg-base-200 border border-base-300 shrink-0 w-72 snap-start">
+      <div class="card-body p-5 gap-3">
+
+        <h3 class="font-semibold text-sm leading-tight">
+          <a href="windows-server-2016.html" class="link link-hover">2016</a>
+        </h3>
+
+        <div class="flex gap-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold">34</div>
+            <div class="text-xs text-base-content/50">CVEs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold ">
+              0
+            </div>
+            <div class="text-xs text-base-content/50">Exploited</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold">12</div>
+            <div class="text-xs text-base-content/50">Releases</div>
+          </div>
+        </div>
+
+        <div class="text-xs text-base-content/60 leading-relaxed">
+          
+          <a href="https://support.microsoft.com/help/5078938" class="link link-hover">Windows Server 2016 - March 2026 Security Update (KB5078938)</a>
+          
+        </div>
+
+        <div class="text-xs text-base-content/40">
+          2026-03-10
+          
+            &nbsp;·&nbsp; <code class="font-mono">10.0.14393.8957</code>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+    
+    <div class="card bg-base-200 border border-base-300 shrink-0 w-72 snap-start">
+      <div class="card-body p-5 gap-3">
+
+        <h3 class="font-semibold text-sm leading-tight">
+          <a href="windows-server-2012.html" class="link link-hover">2012</a>
+        </h3>
+
+        <div class="flex gap-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold">12</div>
+            <div class="text-xs text-base-content/50">CVEs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold ">
+              0
+            </div>
+            <div class="text-xs text-base-content/50">Exploited</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold">2</div>
+            <div class="text-xs text-base-content/50">Releases</div>
+          </div>
+        </div>
+
+        <div class="text-xs text-base-content/60 leading-relaxed">
+          
+          <a href="https://support.microsoft.com/help/5071503" class="link link-hover">Windows Server 2012 - December 2025 Security Update (KB5071503)</a>
+          
+        </div>
+
+        <div class="text-xs text-base-content/40">
+          2025-12-09
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+
+  </div>
+</section>
+
+
+
+<div class="flex items-baseline gap-3 mb-4 pb-2 border-b border-base-300">
+  <h2 class="text-base font-semibold">Latest Patch Tuesday</h2>
+  <span class="text-sm text-base-content/50">March 2026 &nbsp;·&nbsp; 2026-03-10</span>
+</div>
+
+<div class="card bg-base-200 border border-base-300">
+  <div class="card-body p-5 gap-5">
+
+    <!-- Aggregate stats -->
+    <div class="flex flex-wrap gap-8">
+      <div>
+        <div class="text-3xl font-bold">477</div>
+        <div class="text-xs text-base-content/50 mt-0.5">Total CVEs</div>
+      </div>
+      <div>
+        <div class="text-3xl font-bold ">
+          0
+        </div>
+        <div class="text-xs text-base-content/50 mt-0.5">Actively Exploited</div>
+      </div>
+      
+      <div>
+        <div class="text-3xl font-bold">12</div>
+        <div class="text-xs text-base-content/50 mt-0.5">Versions Updated</div>
+      </div>
+    </div>
+
+    <!-- Per-version breakdown -->
+    <div class="overflow-auto">
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th>OS Version</th>
+            <th>KB Article</th>
+            <th>Build</th>
+            <th>CVEs</th>
+            <th>Exploited</th>
+            <th>KEV</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td><a href="windows-11-26h1.html" class="link link-hover">Windows 11 26H1</a></td>
+            <td>
+              
+              <a href="https://support.microsoft.com/help/5079466" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB5079466</a>
+              
+            </td>
+            <td><code class="font-mono text-xs text-base-content/60">10.0.28000.1719</code></td>
+            <td>40</td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+          </tr>
+          
+          <tr>
+            <td><a href="windows-11-25h2.html" class="link link-hover">Windows 11 25H2</a></td>
+            <td>
+              
+              <a href="https://support.microsoft.com/help/5079473" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB5079473</a>
+              
+            </td>
+            <td><code class="font-mono text-xs text-base-content/60">10.0.26200.8037</code></td>
+            <td>41</td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+          </tr>
+          
+          <tr>
+            <td><a href="windows-11-24h2.html" class="link link-hover">Windows 11 24H2</a></td>
+            <td>
+              
+              <a href="https://support.microsoft.com/help/5079473" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB5079473</a>
+              
+            </td>
+            <td><code class="font-mono text-xs text-base-content/60">10.0.26100.8037</code></td>
+            <td>41</td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+          </tr>
+          
+          <tr>
+            <td><a href="windows-11-23h2.html" class="link link-hover">Windows 11 23H2</a></td>
+            <td>
+              
+              <a href="https://support.microsoft.com/help/5078883" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB5078883</a>
+              
+            </td>
+            <td><code class="font-mono text-xs text-base-content/60">10.0.22631.6783</code></td>
+            <td>41</td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+          </tr>
+          
+          <tr>
+            <td><a href="windows-10-1809.html" class="link link-hover">Windows 10 1809</a></td>
+            <td>
+              
+              <a href="https://support.microsoft.com/help/5078752" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB5078752</a>
+              
+            </td>
+            <td><code class="font-mono text-xs text-base-content/60">10.0.17763.8511</code></td>
+            <td>40</td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+          </tr>
+          
+          <tr>
+            <td><a href="windows-10-1607.html" class="link link-hover">Windows 10 1607</a></td>
+            <td>
+              
+              <a href="https://support.microsoft.com/help/5078938" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB5078938</a>
+              
+            </td>
+            <td><code class="font-mono text-xs text-base-content/60">10.0.14393.8957</code></td>
+            <td>35</td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+          </tr>
+          
+          <tr>
+            <td><a href="windows-10-22h2.html" class="link link-hover">Windows 10 22H2</a></td>
+            <td>
+              
+              <a href="https://support.microsoft.com/help/5078885" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB5078885</a>
+              
+            </td>
+            <td><code class="font-mono text-xs text-base-content/60">10.0.19045.7058</code></td>
+            <td>43</td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+          </tr>
+          
+          <tr>
+            <td><a href="windows-10-21h2.html" class="link link-hover">Windows 10 21H2</a></td>
+            <td>
+              
+              <a href="https://support.microsoft.com/help/5078885" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB5078885</a>
+              
+            </td>
+            <td><code class="font-mono text-xs text-base-content/60">10.0.19044.7058</code></td>
+            <td>43</td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+          </tr>
+          
+          <tr>
+            <td><a href="windows-server-2025.html" class="link link-hover">Windows Server 2025</a></td>
+            <td>
+              
+              <a href="https://support.microsoft.com/help/5078740" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB5078740</a>
+              
+            </td>
+            <td><code class="font-mono text-xs text-base-content/60">10.0.26100.32522</code></td>
+            <td>39</td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+          </tr>
+          
+          <tr>
+            <td><a href="windows-server-2022.html" class="link link-hover">Windows Server 2022</a></td>
+            <td>
+              
+              <a href="https://support.microsoft.com/help/5078766" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB5078766</a>
+              
+            </td>
+            <td><code class="font-mono text-xs text-base-content/60">10.0.20348.4893</code></td>
+            <td>42</td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+          </tr>
+          
+          <tr>
+            <td><a href="windows-server-2019.html" class="link link-hover">Windows Server 2019</a></td>
+            <td>
+              
+              <a href="https://support.microsoft.com/help/5078752" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB5078752</a>
+              
+            </td>
+            <td><code class="font-mono text-xs text-base-content/60">10.0.17763.8511</code></td>
+            <td>38</td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+          </tr>
+          
+          <tr>
+            <td><a href="windows-server-2016.html" class="link link-hover">Windows Server 2016</a></td>
+            <td>
+              
+              <a href="https://support.microsoft.com/help/5078938" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB5078938</a>
+              
+            </td>
+            <td><code class="font-mono text-xs text-base-content/60">10.0.14393.8957</code></td>
+            <td>34</td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+            <td>
+              
+              <span class="text-base-content/30">—</span>
+              
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Exploited CVEs -->
+    
+
+  </div>
+</div>
+
+
+  </main>
+
+  <footer class="border-t border-base-300 py-5 px-6 text-center text-xs text-base-content/40">
+    Windows Organized Feed for Admins &nbsp;·&nbsp;
+    Data from <a href="https://api.msrc.microsoft.com" class="link link-hover">MSRC</a> and
+    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" class="link link-hover">CISA KEV</a>
+    &nbsp;·&nbsp;
+    <a href="v1/windows_data_feed.json" class="link link-hover">JSON feed</a> &nbsp;·&nbsp;
+    <a href="windows_release_feed.rss" class="link link-hover">RSS</a>
+  </footer>
+</body>
+</html>
