@@ -21,7 +21,7 @@ import json
 import logging
 import time
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 
 import requests
@@ -53,6 +53,7 @@ _EXPLOITED_PHRASES = {"Exploitation Detected"}
 # Cache helpers
 # ---------------------------------------------------------------------------
 
+
 def _cache_path(name: str) -> Path:
     return Path(config.CACHE_DIR) / "msrc" / name
 
@@ -73,6 +74,7 @@ def _write_cache(path: Path, data):
 # ---------------------------------------------------------------------------
 # API fetchers
 # ---------------------------------------------------------------------------
+
 
 def get_updates_index() -> list[dict]:
     """
@@ -133,6 +135,7 @@ def get_cvrf_document(update_id: str) -> dict:
 # CVRF parsing
 # ---------------------------------------------------------------------------
 
+
 def _product_map(cvrf_doc: dict) -> dict[str, str]:
     """Return {ProductID: product_name} from a CVRF document."""
     return {
@@ -144,11 +147,7 @@ def _product_map(cvrf_doc: dict) -> dict[str, str]:
 def _matching_pids(product_map: dict, patterns: list[str]) -> set[str]:
     """Return ProductIDs whose names match any of the given substrings (case-insensitive)."""
     lowered = [p.lower() for p in patterns]
-    return {
-        pid
-        for pid, name in product_map.items()
-        if any(pat in name.lower() for pat in lowered)
-    }
+    return {pid for pid, name in product_map.items() if any(pat in name.lower() for pat in lowered)}
 
 
 def _find_main_kb(cvrf_doc: dict, target_pids: set[str]) -> tuple[str | None, dict]:

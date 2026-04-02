@@ -16,9 +16,9 @@ OUTPUT_DIR = "output"
 CACHE_DIR = ".cache"
 
 # Cache TTL in hours (CVRF docs are immutable once published; index refreshes more often)
-CACHE_TTL_CVRF_HOURS = 168   # 7 days — monthly docs don't change
-CACHE_TTL_INDEX_HOURS = 1    # Index may add new entries (out-of-band releases)
-CACHE_TTL_KEV_HOURS = 6      # CISA updates KEV a few times per week
+CACHE_TTL_CVRF_HOURS = 168  # 7 days — monthly docs don't change
+CACHE_TTL_INDEX_HOURS = 1  # Index may add new entries (out-of-band releases)
+CACHE_TTL_KEV_HOURS = 6  # CISA updates KEV a few times per week
 
 MSRC_API_BASE = "https://api.msrc.microsoft.com/cvrf/v3.0"
 CISA_KEV_URL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"

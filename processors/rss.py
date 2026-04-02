@@ -5,6 +5,7 @@ Produces an RSS 2.0 feed from the WOFA v2 feed data, with one entry
 per OS version's latest release. Uses feedgen.
 """
 
+import contextlib
 import logging
 from datetime import datetime, timezone
 
@@ -49,12 +50,8 @@ def generate_rss(v2_feed: dict) -> str:
         # Parse release date
         pub_date = None
         if release_date_str:
-            try:
-                pub_date = datetime.fromisoformat(release_date_str).replace(
-                    tzinfo=timezone.utc
-                )
-            except ValueError:
-                pass
+            with contextlib.suppress(ValueError):
+                pub_date = datetime.fromisoformat(release_date_str).replace(tzinfo=timezone.utc)
 
         # Build description
         lines = [f"<p><strong>{update_name}</strong></p>"]

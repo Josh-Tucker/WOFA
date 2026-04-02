@@ -6,10 +6,11 @@ Produces both a v2 feed (full CVE detail) and a v1 feed (summary only).
 """
 
 import logging
-from datetime import datetime, date, timezone, timedelta
+from datetime import date, datetime, timedelta, timezone
 
 import config
-from collectors import msrc, cisa_kev, os_versions as os_versions_collector
+from collectors import cisa_kev, msrc
+from collectors import os_versions as os_versions_collector
 
 logger = logging.getLogger(__name__)
 
@@ -24,7 +25,8 @@ def _months_to_fetch(n: int) -> list[str]:
 
     # Filter to updates within the window and exclude very old Azure Linux-only docs
     recent = [
-        u for u in all_updates
+        u
+        for u in all_updates
         if u["date"] >= cutoff
         # Skip the ancient "Mariner Release Notes" entries that predate 2017 Windows CVRF
         and u["date"] >= "2017-01-01"
@@ -105,7 +107,9 @@ def build_feed() -> dict:
 
     for sname, releases in releases_by_os.items():
         if not releases:
-            logger.info("No releases found for %s in the last %d months", sname, config.MONTHS_TO_FETCH)
+            logger.info(
+                "No releases found for %s in the last %d months", sname, config.MONTHS_TO_FETCH
+            )
             continue
 
         os_cfg = os_cfg_by_sname[sname]
@@ -129,37 +133,39 @@ def build_feed() -> dict:
         security_releases = []
         for rel in releases:
             cves = rel["cves"]
-            exploited = sorted(
-                cve_id for cve_id, d in cves.items() if d.get("actively_exploited")
+            exploited = sorted(cve_id for cve_id, d in cves.items() if d.get("actively_exploited"))
+            security_releases.append(
+                {
+                    "UpdateName": _build_update_name(os_name, rel["doc_title"], rel["kb_article"]),
+                    "ReleaseDate": rel["release_date"],
+                    "ProductVersion": rel["fixed_build"],
+                    "SecurityInfo": rel["support_url"],
+                    "CVEs": cves,
+                    "ActivelyExploitedCVEs": exploited,
+                    "UniqueCVEsCount": len(cves),
+                    "DaysSincePreviousRelease": rel["days_since_previous"],
+                    "Supersedes": rel["supersedes"],
+                }
             )
-            security_releases.append({
-                "UpdateName": _build_update_name(os_name, rel["doc_title"], rel["kb_article"]),
-                "ReleaseDate": rel["release_date"],
-                "ProductVersion": rel["fixed_build"],
-                "SecurityInfo": rel["support_url"],
-                "CVEs": cves,
-                "ActivelyExploitedCVEs": exploited,
-                "UniqueCVEsCount": len(cves),
-                "DaysSincePreviousRelease": rel["days_since_previous"],
-                "Supersedes": rel["supersedes"],
-            })
 
         latest = security_releases[0] if security_releases else {}
 
-        os_version_entries.append({
-            "OSVersion": os_name,
-            "Group": os_cfg["group"],
-            "VersionLabel": os_cfg["version_label"],
-            "Latest": {
-                "UpdateName": latest.get("UpdateName"),
-                "ProductVersion": latest.get("ProductVersion"),
-                "ReleaseDate": latest.get("ReleaseDate"),
-                "SecurityInfo": latest.get("SecurityInfo"),
-                "ActivelyExploitedCVEs": latest.get("ActivelyExploitedCVEs", []),
-                "UniqueCVEsCount": latest.get("UniqueCVEsCount", 0),
-            },
-            "SecurityReleases": security_releases,
-        })
+        os_version_entries.append(
+            {
+                "OSVersion": os_name,
+                "Group": os_cfg["group"],
+                "VersionLabel": os_cfg["version_label"],
+                "Latest": {
+                    "UpdateName": latest.get("UpdateName"),
+                    "ProductVersion": latest.get("ProductVersion"),
+                    "ReleaseDate": latest.get("ReleaseDate"),
+                    "SecurityInfo": latest.get("SecurityInfo"),
+                    "ActivelyExploitedCVEs": latest.get("ActivelyExploitedCVEs", []),
+                    "UniqueCVEsCount": latest.get("UniqueCVEsCount", 0),
+                },
+                "SecurityReleases": security_releases,
+            }
+        )
 
     return {
         "Version": "1.0",

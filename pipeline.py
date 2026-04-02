@@ -68,8 +68,7 @@ def main() -> None:
         "LastCheck": timestamp,
         "OSVersionsTracked": len(feed.get("OSVersions", [])),
         "TotalSecurityReleases": sum(
-            len(os_entry.get("SecurityReleases", []))
-            for os_entry in feed.get("OSVersions", [])
+            len(os_entry.get("SecurityReleases", [])) for os_entry in feed.get("OSVersions", [])
         ),
         "TotalCVEsTracked": total_cves,
         "TotalActivelyExploited": total_exploited,

@@ -7,7 +7,7 @@ Renders Jinja2 templates against feed data and writes HTML files to the output d
 import logging
 import re
 from collections import defaultdict
-from datetime import date, datetime, timezone
+from datetime import date, datetime
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -153,11 +153,13 @@ def _patch_tuesday_summary(os_versions: list[dict]) -> dict | None:
     for os_entry in os_versions:
         for rel in os_entry.get("SecurityReleases", []):
             if rel.get("ReleaseDate") == latest_date:
-                rows.append({
-                    "os_name": os_entry["OSVersion"],
-                    "slug": os_entry["slug"],
-                    **rel,
-                })
+                rows.append(
+                    {
+                        "os_name": os_entry["OSVersion"],
+                        "slug": os_entry["slug"],
+                        **rel,
+                    }
+                )
                 total_cves += rel.get("UniqueCVEsCount", 0)
                 all_exploited.update(rel.get("ActivelyExploitedCVEs", []))
                 total_kev += rel.get("kev_count", 0)
@@ -187,11 +189,13 @@ def _recent_releases(os_versions: list[dict], limit: int = 30) -> list[dict]:
     rows = []
     for os_entry in os_versions:
         for rel in os_entry.get("SecurityReleases", []):
-            rows.append({
-                "os_name": os_entry["OSVersion"],
-                "kb": _kb_from_update_name(rel.get("UpdateName", "")),
-                **rel,
-            })
+            rows.append(
+                {
+                    "os_name": os_entry["OSVersion"],
+                    "kb": _kb_from_update_name(rel.get("UpdateName", "")),
+                    **rel,
+                }
+            )
     rows.sort(key=lambda r: r.get("ReleaseDate") or "", reverse=True)
     return rows[:limit]
 
@@ -221,14 +225,16 @@ def build_cve_index(os_versions: list[dict]) -> dict:
                     entry["actively_exploited"] = True
                 if cve_data.get("in_kev"):
                     entry["in_kev"] = True
-                entry["affected"].append({
-                    "os": os_name,
-                    "slug": slug,
-                    "kb": rel.get("kb", ""),
-                    "release_date": rel.get("ReleaseDate"),
-                    "security_info": rel.get("SecurityInfo"),
-                    "product_version": rel.get("ProductVersion"),
-                })
+                entry["affected"].append(
+                    {
+                        "os": os_name,
+                        "slug": slug,
+                        "kb": rel.get("kb", ""),
+                        "release_date": rel.get("ReleaseDate"),
+                        "security_info": rel.get("SecurityInfo"),
+                        "product_version": rel.get("ProductVersion"),
+                    }
+                )
     for entry in index.values():
         entry["affected"].sort(key=lambda x: x.get("release_date") or "", reverse=True)
     return index
@@ -250,12 +256,14 @@ def generate(feed: dict) -> None:
     os_versions = []
     for os_entry in feed.get("OSVersions", []):
         enriched = _enrich_os(os_entry)
-        os_versions.append({
-            **enriched,
-            "slug": _slug(os_entry["OSVersion"]),
-            "group": os_entry.get("Group", os_entry["OSVersion"]),
-            "version_label": os_entry.get("VersionLabel", os_entry["OSVersion"]),
-        })
+        os_versions.append(
+            {
+                **enriched,
+                "slug": _slug(os_entry["OSVersion"]),
+                "group": os_entry.get("Group", os_entry["OSVersion"]),
+                "version_label": os_entry.get("VersionLabel", os_entry["OSVersion"]),
+            }
+        )
 
     nav_groups = _nav_groups(os_versions)
 

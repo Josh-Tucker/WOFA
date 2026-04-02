@@ -36,8 +36,8 @@ def _parse(product_name: str) -> dict | None:
 
     m = _RE_CLIENT.match(product_name)
     if m:
-        win_ver = m.group(1)   # "10" or "11"
-        release = m.group(2)   # "24H2", "22H2", etc.
+        win_ver = m.group(1)  # "10" or "11"
+        release = m.group(2)  # "24H2", "22H2", etc.
         display = f"Windows {win_ver} {release}"
         return {
             "name": display,

@@ -44,9 +44,7 @@ def get_kev_cve_ids() -> set[str]:
     resp.raise_for_status()
 
     cve_ids = [
-        entry["cveID"]
-        for entry in resp.json().get("vulnerabilities", [])
-        if entry.get("cveID")
+        entry["cveID"] for entry in resp.json().get("vulnerabilities", []) if entry.get("cveID")
     ]
 
     cache.parent.mkdir(parents=True, exist_ok=True)
