@@ -225,7 +225,7 @@
         RSS
       </a>
     </div>
-    <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 02 Apr 2026 09:36 UTC</span>
+    <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 02 Apr 2026 12:47 UTC</span>
     <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
       <!-- sun (shown in dark mode) -->
       <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -329,22 +329,22 @@
     <div x-show="tab === 'curl'" class="flex flex-col gap-4">
       <div>
         <p class="text-sm text-base-content/60 mb-2">Get the latest build number for Windows 11 24H2:</p>
-        <pre><code class="language-bash">curl -s https://wofa.example.com/v1/windows_data_feed.json \
+        <pre><code class="language-bash">curl -s https://wofa.jtucker.me.uk/v1/windows_data_feed.json \
   | jq '.OSVersions[] | select(.OSVersion == "Windows 11 24H2") | .Latest.ProductVersion'</code></pre>
       </div>
       <div>
         <p class="text-sm text-base-content/60 mb-2">List all actively exploited CVEs across every tracked version:</p>
-        <pre><code class="language-bash">curl -s https://wofa.example.com/v1/windows_data_feed.json \
+        <pre><code class="language-bash">curl -s https://wofa.jtucker.me.uk/v1/windows_data_feed.json \
   | jq '[.OSVersions[].SecurityReleases[].ActivelyExploitedCVEs[]] | unique | sort[]'</code></pre>
       </div>
       <div>
         <p class="text-sm text-base-content/60 mb-2">Check when the feed was last updated:</p>
-        <pre><code class="language-bash">curl -s https://wofa.example.com/metadata.json | jq '{LastCheck, UpdateHash}'</code></pre>
+        <pre><code class="language-bash">curl -s https://wofa.jtucker.me.uk/metadata.json | jq '{LastCheck, UpdateHash}'</code></pre>
       </div>
       <div>
         <p class="text-sm text-base-content/60 mb-2">Look up a specific CVE across all versions:</p>
         <pre><code class="language-bash">CVE="CVE-2025-21333"
-curl -s https://wofa.example.com/v1/cve_index.json \
+curl -s https://wofa.jtucker.me.uk/v1/cve_index.json \
   | jq --arg cve "$CVE" '.[$cve] | {severity, cvss_score, in_kev, affected: [.affected[].os]}'</code></pre>
       </div>
     </div>
@@ -355,7 +355,7 @@ curl -s https://wofa.example.com/v1/cve_index.json \
         <p class="text-sm text-base-content/60 mb-2">Fetch the feed and print exploited CVEs per OS version:</p>
         <pre><code class="language-python">import requests
 
-FEED_URL = "https://wofa.example.com/v1/windows_data_feed.json"
+FEED_URL = "https://wofa.jtucker.me.uk/v1/windows_data_feed.json"
 
 feed = requests.get(FEED_URL, timeout=30).json()
 
@@ -370,7 +370,7 @@ for os_entry in feed["OSVersions"]:
         <p class="text-sm text-base-content/60 mb-2">Alert when a new patch drops by polling the metadata hash:</p>
         <pre><code class="language-python">import requests, time
 
-METADATA_URL = "https://wofa.example.com/metadata.json"
+METADATA_URL = "https://wofa.jtucker.me.uk/metadata.json"
 
 def get_hash():
     return requests.get(METADATA_URL, timeout=10).json()["UpdateHash"]
@@ -390,7 +390,7 @@ while True:
         <p class="text-sm text-base-content/60 mb-2">Search the CVE index for CISA KEV entries:</p>
         <pre><code class="language-python">import requests
 
-INDEX_URL = "https://wofa.example.com/v1/cve_index.json"
+INDEX_URL = "https://wofa.jtucker.me.uk/v1/cve_index.json"
 
 index = requests.get(INDEX_URL, timeout=30).json()
 
@@ -411,7 +411,7 @@ for cve_id, data in sorted(kev_cves.items()):
     <div x-show="tab === 'powershell'" class="flex flex-col gap-4">
       <div>
         <p class="text-sm text-base-content/60 mb-2">Get the latest build number for all tracked versions:</p>
-        <pre><code class="language-powershell">$feed = Invoke-RestMethod "https://wofa.example.com/v1/windows_data_feed.json"
+        <pre><code class="language-powershell">$feed = Invoke-RestMethod "https://wofa.jtucker.me.uk/v1/windows_data_feed.json"
 
 $feed.OSVersions | Select-Object OSVersion, @{
     Name = "LatestBuild"; Expression = { $_.Latest.ProductVersion }
@@ -421,7 +421,7 @@ $feed.OSVersions | Select-Object OSVersion, @{
       </div>
       <div>
         <p class="text-sm text-base-content/60 mb-2">Find all actively exploited CVEs and output a report:</p>
-        <pre><code class="language-powershell">$feed = Invoke-RestMethod "https://wofa.example.com/v1/windows_data_feed.json"
+        <pre><code class="language-powershell">$feed = Invoke-RestMethod "https://wofa.jtucker.me.uk/v1/windows_data_feed.json"
 
 $feed.OSVersions | ForEach-Object {
     $os = $_.OSVersion
@@ -441,7 +441,7 @@ $feed.OSVersions | ForEach-Object {
       <div>
         <p class="text-sm text-base-content/60 mb-2">Check if a specific CVE affects any tracked version:</p>
         <pre><code class="language-powershell">$cveId = "CVE-2025-21333"
-$index = Invoke-RestMethod "https://wofa.example.com/v1/cve_index.json"
+$index = Invoke-RestMethod "https://wofa.jtucker.me.uk/v1/cve_index.json"
 
 $entry = $index.$cveId
 if ($entry) {
