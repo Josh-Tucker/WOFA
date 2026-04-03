@@ -12,6 +12,17 @@
   <h1 class="text-2xl font-bold">{{ os.OSVersion }}</h1>
 </div>
 
+{% if os.is_insider %}
+<div role="alert" class="alert alert-info mb-6">
+  <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+  </svg>
+  <div>
+    <div class="font-semibold">Windows Insider Preview</div>
+    <div class="text-sm opacity-80">{{ os.OSVersion }} is a pre-release build available through the Windows Insider Program. It has not been released to the General Availability Channel and may not reflect final security guidance.</div>
+  </div>
+</div>
+{% endif %}
 {% if os.out_of_support %}
 <div role="alert" class="alert alert-error mb-6">
   <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -29,13 +40,16 @@
 
   <!-- Latest release card -->
   <div class="indicator w-full">
+    {% if os.is_insider %}
+    <span class="indicator-item badge badge-info">Preview</span>
+    {% endif %}
     {% if os.out_of_support %}
-    <span class="indicator-item badge badge-error">End of Life</span>
+    <span class="indicator-item badge badge-error {% if os.is_insider %}indicator-middle{% endif %}">End of Life</span>
     {% endif %}
     {% if latest_rel and latest_rel.kev_count %}
-    <span class="indicator-item badge badge-error {% if os.out_of_support %}indicator-middle{% endif %}">{{ latest_rel.kev_count }} KEV</span>
+    <span class="indicator-item badge badge-error {% if os.out_of_support or os.is_insider %}indicator-middle{% endif %}">{{ latest_rel.kev_count }} KEV</span>
     {% elif latest.ActivelyExploitedCVEs %}
-    <span class="indicator-item badge badge-warning {% if os.out_of_support %}indicator-middle{% endif %}">Exploited</span>
+    <span class="indicator-item badge badge-warning {% if os.out_of_support or os.is_insider %}indicator-middle{% endif %}">Exploited</span>
     {% endif %}
   <div class="card bg-base-200 border border-base-300 w-full">
     <div class="card-body p-5 gap-0">
@@ -331,4 +345,56 @@
   {% endfor %}
 
 </div>
+
+{% if os.non_security_releases %}
+<div class="flex items-baseline gap-3 mt-10 mb-4 pb-2 border-b border-base-300">
+  <h2 class="text-base font-semibold">{{ 'All Builds' if os.is_insider else 'Additional Updates' }}</h2>
+  <span class="text-sm text-base-content/50">{{ os.non_security_releases | length }} release{{ 's' if os.non_security_releases | length != 1 else '' }}</span>
+  {% if not os.is_insider %}
+  <span class="text-xs text-base-content/40 ml-1">Out-of-band and preview updates</span>
+  {% endif %}
+</div>
+
+<div class="overflow-auto">
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Build</th>
+        <th>KB Article</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for rel in os.non_security_releases %}
+      <tr>
+        <td class="text-base-content/70">{{ rel.ReleaseDate }}</td>
+        <td><code class="font-mono text-xs">{{ rel.ProductVersion }}</code></td>
+        <td>
+          {% if rel.SecurityInfo and rel.KB %}
+          <a href="{{ rel.SecurityInfo }}" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB{{ rel.KB }}</a>
+          {% elif rel.KB %}
+          <span class="font-mono text-sm">KB{{ rel.KB }}</span>
+          {% else %}
+          <span class="text-base-content/30">—</span>
+          {% endif %}
+        </td>
+        <td>
+          {% if rel.UpdateType %}
+            {% if 'OOB' in rel.UpdateType %}
+          <span class="badge badge-warning badge-sm font-mono">{{ rel.UpdateType }}</span>
+            {% else %}
+          <span class="badge badge-ghost badge-sm font-mono">{{ rel.UpdateType }}</span>
+            {% endif %}
+          {% else %}
+          <span class="text-base-content/30">—</span>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+
 {% endblock %}

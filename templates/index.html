@@ -80,20 +80,49 @@
     {% set latest = os.Latest %}
     {% set latest_rel = os.SecurityReleases[0] if os.SecurityReleases else none %}
     <div class="indicator shrink-0 w-72 snap-start">
-      {% if os.out_of_support %}
+      {% if os.is_insider %}
+      <span class="indicator-item badge badge-info">Preview</span>
+      {% elif os.out_of_support %}
       <span class="indicator-item badge badge-error">End of Life</span>
       {% elif latest_rel and latest_rel.kev_count %}
       <span class="indicator-item badge badge-error">{{ latest_rel.kev_count }} KEV</span>
       {% elif latest.ActivelyExploitedCVEs %}
       <span class="indicator-item badge badge-warning">Exploited</span>
       {% endif %}
-    <div class="card bg-base-200 w-full {% if os.out_of_support %}border border-error/40{% else %}border border-base-300{% endif %}">
+    <div class="card bg-base-200 w-full {% if os.is_insider %}border border-info/40{% elif os.out_of_support %}border border-error/40{% else %}border border-base-300{% endif %}">
       <div class="card-body p-5 gap-3">
 
         <h3 class="font-semibold text-sm leading-tight">
           <a href="{{ os.slug }}.html" class="link link-hover">{{ os.version_label }}</a>
         </h3>
 
+        {% if os.is_insider %}
+        {# Insider card: show build history counts instead of CVE data #}
+        {% set latest_ns = os.non_security_releases[0] if os.non_security_releases else none %}
+        <div class="flex gap-4">
+          <div class="text-center">
+            <div class="text-2xl font-bold">{{ os.non_security_releases | length }}</div>
+            <div class="text-xs text-base-content/50">Builds</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold">{{ os.SecurityReleases | length }}</div>
+            <div class="text-xs text-base-content/50">Security</div>
+          </div>
+        </div>
+        <div class="text-xs text-base-content/60 leading-relaxed">
+          {% if latest_ns %}
+          Latest: <code class="font-mono">{{ latest_ns.ProductVersion }}</code>
+          {% elif latest.ProductVersion %}
+          Latest: <code class="font-mono">{{ latest.ProductVersion }}</code>
+          {% else %}
+          No builds tracked yet
+          {% endif %}
+        </div>
+        <div class="text-xs text-base-content/40">
+          {% if latest_ns %}{{ latest_ns.ReleaseDate }}{% elif latest.ReleaseDate %}{{ latest.ReleaseDate }}{% endif %}
+        </div>
+        {% else %}
+        {# Stable/EOL card: existing CVE data #}
         <div class="flex gap-4">
           <div class="text-center">
             <div class="text-2xl font-bold">{{ latest.UniqueCVEsCount }}</div>
@@ -135,6 +164,7 @@
           <span class="badge badge-ghost badge-sm">+{{ latest.ActivelyExploitedCVEs | length - 4 }} more</span>
           {% endif %}
         </div>
+        {% endif %}
         {% endif %}
 
       </div>

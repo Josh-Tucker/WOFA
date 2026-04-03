@@ -229,7 +229,7 @@
             RSS
           </a>
         </div>
-        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 03 Apr 2026 06:51 UTC</span>
+        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 03 Apr 2026 09:31 UTC</span>
         <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
           <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -259,11 +259,13 @@
 
 
 
+
 <!-- top info grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-9">
 
   <!-- Latest release card -->
   <div class="indicator w-full">
+    
     
     
   <div class="card bg-base-200 border border-base-300 w-full">
@@ -1266,7 +1268,7 @@
       </div>
       <div class="flex-1"></div>
       
-      <span class="text-xs text-base-content/40 whitespace-nowrap">+35d</span>
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+26d</span>
       
       <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
             :class="{ 'rotate-180': open }">▼</span>
@@ -1274,7 +1276,7 @@
 
     <!-- collapsed hint -->
     <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
-      35 days since previous release &nbsp;·&nbsp; 
+      26 days since previous release &nbsp;·&nbsp; 
       Contains 1 actively exploited vulnerability
     </div>
 
@@ -1320,7 +1322,7 @@
         
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
-          35
+          26
         </div>
         
         
@@ -1902,6 +1904,97 @@
          @click="open = !open">
       <span class="font-semibold text-sm">
         
+        <a href="https://support.microsoft.com/help/5074974" target="_blank" rel="noopener" @click.stop class="link link-hover">December 2025 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2025-12-18</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.8692</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+9d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      9 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5074974" target="_blank" rel="noopener" class="link link-hover">KB5074974</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.8692</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          9
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
         <a href="https://support.microsoft.com/help/5071543" target="_blank" rel="noopener" @click.stop class="link link-hover">December 2025 Security Update</a>
         
       </span>
@@ -2254,7 +2347,7 @@
       </div>
       <div class="flex-1"></div>
       
-      <span class="text-xs text-base-content/40 whitespace-nowrap">+28d</span>
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+19d</span>
       
       <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
             :class="{ 'rotate-180': open }">▼</span>
@@ -2262,7 +2355,7 @@
 
     <!-- collapsed hint -->
     <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
-      28 days since previous release &nbsp;·&nbsp; 
+      19 days since previous release &nbsp;·&nbsp; 
       Addresses 26 security issues
     </div>
 
@@ -2302,7 +2395,7 @@
         
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
-          28
+          19
         </div>
         
         
@@ -2617,6 +2710,97 @@
         </div>
         
       </div>
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/5070882" target="_blank" rel="noopener" @click.stop class="link link-hover">October 2025 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2025-10-23</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.8524</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+9d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      9 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5070882" target="_blank" rel="noopener" class="link link-hover">KB5070882</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.8524</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          9
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
       
 
     </div>
@@ -5959,7 +6143,7 @@
       </div>
       <div class="flex-1"></div>
       
-      <span class="text-xs text-base-content/40 whitespace-nowrap">+35d</span>
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+32d</span>
       
       <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
             :class="{ 'rotate-180': open }">▼</span>
@@ -5967,7 +6151,7 @@
 
     <!-- collapsed hint -->
     <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
-      35 days since previous release &nbsp;·&nbsp; 
+      32 days since previous release &nbsp;·&nbsp; 
       Contains 4 actively exploited vulnerabilities
     </div>
 
@@ -6013,7 +6197,7 @@
         
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
-          35
+          32
         </div>
         
         
@@ -6417,6 +6601,97 @@
          @click="open = !open">
       <span class="font-semibold text-sm">
         
+        <a href="https://support.microsoft.com/help/5058921" target="_blank" rel="noopener" @click.stop class="link link-hover">April 2025 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2025-04-11</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.7973</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+3d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      3 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5058921" target="_blank" rel="noopener" class="link link-hover">KB5058921</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.7973</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          3
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
         <a href="https://support.microsoft.com/help/5055521" target="_blank" rel="noopener" @click.stop class="link link-hover">April 2025 Security Update</a>
         
       </span>
@@ -6442,13 +6717,15 @@
       </div>
       <div class="flex-1"></div>
       
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+382d</span>
+      
       <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
             :class="{ 'rotate-180': open }">▼</span>
     </div>
 
     <!-- collapsed hint -->
     <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
-      
+      382 days since previous release &nbsp;·&nbsp; 
       Contains 1 actively exploited vulnerability
     </div>
 
@@ -6491,6 +6768,11 @@
           <span class="text-warning">1</span>
         </div>
         
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          382
+        </div>
         
         
         <div>
@@ -7003,8 +7285,3080 @@
     </div>
   </div>
   
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/5037423" target="_blank" rel="noopener" @click.stop class="link link-hover">March 2024 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2024-03-22</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.6800</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+273d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      273 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5037423" target="_blank" rel="noopener" class="link link-hover">KB5037423</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.6800</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          273
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/5028623" target="_blank" rel="noopener" @click.stop class="link link-hover">June 2023 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2023-06-23</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.5996</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+218d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      218 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5028623" target="_blank" rel="noopener" class="link link-hover">KB5028623</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.5996</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          218
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/5021654" target="_blank" rel="noopener" @click.stop class="link link-hover">November 2022 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2022-11-17</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.5502</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+30d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      30 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5021654" target="_blank" rel="noopener" class="link link-hover">KB5021654</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.5502</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          30
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/5020439" target="_blank" rel="noopener" @click.stop class="link link-hover">October 2022 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2022-10-18</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.5429</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+152d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      152 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5020439" target="_blank" rel="noopener" class="link link-hover">KB5020439</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.5429</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          152
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/5015019" target="_blank" rel="noopener" @click.stop class="link link-hover">May 2022 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2022-05-19</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.5127</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+122d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      122 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5015019" target="_blank" rel="noopener" class="link link-hover">KB5015019</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.5127</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          122
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/5010790" target="_blank" rel="noopener" @click.stop class="link link-hover">January 2022 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2022-01-17</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.4889</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+12d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      12 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5010790" target="_blank" rel="noopener" class="link link-hover">KB5010790</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.4889</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          12
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/5010195" target="_blank" rel="noopener" @click.stop class="link link-hover">January 2022 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2022-01-05</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.4827</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+52d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      52 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5010195" target="_blank" rel="noopener" class="link link-hover">KB5010195</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.4827</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          52
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/5008601" target="_blank" rel="noopener" @click.stop class="link link-hover">November 2021 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2021-11-14</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.4771</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+108d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      108 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5008601" target="_blank" rel="noopener" class="link link-hover">KB5008601</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.4771</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          108
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/5005393" target="_blank" rel="noopener" @click.stop class="link link-hover">July 2021 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2021-07-29</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.4532</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+22d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      22 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5005393" target="_blank" rel="noopener" class="link link-hover">KB5005393</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.4532</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          22
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/5004948" target="_blank" rel="noopener" @click.stop class="link link-hover">July 2021 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2021-07-07</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.4470</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+111d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      111 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5004948" target="_blank" rel="noopener" class="link link-hover">KB5004948</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.4470</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          111
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/5001633" target="_blank" rel="noopener" @click.stop class="link link-hover">March 2021 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2021-03-18</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.4288</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+119d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      119 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5001633" target="_blank" rel="noopener" class="link link-hover">KB5001633</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.4288</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          119
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/4594441" target="_blank" rel="noopener" @click.stop class="link link-hover">November 2020 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2020-11-19</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.4048</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+154d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      154 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/4594441" target="_blank" rel="noopener" class="link link-hover">KB4594441</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.4048</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          154
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/4567517" target="_blank" rel="noopener" @click.stop class="link link-hover">June 2020 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2020-06-18</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.3755</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+259d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      259 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/4567517" target="_blank" rel="noopener" class="link link-hover">KB4567517</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.3755</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          259
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/4524152" target="_blank" rel="noopener" @click.stop class="link link-hover">September 2019 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2019-10-03</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.3243</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+10d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      10 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/4524152" target="_blank" rel="noopener" class="link link-hover">KB4524152</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.3243</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          10
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/4522010" target="_blank" rel="noopener" @click.stop class="link link-hover">September 2019 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2019-09-23</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.3206</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+88d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      88 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/4522010" target="_blank" rel="noopener" class="link link-hover">KB4522010</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.3206</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          88
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/4509475" target="_blank" rel="noopener" @click.stop class="link link-hover">June 2019 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2019-06-27</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.3056</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+39d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      39 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/4509475" target="_blank" rel="noopener" class="link link-hover">KB4509475</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.3056</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          39
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/4505052" target="_blank" rel="noopener" @click.stop class="link link-hover">May 2019 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2019-05-19</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.2972</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+24d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      24 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/4505052" target="_blank" rel="noopener" class="link link-hover">KB4505052</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.2972</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          24
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/4499418" target="_blank" rel="noopener" @click.stop class="link link-hover">April 2019 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2019-04-25</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.2908</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+127d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      127 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/4499418" target="_blank" rel="noopener" class="link link-hover">KB4499418</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.2908</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          127
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/4483229" target="_blank" rel="noopener" @click.stop class="link link-hover">December 2018 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2018-12-19</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.2670</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+16d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      16 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/4483229" target="_blank" rel="noopener" class="link link-hover">KB4483229</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.2670</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          16
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/4478877" target="_blank" rel="noopener" @click.stop class="link link-hover">November 2018 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2018-12-03</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.2641</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+126d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      126 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/4478877" target="_blank" rel="noopener" class="link link-hover">KB4478877</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.2641</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          126
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/4346877" target="_blank" rel="noopener" @click.stop class="link link-hover">July 2018 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2018-07-30</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.2396</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+14d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      14 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/4346877" target="_blank" rel="noopener" class="link link-hover">KB4346877</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.2396</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          14
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/4345418" target="_blank" rel="noopener" @click.stop class="link link-hover">July 2018 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2018-07-16</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.2368</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+109d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      109 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/4345418" target="_blank" rel="noopener" class="link link-hover">KB4345418</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.2368</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          109
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/4096309" target="_blank" rel="noopener" @click.stop class="link link-hover">March 2018 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2018-03-29</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.2156</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+147d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      147 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/4096309" target="_blank" rel="noopener" class="link link-hover">KB4096309</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.2156</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          147
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/4052231" target="_blank" rel="noopener" @click.stop class="link link-hover">October 2017 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2017-11-02</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.1797</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+66d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      66 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/4052231" target="_blank" rel="noopener" class="link link-hover">KB4052231</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.1797</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          66
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/4039396" target="_blank" rel="noopener" @click.stop class="link link-hover">August 2017 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2017-08-28</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.1670</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+21d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      21 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/4039396" target="_blank" rel="noopener" class="link link-hover">KB4039396</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.1670</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          21
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/4038220" target="_blank" rel="noopener" @click.stop class="link link-hover">August 2017 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2017-08-07</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.1537</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+140d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      140 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/4038220" target="_blank" rel="noopener" class="link link-hover">KB4038220</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.1537</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          140
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/4015438" target="_blank" rel="noopener" @click.stop class="link link-hover">March 2017 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2017-03-20</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.969</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/4015438" target="_blank" rel="noopener" class="link link-hover">KB4015438</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.969</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
 
 </div>
+
+
+<div class="flex items-baseline gap-3 mt-10 mb-4 pb-2 border-b border-base-300">
+  <h2 class="text-base font-semibold">Additional Updates</h2>
+  <span class="text-sm text-base-content/50">35 releases</span>
+  
+  <span class="text-xs text-base-content/40 ml-1">Out-of-band and preview updates</span>
+  
+</div>
+
+<div class="overflow-auto">
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Build</th>
+        <th>KB Article</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td class="text-base-content/70">2020-04-21</td>
+        <td><code class="font-mono text-xs">14393.3659</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4550947" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4550947</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2020-04 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2020-03-17</td>
+        <td><code class="font-mono text-xs">14393.3595</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4541329" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4541329</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2020-03 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2020-02-25</td>
+        <td><code class="font-mono text-xs">14393.3542</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4537806" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4537806</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2020-02 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2020-01-23</td>
+        <td><code class="font-mono text-xs">14393.3474</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4534307" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4534307</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2020-01 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2019-10-15</td>
+        <td><code class="font-mono text-xs">14393.3300</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4519979" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4519979</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2019-10 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2019-09-24</td>
+        <td><code class="font-mono text-xs">14393.3242</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4516061" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4516061</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2019-09 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2019-08-17</td>
+        <td><code class="font-mono text-xs">14393.3181</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4512495" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4512495</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2019-08 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2019-07-16</td>
+        <td><code class="font-mono text-xs">14393.3115</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4507459" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4507459</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2019-07 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2019-06-18</td>
+        <td><code class="font-mono text-xs">14393.3053</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4503294" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4503294</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2019-06 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2019-05-23</td>
+        <td><code class="font-mono text-xs">14393.2999</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4499177" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4499177</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2019-05 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2019-04-25</td>
+        <td><code class="font-mono text-xs">14393.2941</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4493473" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4493473</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2019-04 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2019-03-19</td>
+        <td><code class="font-mono text-xs">14393.2879</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4489889" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4489889</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2019-03 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2019-02-19</td>
+        <td><code class="font-mono text-xs">14393.2828</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4487006" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4487006</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2019-02 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2019-01-17</td>
+        <td><code class="font-mono text-xs">14393.2759</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4480977" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4480977</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2019-01 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2018-11-27</td>
+        <td><code class="font-mono text-xs">14393.2639</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4467684" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4467684</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2018-11 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2018-10-18</td>
+        <td><code class="font-mono text-xs">14393.2580</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4462928" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4462928</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2018-10 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2018-09-20</td>
+        <td><code class="font-mono text-xs">14393.2515</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4457127" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4457127</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2018-09 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2018-08-30</td>
+        <td><code class="font-mono text-xs">14393.2457</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4343884" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4343884</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2018-08 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2018-07-24</td>
+        <td><code class="font-mono text-xs">14393.2395</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4338822" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4338822</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2018-07 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2018-06-21</td>
+        <td><code class="font-mono text-xs">14393.2339</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4284833" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4284833</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2018-06 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2018-05-17</td>
+        <td><code class="font-mono text-xs">14393.2273</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4103720" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4103720</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2018-05 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2018-04-17</td>
+        <td><code class="font-mono text-xs">14393.2214</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4093120" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4093120</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2018-04 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2018-03-22</td>
+        <td><code class="font-mono text-xs">14393.2155</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4088889" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4088889</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2018-03 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2018-02-22</td>
+        <td><code class="font-mono text-xs">14393.2097</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4077525" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4077525</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2018-02 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2018-01-17</td>
+        <td><code class="font-mono text-xs">14393.2035</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4057142" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4057142</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2018-01 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2017-11-27</td>
+        <td><code class="font-mono text-xs">14393.1914</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4051033" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4051033</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2017-11 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2017-10-17</td>
+        <td><code class="font-mono text-xs">14393.1794</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4041688" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4041688</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2017-10 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2017-09-28</td>
+        <td><code class="font-mono text-xs">14393.1737</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4038801" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4038801</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2017-09 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2017-08-16</td>
+        <td><code class="font-mono text-xs">14393.1613</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4034661" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4034661</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2017-08 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2017-07-18</td>
+        <td><code class="font-mono text-xs">14393.1532</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4025334" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4025334</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2017-07 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2017-06-27</td>
+        <td><code class="font-mono text-xs">14393.1378</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/4022723" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB4022723</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2017-06 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2016-12-09</td>
+        <td><code class="font-mono text-xs">14393.479</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/3201845" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB3201845</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2016-11 C</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2016-10-27</td>
+        <td><code class="font-mono text-xs">14393.351</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/3197954" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB3197954</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2016-10 D</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2016-09-29</td>
+        <td><code class="font-mono text-xs">14393.222</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/3194496" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB3194496</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2016-09 D</span>
+            
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="text-base-content/70">2016-08-23</td>
+        <td><code class="font-mono text-xs">14393.82</code></td>
+        <td>
+          
+          <a href="https://support.microsoft.com/help/3176934" class="link link-hover font-mono text-sm" target="_blank" rel="noopener">KB3176934</a>
+          
+        </td>
+        <td>
+          
+            
+          <span class="badge badge-ghost badge-sm font-mono">2016-08 D</span>
+            
+          
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+
 
     </main>
 

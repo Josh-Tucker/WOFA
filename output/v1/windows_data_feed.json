@@ -5,6 +5,7 @@
       "OSVersion": "Windows 11 26H1",
       "Group": "Windows 11",
       "VersionLabel": "26H1",
+      "IsInsider": false,
       "SupportEndDate": {
         "HomePro": "2028-03-14",
         "EnterpriseEducation": "2029-03-13"
@@ -525,25 +526,39 @@
           "Supersedes": null,
           "PatchTuesdayRelease": true
         }
-      ]
+      ],
+      "NonSecurityReleases": []
     },
     {
       "OSVersion": "Windows 11 25H2",
       "Group": "Windows 11",
       "VersionLabel": "25H2",
+      "IsInsider": false,
       "SupportEndDate": {
         "HomePro": "2027-10-12",
         "EnterpriseEducation": "2028-10-10"
       },
       "Latest": {
-        "UpdateName": "Windows 11 25H2 - March 2026 Security Update (KB5079473)",
-        "ProductVersion": "10.0.26200.8037",
-        "ReleaseDate": "2026-03-10",
-        "SecurityInfo": "https://support.microsoft.com/help/5079473",
+        "UpdateName": "Windows 11 25H2 - March 2026 Out-of-Band (KB5085516)",
+        "ProductVersion": "10.0.26200.8039",
+        "ReleaseDate": "2026-03-21",
+        "SecurityInfo": "https://support.microsoft.com/help/5085516",
         "ActivelyExploitedCVEs": [],
-        "UniqueCVEsCount": 41
+        "UniqueCVEsCount": 0
       },
       "SecurityReleases": [
+        {
+          "UpdateName": "Windows 11 25H2 - March 2026 Out-of-Band (KB5085516)",
+          "ReleaseDate": "2026-03-21",
+          "ProductVersion": "10.0.26200.8039",
+          "SecurityInfo": "https://support.microsoft.com/help/5085516",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 11,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
         {
           "UpdateName": "Windows 11 25H2 - March 2026 Security Update (KB5079473)",
           "ReleaseDate": "2026-03-10",
@@ -1041,9 +1056,33 @@
             "CVE-2026-21533"
           ],
           "UniqueCVEsCount": 26,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 17,
           "Supersedes": "5074109",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 11 25H2 - January 2026 Out-of-Band (KB5078127)",
+          "ReleaseDate": "2026-01-24",
+          "ProductVersion": "10.0.26200.7628",
+          "SecurityInfo": "https://support.microsoft.com/help/5078127",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 7,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 11 25H2 - January 2026 Out-of-Band (KB5077744)",
+          "ReleaseDate": "2026-01-17",
+          "ProductVersion": "10.0.26200.7627",
+          "SecurityInfo": "https://support.microsoft.com/help/5077744",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 4,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 11 25H2 - January 2026 Security Update (KB5074109)",
@@ -2185,9 +2224,21 @@
             "CVE-2025-62215"
           ],
           "UniqueCVEsCount": 36,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 22,
           "Supersedes": "5066835",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 11 25H2 - October 2025 Out-of-Band (KB5070773)",
+          "ReleaseDate": "2025-10-20",
+          "ProductVersion": "10.0.26200.6901",
+          "SecurityInfo": "https://support.microsoft.com/help/5070773",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 6,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 11 25H2 - October 2025 Security Update (KB5066835)",
@@ -3045,25 +3096,75 @@
           "Supersedes": "5072033",
           "PatchTuesdayRelease": true
         }
+      ],
+      "NonSecurityReleases": [
+        {
+          "UpdateType": "2026-03 D",
+          "ReleaseDate": "2026-03-26",
+          "ProductVersion": "26200.8116",
+          "KB": "5079391",
+          "SecurityInfo": "https://support.microsoft.com/help/5079391"
+        },
+        {
+          "UpdateType": "2026-02 D",
+          "ReleaseDate": "2026-02-24",
+          "ProductVersion": "26200.7922",
+          "KB": "5077241",
+          "SecurityInfo": "https://support.microsoft.com/help/5077241"
+        },
+        {
+          "UpdateType": "2026-01 D",
+          "ReleaseDate": "2026-01-29",
+          "ProductVersion": "26200.7705",
+          "KB": "5074105",
+          "SecurityInfo": "https://support.microsoft.com/help/5074105"
+        },
+        {
+          "UpdateType": "2025-11 D",
+          "ReleaseDate": "2025-12-01",
+          "ProductVersion": "26200.7309",
+          "KB": "5070311",
+          "SecurityInfo": "https://support.microsoft.com/help/5070311"
+        },
+        {
+          "UpdateType": "2025-10 D",
+          "ReleaseDate": "2025-10-28",
+          "ProductVersion": "26200.7019",
+          "KB": "5067036",
+          "SecurityInfo": "https://support.microsoft.com/help/5067036"
+        }
       ]
     },
     {
       "OSVersion": "Windows 11 24H2",
       "Group": "Windows 11",
       "VersionLabel": "24H2",
+      "IsInsider": false,
       "SupportEndDate": {
         "HomePro": "2026-10-13",
         "EnterpriseEducation": "2027-10-12"
       },
       "Latest": {
-        "UpdateName": "Windows 11 24H2 - March 2026 Security Update (KB5079473)",
-        "ProductVersion": "10.0.26100.8037",
-        "ReleaseDate": "2026-03-10",
-        "SecurityInfo": "https://support.microsoft.com/help/5079473",
+        "UpdateName": "Windows 11 24H2 - March 2026 Out-of-Band (KB5085516)",
+        "ProductVersion": "10.0.26100.8039",
+        "ReleaseDate": "2026-03-21",
+        "SecurityInfo": "https://support.microsoft.com/help/5085516",
         "ActivelyExploitedCVEs": [],
-        "UniqueCVEsCount": 41
+        "UniqueCVEsCount": 0
       },
       "SecurityReleases": [
+        {
+          "UpdateName": "Windows 11 24H2 - March 2026 Out-of-Band (KB5085516)",
+          "ReleaseDate": "2026-03-21",
+          "ProductVersion": "10.0.26100.8039",
+          "SecurityInfo": "https://support.microsoft.com/help/5085516",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 11,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
         {
           "UpdateName": "Windows 11 24H2 - March 2026 Security Update (KB5079473)",
           "ReleaseDate": "2026-03-10",
@@ -3568,9 +3669,33 @@
             "CVE-2026-21533"
           ],
           "UniqueCVEsCount": 27,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 17,
           "Supersedes": "5073379",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 11 24H2 - January 2026 Out-of-Band (KB5078127)",
+          "ReleaseDate": "2026-01-24",
+          "ProductVersion": "10.0.26100.7628",
+          "SecurityInfo": "https://support.microsoft.com/help/5078127",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 7,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 11 24H2 - January 2026 Out-of-Band (KB5077744)",
+          "ReleaseDate": "2026-01-17",
+          "ProductVersion": "10.0.26100.7627",
+          "SecurityInfo": "https://support.microsoft.com/help/5077744",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 4,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 11 24H2 - January 2026 Security Update (KB5074109)",
@@ -4445,9 +4570,21 @@
             "CVE-2025-62221"
           ],
           "UniqueCVEsCount": 36,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 21,
           "Supersedes": "5068861",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 11 24H2 - November 2025 Out-of-Band (KB5072359)",
+          "ReleaseDate": "2025-11-18",
+          "ProductVersion": "10.0.26100.7178",
+          "SecurityInfo": "https://support.microsoft.com/help/5072359",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 7,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 11 24H2 - November 2025 Security Update (KB5068861)",
@@ -4712,9 +4849,33 @@
             "CVE-2025-62215"
           ],
           "UniqueCVEsCount": 36,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 19,
           "Supersedes": "5066835",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 11 24H2 - October 2025 Out-of-Band (KB5070881)",
+          "ReleaseDate": "2025-10-23",
+          "ProductVersion": "10.0.26100.6905",
+          "SecurityInfo": "https://support.microsoft.com/help/5070881",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 3,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 11 24H2 - October 2025 Out-of-Band (KB5070773)",
+          "ReleaseDate": "2025-10-20",
+          "ProductVersion": "10.0.26100.6901",
+          "SecurityInfo": "https://support.microsoft.com/help/5070773",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 6,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 11 24H2 - October 2025 Security Update (KB5066835)",
@@ -5604,9 +5765,21 @@
             "CVE-2025-59230"
           ],
           "UniqueCVEsCount": 125,
-          "DaysSincePreviousRelease": 35,
+          "DaysSincePreviousRelease": 22,
           "Supersedes": "5065426",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 11 24H2 - September 2025 Out-of-Band (KB5068221)",
+          "ReleaseDate": "2025-09-22",
+          "ProductVersion": "10.0.26100.6588",
+          "SecurityInfo": "https://support.microsoft.com/help/5068221",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 13,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 11 24H2 - September 2025 Security Update (KB5065426)",
@@ -6344,9 +6517,21 @@
           },
           "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 53,
-          "DaysSincePreviousRelease": 35,
+          "DaysSincePreviousRelease": 30,
           "Supersedes": "5062553",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 11 24H2 - July 2025 Out-of-Band (KB5064489)",
+          "ReleaseDate": "2025-07-13",
+          "ProductVersion": "10.0.26100.4656",
+          "SecurityInfo": "https://support.microsoft.com/help/5064489",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 5,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 11 24H2 - July 2025 Security Update (KB5062553)",
@@ -6924,9 +7109,21 @@
           },
           "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 81,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 27,
           "Supersedes": "5060842",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 11 24H2 - June 2025 Out-of-Band (KB5063060)",
+          "ReleaseDate": "2025-06-11",
+          "ProductVersion": "10.0.26100.4351",
+          "SecurityInfo": "https://support.microsoft.com/help/5063060",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 1,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 11 24H2 - June 2025 Security Update (KB5060842)",
@@ -7199,9 +7396,21 @@
             "CVE-2025-33073"
           ],
           "UniqueCVEsCount": 37,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 14,
           "Supersedes": "5058411",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 11 24H2 - May 2025 Out-of-Band (KB5061977)",
+          "ReleaseDate": "2025-05-27",
+          "ProductVersion": "10.0.26100.4066",
+          "SecurityInfo": "https://support.microsoft.com/help/5061977",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 14,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 11 24H2 - May 2025 Security Update (KB5058411)",
@@ -7944,12 +8153,127 @@
           "Supersedes": "5053598",
           "PatchTuesdayRelease": true
         }
+      ],
+      "NonSecurityReleases": [
+        {
+          "UpdateType": "2026-03 D",
+          "ReleaseDate": "2026-03-26",
+          "ProductVersion": "26100.8116",
+          "KB": "5079391",
+          "SecurityInfo": "https://support.microsoft.com/help/5079391"
+        },
+        {
+          "UpdateType": "2026-02 D",
+          "ReleaseDate": "2026-02-24",
+          "ProductVersion": "26100.7922",
+          "KB": "5077241",
+          "SecurityInfo": "https://support.microsoft.com/help/5077241"
+        },
+        {
+          "UpdateType": "2026-01 D",
+          "ReleaseDate": "2026-01-29",
+          "ProductVersion": "26100.7705",
+          "KB": "5074105",
+          "SecurityInfo": "https://support.microsoft.com/help/5074105"
+        },
+        {
+          "UpdateType": "2025-11 D",
+          "ReleaseDate": "2025-12-01",
+          "ProductVersion": "26100.7309",
+          "KB": "5070311",
+          "SecurityInfo": "https://support.microsoft.com/help/5070311"
+        },
+        {
+          "UpdateType": "2025-10 D",
+          "ReleaseDate": "2025-10-28",
+          "ProductVersion": "26100.7019",
+          "KB": "5067036",
+          "SecurityInfo": "https://support.microsoft.com/help/5067036"
+        },
+        {
+          "UpdateType": "2025-09 D",
+          "ReleaseDate": "2025-09-29",
+          "ProductVersion": "26100.6725",
+          "KB": "5065789",
+          "SecurityInfo": "https://support.microsoft.com/help/5065789"
+        },
+        {
+          "UpdateType": "2025-08 D",
+          "ReleaseDate": "2025-08-29",
+          "ProductVersion": "26100.5074",
+          "KB": "5064081",
+          "SecurityInfo": "https://support.microsoft.com/help/5064081"
+        },
+        {
+          "UpdateType": "2025-07 D",
+          "ReleaseDate": "2025-07-22",
+          "ProductVersion": "26100.4770",
+          "KB": "5062660",
+          "SecurityInfo": "https://support.microsoft.com/help/5062660"
+        },
+        {
+          "UpdateType": "2025-06 D",
+          "ReleaseDate": "2025-06-26",
+          "ProductVersion": "26100.4484",
+          "KB": "5060829",
+          "SecurityInfo": "https://support.microsoft.com/help/5060829"
+        },
+        {
+          "UpdateType": "2025-05 D",
+          "ReleaseDate": "2025-05-28",
+          "ProductVersion": "26100.4202",
+          "KB": "5058499",
+          "SecurityInfo": "https://support.microsoft.com/help/5058499"
+        },
+        {
+          "UpdateType": "2025-04 D",
+          "ReleaseDate": "2025-04-25",
+          "ProductVersion": "26100.3915",
+          "KB": "5055627",
+          "SecurityInfo": "https://support.microsoft.com/help/5055627"
+        },
+        {
+          "UpdateType": "2025-03 D",
+          "ReleaseDate": "2025-03-27",
+          "ProductVersion": "26100.3624",
+          "KB": "5053656",
+          "SecurityInfo": "https://support.microsoft.com/help/5053656"
+        },
+        {
+          "UpdateType": "2025-02 D",
+          "ReleaseDate": "2025-02-25",
+          "ProductVersion": "26100.3323",
+          "KB": "5052093",
+          "SecurityInfo": "https://support.microsoft.com/help/5052093"
+        },
+        {
+          "UpdateType": "2025-01 D",
+          "ReleaseDate": "2025-01-28",
+          "ProductVersion": "26100.3037",
+          "KB": "5050094",
+          "SecurityInfo": "https://support.microsoft.com/help/5050094"
+        },
+        {
+          "UpdateType": "2024-11 D",
+          "ReleaseDate": "2024-11-21",
+          "ProductVersion": "26100.2454",
+          "KB": "5046740",
+          "SecurityInfo": "https://support.microsoft.com/help/5046740"
+        },
+        {
+          "UpdateType": "2024-10 D",
+          "ReleaseDate": "2024-10-24",
+          "ProductVersion": "26100.2161",
+          "KB": "5044384",
+          "SecurityInfo": "https://support.microsoft.com/help/5044384"
+        }
       ]
     },
     {
       "OSVersion": "Windows 11 23H2",
       "Group": "Windows 11",
       "VersionLabel": "23H2",
+      "IsInsider": false,
       "SupportEndDate": {
         "HomePro": "2025-11-11",
         "EnterpriseEducation": "2026-11-10"
@@ -8460,9 +8784,33 @@
             "CVE-2026-21533"
           ],
           "UniqueCVEsCount": 26,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 17,
           "Supersedes": "5073455",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 11 23H2 - January 2026 Out-of-Band (KB5078132)",
+          "ReleaseDate": "2026-01-24",
+          "ProductVersion": "10.0.22631.6495",
+          "SecurityInfo": "https://support.microsoft.com/help/5078132",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 7,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 11 23H2 - January 2026 Out-of-Band (KB5077797)",
+          "ReleaseDate": "2026-01-17",
+          "ProductVersion": "10.0.22631.6494",
+          "SecurityInfo": "https://support.microsoft.com/help/5077797",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 4,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 11 23H2 - January 2026 Security Update (KB5073455)",
@@ -10635,9 +10983,21 @@
           },
           "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 46,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 21,
           "Supersedes": "5063875",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 11 23H2 - August 2025 Out-of-Band (KB5066189)",
+          "ReleaseDate": "2025-08-19",
+          "ProductVersion": "10.0.22631.5771",
+          "SecurityInfo": "https://support.microsoft.com/help/5066189",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 7,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 11 23H2 - August 2025 Security Update (KB5063875)",
@@ -11832,9 +12192,21 @@
             "CVE-2025-33073"
           ],
           "UniqueCVEsCount": 37,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 10,
           "Supersedes": "5058405",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 11 23H2 - May 2025 Out-of-Band (KB5062170)",
+          "ReleaseDate": "2025-05-31",
+          "ProductVersion": "10.0.22631.5415",
+          "SecurityInfo": "https://support.microsoft.com/help/5062170",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 18,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 11 23H2 - May 2025 Security Update (KB5058405)",
@@ -12096,9 +12468,21 @@
             "CVE-2025-32709"
           ],
           "UniqueCVEsCount": 35,
-          "DaysSincePreviousRelease": 35,
+          "DaysSincePreviousRelease": 32,
           "Supersedes": "5055528",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 11 23H2 - April 2025 Out-of-Band (KB5058919)",
+          "ReleaseDate": "2025-04-11",
+          "ProductVersion": "10.0.22631.5192",
+          "SecurityInfo": "https://support.microsoft.com/help/5058919",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 3,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 11 23H2 - April 2025 Security Update (KB5055528)",
@@ -12570,12 +12954,190 @@
           "Supersedes": "5053602",
           "PatchTuesdayRelease": true
         }
+      ],
+      "NonSecurityReleases": [
+        {
+          "UpdateType": "2025-11 D",
+          "ReleaseDate": "2025-11-20",
+          "ProductVersion": "22631.6276",
+          "KB": "5070312",
+          "SecurityInfo": "https://support.microsoft.com/help/5070312"
+        },
+        {
+          "UpdateType": "2025-10 D",
+          "ReleaseDate": "2025-10-28",
+          "ProductVersion": "22631.6133",
+          "KB": "5067112",
+          "SecurityInfo": "https://support.microsoft.com/help/5067112"
+        },
+        {
+          "UpdateType": "2025-09 D",
+          "ReleaseDate": "2025-09-23",
+          "ProductVersion": "22631.5984",
+          "KB": "5065790",
+          "SecurityInfo": "https://support.microsoft.com/help/5065790"
+        },
+        {
+          "UpdateType": "2025-08 D",
+          "ReleaseDate": "2025-08-26",
+          "ProductVersion": "22631.5840",
+          "KB": "5064080",
+          "SecurityInfo": "https://support.microsoft.com/help/5064080"
+        },
+        {
+          "UpdateType": "2025-07 D",
+          "ReleaseDate": "2025-07-22",
+          "ProductVersion": "22631.5699",
+          "KB": "5062663",
+          "SecurityInfo": "https://support.microsoft.com/help/5062663"
+        },
+        {
+          "UpdateType": "2025-06 D",
+          "ReleaseDate": "2025-06-26",
+          "ProductVersion": "22631.5549",
+          "KB": "5060826",
+          "SecurityInfo": "https://support.microsoft.com/help/5060826"
+        },
+        {
+          "UpdateType": "2025-05 D",
+          "ReleaseDate": "2025-05-27",
+          "ProductVersion": "22631.5413",
+          "KB": "5058502",
+          "SecurityInfo": "https://support.microsoft.com/help/5058502"
+        },
+        {
+          "UpdateType": "2025-04 D",
+          "ReleaseDate": "2025-04-22",
+          "ProductVersion": "22631.5262",
+          "KB": "5055629",
+          "SecurityInfo": "https://support.microsoft.com/help/5055629"
+        },
+        {
+          "UpdateType": "2025-03 D",
+          "ReleaseDate": "2025-03-25",
+          "ProductVersion": "22631.5126",
+          "KB": "5053657",
+          "SecurityInfo": "https://support.microsoft.com/help/5053657"
+        },
+        {
+          "UpdateType": "2025-02 D",
+          "ReleaseDate": "2025-02-25",
+          "ProductVersion": "22631.4974",
+          "KB": "5052094",
+          "SecurityInfo": "https://support.microsoft.com/help/5052094"
+        },
+        {
+          "UpdateType": "2025-01 D",
+          "ReleaseDate": "2025-01-29",
+          "ProductVersion": "22631.4830",
+          "KB": "5050092",
+          "SecurityInfo": "https://support.microsoft.com/help/5050092"
+        },
+        {
+          "UpdateType": "2024-11 D",
+          "ReleaseDate": "2024-11-21",
+          "ProductVersion": "22631.4541",
+          "KB": "5046732",
+          "SecurityInfo": "https://support.microsoft.com/help/5046732"
+        },
+        {
+          "UpdateType": "2024-10 D",
+          "ReleaseDate": "2024-10-22",
+          "ProductVersion": "22631.4391",
+          "KB": "5044380",
+          "SecurityInfo": "https://support.microsoft.com/help/5044380"
+        },
+        {
+          "UpdateType": "2024-09 D",
+          "ReleaseDate": "2024-09-26",
+          "ProductVersion": "22631.4249",
+          "KB": "5043145",
+          "SecurityInfo": "https://support.microsoft.com/help/5043145"
+        },
+        {
+          "UpdateType": "2024-08 D",
+          "ReleaseDate": "2024-08-27",
+          "ProductVersion": "22631.4112",
+          "KB": "5041587",
+          "SecurityInfo": "https://support.microsoft.com/help/5041587"
+        },
+        {
+          "UpdateType": "2024-07 D",
+          "ReleaseDate": "2024-07-25",
+          "ProductVersion": "22631.3958",
+          "KB": "5040527",
+          "SecurityInfo": "https://support.microsoft.com/help/5040527"
+        },
+        {
+          "UpdateType": "2024-06 D",
+          "ReleaseDate": "2024-06-25",
+          "ProductVersion": "22631.3810",
+          "KB": "5039302",
+          "SecurityInfo": "https://support.microsoft.com/help/5039302"
+        },
+        {
+          "UpdateType": "2024-05 D",
+          "ReleaseDate": "2024-05-29",
+          "ProductVersion": "22631.3672",
+          "KB": "5037853",
+          "SecurityInfo": "https://support.microsoft.com/help/5037853"
+        },
+        {
+          "UpdateType": "2024-04 D",
+          "ReleaseDate": "2024-04-23",
+          "ProductVersion": "22631.3527",
+          "KB": "5036980",
+          "SecurityInfo": "https://support.microsoft.com/help/5036980"
+        },
+        {
+          "UpdateType": "2024-03 D",
+          "ReleaseDate": "2024-03-26",
+          "ProductVersion": "22631.3374",
+          "KB": "5035942",
+          "SecurityInfo": "https://support.microsoft.com/help/5035942"
+        },
+        {
+          "UpdateType": "2024-02 D",
+          "ReleaseDate": "2024-02-29",
+          "ProductVersion": "22631.3235",
+          "KB": "5034848",
+          "SecurityInfo": "https://support.microsoft.com/help/5034848"
+        },
+        {
+          "UpdateType": "2024-01 D",
+          "ReleaseDate": "2024-01-23",
+          "ProductVersion": "22631.3085",
+          "KB": "5034204",
+          "SecurityInfo": "https://support.microsoft.com/help/5034204"
+        },
+        {
+          "UpdateType": "2023-11 D",
+          "ReleaseDate": "2023-12-04",
+          "ProductVersion": "22631.2792",
+          "KB": "5032288",
+          "SecurityInfo": "https://support.microsoft.com/help/5032288"
+        },
+        {
+          "UpdateType": "2023-10 D",
+          "ReleaseDate": "2023-10-31",
+          "ProductVersion": "22631.2506",
+          "KB": "5031455",
+          "SecurityInfo": "https://support.microsoft.com/help/5031455"
+        },
+        {
+          "UpdateType": "2023-10 D",
+          "ReleaseDate": "2023-10-31",
+          "ProductVersion": "22631.2428",
+          "KB": "",
+          "SecurityInfo": null
+        }
       ]
     },
     {
       "OSVersion": "Windows 10 1809",
       "Group": "Windows 10",
       "VersionLabel": "1809",
+      "IsInsider": false,
       "SupportEndDate": {
         "HomePro": null,
         "EnterpriseEducation": null
@@ -13051,9 +13613,33 @@
             "CVE-2026-21533"
           ],
           "UniqueCVEsCount": 22,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 17,
           "Supersedes": null,
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 10 1809 - January 2026 Out-of-Band (KB5078131)",
+          "ReleaseDate": "2026-01-24",
+          "ProductVersion": "10.0.17763.8281",
+          "SecurityInfo": "https://support.microsoft.com/help/5078131",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 7,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - January 2026 Out-of-Band (KB5077795)",
+          "ReleaseDate": "2026-01-17",
+          "ProductVersion": "10.0.17763.8280",
+          "SecurityInfo": "https://support.microsoft.com/help/5077795",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 4,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 10 1809 - January 2026 Security Update (KB5073723)",
@@ -13549,9 +14135,21 @@
             "CVE-2026-20805"
           ],
           "UniqueCVEsCount": 69,
-          "DaysSincePreviousRelease": 35,
+          "DaysSincePreviousRelease": 26,
           "Supersedes": "5071544",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 10 1809 - December 2025 Out-of-Band (KB5074975)",
+          "ReleaseDate": "2025-12-18",
+          "ProductVersion": "10.0.17763.8148",
+          "SecurityInfo": "https://support.microsoft.com/help/5074975",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 9,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 10 1809 - December 2025 Security Update (KB5071544)",
@@ -14020,9 +14618,21 @@
             "CVE-2025-62215"
           ],
           "UniqueCVEsCount": 34,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 19,
           "Supersedes": "5066586",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 10 1809 - October 2025 Out-of-Band (KB5070883)",
+          "ReleaseDate": "2025-10-23",
+          "ProductVersion": "10.0.17763.7922",
+          "SecurityInfo": "https://support.microsoft.com/help/5070883",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 9,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 10 1809 - October 2025 Security Update (KB5066586)",
@@ -14953,9 +15563,21 @@
           },
           "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 40,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 21,
           "Supersedes": "5063877",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 10 1809 - August 2025 Out-of-Band (KB5066187)",
+          "ReleaseDate": "2025-08-19",
+          "ProductVersion": "10.0.17763.7683",
+          "SecurityInfo": "https://support.microsoft.com/help/5066187",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 7,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 10 1809 - August 2025 Security Update (KB5063877)",
@@ -16080,9 +16702,21 @@
             "CVE-2025-33073"
           ],
           "UniqueCVEsCount": 35,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 14,
           "Supersedes": "5058392",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 10 1809 - May 2025 Out-of-Band (KB5061978)",
+          "ReleaseDate": "2025-05-27",
+          "ProductVersion": "10.0.17763.7322",
+          "SecurityInfo": "https://support.microsoft.com/help/5061978",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 14,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 10 1809 - May 2025 Security Update (KB5058392)",
@@ -16337,9 +16971,33 @@
             "CVE-2025-32709"
           ],
           "UniqueCVEsCount": 34,
-          "DaysSincePreviousRelease": 35,
+          "DaysSincePreviousRelease": 27,
           "Supersedes": "5055519",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 10 1809 - April 2025 Out-of-Band (KB5059091)",
+          "ReleaseDate": "2025-04-16",
+          "ProductVersion": "10.0.17763.7249",
+          "SecurityInfo": "https://support.microsoft.com/help/5059091",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 5,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - April 2025 Out-of-Band (KB5058922)",
+          "ReleaseDate": "2025-04-11",
+          "ProductVersion": "10.0.17763.7240",
+          "SecurityInfo": "https://support.microsoft.com/help/5058922",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 3,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 10 1809 - April 2025 Security Update (KB5055519)",
@@ -16744,9 +17402,562 @@
             "CVE-2025-29824"
           ],
           "UniqueCVEsCount": 56,
-          "DaysSincePreviousRelease": null,
+          "DaysSincePreviousRelease": 320,
           "Supersedes": "5053596",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 10 1809 - May 2024 Out-of-Band (KB5039705)",
+          "ReleaseDate": "2024-05-23",
+          "ProductVersion": "10.0.17763.5830",
+          "SecurityInfo": "https://support.microsoft.com/help/5039705",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 59,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - March 2024 Out-of-Band (KB5037425)",
+          "ReleaseDate": "2024-03-25",
+          "ProductVersion": "10.0.17763.5579",
+          "SecurityInfo": "https://support.microsoft.com/help/5037425",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 461,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - December 2022 Out-of-Band (KB5022554)",
+          "ReleaseDate": "2022-12-20",
+          "ProductVersion": "10.0.17763.3772",
+          "SecurityInfo": "https://support.microsoft.com/help/5022554",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 33,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - November 2022 Out-of-Band (KB5021655)",
+          "ReleaseDate": "2022-11-17",
+          "ProductVersion": "10.0.17763.3653",
+          "SecurityInfo": "https://support.microsoft.com/help/5021655",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 31,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - October 2022 Out-of-Band (KB5020438)",
+          "ReleaseDate": "2022-10-17",
+          "ProductVersion": "10.0.17763.3534",
+          "SecurityInfo": "https://support.microsoft.com/help/5020438",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 151,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - May 2022 Out-of-Band (KB5015018)",
+          "ReleaseDate": "2022-05-19",
+          "ProductVersion": "10.0.17763.2931",
+          "SecurityInfo": "https://support.microsoft.com/help/5015018",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 121,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - January 2022 Out-of-Band (KB5010791)",
+          "ReleaseDate": "2022-01-18",
+          "ProductVersion": "10.0.17763.2458",
+          "SecurityInfo": "https://support.microsoft.com/help/5010791",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 14,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - January 2022 Out-of-Band (KB5010196)",
+          "ReleaseDate": "2022-01-04",
+          "ProductVersion": "10.0.17763.2369",
+          "SecurityInfo": "https://support.microsoft.com/help/5010196",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 51,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - November 2021 Out-of-Band (KB5008602)",
+          "ReleaseDate": "2021-11-14",
+          "ProductVersion": "10.0.17763.2305",
+          "SecurityInfo": "https://support.microsoft.com/help/5008602",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 110,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - July 2021 Out-of-Band (KB5005394)",
+          "ReleaseDate": "2021-07-27",
+          "ProductVersion": "10.0.17763.2091",
+          "SecurityInfo": "https://support.microsoft.com/help/5005394",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 21,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - July 2021 Out-of-Band (KB5004947)",
+          "ReleaseDate": "2021-07-06",
+          "ProductVersion": "10.0.17763.2029",
+          "SecurityInfo": "https://support.microsoft.com/help/5004947",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 110,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - March 2021 Out-of-Band (KB5001638)",
+          "ReleaseDate": "2021-03-18",
+          "ProductVersion": "10.0.17763.1823",
+          "SecurityInfo": "https://support.microsoft.com/help/5001638",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 3,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - March 2021 Out-of-Band (KB5001568)",
+          "ReleaseDate": "2021-03-15",
+          "ProductVersion": "10.0.17763.1821",
+          "SecurityInfo": "https://support.microsoft.com/help/5001568",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 118,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - November 2020 Out-of-Band (KB4594442)",
+          "ReleaseDate": "2020-11-17",
+          "ProductVersion": "10.0.17763.1579",
+          "SecurityInfo": "https://support.microsoft.com/help/4594442",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 154,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - June 2020 Out-of-Band (KB4567513)",
+          "ReleaseDate": "2020-06-16",
+          "ProductVersion": "10.0.17763.1294",
+          "SecurityInfo": "https://support.microsoft.com/help/4567513",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 78,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - March 2020 Out-of-Band (KB4554354)",
+          "ReleaseDate": "2020-03-30",
+          "ProductVersion": "10.0.17763.1132",
+          "SecurityInfo": "https://support.microsoft.com/help/4554354",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 179,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - September 2019 Out-of-Band (KB4524148)",
+          "ReleaseDate": "2019-10-03",
+          "ProductVersion": "10.0.17763.775",
+          "SecurityInfo": "https://support.microsoft.com/help/4524148",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 10,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - September 2019 Out-of-Band (KB4522015)",
+          "ReleaseDate": "2019-09-23",
+          "ProductVersion": "10.0.17763.740",
+          "SecurityInfo": "https://support.microsoft.com/help/4522015",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 89,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - June 2019 Out-of-Band (KB4509479)",
+          "ReleaseDate": "2019-06-26",
+          "ProductVersion": "10.0.17763.593",
+          "SecurityInfo": "https://support.microsoft.com/help/4509479",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 38,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - May 2019 Out-of-Band (KB4505056)",
+          "ReleaseDate": "2019-05-19",
+          "ProductVersion": "10.0.17763.504",
+          "SecurityInfo": "https://support.microsoft.com/help/4505056",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 18,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - April 2019 Out-of-Band (KB4501835)",
+          "ReleaseDate": "2019-05-01",
+          "ProductVersion": "10.0.17763.439",
+          "SecurityInfo": "https://support.microsoft.com/help/4501835",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 133,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1809 - December 2018 Out-of-Band (KB4483235)",
+          "ReleaseDate": "2018-12-19",
+          "ProductVersion": "10.0.17763.195",
+          "SecurityInfo": "https://support.microsoft.com/help/4483235",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": null,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        }
+      ],
+      "NonSecurityReleases": [
+        {
+          "UpdateType": "2022-09 C",
+          "ReleaseDate": "2022-09-20",
+          "ProductVersion": "17763.3469",
+          "KB": "5017379",
+          "SecurityInfo": "https://support.microsoft.com/help/5017379"
+        },
+        {
+          "UpdateType": "2022-08 C",
+          "ReleaseDate": "2022-08-23",
+          "ProductVersion": "17763.3346",
+          "KB": "5016690",
+          "SecurityInfo": "https://support.microsoft.com/help/5016690"
+        },
+        {
+          "UpdateType": "2022-07 C",
+          "ReleaseDate": "2022-07-21",
+          "ProductVersion": "17763.3232",
+          "KB": "5015880",
+          "SecurityInfo": "https://support.microsoft.com/help/5015880"
+        },
+        {
+          "UpdateType": "2022-06 C",
+          "ReleaseDate": "2022-06-23",
+          "ProductVersion": "17763.3113",
+          "KB": "5014669",
+          "SecurityInfo": "https://support.microsoft.com/help/5014669"
+        },
+        {
+          "UpdateType": "2022-05 C",
+          "ReleaseDate": "2022-05-24",
+          "ProductVersion": "17763.2989",
+          "KB": "5014022",
+          "SecurityInfo": "https://support.microsoft.com/help/5014022"
+        },
+        {
+          "UpdateType": "2022-04 C",
+          "ReleaseDate": "2022-04-21",
+          "ProductVersion": "17763.2867",
+          "KB": "5012636",
+          "SecurityInfo": "https://support.microsoft.com/help/5012636"
+        },
+        {
+          "UpdateType": "2022-03 C",
+          "ReleaseDate": "2022-03-22",
+          "ProductVersion": "17763.2746",
+          "KB": "5011551",
+          "SecurityInfo": "https://support.microsoft.com/help/5011551"
+        },
+        {
+          "UpdateType": "2022-02 C",
+          "ReleaseDate": "2022-02-15",
+          "ProductVersion": "17763.2628",
+          "KB": "5010427",
+          "SecurityInfo": "https://support.microsoft.com/help/5010427"
+        },
+        {
+          "UpdateType": "2022-01 C",
+          "ReleaseDate": "2022-01-25",
+          "ProductVersion": "17763.2510",
+          "KB": "5009616",
+          "SecurityInfo": "https://support.microsoft.com/help/5009616"
+        },
+        {
+          "UpdateType": "2021-11 C",
+          "ReleaseDate": "2021-11-22",
+          "ProductVersion": "17763.2330",
+          "KB": "5007266",
+          "SecurityInfo": "https://support.microsoft.com/help/5007266"
+        },
+        {
+          "UpdateType": "2021-10 C",
+          "ReleaseDate": "2021-10-19",
+          "ProductVersion": "17763.2268",
+          "KB": "5006744",
+          "SecurityInfo": "https://support.microsoft.com/help/5006744"
+        },
+        {
+          "UpdateType": "2021-09 C",
+          "ReleaseDate": "2021-09-21",
+          "ProductVersion": "17763.2213",
+          "KB": "5005625",
+          "SecurityInfo": "https://support.microsoft.com/help/5005625"
+        },
+        {
+          "UpdateType": "2021-08 C",
+          "ReleaseDate": "2021-08-26",
+          "ProductVersion": "17763.2145",
+          "KB": "5005102",
+          "SecurityInfo": "https://support.microsoft.com/help/5005102"
+        },
+        {
+          "UpdateType": "2021-07 C",
+          "ReleaseDate": "2021-07-20",
+          "ProductVersion": "17763.2090",
+          "KB": "5004308",
+          "SecurityInfo": "https://support.microsoft.com/help/5004308"
+        },
+        {
+          "UpdateType": "2021-06 C",
+          "ReleaseDate": "2021-06-15",
+          "ProductVersion": "17763.2028",
+          "KB": "5003703",
+          "SecurityInfo": "https://support.microsoft.com/help/5003703"
+        },
+        {
+          "UpdateType": "2021-05 C",
+          "ReleaseDate": "2021-05-20",
+          "ProductVersion": "17763.1971",
+          "KB": "5003217",
+          "SecurityInfo": "https://support.microsoft.com/help/5003217"
+        },
+        {
+          "UpdateType": "2021-04 C",
+          "ReleaseDate": "2021-04-22",
+          "ProductVersion": "17763.1911",
+          "KB": "5001384",
+          "SecurityInfo": "https://support.microsoft.com/help/5001384"
+        },
+        {
+          "UpdateType": "2021-03 C",
+          "ReleaseDate": "2021-03-25",
+          "ProductVersion": "17763.1852",
+          "KB": "5000854",
+          "SecurityInfo": "https://support.microsoft.com/help/5000854"
+        },
+        {
+          "UpdateType": "2021-02 C",
+          "ReleaseDate": "2021-02-16",
+          "ProductVersion": "17763.1790",
+          "KB": "4601383",
+          "SecurityInfo": "https://support.microsoft.com/help/4601383"
+        },
+        {
+          "UpdateType": "2021-01 C",
+          "ReleaseDate": "2021-01-21",
+          "ProductVersion": "17763.1728",
+          "KB": "4598296",
+          "SecurityInfo": "https://support.microsoft.com/help/4598296"
+        },
+        {
+          "UpdateType": "2020-11 C",
+          "ReleaseDate": "2020-11-19",
+          "ProductVersion": "17763.1613",
+          "KB": "4586839",
+          "SecurityInfo": "https://support.microsoft.com/help/4586839"
+        },
+        {
+          "UpdateType": "2020-10 C",
+          "ReleaseDate": "2020-10-20",
+          "ProductVersion": "17763.1554",
+          "KB": "4580390",
+          "SecurityInfo": "https://support.microsoft.com/help/4580390"
+        },
+        {
+          "UpdateType": "2020-09 C",
+          "ReleaseDate": "2020-09-16",
+          "ProductVersion": "17763.1490",
+          "KB": "4577069",
+          "SecurityInfo": "https://support.microsoft.com/help/4577069"
+        },
+        {
+          "UpdateType": "2020-08 C",
+          "ReleaseDate": "2020-08-20",
+          "ProductVersion": "17763.1432",
+          "KB": "4571748",
+          "SecurityInfo": "https://support.microsoft.com/help/4571748"
+        },
+        {
+          "UpdateType": "2020-07 C",
+          "ReleaseDate": "2020-07-21",
+          "ProductVersion": "17763.1369",
+          "KB": "4559003",
+          "SecurityInfo": "https://support.microsoft.com/help/4559003"
+        },
+        {
+          "UpdateType": "2020-04 C",
+          "ReleaseDate": "2020-04-21",
+          "ProductVersion": "17763.1192",
+          "KB": "4550969",
+          "SecurityInfo": "https://support.microsoft.com/help/4550969"
+        },
+        {
+          "UpdateType": "2020-03 C",
+          "ReleaseDate": "2020-03-17",
+          "ProductVersion": "17763.1131",
+          "KB": "4541331",
+          "SecurityInfo": "https://support.microsoft.com/help/4541331"
+        },
+        {
+          "UpdateType": "2020-02 C",
+          "ReleaseDate": "2020-02-25",
+          "ProductVersion": "17763.1075",
+          "KB": "4537818",
+          "SecurityInfo": "https://support.microsoft.com/help/4537818"
+        },
+        {
+          "UpdateType": "2020-01 C",
+          "ReleaseDate": "2020-01-23",
+          "ProductVersion": "17763.1012",
+          "KB": "4534321",
+          "SecurityInfo": "https://support.microsoft.com/help/4534321"
+        },
+        {
+          "UpdateType": "2019-10 C",
+          "ReleaseDate": "2019-10-15",
+          "ProductVersion": "17763.832",
+          "KB": "4520062",
+          "SecurityInfo": "https://support.microsoft.com/help/4520062"
+        },
+        {
+          "UpdateType": "2019-09 C",
+          "ReleaseDate": "2019-09-24",
+          "ProductVersion": "17763.774",
+          "KB": "4516077",
+          "SecurityInfo": "https://support.microsoft.com/help/4516077"
+        },
+        {
+          "UpdateType": "2019-08 C",
+          "ReleaseDate": "2019-08-17",
+          "ProductVersion": "17763.720",
+          "KB": "4512534",
+          "SecurityInfo": "https://support.microsoft.com/help/4512534"
+        },
+        {
+          "UpdateType": "2019-07 C",
+          "ReleaseDate": "2019-07-22",
+          "ProductVersion": "17763.652",
+          "KB": "4505658",
+          "SecurityInfo": "https://support.microsoft.com/help/4505658"
+        },
+        {
+          "UpdateType": "2019-06 C",
+          "ReleaseDate": "2019-06-18",
+          "ProductVersion": "17763.592",
+          "KB": "4501371",
+          "SecurityInfo": "https://support.microsoft.com/help/4501371"
+        },
+        {
+          "UpdateType": "2019-05 C",
+          "ReleaseDate": "2019-05-21",
+          "ProductVersion": "17763.529",
+          "KB": "4497934",
+          "SecurityInfo": "https://support.microsoft.com/help/4497934"
+        },
+        {
+          "UpdateType": "2019-04 C",
+          "ReleaseDate": "2019-05-03",
+          "ProductVersion": "17763.475",
+          "KB": "4495667",
+          "SecurityInfo": "https://support.microsoft.com/help/4495667"
+        },
+        {
+          "UpdateType": "2019-03 D",
+          "ReleaseDate": "2019-04-02",
+          "ProductVersion": "17763.404",
+          "KB": "4490481",
+          "SecurityInfo": "https://support.microsoft.com/help/4490481"
+        },
+        {
+          "UpdateType": "2019-02 D",
+          "ReleaseDate": "2019-03-01",
+          "ProductVersion": "17763.348",
+          "KB": "4482887",
+          "SecurityInfo": "https://support.microsoft.com/help/4482887"
+        },
+        {
+          "UpdateType": "2019-01 D",
+          "ReleaseDate": "2019-01-22",
+          "ProductVersion": "17763.292",
+          "KB": "4476976",
+          "SecurityInfo": "https://support.microsoft.com/help/4476976"
+        },
+        {
+          "UpdateType": "2018-11 D",
+          "ReleaseDate": "2018-12-05",
+          "ProductVersion": "17763.168",
+          "KB": "4469342",
+          "SecurityInfo": "https://support.microsoft.com/help/4469342"
+        },
+        {
+          "UpdateType": "2018-10 D",
+          "ReleaseDate": "2018-11-13",
+          "ProductVersion": "17763.107",
+          "KB": "4464455",
+          "SecurityInfo": "https://support.microsoft.com/help/4464455"
         }
       ]
     },
@@ -16754,6 +17965,7 @@
       "OSVersion": "Windows 10 1607",
       "Group": "Windows 10",
       "VersionLabel": "1607",
+      "IsInsider": false,
       "SupportEndDate": {
         "HomePro": null,
         "EnterpriseEducation": null
@@ -17545,9 +18757,21 @@
             "CVE-2026-20805"
           ],
           "UniqueCVEsCount": 50,
-          "DaysSincePreviousRelease": 35,
+          "DaysSincePreviousRelease": 26,
           "Supersedes": "5071543",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 10 1607 - December 2025 Out-of-Band (KB5074974)",
+          "ReleaseDate": "2025-12-18",
+          "ProductVersion": "10.0.14393.8692",
+          "SecurityInfo": "https://support.microsoft.com/help/5074974",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 9,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 10 1607 - December 2025 Security Update (KB5071543)",
@@ -17879,9 +19103,21 @@
           },
           "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 26,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 19,
           "Supersedes": "5066836",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 10 1607 - October 2025 Out-of-Band (KB5070882)",
+          "ReleaseDate": "2025-10-23",
+          "ProductVersion": "10.0.14393.8524",
+          "SecurityInfo": "https://support.microsoft.com/help/5070882",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 9,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 10 1607 - October 2025 Security Update (KB5066836)",
@@ -19880,9 +21116,21 @@
             "CVE-2025-32709"
           ],
           "UniqueCVEsCount": 31,
-          "DaysSincePreviousRelease": 35,
+          "DaysSincePreviousRelease": 32,
           "Supersedes": "5055521",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 10 1607 - April 2025 Out-of-Band (KB5058921)",
+          "ReleaseDate": "2025-04-11",
+          "ProductVersion": "10.0.14393.7973",
+          "SecurityInfo": "https://support.microsoft.com/help/5058921",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 3,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 10 1607 - April 2025 Security Update (KB5055521)",
@@ -20196,9 +21444,580 @@
             "CVE-2025-29824"
           ],
           "UniqueCVEsCount": 43,
-          "DaysSincePreviousRelease": null,
+          "DaysSincePreviousRelease": 382,
           "Supersedes": "5053594",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 10 1607 - March 2024 Out-of-Band (KB5037423)",
+          "ReleaseDate": "2024-03-22",
+          "ProductVersion": "10.0.14393.6800",
+          "SecurityInfo": "https://support.microsoft.com/help/5037423",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 273,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - June 2023 Out-of-Band (KB5028623)",
+          "ReleaseDate": "2023-06-23",
+          "ProductVersion": "10.0.14393.5996",
+          "SecurityInfo": "https://support.microsoft.com/help/5028623",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 218,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - November 2022 Out-of-Band (KB5021654)",
+          "ReleaseDate": "2022-11-17",
+          "ProductVersion": "10.0.14393.5502",
+          "SecurityInfo": "https://support.microsoft.com/help/5021654",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 30,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - October 2022 Out-of-Band (KB5020439)",
+          "ReleaseDate": "2022-10-18",
+          "ProductVersion": "10.0.14393.5429",
+          "SecurityInfo": "https://support.microsoft.com/help/5020439",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 152,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - May 2022 Out-of-Band (KB5015019)",
+          "ReleaseDate": "2022-05-19",
+          "ProductVersion": "10.0.14393.5127",
+          "SecurityInfo": "https://support.microsoft.com/help/5015019",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 122,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - January 2022 Out-of-Band (KB5010790)",
+          "ReleaseDate": "2022-01-17",
+          "ProductVersion": "10.0.14393.4889",
+          "SecurityInfo": "https://support.microsoft.com/help/5010790",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 12,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - January 2022 Out-of-Band (KB5010195)",
+          "ReleaseDate": "2022-01-05",
+          "ProductVersion": "10.0.14393.4827",
+          "SecurityInfo": "https://support.microsoft.com/help/5010195",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 52,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - November 2021 Out-of-Band (KB5008601)",
+          "ReleaseDate": "2021-11-14",
+          "ProductVersion": "10.0.14393.4771",
+          "SecurityInfo": "https://support.microsoft.com/help/5008601",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 108,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - July 2021 Out-of-Band (KB5005393)",
+          "ReleaseDate": "2021-07-29",
+          "ProductVersion": "10.0.14393.4532",
+          "SecurityInfo": "https://support.microsoft.com/help/5005393",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 22,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - July 2021 Out-of-Band (KB5004948)",
+          "ReleaseDate": "2021-07-07",
+          "ProductVersion": "10.0.14393.4470",
+          "SecurityInfo": "https://support.microsoft.com/help/5004948",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 111,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - March 2021 Out-of-Band (KB5001633)",
+          "ReleaseDate": "2021-03-18",
+          "ProductVersion": "10.0.14393.4288",
+          "SecurityInfo": "https://support.microsoft.com/help/5001633",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 119,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - November 2020 Out-of-Band (KB4594441)",
+          "ReleaseDate": "2020-11-19",
+          "ProductVersion": "10.0.14393.4048",
+          "SecurityInfo": "https://support.microsoft.com/help/4594441",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 154,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - June 2020 Out-of-Band (KB4567517)",
+          "ReleaseDate": "2020-06-18",
+          "ProductVersion": "10.0.14393.3755",
+          "SecurityInfo": "https://support.microsoft.com/help/4567517",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 259,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - September 2019 Out-of-Band (KB4524152)",
+          "ReleaseDate": "2019-10-03",
+          "ProductVersion": "10.0.14393.3243",
+          "SecurityInfo": "https://support.microsoft.com/help/4524152",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 10,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - September 2019 Out-of-Band (KB4522010)",
+          "ReleaseDate": "2019-09-23",
+          "ProductVersion": "10.0.14393.3206",
+          "SecurityInfo": "https://support.microsoft.com/help/4522010",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 88,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - June 2019 Out-of-Band (KB4509475)",
+          "ReleaseDate": "2019-06-27",
+          "ProductVersion": "10.0.14393.3056",
+          "SecurityInfo": "https://support.microsoft.com/help/4509475",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 39,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - May 2019 Out-of-Band (KB4505052)",
+          "ReleaseDate": "2019-05-19",
+          "ProductVersion": "10.0.14393.2972",
+          "SecurityInfo": "https://support.microsoft.com/help/4505052",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 24,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - April 2019 Out-of-Band (KB4499418)",
+          "ReleaseDate": "2019-04-25",
+          "ProductVersion": "10.0.14393.2908",
+          "SecurityInfo": "https://support.microsoft.com/help/4499418",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 127,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - December 2018 Out-of-Band (KB4483229)",
+          "ReleaseDate": "2018-12-19",
+          "ProductVersion": "10.0.14393.2670",
+          "SecurityInfo": "https://support.microsoft.com/help/4483229",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 16,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - November 2018 Out-of-Band (KB4478877)",
+          "ReleaseDate": "2018-12-03",
+          "ProductVersion": "10.0.14393.2641",
+          "SecurityInfo": "https://support.microsoft.com/help/4478877",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 126,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - July 2018 Out-of-Band (KB4346877)",
+          "ReleaseDate": "2018-07-30",
+          "ProductVersion": "10.0.14393.2396",
+          "SecurityInfo": "https://support.microsoft.com/help/4346877",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 14,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - July 2018 Out-of-Band (KB4345418)",
+          "ReleaseDate": "2018-07-16",
+          "ProductVersion": "10.0.14393.2368",
+          "SecurityInfo": "https://support.microsoft.com/help/4345418",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 109,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - March 2018 Out-of-Band (KB4096309)",
+          "ReleaseDate": "2018-03-29",
+          "ProductVersion": "10.0.14393.2156",
+          "SecurityInfo": "https://support.microsoft.com/help/4096309",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 147,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - October 2017 Out-of-Band (KB4052231)",
+          "ReleaseDate": "2017-11-02",
+          "ProductVersion": "10.0.14393.1797",
+          "SecurityInfo": "https://support.microsoft.com/help/4052231",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 66,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - August 2017 Out-of-Band (KB4039396)",
+          "ReleaseDate": "2017-08-28",
+          "ProductVersion": "10.0.14393.1670",
+          "SecurityInfo": "https://support.microsoft.com/help/4039396",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 21,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - August 2017 Out-of-Band (KB4038220)",
+          "ReleaseDate": "2017-08-07",
+          "ProductVersion": "10.0.14393.1537",
+          "SecurityInfo": "https://support.microsoft.com/help/4038220",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 140,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 1607 - March 2017 Out-of-Band (KB4015438)",
+          "ReleaseDate": "2017-03-20",
+          "ProductVersion": "10.0.14393.969",
+          "SecurityInfo": "https://support.microsoft.com/help/4015438",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": null,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        }
+      ],
+      "NonSecurityReleases": [
+        {
+          "UpdateType": "2020-04 C",
+          "ReleaseDate": "2020-04-21",
+          "ProductVersion": "14393.3659",
+          "KB": "4550947",
+          "SecurityInfo": "https://support.microsoft.com/help/4550947"
+        },
+        {
+          "UpdateType": "2020-03 C",
+          "ReleaseDate": "2020-03-17",
+          "ProductVersion": "14393.3595",
+          "KB": "4541329",
+          "SecurityInfo": "https://support.microsoft.com/help/4541329"
+        },
+        {
+          "UpdateType": "2020-02 C",
+          "ReleaseDate": "2020-02-25",
+          "ProductVersion": "14393.3542",
+          "KB": "4537806",
+          "SecurityInfo": "https://support.microsoft.com/help/4537806"
+        },
+        {
+          "UpdateType": "2020-01 C",
+          "ReleaseDate": "2020-01-23",
+          "ProductVersion": "14393.3474",
+          "KB": "4534307",
+          "SecurityInfo": "https://support.microsoft.com/help/4534307"
+        },
+        {
+          "UpdateType": "2019-10 C",
+          "ReleaseDate": "2019-10-15",
+          "ProductVersion": "14393.3300",
+          "KB": "4519979",
+          "SecurityInfo": "https://support.microsoft.com/help/4519979"
+        },
+        {
+          "UpdateType": "2019-09 C",
+          "ReleaseDate": "2019-09-24",
+          "ProductVersion": "14393.3242",
+          "KB": "4516061",
+          "SecurityInfo": "https://support.microsoft.com/help/4516061"
+        },
+        {
+          "UpdateType": "2019-08 C",
+          "ReleaseDate": "2019-08-17",
+          "ProductVersion": "14393.3181",
+          "KB": "4512495",
+          "SecurityInfo": "https://support.microsoft.com/help/4512495"
+        },
+        {
+          "UpdateType": "2019-07 C",
+          "ReleaseDate": "2019-07-16",
+          "ProductVersion": "14393.3115",
+          "KB": "4507459",
+          "SecurityInfo": "https://support.microsoft.com/help/4507459"
+        },
+        {
+          "UpdateType": "2019-06 C",
+          "ReleaseDate": "2019-06-18",
+          "ProductVersion": "14393.3053",
+          "KB": "4503294",
+          "SecurityInfo": "https://support.microsoft.com/help/4503294"
+        },
+        {
+          "UpdateType": "2019-05 C",
+          "ReleaseDate": "2019-05-23",
+          "ProductVersion": "14393.2999",
+          "KB": "4499177",
+          "SecurityInfo": "https://support.microsoft.com/help/4499177"
+        },
+        {
+          "UpdateType": "2019-04 C",
+          "ReleaseDate": "2019-04-25",
+          "ProductVersion": "14393.2941",
+          "KB": "4493473",
+          "SecurityInfo": "https://support.microsoft.com/help/4493473"
+        },
+        {
+          "UpdateType": "2019-03 C",
+          "ReleaseDate": "2019-03-19",
+          "ProductVersion": "14393.2879",
+          "KB": "4489889",
+          "SecurityInfo": "https://support.microsoft.com/help/4489889"
+        },
+        {
+          "UpdateType": "2019-02 C",
+          "ReleaseDate": "2019-02-19",
+          "ProductVersion": "14393.2828",
+          "KB": "4487006",
+          "SecurityInfo": "https://support.microsoft.com/help/4487006"
+        },
+        {
+          "UpdateType": "2019-01 C",
+          "ReleaseDate": "2019-01-17",
+          "ProductVersion": "14393.2759",
+          "KB": "4480977",
+          "SecurityInfo": "https://support.microsoft.com/help/4480977"
+        },
+        {
+          "UpdateType": "2018-11 C",
+          "ReleaseDate": "2018-11-27",
+          "ProductVersion": "14393.2639",
+          "KB": "4467684",
+          "SecurityInfo": "https://support.microsoft.com/help/4467684"
+        },
+        {
+          "UpdateType": "2018-10 C",
+          "ReleaseDate": "2018-10-18",
+          "ProductVersion": "14393.2580",
+          "KB": "4462928",
+          "SecurityInfo": "https://support.microsoft.com/help/4462928"
+        },
+        {
+          "UpdateType": "2018-09 C",
+          "ReleaseDate": "2018-09-20",
+          "ProductVersion": "14393.2515",
+          "KB": "4457127",
+          "SecurityInfo": "https://support.microsoft.com/help/4457127"
+        },
+        {
+          "UpdateType": "2018-08 C",
+          "ReleaseDate": "2018-08-30",
+          "ProductVersion": "14393.2457",
+          "KB": "4343884",
+          "SecurityInfo": "https://support.microsoft.com/help/4343884"
+        },
+        {
+          "UpdateType": "2018-07 C",
+          "ReleaseDate": "2018-07-24",
+          "ProductVersion": "14393.2395",
+          "KB": "4338822",
+          "SecurityInfo": "https://support.microsoft.com/help/4338822"
+        },
+        {
+          "UpdateType": "2018-06 C",
+          "ReleaseDate": "2018-06-21",
+          "ProductVersion": "14393.2339",
+          "KB": "4284833",
+          "SecurityInfo": "https://support.microsoft.com/help/4284833"
+        },
+        {
+          "UpdateType": "2018-05 C",
+          "ReleaseDate": "2018-05-17",
+          "ProductVersion": "14393.2273",
+          "KB": "4103720",
+          "SecurityInfo": "https://support.microsoft.com/help/4103720"
+        },
+        {
+          "UpdateType": "2018-04 C",
+          "ReleaseDate": "2018-04-17",
+          "ProductVersion": "14393.2214",
+          "KB": "4093120",
+          "SecurityInfo": "https://support.microsoft.com/help/4093120"
+        },
+        {
+          "UpdateType": "2018-03 C",
+          "ReleaseDate": "2018-03-22",
+          "ProductVersion": "14393.2155",
+          "KB": "4088889",
+          "SecurityInfo": "https://support.microsoft.com/help/4088889"
+        },
+        {
+          "UpdateType": "2018-02 C",
+          "ReleaseDate": "2018-02-22",
+          "ProductVersion": "14393.2097",
+          "KB": "4077525",
+          "SecurityInfo": "https://support.microsoft.com/help/4077525"
+        },
+        {
+          "UpdateType": "2018-01 C",
+          "ReleaseDate": "2018-01-17",
+          "ProductVersion": "14393.2035",
+          "KB": "4057142",
+          "SecurityInfo": "https://support.microsoft.com/help/4057142"
+        },
+        {
+          "UpdateType": "2017-11 C",
+          "ReleaseDate": "2017-11-27",
+          "ProductVersion": "14393.1914",
+          "KB": "4051033",
+          "SecurityInfo": "https://support.microsoft.com/help/4051033"
+        },
+        {
+          "UpdateType": "2017-10 C",
+          "ReleaseDate": "2017-10-17",
+          "ProductVersion": "14393.1794",
+          "KB": "4041688",
+          "SecurityInfo": "https://support.microsoft.com/help/4041688"
+        },
+        {
+          "UpdateType": "2017-09 C",
+          "ReleaseDate": "2017-09-28",
+          "ProductVersion": "14393.1737",
+          "KB": "4038801",
+          "SecurityInfo": "https://support.microsoft.com/help/4038801"
+        },
+        {
+          "UpdateType": "2017-08 C",
+          "ReleaseDate": "2017-08-16",
+          "ProductVersion": "14393.1613",
+          "KB": "4034661",
+          "SecurityInfo": "https://support.microsoft.com/help/4034661"
+        },
+        {
+          "UpdateType": "2017-07 C",
+          "ReleaseDate": "2017-07-18",
+          "ProductVersion": "14393.1532",
+          "KB": "4025334",
+          "SecurityInfo": "https://support.microsoft.com/help/4025334"
+        },
+        {
+          "UpdateType": "2017-06 C",
+          "ReleaseDate": "2017-06-27",
+          "ProductVersion": "14393.1378",
+          "KB": "4022723",
+          "SecurityInfo": "https://support.microsoft.com/help/4022723"
+        },
+        {
+          "UpdateType": "2016-11 C",
+          "ReleaseDate": "2016-12-09",
+          "ProductVersion": "14393.479",
+          "KB": "3201845",
+          "SecurityInfo": "https://support.microsoft.com/help/3201845"
+        },
+        {
+          "UpdateType": "2016-10 D",
+          "ReleaseDate": "2016-10-27",
+          "ProductVersion": "14393.351",
+          "KB": "3197954",
+          "SecurityInfo": "https://support.microsoft.com/help/3197954"
+        },
+        {
+          "UpdateType": "2016-09 D",
+          "ReleaseDate": "2016-09-29",
+          "ProductVersion": "14393.222",
+          "KB": "3194496",
+          "SecurityInfo": "https://support.microsoft.com/help/3194496"
+        },
+        {
+          "UpdateType": "2016-08 D",
+          "ReleaseDate": "2016-08-23",
+          "ProductVersion": "14393.82",
+          "KB": "3176934",
+          "SecurityInfo": "https://support.microsoft.com/help/3176934"
         }
       ]
     },
@@ -20206,6 +22025,7 @@
       "OSVersion": "Windows 10 22H2",
       "Group": "Windows 10",
       "VersionLabel": "22H2",
+      "IsInsider": false,
       "SupportEndDate": {
         "HomePro": "2025-10-14",
         "EnterpriseEducation": "2025-10-14"
@@ -24581,12 +26401,14 @@
           "Supersedes": "5053606",
           "PatchTuesdayRelease": true
         }
-      ]
+      ],
+      "NonSecurityReleases": []
     },
     {
       "OSVersion": "Windows 10 21H2",
       "Group": "Windows 10",
       "VersionLabel": "21H2",
+      "IsInsider": false,
       "SupportEndDate": {
         "HomePro": "2023-06-13",
         "EnterpriseEducation": "2024-06-11"
@@ -25097,9 +26919,33 @@
             "CVE-2026-21533"
           ],
           "UniqueCVEsCount": 24,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 17,
           "Supersedes": "5073724",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 10 21H2 - January 2026 Out-of-Band (KB5078129)",
+          "ReleaseDate": "2026-01-24",
+          "ProductVersion": "10.0.19044.6812",
+          "SecurityInfo": "https://support.microsoft.com/help/5078129",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 7,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 21H2 - January 2026 Out-of-Band (KB5077796)",
+          "ReleaseDate": "2026-01-17",
+          "ProductVersion": "10.0.19044.6811",
+          "SecurityInfo": "https://support.microsoft.com/help/5077796",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 4,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 10 21H2 - January 2026 Security Update (KB5073724)",
@@ -25616,9 +27462,21 @@
             "CVE-2026-20805"
           ],
           "UniqueCVEsCount": 72,
-          "DaysSincePreviousRelease": 35,
+          "DaysSincePreviousRelease": 26,
           "Supersedes": "5071546",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 10 21H2 - December 2025 Out-of-Band (KB5074976)",
+          "ReleaseDate": "2025-12-18",
+          "ProductVersion": "10.0.19044.6693",
+          "SecurityInfo": "https://support.microsoft.com/help/5074976",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 9,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 10 21H2 - December 2025 Security Update (KB5071546)",
@@ -27132,9 +28990,21 @@
           },
           "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 45,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 21,
           "Supersedes": "5063709",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 10 21H2 - August 2025 Out-of-Band (KB5066188)",
+          "ReleaseDate": "2025-08-19",
+          "ProductVersion": "10.0.19044.6218",
+          "SecurityInfo": "https://support.microsoft.com/help/5066188",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 7,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 10 21H2 - August 2025 Security Update (KB5063709)",
@@ -28273,9 +30143,33 @@
             "CVE-2025-33073"
           ],
           "UniqueCVEsCount": 35,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 14,
           "Supersedes": "5058379",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 10 21H2 - May 2025 Out-of-Band (KB5061979)",
+          "ReleaseDate": "2025-05-27",
+          "ProductVersion": "10.0.19044.5859",
+          "SecurityInfo": "https://support.microsoft.com/help/5061979",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 8,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 21H2 - May 2025 Out-of-Band (KB5061768)",
+          "ReleaseDate": "2025-05-19",
+          "ProductVersion": "10.0.19044.5856",
+          "SecurityInfo": "https://support.microsoft.com/help/5061768",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 6,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 10 21H2 - May 2025 Security Update (KB5058379)",
@@ -28958,9 +30852,183 @@
             "CVE-2025-29824"
           ],
           "UniqueCVEsCount": 59,
-          "DaysSincePreviousRelease": null,
+          "DaysSincePreviousRelease": 893,
           "Supersedes": "5053606",
           "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 10 21H2 - October 2022 Out-of-Band (KB5020953)",
+          "ReleaseDate": "2022-10-28",
+          "ProductVersion": "10.0.19044.2194",
+          "SecurityInfo": "https://support.microsoft.com/help/5020953",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 11,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 21H2 - October 2022 Out-of-Band (KB5020435)",
+          "ReleaseDate": "2022-10-17",
+          "ProductVersion": "10.0.19044.2132",
+          "SecurityInfo": "https://support.microsoft.com/help/5020435",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 119,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 21H2 - June 2022 Out-of-Band (KB5016139)",
+          "ReleaseDate": "2022-06-20",
+          "ProductVersion": "10.0.19044.1767",
+          "SecurityInfo": "https://support.microsoft.com/help/5016139",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 32,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 21H2 - May 2022 Out-of-Band (KB5015020)",
+          "ReleaseDate": "2022-05-19",
+          "ProductVersion": "10.0.19044.1708",
+          "SecurityInfo": "https://support.microsoft.com/help/5015020",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 122,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
+        {
+          "UpdateName": "Windows 10 21H2 - January 2022 Out-of-Band (KB5010793)",
+          "ReleaseDate": "2022-01-17",
+          "ProductVersion": "10.0.19044.1469",
+          "SecurityInfo": "https://support.microsoft.com/help/5010793",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": null,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        }
+      ],
+      "NonSecurityReleases": [
+        {
+          "UpdateType": "2023-03 C",
+          "ReleaseDate": "2023-03-21",
+          "ProductVersion": "19044.2788",
+          "KB": "5023773",
+          "SecurityInfo": "https://support.microsoft.com/help/5023773"
+        },
+        {
+          "UpdateType": "2023-02 C",
+          "ReleaseDate": "2023-02-21",
+          "ProductVersion": "19044.2673",
+          "KB": "5022906",
+          "SecurityInfo": "https://support.microsoft.com/help/5022906"
+        },
+        {
+          "UpdateType": "2023-01 C",
+          "ReleaseDate": "2023-01-19",
+          "ProductVersion": "19044.2546",
+          "KB": "5019275",
+          "SecurityInfo": "https://support.microsoft.com/help/5019275"
+        },
+        {
+          "UpdateType": "2022-11 C",
+          "ReleaseDate": "2022-11-15",
+          "ProductVersion": "19044.2311",
+          "KB": "5020030",
+          "SecurityInfo": "https://support.microsoft.com/help/5020030"
+        },
+        {
+          "UpdateType": "2022-10 C",
+          "ReleaseDate": "2022-10-25",
+          "ProductVersion": "19044.2193",
+          "KB": "5018482",
+          "SecurityInfo": "https://support.microsoft.com/help/5018482"
+        },
+        {
+          "UpdateType": "2022-09 C",
+          "ReleaseDate": "2022-09-20",
+          "ProductVersion": "19044.2075",
+          "KB": "5017380",
+          "SecurityInfo": "https://support.microsoft.com/help/5017380"
+        },
+        {
+          "UpdateType": "2022-08 C",
+          "ReleaseDate": "2022-08-26",
+          "ProductVersion": "19044.1949",
+          "KB": "5016688",
+          "SecurityInfo": "https://support.microsoft.com/help/5016688"
+        },
+        {
+          "UpdateType": "2022-07 C",
+          "ReleaseDate": "2022-07-26",
+          "ProductVersion": "19044.1865",
+          "KB": "5015878",
+          "SecurityInfo": "https://support.microsoft.com/help/5015878"
+        },
+        {
+          "UpdateType": "2022-06 C",
+          "ReleaseDate": "2022-06-28",
+          "ProductVersion": "19044.1806",
+          "KB": "5014666",
+          "SecurityInfo": "https://support.microsoft.com/help/5014666"
+        },
+        {
+          "UpdateType": "2022-05 C",
+          "ReleaseDate": "2022-06-02",
+          "ProductVersion": "19044.1741",
+          "KB": "5014023",
+          "SecurityInfo": "https://support.microsoft.com/help/5014023"
+        },
+        {
+          "UpdateType": "2022-04 C",
+          "ReleaseDate": "2022-04-25",
+          "ProductVersion": "19044.1682",
+          "KB": "5011831",
+          "SecurityInfo": "https://support.microsoft.com/help/5011831"
+        },
+        {
+          "UpdateType": "2022-03 C",
+          "ReleaseDate": "2022-03-22",
+          "ProductVersion": "19044.1620",
+          "KB": "5011543",
+          "SecurityInfo": "https://support.microsoft.com/help/5011543"
+        },
+        {
+          "UpdateType": "2022-02 C",
+          "ReleaseDate": "2022-02-15",
+          "ProductVersion": "19044.1566",
+          "KB": "5010415",
+          "SecurityInfo": "https://support.microsoft.com/help/5010415"
+        },
+        {
+          "UpdateType": "2022-01 C",
+          "ReleaseDate": "2022-01-25",
+          "ProductVersion": "19044.1503",
+          "KB": "5009596",
+          "SecurityInfo": "https://support.microsoft.com/help/5009596"
+        },
+        {
+          "UpdateType": "2021-11 C",
+          "ReleaseDate": "2021-11-22",
+          "ProductVersion": "19044.1387",
+          "KB": "5007253",
+          "SecurityInfo": "https://support.microsoft.com/help/5007253"
+        },
+        {
+          "UpdateType": "2021-11 C",
+          "ReleaseDate": "2021-11-16",
+          "ProductVersion": "19044.1288",
+          "KB": "",
+          "SecurityInfo": null
         }
       ]
     },
@@ -28968,6 +31036,7 @@
       "OSVersion": "Windows Server 2025",
       "Group": "Windows Server",
       "VersionLabel": "2025",
+      "IsInsider": false,
       "SupportEndDate": {
         "HomePro": null,
         "EnterpriseEducation": "2034-11-14"
@@ -34345,12 +36414,14 @@
           "Supersedes": "5053598",
           "PatchTuesdayRelease": true
         }
-      ]
+      ],
+      "NonSecurityReleases": []
     },
     {
       "OSVersion": "Windows Server 2022",
       "Group": "Windows Server",
       "VersionLabel": "2022",
+      "IsInsider": false,
       "SupportEndDate": {
         "HomePro": null,
         "EnterpriseEducation": "2031-10-14"
@@ -39553,12 +41624,14 @@
           "Supersedes": "5053603",
           "PatchTuesdayRelease": true
         }
-      ]
+      ],
+      "NonSecurityReleases": []
     },
     {
       "OSVersion": "Windows Server 2019",
       "Group": "Windows Server",
       "VersionLabel": "2019",
+      "IsInsider": false,
       "SupportEndDate": {
         "HomePro": null,
         "EnterpriseEducation": "2029-01-09"
@@ -44264,12 +46337,14 @@
           "Supersedes": "5053596",
           "PatchTuesdayRelease": true
         }
-      ]
+      ],
+      "NonSecurityReleases": []
     },
     {
       "OSVersion": "Windows Server 2016",
       "Group": "Windows Server",
       "VersionLabel": "2016",
+      "IsInsider": false,
       "SupportEndDate": {
         "HomePro": null,
         "EnterpriseEducation": "2027-01-12"
@@ -48242,12 +50317,14 @@
           "Supersedes": "5053594",
           "PatchTuesdayRelease": true
         }
-      ]
+      ],
+      "NonSecurityReleases": []
     },
     {
       "OSVersion": "Windows Server 2012",
       "Group": "Windows Server",
       "VersionLabel": "2012",
+      "IsInsider": false,
       "SupportEndDate": {
         "HomePro": null,
         "EnterpriseEducation": "2023-10-10"
@@ -48740,9 +50817,10 @@
           "Supersedes": null,
           "PatchTuesdayRelease": true
         }
-      ]
+      ],
+      "NonSecurityReleases": []
     }
   ],
-  "UpdateHash": "9d5464052867c894c20843e222fa5f5ee8b61061c57d41af70211d5c5b734ba0",
-  "LastCheck": "2026-04-03T06:51:32.028983+00:00"
+  "UpdateHash": "9cddacda98119a03288b8affd6723d4eecc0fcee68fa1f4f061198657b4ed9b8",
+  "LastCheck": "2026-04-03T09:31:47.370405+00:00"
 }

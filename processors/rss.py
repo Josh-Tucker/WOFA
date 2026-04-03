@@ -40,7 +40,10 @@ def generate_rss(v2_feed: dict) -> str:
             continue
 
         latest = releases[0]
+        is_insider = os_entry.get("IsInsider", False)
         update_name = latest.get("UpdateName", os_entry["OSVersion"])
+        if is_insider:
+            update_name = f"[Insider Preview] {update_name}"
         release_date_str = latest.get("ReleaseDate")
         security_info = latest.get("SecurityInfo", "")
         exploited = latest.get("ActivelyExploitedCVEs", [])

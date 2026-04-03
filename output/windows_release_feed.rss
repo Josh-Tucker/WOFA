@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Apr 2026 06:51:32 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 09:31:47 +0000</lastBuildDate>
     <item>
       <title>Windows Server 2012 - December 2025 Security Update (KB5071503)</title>
       <link>https://support.microsoft.com/help/5071503</link>
@@ -79,18 +79,18 @@
       <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 11 24H2 - March 2026 Security Update (KB5079473)</title>
-      <link>https://support.microsoft.com/help/5079473</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 24H2 - March 2026 Security Update (KB5079473)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.8037&lt;/p&gt;&lt;p&gt;CVEs addressed: 41&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5079473"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5079473</guid>
-      <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Windows 11 24H2 - March 2026 Out-of-Band (KB5085516)</title>
+      <link>https://support.microsoft.com/help/5085516</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 24H2 - March 2026 Out-of-Band (KB5085516)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.8039&lt;/p&gt;&lt;p&gt;CVEs addressed: 0&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5085516"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5085516</guid>
+      <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 11 25H2 - March 2026 Security Update (KB5079473)</title>
-      <link>https://support.microsoft.com/help/5079473</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 25H2 - March 2026 Security Update (KB5079473)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26200.8037&lt;/p&gt;&lt;p&gt;CVEs addressed: 41&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5079473"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5079473</guid>
-      <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Windows 11 25H2 - March 2026 Out-of-Band (KB5085516)</title>
+      <link>https://support.microsoft.com/help/5085516</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 25H2 - March 2026 Out-of-Band (KB5085516)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26200.8039&lt;/p&gt;&lt;p&gt;CVEs addressed: 0&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5085516"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5085516</guid>
+      <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 11 26H1 - March 2026 Security Update (KB5079466)</title>

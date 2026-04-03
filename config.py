@@ -29,3 +29,16 @@ USER_AGENT = "WOFA/1.0 (+https://github.com/wofa/wofa)"
 # OS versions are discovered automatically from the MSRC CVRF ProductTree.
 # See collectors/os_versions.py — any version Microsoft is actively patching
 # will be included without manual config changes.
+
+# Whether to include Windows Insider / pre-release builds in the feed and site.
+# Insider builds are detected by cross-referencing against the Windows Release Health pages.
+INCLUDE_INSIDER_BUILDS = True
+
+# Cache TTL for Windows Release Health pages (GA version lists change infrequently)
+CACHE_TTL_RELEASE_HEALTH_HOURS = 24
+
+# Release health page URLs, keyed by OS group name
+RELEASE_HEALTH_URLS: dict[str, str] = {
+    "Windows 11": "https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information",
+    "Windows 10": "https://learn.microsoft.com/en-us/windows/release-health/release-information",
+}

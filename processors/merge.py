@@ -9,7 +9,7 @@ import re
 from datetime import date, datetime, timedelta, timezone
 
 import config
-from collectors import cisa_kev, lifecycle, msrc
+from collectors import cisa_kev, lifecycle, msrc, release_health
 from collectors import os_versions as os_versions_collector
 
 logger = logging.getLogger(__name__)
@@ -50,6 +50,25 @@ def _build_update_name(os_name: str, doc_title: str, kb: str) -> str:
     return f"{os_name} - {month_part} Security Update (KB{kb})"
 
 
+def _oob_update_name(os_name: str, update_type: str, kb: str) -> str:
+    """Construct update name for an OOB release from release health data."""
+    # update_type like "2026-03 OOB" → "Windows 11 24H2 - March 2026 Out-of-Band (KB5085516)"
+    try:
+        ym = update_type.split()[0]
+        year, month = ym.split("-")
+        month_name = datetime.strptime(month, "%m").strftime("%B")
+        label = f"{month_name} {year}"
+    except Exception:
+        label = update_type
+    suffix = f" (KB{kb})" if kb else ""
+    return f"{os_name} - {label} Out-of-Band{suffix}"
+
+
+def _normalize_build(build: str | None) -> str:
+    """Strip '10.0.' prefix so MSRC and release health builds can be compared."""
+    return (build or "").removeprefix("10.0.")
+
+
 def build_feed() -> dict:
     """
     Build and return the feed dict.
@@ -84,6 +103,31 @@ def build_feed() -> dict:
 
     if not os_version_configs:
         raise RuntimeError("Could not discover any OS versions from CVRF documents")
+
+    # --- Fetch release health data (GA versions + build history) ---
+    groups_with_release_health = set(config.RELEASE_HEALTH_URLS.keys())
+    ga_versions_by_group: dict[str, set[str]] = {}
+    release_history_by_group: dict[str, dict[str, list]] = {}
+    for group in groups_with_release_health:
+        ga = release_health.get_ga_versions(group)
+        if ga:
+            ga_versions_by_group[group] = ga
+        history = release_health.get_release_history(group)
+        if history:
+            release_history_by_group[group] = history
+
+    os_versions_collector.mark_insider_builds(os_version_configs, ga_versions_by_group)
+
+    if not config.INCLUDE_INSIDER_BUILDS:
+        before = len(os_version_configs)
+        os_version_configs = [c for c in os_version_configs if not c.get("is_insider")]
+        logger.info(
+            "Excluded %d Insider builds (INCLUDE_INSIDER_BUILDS=False)",
+            before - len(os_version_configs),
+        )
+
+    # Re-sort after marking (insider penalty applied in sort key)
+    os_version_configs.sort(key=os_versions_collector._sort_key)
 
     # {short_name: [release_dict, ...]}  — accumulate across months
     releases_by_os: dict[str, list[dict]] = {
@@ -159,13 +203,79 @@ def build_feed() -> dict:
                 }
             )
 
+        # Inject OOB releases from release health page not already covered by MSRC CVRF.
+        # OOBs are cumulative so knowing if a machine is on an OOB build matters for vuln status.
+        is_insider = os_cfg.get("is_insider", False)
+        group = os_cfg["group"]
+        version_label = os_cfg["version_label"].upper()
+        version_history = release_history_by_group.get(group, {}).get(version_label, [])
+
+        if not is_insider:
+            existing_builds = {_normalize_build(r["ProductVersion"]) for r in security_releases}
+            for rh_rel in version_history:
+                if rh_rel.get("week") != "OOB":
+                    continue
+                short = _normalize_build(rh_rel["build"])
+                if short in existing_builds:
+                    continue
+                kb = rh_rel.get("kb_number", "")
+                raw_build = rh_rel["build"]
+                # Release health page omits the "10.0." prefix; add it for consistency with MSRC data
+                build = f"10.0.{raw_build}" if re.match(r"^\d{5}\.\d+$", raw_build) else raw_build
+                security_releases.append(
+                    {
+                        "UpdateName": _oob_update_name(os_name, rh_rel["update_type"], kb),
+                        "ReleaseDate": rh_rel["availability_date"],
+                        "ProductVersion": build,
+                        "SecurityInfo": rh_rel.get("kb_url") or None,
+                        "CVEs": {},
+                        "ActivelyExploitedCVEs": [],
+                        "UniqueCVEsCount": 0,
+                        "DaysSincePreviousRelease": None,
+                        "Supersedes": None,
+                        "PatchTuesdayRelease": False,
+                    }
+                )
+                existing_builds.add(short)
+
+            # Re-sort and recalculate gaps after OOB injection
+            security_releases.sort(key=lambda r: r["ReleaseDate"] or "", reverse=True)
+            for i, rel in enumerate(security_releases):
+                prev_rel = security_releases[i + 1] if i + 1 < len(security_releases) else None
+                if prev_rel and rel["ReleaseDate"] and prev_rel["ReleaseDate"]:
+                    try:
+                        curr = date.fromisoformat(rel["ReleaseDate"])
+                        prev = date.fromisoformat(prev_rel["ReleaseDate"])
+                        rel["DaysSincePreviousRelease"] = (curr - prev).days
+                    except ValueError:
+                        rel["DaysSincePreviousRelease"] = None
+                else:
+                    rel["DaysSincePreviousRelease"] = None
+
         latest = security_releases[0] if security_releases else {}
+
+        # Build NonSecurityReleases: D/C week previews for stable; all entries for Insider.
+        non_security_releases = []
+        for rel in version_history:
+            week = rel.get("week", "")
+            include = is_insider or week in ("D", "C")
+            if not include:
+                continue
+            entry = {
+                "UpdateType": rel["update_type"],
+                "ReleaseDate": rel["availability_date"],
+                "ProductVersion": rel["build"],
+                "KB": rel["kb_number"],
+                "SecurityInfo": rel["kb_url"] or None,
+            }
+            non_security_releases.append(entry)
 
         os_version_entries.append(
             {
                 "OSVersion": os_name,
                 "Group": os_cfg["group"],
                 "VersionLabel": os_cfg["version_label"],
+                "IsInsider": is_insider,
                 "SupportEndDate": lifecycle.get_support_end_dates(os_cfg),
                 "Latest": {
                     "UpdateName": latest.get("UpdateName"),
@@ -176,6 +286,7 @@ def build_feed() -> dict:
                     "UniqueCVEsCount": latest.get("UniqueCVEsCount", 0),
                 },
                 "SecurityReleases": security_releases,
+                "NonSecurityReleases": non_security_releases,
             }
         )
 

@@ -187,9 +187,10 @@ def _patch_tuesday_summary(os_versions: list[dict]) -> dict | None:
     """
     Build a summary of the most recent Patch Tuesday across all OS versions.
     Uses the latest release date that appears in any OS version's releases.
+    Insider builds are excluded from the summary.
     """
     latest_date = None
-    for os_entry in os_versions:
+    for os_entry in [o for o in os_versions if not o.get("is_insider")]:
         releases = os_entry.get("SecurityReleases", [])
         if releases:
             d = releases[0].get("ReleaseDate")  # sorted newest first
@@ -204,7 +205,7 @@ def _patch_tuesday_summary(os_versions: list[dict]) -> dict | None:
     total_cves = 0
     total_kev = 0
 
-    for os_entry in os_versions:
+    for os_entry in [o for o in os_versions if not o.get("is_insider")]:
         for rel in os_entry.get("SecurityReleases", []):
             if rel.get("ReleaseDate") == latest_date:
                 rows.append(
@@ -310,13 +311,22 @@ def generate(feed: dict) -> None:
     os_versions = []
     for os_entry in feed.get("OSVersions", []):
         enriched = _enrich_os(os_entry)
+        is_insider = os_entry.get("IsInsider", False)
+        group = os_entry.get("Group", os_entry["OSVersion"])
+        # Insider builds form their own carousel section
+        display_group = f"{group} Insider Preview" if is_insider else group
+
+        non_security_releases = os_entry.get("NonSecurityReleases", [])
+
         os_versions.append(
             {
                 **enriched,
                 "slug": _slug(os_entry["OSVersion"]),
-                "group": os_entry.get("Group", os_entry["OSVersion"]),
+                "group": display_group,
                 "version_label": os_entry.get("VersionLabel", os_entry["OSVersion"]),
                 "out_of_support": _out_of_support(enriched),
+                "is_insider": is_insider,
+                "non_security_releases": non_security_releases,
             }
         )
 
