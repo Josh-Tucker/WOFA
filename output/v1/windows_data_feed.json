@@ -539,14 +539,26 @@
         "EnterpriseEducation": "2028-10-10"
       },
       "Latest": {
-        "UpdateName": "Windows 11 25H2 - March 2026 Out-of-Band (KB5085516)",
-        "ProductVersion": "10.0.26200.8039",
-        "ReleaseDate": "2026-03-21",
-        "SecurityInfo": "https://support.microsoft.com/help/5085516",
+        "UpdateName": "Windows 11 25H2 - March 2026 Out-of-Band (KB5086672)",
+        "ProductVersion": "10.0.26200.8117",
+        "ReleaseDate": "2026-03-31",
+        "SecurityInfo": "https://support.microsoft.com/help/5086672",
         "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 0
       },
       "SecurityReleases": [
+        {
+          "UpdateName": "Windows 11 25H2 - March 2026 Out-of-Band (KB5086672)",
+          "ReleaseDate": "2026-03-31",
+          "ProductVersion": "10.0.26200.8117",
+          "SecurityInfo": "https://support.microsoft.com/help/5086672",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 10,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
         {
           "UpdateName": "Windows 11 25H2 - March 2026 Out-of-Band (KB5085516)",
           "ReleaseDate": "2026-03-21",
@@ -3145,14 +3157,26 @@
         "EnterpriseEducation": "2027-10-12"
       },
       "Latest": {
-        "UpdateName": "Windows 11 24H2 - March 2026 Out-of-Band (KB5085516)",
-        "ProductVersion": "10.0.26100.8039",
-        "ReleaseDate": "2026-03-21",
-        "SecurityInfo": "https://support.microsoft.com/help/5085516",
+        "UpdateName": "Windows 11 24H2 - March 2026 Out-of-Band (KB5086672)",
+        "ProductVersion": "10.0.26100.8117",
+        "ReleaseDate": "2026-03-31",
+        "SecurityInfo": "https://support.microsoft.com/help/5086672",
         "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 0
       },
       "SecurityReleases": [
+        {
+          "UpdateName": "Windows 11 24H2 - March 2026 Out-of-Band (KB5086672)",
+          "ReleaseDate": "2026-03-31",
+          "ProductVersion": "10.0.26100.8117",
+          "SecurityInfo": "https://support.microsoft.com/help/5086672",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 10,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
         {
           "UpdateName": "Windows 11 24H2 - March 2026 Out-of-Band (KB5085516)",
           "ReleaseDate": "2026-03-21",
@@ -50821,6 +50845,6 @@
       "NonSecurityReleases": []
     }
   ],
-  "UpdateHash": "9cddacda98119a03288b8affd6723d4eecc0fcee68fa1f4f061198657b4ed9b8",
-  "LastCheck": "2026-04-04T00:55:25.419761+00:00"
+  "UpdateHash": "3b1acb16c6242b90139894d4c80e7ba6290e23abcee4c074d111fd6b6dae20ce",
+  "LastCheck": "2026-04-04T06:46:50.650905+00:00"
 }
