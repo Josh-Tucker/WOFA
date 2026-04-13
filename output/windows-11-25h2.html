@@ -229,7 +229,7 @@
             RSS
           </a>
         </div>
-        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 13 Apr 2026 12:49 UTC</span>
+        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 13 Apr 2026 18:51 UTC</span>
         <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
           <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -3292,7 +3292,7 @@
         
         <span class="badge badge-info badge-outline">36 CVEs</span>
         
-        <span class="badge badge-warning">1 KEV</span>
+        <span class="badge badge-warning">2 KEV</span>
         
         
         <span class="badge badge-error">Critical Risk</span>
@@ -3309,7 +3309,7 @@
     <!-- collapsed hint -->
     <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
       22 days since previous release &nbsp;·&nbsp; 
-      Contains 1 actively exploited vulnerability
+      Contains 2 actively exploited vulnerabilities
     </div>
 
     <!-- expanded body -->
@@ -3321,7 +3321,7 @@
                   ">
         <div class="mb-1">
           ⚠️
-          Contains 1 actively exploited vulnerability
+          Contains 2 actively exploited vulnerabilities
         </div>
         <div class="text-xs text-base-content/50">
           <strong class="text-base-content/70">Recommendation:</strong> Update immediately — contains known-exploited vulnerabilities (CISA KEV)
@@ -3348,7 +3348,7 @@
         
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">CISA KEV</div>
-          <span class="text-warning">1</span>
+          <span class="text-warning">2</span>
         </div>
         
         
@@ -3576,11 +3576,11 @@
             <a class="badge font-mono hover:no-underline
                       badge-warning
                       
-                      badge-outline"
+                      "
                href="https://nvd.nist.gov/vuln/detail/CVE-2025-60710"
                target="_blank" rel="noopener"
-               title="Important · CVSS 7.8">
-              CVE-2025-60710
+               title="Important · CVSS 7.8 · CISA KEV">
+              ⚑ CVE-2025-60710
             </a>
             
             <a class="badge font-mono hover:no-underline

@@ -2227,12 +2227,13 @@
             "CVE-2025-60710": {
               "severity": "Important",
               "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
+              "actively_exploited": true,
+              "in_kev": true,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60710"
             }
           },
           "ActivelyExploitedCVEs": [
+            "CVE-2025-60710",
             "CVE-2025-62215"
           ],
           "UniqueCVEsCount": 36,
@@ -4864,12 +4865,13 @@
             "CVE-2025-60710": {
               "severity": "Important",
               "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
+              "actively_exploited": true,
+              "in_kev": true,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60710"
             }
           },
           "ActivelyExploitedCVEs": [
+            "CVE-2025-60710",
             "CVE-2025-62215"
           ],
           "UniqueCVEsCount": 36,
@@ -32692,12 +32694,13 @@
             "CVE-2025-60710": {
               "severity": "Important",
               "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
+              "actively_exploited": true,
+              "in_kev": true,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60710"
             }
           },
           "ActivelyExploitedCVEs": [
+            "CVE-2025-60710",
             "CVE-2025-62215"
           ],
           "UniqueCVEsCount": 33,
@@ -50845,6 +50848,6 @@
       "NonSecurityReleases": []
     }
   ],
-  "UpdateHash": "3b1acb16c6242b90139894d4c80e7ba6290e23abcee4c074d111fd6b6dae20ce",
-  "LastCheck": "2026-04-13T12:49:58.316088+00:00"
+  "UpdateHash": "dd55c2ad02290181742edc7b2b8802783fe3cddcfc4f2117b136e37ff8a2331f",
+  "LastCheck": "2026-04-13T18:51:43.746867+00:00"
 }
