@@ -4933,19 +4933,19 @@
         "EnterpriseEducation": "2027-10-12"
       },
       "Latest": {
-        "UpdateName": "Windows 11 24H2 - April 2026 Security Update (KB5082063)",
-        "ProductVersion": "10.0.26100.32690",
+        "UpdateName": "Windows 11 24H2 - April 2026 Security Update (KB5083769)",
+        "ProductVersion": "10.0.26100.8246",
         "ReleaseDate": "2026-04-14",
-        "SecurityInfo": "https://support.microsoft.com/help/5082063",
+        "SecurityInfo": "https://support.microsoft.com/help/5083769",
         "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 123
       },
       "SecurityReleases": [
         {
-          "UpdateName": "Windows 11 24H2 - April 2026 Security Update (KB5082063)",
+          "UpdateName": "Windows 11 24H2 - April 2026 Security Update (KB5083769)",
           "ReleaseDate": "2026-04-14",
-          "ProductVersion": "10.0.26100.32690",
-          "SecurityInfo": "https://support.microsoft.com/help/5082063",
+          "ProductVersion": "10.0.26100.8246",
+          "SecurityInfo": "https://support.microsoft.com/help/5083769",
           "CVEs": {
             "CVE-2026-20930": {
               "severity": "Important",
@@ -56326,6 +56326,6 @@
       "NonSecurityReleases": []
     }
   ],
-  "UpdateHash": "f8fd2417b13f34ba700d63418ddc5ae245dee08d400752428a374c44401747fe",
-  "LastCheck": "2026-04-15T12:49:50.058569+00:00"
+  "UpdateHash": "1f57651d5dd25a79a04500bcf0dad1dc1c5e0b20896405dcf3f28af6ac2ad9fc",
+  "LastCheck": "2026-04-15T18:51:27.305140+00:00"
 }
