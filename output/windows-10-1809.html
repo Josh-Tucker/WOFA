@@ -229,7 +229,7 @@
             RSS
           </a>
         </div>
-        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 15 Apr 2026 07:04 UTC</span>
+        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 15 Apr 2026 12:49 UTC</span>
         <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
           <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -4155,7 +4155,7 @@
         
         <span class="badge badge-info badge-outline">Patch Tuesday</span>
         
-        <span class="badge badge-info badge-outline">34 CVEs</span>
+        <span class="badge badge-info badge-outline">36 CVEs</span>
         
         <span class="badge badge-warning">1 KEV</span>
         
@@ -4208,7 +4208,7 @@
         
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
-          34
+          36
         </div>
         
         <div>
@@ -4233,7 +4233,7 @@
       <!-- CVE groups -->
       
       <div class="text-xs font-semibold text-base-content/50 uppercase tracking-wide mb-2.5">
-        CVEs (34)
+        CVEs (36)
       </div>
       <div class="flex flex-col gap-1.5">
         
@@ -4608,6 +4608,50 @@
                target="_blank" rel="noopener"
                title="Important · CVSS 8.0">
               CVE-2025-62452
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: false }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2025-64xx</code>
+            <span class="text-xs text-base-content/50">(1 CVE)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2025-64720"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.1">
+              CVE-2025-64720
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: false }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2025-65xx</code>
+            <span class="text-xs text-base-content/50">(1 CVE)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2025-65018"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.1">
+              CVE-2025-65018
             </a>
             
           </div>

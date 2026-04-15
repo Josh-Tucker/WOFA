@@ -229,7 +229,7 @@
             RSS
           </a>
         </div>
-        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 15 Apr 2026 07:04 UTC</span>
+        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 15 Apr 2026 12:49 UTC</span>
         <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
           <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -2383,7 +2383,7 @@
       </div>
       <div class="flex-1"></div>
       
-      <span class="text-xs text-base-content/40 whitespace-nowrap">+119d</span>
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+91d</span>
       
       <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
             :class="{ 'rotate-180': open }">▼</span>
@@ -2391,7 +2391,7 @@
 
     <!-- collapsed hint -->
     <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
-      119 days since previous release &nbsp;·&nbsp; 
+      91 days since previous release &nbsp;·&nbsp; 
       Contains 5 actively exploited vulnerabilities
     </div>
 
@@ -2437,7 +2437,7 @@
         
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
-          119
+          91
         </div>
         
         
@@ -2719,6 +2719,153 @@
                target="_blank" rel="noopener"
                title="Important · CVSS 7.8 · CISA KEV">
               ⚑ CVE-2026-21533
+            </a>
+            
+          </div>
+        </div>
+        
+      </div>
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/5083768" target="_blank" rel="noopener" @click.stop class="link link-hover">November 2025 Security Update</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2025-11-11</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.28000.1836</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-info badge-outline">Patch Tuesday</span>
+        
+        <span class="badge badge-info badge-outline">2 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+28d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      28 days since previous release &nbsp;·&nbsp; 
+      Addresses 2 security issues
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Addresses 2 security issues
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update to stay secure — security fixes available
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5083768" target="_blank" rel="noopener" class="link link-hover">KB5083768</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.28000.1836</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          2
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          28
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Supersedes</div>
+          <code class="font-mono">KB5079466</code>
+        </div>
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+      <div class="text-xs font-semibold text-base-content/50 uppercase tracking-wide mb-2.5">
+        CVEs (2)
+      </div>
+      <div class="flex flex-col gap-1.5">
+        
+        <div x-data="{ gopen: false }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2025-64xx</code>
+            <span class="text-xs text-base-content/50">(1 CVE)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2025-64720"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.1">
+              CVE-2025-64720
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: false }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2025-65xx</code>
+            <span class="text-xs text-base-content/50">(1 CVE)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2025-65018"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.1">
+              CVE-2025-65018
             </a>
             
           </div>

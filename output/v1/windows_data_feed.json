@@ -1362,8 +1362,35 @@
             "CVE-2026-21533"
           ],
           "UniqueCVEsCount": 25,
-          "DaysSincePreviousRelease": 119,
+          "DaysSincePreviousRelease": 91,
           "Supersedes": null,
+          "PatchTuesdayRelease": true
+        },
+        {
+          "UpdateName": "Windows 11 26H1 - November 2025 Security Update (KB5083768)",
+          "ReleaseDate": "2025-11-11",
+          "ProductVersion": "10.0.28000.1836",
+          "SecurityInfo": "https://support.microsoft.com/help/5083768",
+          "CVEs": {
+            "CVE-2025-65018": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65018"
+            },
+            "CVE-2025-64720": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64720"
+            }
+          },
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 2,
+          "DaysSincePreviousRelease": 28,
+          "Supersedes": "5079466",
           "PatchTuesdayRelease": true
         },
         {
@@ -3713,6 +3740,20 @@
           "ProductVersion": "10.0.26200.7171",
           "SecurityInfo": "https://support.microsoft.com/help/5068861",
           "CVEs": {
+            "CVE-2025-65018": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65018"
+            },
+            "CVE-2025-64720": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64720"
+            },
             "CVE-2025-59505": {
               "severity": "Important",
               "cvss_score": 7.8,
@@ -3970,7 +4011,7 @@
             "CVE-2025-60710",
             "CVE-2025-62215"
           ],
-          "UniqueCVEsCount": 36,
+          "UniqueCVEsCount": 38,
           "DaysSincePreviousRelease": 22,
           "Supersedes": "5066835",
           "PatchTuesdayRelease": true
@@ -7225,6 +7266,20 @@
           "ProductVersion": "10.0.26100.7171",
           "SecurityInfo": "https://support.microsoft.com/help/5068861",
           "CVEs": {
+            "CVE-2025-65018": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65018"
+            },
+            "CVE-2025-64720": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64720"
+            },
             "CVE-2025-59505": {
               "severity": "Important",
               "cvss_score": 7.8,
@@ -7482,7 +7537,7 @@
             "CVE-2025-60710",
             "CVE-2025-62215"
           ],
-          "UniqueCVEsCount": 36,
+          "UniqueCVEsCount": 38,
           "DaysSincePreviousRelease": 19,
           "Supersedes": "5066835",
           "PatchTuesdayRelease": true
@@ -12628,6 +12683,20 @@
           "ProductVersion": "10.0.22631.6199",
           "SecurityInfo": "https://support.microsoft.com/help/5068865",
           "CVEs": {
+            "CVE-2025-65018": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65018"
+            },
+            "CVE-2025-64720": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64720"
+            },
             "CVE-2025-59505": {
               "severity": "Important",
               "cvss_score": 7.8,
@@ -12870,7 +12939,7 @@
           "ActivelyExploitedCVEs": [
             "CVE-2025-62215"
           ],
-          "UniqueCVEsCount": 34,
+          "UniqueCVEsCount": 36,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5066793",
           "PatchTuesdayRelease": true
@@ -17635,6 +17704,20 @@
           "ProductVersion": "10.0.17763.8027",
           "SecurityInfo": "https://support.microsoft.com/help/5068791",
           "CVEs": {
+            "CVE-2025-65018": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65018"
+            },
+            "CVE-2025-64720": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64720"
+            },
             "CVE-2025-59505": {
               "severity": "Important",
               "cvss_score": 7.8,
@@ -17877,7 +17960,7 @@
           "ActivelyExploitedCVEs": [
             "CVE-2025-62215"
           ],
-          "UniqueCVEsCount": 34,
+          "UniqueCVEsCount": 36,
           "DaysSincePreviousRelease": 19,
           "Supersedes": "5066586",
           "PatchTuesdayRelease": true
@@ -22365,6 +22448,20 @@
           "ProductVersion": "10.0.14393.8594",
           "SecurityInfo": "https://support.microsoft.com/help/5068864",
           "CVEs": {
+            "CVE-2025-65018": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65018"
+            },
+            "CVE-2025-64720": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64720"
+            },
             "CVE-2025-59505": {
               "severity": "Important",
               "cvss_score": 7.8,
@@ -22549,7 +22646,7 @@
             }
           },
           "ActivelyExploitedCVEs": [],
-          "UniqueCVEsCount": 26,
+          "UniqueCVEsCount": 28,
           "DaysSincePreviousRelease": 19,
           "Supersedes": "5066836",
           "PatchTuesdayRelease": true
@@ -27204,6 +27301,20 @@
           "ProductVersion": "10.0.19045.6575",
           "SecurityInfo": "https://support.microsoft.com/help/5068781",
           "CVEs": {
+            "CVE-2025-65018": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65018"
+            },
+            "CVE-2025-64720": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64720"
+            },
             "CVE-2025-59505": {
               "severity": "Important",
               "cvss_score": 7.8,
@@ -27446,7 +27557,7 @@
           "ActivelyExploitedCVEs": [
             "CVE-2025-62215"
           ],
-          "UniqueCVEsCount": 34,
+          "UniqueCVEsCount": 36,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5066791",
           "PatchTuesdayRelease": true
@@ -31971,6 +32082,20 @@
           "ProductVersion": "10.0.19044.6575",
           "SecurityInfo": "https://support.microsoft.com/help/5068781",
           "CVEs": {
+            "CVE-2025-65018": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65018"
+            },
+            "CVE-2025-64720": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64720"
+            },
             "CVE-2025-59505": {
               "severity": "Important",
               "cvss_score": 7.8,
@@ -32213,7 +32338,7 @@
           "ActivelyExploitedCVEs": [
             "CVE-2025-62215"
           ],
-          "UniqueCVEsCount": 34,
+          "UniqueCVEsCount": 36,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5066791",
           "PatchTuesdayRelease": true
@@ -37170,6 +37295,20 @@
           "ProductVersion": "10.0.26100.7171",
           "SecurityInfo": "https://support.microsoft.com/help/5068861",
           "CVEs": {
+            "CVE-2025-65018": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65018"
+            },
+            "CVE-2025-64720": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64720"
+            },
             "CVE-2025-59505": {
               "severity": "Important",
               "cvss_score": 7.8,
@@ -37406,7 +37545,7 @@
             "CVE-2025-60710",
             "CVE-2025-62215"
           ],
-          "UniqueCVEsCount": 33,
+          "UniqueCVEsCount": 35,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5066835",
           "PatchTuesdayRelease": true
@@ -42834,6 +42973,20 @@
           "ProductVersion": "10.0.25398.1965",
           "SecurityInfo": "https://support.microsoft.com/help/5068779",
           "CVEs": {
+            "CVE-2025-65018": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65018"
+            },
+            "CVE-2025-64720": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64720"
+            },
             "CVE-2025-59505": {
               "severity": "Important",
               "cvss_score": 7.8,
@@ -43069,7 +43222,7 @@
           "ActivelyExploitedCVEs": [
             "CVE-2025-62215"
           ],
-          "UniqueCVEsCount": 33,
+          "UniqueCVEsCount": 35,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5066780",
           "PatchTuesdayRelease": true
@@ -48056,6 +48209,20 @@
           "ProductVersion": "10.0.17763.8027",
           "SecurityInfo": "https://support.microsoft.com/help/5068791",
           "CVEs": {
+            "CVE-2025-65018": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65018"
+            },
+            "CVE-2025-64720": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64720"
+            },
             "CVE-2025-59505": {
               "severity": "Important",
               "cvss_score": 7.8,
@@ -48291,7 +48458,7 @@
           "ActivelyExploitedCVEs": [
             "CVE-2025-62215"
           ],
-          "UniqueCVEsCount": 33,
+          "UniqueCVEsCount": 35,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5066586",
           "PatchTuesdayRelease": true
@@ -52604,6 +52771,20 @@
           "ProductVersion": "10.0.14393.8594",
           "SecurityInfo": "https://support.microsoft.com/help/5068864",
           "CVEs": {
+            "CVE-2025-65018": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65018"
+            },
+            "CVE-2025-64720": {
+              "severity": "Important",
+              "cvss_score": 7.1,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64720"
+            },
             "CVE-2025-59505": {
               "severity": "Important",
               "cvss_score": 7.8,
@@ -52781,7 +52962,7 @@
             }
           },
           "ActivelyExploitedCVEs": [],
-          "UniqueCVEsCount": 25,
+          "UniqueCVEsCount": 27,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5066836",
           "PatchTuesdayRelease": true
@@ -56145,6 +56326,6 @@
       "NonSecurityReleases": []
     }
   ],
-  "UpdateHash": "9ab32dc1ce99a8f70faf4cd09b99c29c71643a0cb594f24edcdee9dd6b5510c3",
-  "LastCheck": "2026-04-15T07:04:36.962656+00:00"
+  "UpdateHash": "f8fd2417b13f34ba700d63418ddc5ae245dee08d400752428a374c44401747fe",
+  "LastCheck": "2026-04-15T12:49:50.058569+00:00"
 }
