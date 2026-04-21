@@ -1,8 +1,8 @@
 {
-  "UpdateHash": "172804419e507c96a9275b0b5c58e1729e9b24634caf9f05fe67c3112114cbfd",
-  "LastCheck": "2026-04-21T17:51:33.599478+00:00",
+  "UpdateHash": "a9961d55699f6c390d3ebab41af5a154cd3117f404b91a5c2fb5e07422498ccc",
+  "LastCheck": "2026-04-21T18:49:14.351476+00:00",
   "OSVersionsTracked": 13,
   "TotalSecurityReleases": 230,
-  "TotalCVEsTracked": 7445,
+  "TotalCVEsTracked": 7419,
   "TotalActivelyExploited": 201
 }
