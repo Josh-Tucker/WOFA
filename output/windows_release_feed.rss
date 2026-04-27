@@ -7,97 +7,97 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Apr 2026 09:31:47 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 18:54:20 +0000</lastBuildDate>
     <item>
-      <title>Windows Server 2012 - December 2025 Security Update (KB5071503)</title>
-      <link>https://support.microsoft.com/help/5071503</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2012 - December 2025 Security Update (KB5071503)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;CVEs addressed: 12&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5071503"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5071503</guid>
-      <pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate>
+      <title>Windows Server 2012 - April 2026 Security Update (KB5082403)</title>
+      <link>https://support.microsoft.com/help/5082403</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2012 - April 2026 Security Update (KB5082403)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 4.8.4801.0&lt;/p&gt;&lt;p&gt;CVEs addressed: 63&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5082403"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5082403</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows Server 2016 - March 2026 Security Update (KB5078938)</title>
-      <link>https://support.microsoft.com/help/5078938</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2016 - March 2026 Security Update (KB5078938)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.8957&lt;/p&gt;&lt;p&gt;CVEs addressed: 34&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5078938"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5078938</guid>
-      <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Windows Server 2016 - April 2026 Security Update (KB5082198)</title>
+      <link>https://support.microsoft.com/help/5082198</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2016 - April 2026 Security Update (KB5082198)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.9060&lt;/p&gt;&lt;p&gt;CVEs addressed: 87&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5082198"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5082198</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows Server 2019 - March 2026 Security Update (KB5078752)</title>
-      <link>https://support.microsoft.com/help/5078752</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2019 - March 2026 Security Update (KB5078752)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.8511&lt;/p&gt;&lt;p&gt;CVEs addressed: 38&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5078752"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5078752</guid>
-      <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Windows Server 2019 - April 2026 Security Update (KB5082123)</title>
+      <link>https://support.microsoft.com/help/5082123</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2019 - April 2026 Security Update (KB5082123)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.8644&lt;/p&gt;&lt;p&gt;CVEs addressed: 106&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5082123"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5082123</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows Server 2022 - March 2026 Security Update (KB5078766)</title>
-      <link>https://support.microsoft.com/help/5078766</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2022 - March 2026 Security Update (KB5078766)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.20348.4893&lt;/p&gt;&lt;p&gt;CVEs addressed: 42&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5078766"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5078766</guid>
-      <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Windows Server 2022 - April 2026 Security Update (KB5082060)</title>
+      <link>https://support.microsoft.com/help/5082060</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2022 - April 2026 Security Update (KB5082060)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.25398.2274&lt;/p&gt;&lt;p&gt;CVEs addressed: 124&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5082060"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5082060</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows Server 2025 - March 2026 Security Update (KB5078740)</title>
-      <link>https://support.microsoft.com/help/5078740</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2025 - March 2026 Security Update (KB5078740)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.32522&lt;/p&gt;&lt;p&gt;CVEs addressed: 39&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5078740"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5078740</guid>
-      <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Windows Server 2025 - April 2026 Security Update (KB5082063)</title>
+      <link>https://support.microsoft.com/help/5082063</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2025 - April 2026 Security Update (KB5082063)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.32690&lt;/p&gt;&lt;p&gt;CVEs addressed: 127&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5082063"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5082063</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 10 21H2 - March 2026 Security Update (KB5078885)</title>
-      <link>https://support.microsoft.com/help/5078885</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 21H2 - March 2026 Security Update (KB5078885)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19044.7058&lt;/p&gt;&lt;p&gt;CVEs addressed: 43&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5078885"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5078885</guid>
-      <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Windows 10 21H2 - April 2026 Security Update (KB5082200)</title>
+      <link>https://support.microsoft.com/help/5082200</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 21H2 - April 2026 Security Update (KB5082200)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19044.7184&lt;/p&gt;&lt;p&gt;CVEs addressed: 109&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5082200"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5082200</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 10 22H2 - March 2026 Security Update (KB5078885)</title>
-      <link>https://support.microsoft.com/help/5078885</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 22H2 - March 2026 Security Update (KB5078885)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19045.7058&lt;/p&gt;&lt;p&gt;CVEs addressed: 43&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5078885"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5078885</guid>
-      <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Windows 10 22H2 - April 2026 Security Update (KB5082200)</title>
+      <link>https://support.microsoft.com/help/5082200</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 22H2 - April 2026 Security Update (KB5082200)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19045.7184&lt;/p&gt;&lt;p&gt;CVEs addressed: 109&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5082200"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5082200</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 10 1607 - March 2026 Security Update (KB5078938)</title>
-      <link>https://support.microsoft.com/help/5078938</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1607 - March 2026 Security Update (KB5078938)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.8957&lt;/p&gt;&lt;p&gt;CVEs addressed: 35&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5078938"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5078938</guid>
-      <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Windows 10 1607 - April 2026 Out-of-Band (KB5091572)</title>
+      <link>https://support.microsoft.com/help/5091572</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1607 - April 2026 Out-of-Band (KB5091572)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.9062&lt;/p&gt;&lt;p&gt;CVEs addressed: 0&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5091572"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5091572</guid>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 10 1809 - March 2026 Security Update (KB5078752)</title>
-      <link>https://support.microsoft.com/help/5078752</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1809 - March 2026 Security Update (KB5078752)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.8511&lt;/p&gt;&lt;p&gt;CVEs addressed: 40&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5078752"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5078752</guid>
-      <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Windows 10 1809 - April 2026 Out-of-Band (KB5091573)</title>
+      <link>https://support.microsoft.com/help/5091573</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1809 - April 2026 Out-of-Band (KB5091573)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.8647&lt;/p&gt;&lt;p&gt;CVEs addressed: 0&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5091573"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5091573</guid>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 11 23H2 - March 2026 Security Update (KB5078883)</title>
-      <link>https://support.microsoft.com/help/5078883</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 23H2 - March 2026 Security Update (KB5078883)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.22631.6783&lt;/p&gt;&lt;p&gt;CVEs addressed: 41&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5078883"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5078883</guid>
-      <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Windows 11 23H2 - April 2026 Security Update (KB5082052)</title>
+      <link>https://support.microsoft.com/help/5082052</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 23H2 - April 2026 Security Update (KB5082052)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.22631.6936&lt;/p&gt;&lt;p&gt;CVEs addressed: 117&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5082052"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5082052</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 11 24H2 - March 2026 Out-of-Band (KB5085516)</title>
-      <link>https://support.microsoft.com/help/5085516</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 24H2 - March 2026 Out-of-Band (KB5085516)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.8039&lt;/p&gt;&lt;p&gt;CVEs addressed: 0&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5085516"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5085516</guid>
-      <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Windows 11 24H2 - April 2026 Security Update (KB5083769)</title>
+      <link>https://support.microsoft.com/help/5083769</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 24H2 - April 2026 Security Update (KB5083769)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.8246&lt;/p&gt;&lt;p&gt;CVEs addressed: 123&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5083769"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5083769</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 11 25H2 - March 2026 Out-of-Band (KB5085516)</title>
-      <link>https://support.microsoft.com/help/5085516</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 25H2 - March 2026 Out-of-Band (KB5085516)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26200.8039&lt;/p&gt;&lt;p&gt;CVEs addressed: 0&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5085516"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5085516</guid>
-      <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Windows 11 25H2 - April 2026 Security Update (KB5083769)</title>
+      <link>https://support.microsoft.com/help/5083769</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 25H2 - April 2026 Security Update (KB5083769)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26200.8246&lt;/p&gt;&lt;p&gt;CVEs addressed: 123&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5083769"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5083769</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 11 26H1 - March 2026 Security Update (KB5079466)</title>
-      <link>https://support.microsoft.com/help/5079466</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 26H1 - March 2026 Security Update (KB5079466)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.28000.1719&lt;/p&gt;&lt;p&gt;CVEs addressed: 40&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5079466"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5079466</guid>
-      <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Windows 11 26H1 - April 2026 Security Update (KB5083768)</title>
+      <link>https://support.microsoft.com/help/5083768</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 26H1 - April 2026 Security Update (KB5083768)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.28000.1836&lt;/p&gt;&lt;p&gt;CVEs addressed: 121&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5083768"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5083768</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
