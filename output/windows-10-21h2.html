@@ -234,7 +234,7 @@
             RSS
           </a>
         </div>
-        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 12 May 2026 07:26 UTC</span>
+        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 12 May 2026 13:11 UTC</span>
         <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
           <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -8366,11 +8366,12 @@
           <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
             
             <a class="badge font-mono hover:no-underline
-                      badge-ghost
+                      badge-error
+                      
                       badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2025-6965"
                target="_blank" rel="noopener"
-               title="Unknown">
+               title="Unknown · CVSS 9.8">
               CVE-2025-6965
             </a>
             
