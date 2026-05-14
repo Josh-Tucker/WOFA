@@ -234,7 +234,7 @@
             RSS
           </a>
         </div>
-        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 14 May 2026 13:06 UTC</span>
+        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 14 May 2026 19:07 UTC</span>
         <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
           <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -311,7 +311,7 @@
             <span class="badge badge-sm
               badge-info badge-outline
               ">
-              65
+              67
             </span>
           </span>
         </div>
@@ -426,7 +426,7 @@
         
         <span class="badge badge-info badge-outline">Patch Tuesday</span>
         
-        <span class="badge badge-info badge-outline">65 CVEs</span>
+        <span class="badge badge-info badge-outline">67 CVEs</span>
         
         
       </div>
@@ -441,7 +441,7 @@
     <!-- collapsed hint -->
     <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
       28 days since previous release &nbsp;·&nbsp; 
-      Addresses 65 security issues
+      Addresses 67 security issues
     </div>
 
     <!-- expanded body -->
@@ -452,7 +452,7 @@
                   border-neutral">
         <div class="mb-1">
           ℹ️
-          Addresses 65 security issues
+          Addresses 67 security issues
         </div>
         <div class="text-xs text-base-content/50">
           <strong class="text-base-content/70">Recommendation:</strong> Update to stay secure — security fixes available
@@ -474,7 +474,7 @@
         
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
-          65
+          67
         </div>
         
         
@@ -494,7 +494,7 @@
       <!-- CVE groups -->
       
       <div class="text-xs font-semibold text-base-content/50 uppercase tracking-wide mb-2.5">
-        CVEs (65)
+        CVEs (67)
       </div>
       <div class="flex flex-col gap-1.5">
         
@@ -545,7 +545,7 @@
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-32xx</code>
-            <span class="text-xs text-base-content/50">(3 CVEs)</span>
+            <span class="text-xs text-base-content/50">(4 CVEs)</span>
             <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
           </div>
           <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
@@ -568,6 +568,16 @@
                target="_blank" rel="noopener"
                title="Important · CVSS 6.7">
               CVE-2026-32170
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-32177"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.3">
+              CVE-2026-32177
             </a>
             
             <a class="badge font-mono hover:no-underline
@@ -871,7 +881,7 @@
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-35xx</code>
-            <span class="text-xs text-base-content/50">(10 CVEs)</span>
+            <span class="text-xs text-base-content/50">(11 CVEs)</span>
             <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
           </div>
           <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
@@ -974,6 +984,16 @@
                target="_blank" rel="noopener"
                title="Important · CVSS 7.5">
               CVE-2026-35424
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-35433"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.3">
+              CVE-2026-35433
             </a>
             
           </div>
