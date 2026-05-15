@@ -1863,7 +1863,29 @@
           "PatchTuesdayRelease": true
         }
       ],
-      "NonSecurityReleases": []
+      "NonSecurityReleases": [
+        {
+          "UpdateType": "2026-04 D",
+          "ReleaseDate": "2026-04-30",
+          "ProductVersion": "28000.1896",
+          "KB": "5083806",
+          "SecurityInfo": "https://support.microsoft.com/help/5083806"
+        },
+        {
+          "UpdateType": "2026-03 D",
+          "ReleaseDate": "2026-03-26",
+          "ProductVersion": "28000.1764",
+          "KB": "5079489",
+          "SecurityInfo": "https://support.microsoft.com/help/5079489"
+        },
+        {
+          "UpdateType": "2026-02 D",
+          "ReleaseDate": "2026-02-24",
+          "ProductVersion": "28000.1643",
+          "KB": "5077239",
+          "SecurityInfo": "https://support.microsoft.com/help/5077239"
+        }
+      ]
     },
     {
       "OSVersion": "Windows 11 25H2",
@@ -3202,33 +3224,9 @@
             "CVE-2026-32202"
           ],
           "UniqueCVEsCount": 123,
-          "DaysSincePreviousRelease": 14,
+          "DaysSincePreviousRelease": 35,
           "Supersedes": "5079473",
           "PatchTuesdayRelease": true
-        },
-        {
-          "UpdateName": "Windows 11 25H2 - March 2026 Out-of-Band (KB5086672)",
-          "ReleaseDate": "2026-03-31",
-          "ProductVersion": "10.0.26200.8117",
-          "SecurityInfo": "https://support.microsoft.com/help/5086672",
-          "CVEs": {},
-          "ActivelyExploitedCVEs": [],
-          "UniqueCVEsCount": 0,
-          "DaysSincePreviousRelease": 10,
-          "Supersedes": null,
-          "PatchTuesdayRelease": false
-        },
-        {
-          "UpdateName": "Windows 11 25H2 - March 2026 Out-of-Band (KB5085516)",
-          "ReleaseDate": "2026-03-21",
-          "ProductVersion": "10.0.26200.8039",
-          "SecurityInfo": "https://support.microsoft.com/help/5085516",
-          "CVEs": {},
-          "ActivelyExploitedCVEs": [],
-          "UniqueCVEsCount": 0,
-          "DaysSincePreviousRelease": 11,
-          "Supersedes": null,
-          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 11 25H2 - March 2026 Security Update (KB5079473)",
@@ -3727,33 +3725,9 @@
             "CVE-2026-21533"
           ],
           "UniqueCVEsCount": 26,
-          "DaysSincePreviousRelease": 17,
+          "DaysSincePreviousRelease": 28,
           "Supersedes": "5074109",
           "PatchTuesdayRelease": true
-        },
-        {
-          "UpdateName": "Windows 11 25H2 - January 2026 Out-of-Band (KB5078127)",
-          "ReleaseDate": "2026-01-24",
-          "ProductVersion": "10.0.26200.7628",
-          "SecurityInfo": "https://support.microsoft.com/help/5078127",
-          "CVEs": {},
-          "ActivelyExploitedCVEs": [],
-          "UniqueCVEsCount": 0,
-          "DaysSincePreviousRelease": 7,
-          "Supersedes": null,
-          "PatchTuesdayRelease": false
-        },
-        {
-          "UpdateName": "Windows 11 25H2 - January 2026 Out-of-Band (KB5077744)",
-          "ReleaseDate": "2026-01-17",
-          "ProductVersion": "10.0.26200.7627",
-          "SecurityInfo": "https://support.microsoft.com/help/5077744",
-          "CVEs": {},
-          "ActivelyExploitedCVEs": [],
-          "UniqueCVEsCount": 0,
-          "DaysSincePreviousRelease": 4,
-          "Supersedes": null,
-          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 11 25H2 - January 2026 Security Update (KB5074109)",
@@ -4910,21 +4884,9 @@
             "CVE-2025-62215"
           ],
           "UniqueCVEsCount": 38,
-          "DaysSincePreviousRelease": 22,
+          "DaysSincePreviousRelease": 28,
           "Supersedes": "5066835",
           "PatchTuesdayRelease": true
-        },
-        {
-          "UpdateName": "Windows 11 25H2 - October 2025 Out-of-Band (KB5070773)",
-          "ReleaseDate": "2025-10-20",
-          "ProductVersion": "10.0.26200.6901",
-          "SecurityInfo": "https://support.microsoft.com/help/5070773",
-          "CVEs": {},
-          "ActivelyExploitedCVEs": [],
-          "UniqueCVEsCount": 0,
-          "DaysSincePreviousRelease": 6,
-          "Supersedes": null,
-          "PatchTuesdayRelease": false
         },
         {
           "UpdateName": "Windows 11 25H2 - October 2025 Security Update (KB5066835)",
@@ -5783,50 +5745,7 @@
           "PatchTuesdayRelease": true
         }
       ],
-      "NonSecurityReleases": [
-        {
-          "UpdateType": "2026-04 D",
-          "ReleaseDate": "2026-04-30",
-          "ProductVersion": "26200.8328",
-          "KB": "5083631",
-          "SecurityInfo": "https://support.microsoft.com/help/5083631"
-        },
-        {
-          "UpdateType": "2026-03 D",
-          "ReleaseDate": "2026-03-26",
-          "ProductVersion": "26200.8116",
-          "KB": "5079391",
-          "SecurityInfo": "https://support.microsoft.com/help/5079391"
-        },
-        {
-          "UpdateType": "2026-02 D",
-          "ReleaseDate": "2026-02-24",
-          "ProductVersion": "26200.7922",
-          "KB": "5077241",
-          "SecurityInfo": "https://support.microsoft.com/help/5077241"
-        },
-        {
-          "UpdateType": "2026-01 D",
-          "ReleaseDate": "2026-01-29",
-          "ProductVersion": "26200.7705",
-          "KB": "5074105",
-          "SecurityInfo": "https://support.microsoft.com/help/5074105"
-        },
-        {
-          "UpdateType": "2025-11 D",
-          "ReleaseDate": "2025-12-01",
-          "ProductVersion": "26200.7309",
-          "KB": "5070311",
-          "SecurityInfo": "https://support.microsoft.com/help/5070311"
-        },
-        {
-          "UpdateType": "2025-10 D",
-          "ReleaseDate": "2025-10-28",
-          "ProductVersion": "26200.7019",
-          "KB": "5067036",
-          "SecurityInfo": "https://support.microsoft.com/help/5067036"
-        }
-      ]
+      "NonSecurityReleases": []
     },
     {
       "OSVersion": "Windows 11 24H2",
@@ -61648,6 +61567,6 @@
       "NonSecurityReleases": []
     }
   ],
-  "UpdateHash": "ad57cd653de859203eca755d740bce920c74ea590daaacf3d6405ba63c3cc1bf",
-  "LastCheck": "2026-05-15T01:17:05.805013+00:00"
+  "UpdateHash": "2f41a645bb149bb71b9d94e7626fe19b1ab59ac93fa85595d1ddc0c225ccac61",
+  "LastCheck": "2026-05-15T07:34:48.269859+00:00"
 }
