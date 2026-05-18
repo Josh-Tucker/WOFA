@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 18 May 2026 13:45:18 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 19:05:16 +0000</lastBuildDate>
     <item>
       <title>Windows Server 2012 - May 2026 Security Update (KB5087067)</title>
       <link>https://support.microsoft.com/help/5087067</link>
@@ -25,7 +25,7 @@
     <item>
       <title>Windows Server 2019 - May 2026 Security Update (KB5087538)</title>
       <link>https://support.microsoft.com/help/5087538</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2019 - May 2026 Security Update (KB5087538)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.8755&lt;/p&gt;&lt;p&gt;CVEs addressed: 55&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5087538"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2019 - May 2026 Security Update (KB5087538)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.8755&lt;/p&gt;&lt;p&gt;CVEs addressed: 56&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5087538"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5087538</guid>
       <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
     </item>
