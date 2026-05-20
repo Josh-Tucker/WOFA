@@ -32,13 +32,6 @@
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32177"
             },
-            "CVE-2026-21530": {
-              "severity": "Important",
-              "cvss_score": 6.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
-            },
             "CVE-2026-33834": {
               "severity": "Important",
               "cvss_score": 7.8,
@@ -465,6 +458,13 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45585"
+            },
+            "CVE-2026-21530": {
+              "severity": "Important",
+              "cvss_score": 6.7,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -1925,13 +1925,6 @@
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32177"
             },
-            "CVE-2026-21530": {
-              "severity": "Important",
-              "cvss_score": 6.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
-            },
             "CVE-2026-33834": {
               "severity": "Important",
               "cvss_score": 7.8,
@@ -2358,6 +2351,13 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45585"
+            },
+            "CVE-2026-21530": {
+              "severity": "Important",
+              "cvss_score": 6.7,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -5792,13 +5792,6 @@
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32177"
             },
-            "CVE-2026-21530": {
-              "severity": "Important",
-              "cvss_score": 6.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
-            },
             "CVE-2026-33834": {
               "severity": "Important",
               "cvss_score": 7.8,
@@ -6225,6 +6218,13 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45585"
+            },
+            "CVE-2026-21530": {
+              "severity": "Important",
+              "cvss_score": 6.7,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -11391,280 +11391,9 @@
           "CVEs": {},
           "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 0,
-          "DaysSincePreviousRelease": 14,
+          "DaysSincePreviousRelease": null,
           "Supersedes": null,
           "PatchTuesdayRelease": false
-        },
-        {
-          "UpdateName": "Windows 11 24H2 - May 2025 Security Update (KB5058411)",
-          "ReleaseDate": "2025-05-13",
-          "ProductVersion": "10.0.26100.4061",
-          "SecurityInfo": "https://support.microsoft.com/help/5058411",
-          "CVEs": {
-            "CVE-2025-29959": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29959"
-            },
-            "CVE-2025-29960": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29960"
-            },
-            "CVE-2025-29964": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29964"
-            },
-            "CVE-2025-29966": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29966"
-            },
-            "CVE-2025-29967": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29967"
-            },
-            "CVE-2025-29969": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29969"
-            },
-            "CVE-2025-29970": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29970"
-            },
-            "CVE-2025-29971": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29971"
-            },
-            "CVE-2025-27468": {
-              "severity": "Important",
-              "cvss_score": 7.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27468"
-            },
-            "CVE-2025-30400": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30400"
-            },
-            "CVE-2025-32701": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32701"
-            },
-            "CVE-2025-32706": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32706"
-            },
-            "CVE-2025-32709": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32709"
-            },
-            "CVE-2025-29829": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29829"
-            },
-            "CVE-2025-29830": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29830"
-            },
-            "CVE-2025-29832": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29832"
-            },
-            "CVE-2025-29833": {
-              "severity": "Critical",
-              "cvss_score": 7.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29833"
-            },
-            "CVE-2025-29835": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29835"
-            },
-            "CVE-2025-29836": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29836"
-            },
-            "CVE-2025-29837": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29837"
-            },
-            "CVE-2025-29838": {
-              "severity": "Important",
-              "cvss_score": 7.4,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29838"
-            },
-            "CVE-2025-29839": {
-              "severity": "Important",
-              "cvss_score": 4.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29839"
-            },
-            "CVE-2025-29841": {
-              "severity": "Important",
-              "cvss_score": 7.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29841"
-            },
-            "CVE-2025-29842": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29842"
-            },
-            "CVE-2025-29955": {
-              "severity": "Important",
-              "cvss_score": 6.2,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29955"
-            },
-            "CVE-2025-29956": {
-              "severity": "Important",
-              "cvss_score": 5.4,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29956"
-            },
-            "CVE-2025-29957": {
-              "severity": "Important",
-              "cvss_score": 6.2,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29957"
-            },
-            "CVE-2025-29958": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29958"
-            },
-            "CVE-2025-29961": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29961"
-            },
-            "CVE-2025-29962": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29962"
-            },
-            "CVE-2025-29963": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29963"
-            },
-            "CVE-2025-29974": {
-              "severity": "Important",
-              "cvss_score": 5.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29974"
-            },
-            "CVE-2025-30385": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30385"
-            },
-            "CVE-2025-30388": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30388"
-            },
-            "CVE-2025-30397": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30397"
-            },
-            "CVE-2025-24063": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-24063"
-            }
-          },
-          "ActivelyExploitedCVEs": [
-            "CVE-2025-30397",
-            "CVE-2025-30400",
-            "CVE-2025-32701",
-            "CVE-2025-32706",
-            "CVE-2025-32709"
-          ],
-          "UniqueCVEsCount": 36,
-          "DaysSincePreviousRelease": null,
-          "Supersedes": "5055523",
-          "PatchTuesdayRelease": true
         }
       ],
       "NonSecurityReleases": [
@@ -11819,13 +11548,6 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32177"
-            },
-            "CVE-2026-21530": {
-              "severity": "Important",
-              "cvss_score": 6.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             },
             "CVE-2026-33834": {
               "severity": "Important",
@@ -12218,6 +11940,13 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
+            },
+            "CVE-2026-21530": {
+              "severity": "Important",
+              "cvss_score": 6.7,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -16991,273 +16720,9 @@
           "CVEs": {},
           "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 0,
-          "DaysSincePreviousRelease": 18,
+          "DaysSincePreviousRelease": 50,
           "Supersedes": null,
           "PatchTuesdayRelease": false
-        },
-        {
-          "UpdateName": "Windows 11 23H2 - May 2025 Security Update (KB5058405)",
-          "ReleaseDate": "2025-05-13",
-          "ProductVersion": "10.0.22631.5335",
-          "SecurityInfo": "https://support.microsoft.com/help/5058405",
-          "CVEs": {
-            "CVE-2025-29959": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29959"
-            },
-            "CVE-2025-29960": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29960"
-            },
-            "CVE-2025-29964": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29964"
-            },
-            "CVE-2025-29966": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29966"
-            },
-            "CVE-2025-29967": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29967"
-            },
-            "CVE-2025-29969": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29969"
-            },
-            "CVE-2025-29971": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29971"
-            },
-            "CVE-2025-27468": {
-              "severity": "Important",
-              "cvss_score": 7.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27468"
-            },
-            "CVE-2025-30400": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30400"
-            },
-            "CVE-2025-32701": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32701"
-            },
-            "CVE-2025-32706": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32706"
-            },
-            "CVE-2025-32709": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32709"
-            },
-            "CVE-2025-29829": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29829"
-            },
-            "CVE-2025-29830": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29830"
-            },
-            "CVE-2025-29832": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29832"
-            },
-            "CVE-2025-29833": {
-              "severity": "Critical",
-              "cvss_score": 7.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29833"
-            },
-            "CVE-2025-29835": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29835"
-            },
-            "CVE-2025-29836": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29836"
-            },
-            "CVE-2025-29837": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29837"
-            },
-            "CVE-2025-29839": {
-              "severity": "Important",
-              "cvss_score": 4.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29839"
-            },
-            "CVE-2025-29840": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29840"
-            },
-            "CVE-2025-29841": {
-              "severity": "Important",
-              "cvss_score": 7.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29841"
-            },
-            "CVE-2025-29842": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29842"
-            },
-            "CVE-2025-29954": {
-              "severity": "Important",
-              "cvss_score": 5.9,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29954"
-            },
-            "CVE-2025-29956": {
-              "severity": "Important",
-              "cvss_score": 5.4,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29956"
-            },
-            "CVE-2025-29957": {
-              "severity": "Important",
-              "cvss_score": 6.2,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29957"
-            },
-            "CVE-2025-29958": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29958"
-            },
-            "CVE-2025-29961": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29961"
-            },
-            "CVE-2025-29962": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29962"
-            },
-            "CVE-2025-29963": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29963"
-            },
-            "CVE-2025-29974": {
-              "severity": "Important",
-              "cvss_score": 5.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29974"
-            },
-            "CVE-2025-30385": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30385"
-            },
-            "CVE-2025-30388": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30388"
-            },
-            "CVE-2025-30397": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30397"
-            },
-            "CVE-2025-24063": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-24063"
-            }
-          },
-          "ActivelyExploitedCVEs": [
-            "CVE-2025-30397",
-            "CVE-2025-30400",
-            "CVE-2025-32701",
-            "CVE-2025-32706",
-            "CVE-2025-32709"
-          ],
-          "UniqueCVEsCount": 35,
-          "DaysSincePreviousRelease": 32,
-          "Supersedes": "5055528",
-          "PatchTuesdayRelease": true
         },
         {
           "UpdateName": "Windows 11 23H2 - April 2025 Out-of-Band (KB5058919)",
@@ -17480,13 +16945,6 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32177"
-            },
-            "CVE-2026-21530": {
-              "severity": "Important",
-              "cvss_score": 6.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             },
             "CVE-2026-33834": {
               "severity": "Important",
@@ -17851,6 +17309,13 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
+            },
+            "CVE-2026-21530": {
+              "severity": "Important",
+              "cvss_score": 6.7,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -22177,266 +21642,9 @@
           "CVEs": {},
           "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 0,
-          "DaysSincePreviousRelease": 14,
+          "DaysSincePreviousRelease": 41,
           "Supersedes": null,
           "PatchTuesdayRelease": false
-        },
-        {
-          "UpdateName": "Windows 10 1809 - May 2025 Security Update (KB5058392)",
-          "ReleaseDate": "2025-05-13",
-          "ProductVersion": "10.0.17763.7314",
-          "SecurityInfo": "https://support.microsoft.com/help/5058392",
-          "CVEs": {
-            "CVE-2025-29959": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29959"
-            },
-            "CVE-2025-29960": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29960"
-            },
-            "CVE-2025-29964": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29964"
-            },
-            "CVE-2025-29966": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29966"
-            },
-            "CVE-2025-29967": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29967"
-            },
-            "CVE-2025-29969": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29969"
-            },
-            "CVE-2025-27468": {
-              "severity": "Important",
-              "cvss_score": 7.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27468"
-            },
-            "CVE-2025-30400": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30400"
-            },
-            "CVE-2025-32701": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32701"
-            },
-            "CVE-2025-32706": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32706"
-            },
-            "CVE-2025-32709": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32709"
-            },
-            "CVE-2025-29829": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29829"
-            },
-            "CVE-2025-29830": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29830"
-            },
-            "CVE-2025-29832": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29832"
-            },
-            "CVE-2025-29833": {
-              "severity": "Critical",
-              "cvss_score": 7.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29833"
-            },
-            "CVE-2025-29835": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29835"
-            },
-            "CVE-2025-29836": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29836"
-            },
-            "CVE-2025-29837": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29837"
-            },
-            "CVE-2025-29839": {
-              "severity": "Important",
-              "cvss_score": 4.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29839"
-            },
-            "CVE-2025-29840": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29840"
-            },
-            "CVE-2025-29842": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29842"
-            },
-            "CVE-2025-29954": {
-              "severity": "Important",
-              "cvss_score": 5.9,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29954"
-            },
-            "CVE-2025-29956": {
-              "severity": "Important",
-              "cvss_score": 5.4,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29956"
-            },
-            "CVE-2025-29957": {
-              "severity": "Important",
-              "cvss_score": 6.2,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29957"
-            },
-            "CVE-2025-29958": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29958"
-            },
-            "CVE-2025-29961": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29961"
-            },
-            "CVE-2025-29962": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29962"
-            },
-            "CVE-2025-29963": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29963"
-            },
-            "CVE-2025-29974": {
-              "severity": "Important",
-              "cvss_score": 5.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29974"
-            },
-            "CVE-2025-30385": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30385"
-            },
-            "CVE-2025-30388": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30388"
-            },
-            "CVE-2025-30397": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30397"
-            },
-            "CVE-2025-32707": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32707"
-            },
-            "CVE-2025-24063": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-24063"
-            }
-          },
-          "ActivelyExploitedCVEs": [
-            "CVE-2025-30397",
-            "CVE-2025-30400",
-            "CVE-2025-32701",
-            "CVE-2025-32706",
-            "CVE-2025-32709"
-          ],
-          "UniqueCVEsCount": 34,
-          "DaysSincePreviousRelease": 27,
-          "Supersedes": "5055519",
-          "PatchTuesdayRelease": true
         },
         {
           "UpdateName": "Windows 10 1809 - April 2025 Out-of-Band (KB5059091)",
@@ -23048,13 +22256,6 @@
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32177"
             },
-            "CVE-2026-21530": {
-              "severity": "Important",
-              "cvss_score": 6.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
-            },
             "CVE-2026-33834": {
               "severity": "Important",
               "cvss_score": 7.8,
@@ -23362,6 +22563,13 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
+            },
+            "CVE-2026-21530": {
+              "severity": "Important",
+              "cvss_score": 6.7,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -26887,243 +26095,8 @@
             "CVE-2025-33073"
           ],
           "UniqueCVEsCount": 33,
-          "DaysSincePreviousRelease": 28,
+          "DaysSincePreviousRelease": 60,
           "Supersedes": "5058383",
-          "PatchTuesdayRelease": true
-        },
-        {
-          "UpdateName": "Windows 10 1607 - May 2025 Security Update (KB5058383)",
-          "ReleaseDate": "2025-05-13",
-          "ProductVersion": "10.0.14393.8066",
-          "SecurityInfo": "https://support.microsoft.com/help/5058383",
-          "CVEs": {
-            "CVE-2025-29959": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29959"
-            },
-            "CVE-2025-29960": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29960"
-            },
-            "CVE-2025-29966": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29966"
-            },
-            "CVE-2025-29967": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29967"
-            },
-            "CVE-2025-29969": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29969"
-            },
-            "CVE-2025-27468": {
-              "severity": "Important",
-              "cvss_score": 7.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27468"
-            },
-            "CVE-2025-32701": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32701"
-            },
-            "CVE-2025-32706": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32706"
-            },
-            "CVE-2025-32709": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32709"
-            },
-            "CVE-2025-29829": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29829"
-            },
-            "CVE-2025-29830": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29830"
-            },
-            "CVE-2025-29832": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29832"
-            },
-            "CVE-2025-29833": {
-              "severity": "Critical",
-              "cvss_score": 7.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29833"
-            },
-            "CVE-2025-29835": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29835"
-            },
-            "CVE-2025-29836": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29836"
-            },
-            "CVE-2025-29837": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29837"
-            },
-            "CVE-2025-29839": {
-              "severity": "Important",
-              "cvss_score": 4.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29839"
-            },
-            "CVE-2025-29840": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29840"
-            },
-            "CVE-2025-29842": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29842"
-            },
-            "CVE-2025-29954": {
-              "severity": "Important",
-              "cvss_score": 5.9,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29954"
-            },
-            "CVE-2025-29956": {
-              "severity": "Important",
-              "cvss_score": 5.4,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29956"
-            },
-            "CVE-2025-29957": {
-              "severity": "Important",
-              "cvss_score": 6.2,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29957"
-            },
-            "CVE-2025-29958": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29958"
-            },
-            "CVE-2025-29961": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29961"
-            },
-            "CVE-2025-29962": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29962"
-            },
-            "CVE-2025-29974": {
-              "severity": "Important",
-              "cvss_score": 5.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29974"
-            },
-            "CVE-2025-30385": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30385"
-            },
-            "CVE-2025-30388": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30388"
-            },
-            "CVE-2025-30397": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30397"
-            },
-            "CVE-2025-32707": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32707"
-            },
-            "CVE-2025-24063": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-24063"
-            }
-          },
-          "ActivelyExploitedCVEs": [
-            "CVE-2025-30397",
-            "CVE-2025-32701",
-            "CVE-2025-32706",
-            "CVE-2025-32709"
-          ],
-          "UniqueCVEsCount": 31,
-          "DaysSincePreviousRelease": 32,
-          "Supersedes": "5055521",
           "PatchTuesdayRelease": true
         },
         {
@@ -27742,13 +26715,6 @@
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32177"
             },
-            "CVE-2026-21530": {
-              "severity": "Important",
-              "cvss_score": 6.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
-            },
             "CVE-2026-33834": {
               "severity": "Important",
               "cvss_score": 7.8,
@@ -28126,6 +27092,13 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
+            },
+            "CVE-2026-21530": {
+              "severity": "Important",
+              "cvss_score": 6.7,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -32599,265 +31572,8 @@
             "CVE-2025-33073"
           ],
           "UniqueCVEsCount": 35,
-          "DaysSincePreviousRelease": 28,
-          "Supersedes": "5058379",
-          "PatchTuesdayRelease": true
-        },
-        {
-          "UpdateName": "Windows 10 22H2 - May 2025 Security Update (KB5058379)",
-          "ReleaseDate": "2025-05-13",
-          "ProductVersion": "10.0.19045.5854",
-          "SecurityInfo": "https://support.microsoft.com/help/5058379",
-          "CVEs": {
-            "CVE-2025-29959": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29959"
-            },
-            "CVE-2025-29960": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29960"
-            },
-            "CVE-2025-29964": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29964"
-            },
-            "CVE-2025-29966": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29966"
-            },
-            "CVE-2025-29967": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29967"
-            },
-            "CVE-2025-29969": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29969"
-            },
-            "CVE-2025-27468": {
-              "severity": "Important",
-              "cvss_score": 7.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27468"
-            },
-            "CVE-2025-30400": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30400"
-            },
-            "CVE-2025-32701": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32701"
-            },
-            "CVE-2025-32706": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32706"
-            },
-            "CVE-2025-32709": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32709"
-            },
-            "CVE-2025-29829": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29829"
-            },
-            "CVE-2025-29830": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29830"
-            },
-            "CVE-2025-29832": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29832"
-            },
-            "CVE-2025-29833": {
-              "severity": "Critical",
-              "cvss_score": 7.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29833"
-            },
-            "CVE-2025-29835": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29835"
-            },
-            "CVE-2025-29836": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29836"
-            },
-            "CVE-2025-29837": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29837"
-            },
-            "CVE-2025-29839": {
-              "severity": "Important",
-              "cvss_score": 4.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29839"
-            },
-            "CVE-2025-29840": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29840"
-            },
-            "CVE-2025-29841": {
-              "severity": "Important",
-              "cvss_score": 7.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29841"
-            },
-            "CVE-2025-29842": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29842"
-            },
-            "CVE-2025-29954": {
-              "severity": "Important",
-              "cvss_score": 5.9,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29954"
-            },
-            "CVE-2025-29956": {
-              "severity": "Important",
-              "cvss_score": 5.4,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29956"
-            },
-            "CVE-2025-29957": {
-              "severity": "Important",
-              "cvss_score": 6.2,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29957"
-            },
-            "CVE-2025-29958": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29958"
-            },
-            "CVE-2025-29961": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29961"
-            },
-            "CVE-2025-29962": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29962"
-            },
-            "CVE-2025-29963": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29963"
-            },
-            "CVE-2025-29974": {
-              "severity": "Important",
-              "cvss_score": 5.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29974"
-            },
-            "CVE-2025-30385": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30385"
-            },
-            "CVE-2025-30388": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30388"
-            },
-            "CVE-2025-30397": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30397"
-            },
-            "CVE-2025-24063": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-24063"
-            }
-          },
-          "ActivelyExploitedCVEs": [
-            "CVE-2025-30397",
-            "CVE-2025-30400",
-            "CVE-2025-32701",
-            "CVE-2025-32706",
-            "CVE-2025-32709"
-          ],
-          "UniqueCVEsCount": 34,
           "DaysSincePreviousRelease": null,
-          "Supersedes": "5055518",
+          "Supersedes": "5058379",
           "PatchTuesdayRelease": true
         }
       ],
@@ -32893,13 +31609,6 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32177"
-            },
-            "CVE-2026-21530": {
-              "severity": "Important",
-              "cvss_score": 6.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             },
             "CVE-2026-33834": {
               "severity": "Important",
@@ -33278,6 +31987,13 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
+            },
+            "CVE-2026-21530": {
+              "severity": "Important",
+              "cvss_score": 6.7,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -37823,266 +36539,9 @@
           "CVEs": {},
           "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 0,
-          "DaysSincePreviousRelease": 6,
+          "DaysSincePreviousRelease": 934,
           "Supersedes": null,
           "PatchTuesdayRelease": false
-        },
-        {
-          "UpdateName": "Windows 10 21H2 - May 2025 Security Update (KB5058379)",
-          "ReleaseDate": "2025-05-13",
-          "ProductVersion": "10.0.19044.5854",
-          "SecurityInfo": "https://support.microsoft.com/help/5058379",
-          "CVEs": {
-            "CVE-2025-29959": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29959"
-            },
-            "CVE-2025-29960": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29960"
-            },
-            "CVE-2025-29964": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29964"
-            },
-            "CVE-2025-29966": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29966"
-            },
-            "CVE-2025-29967": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29967"
-            },
-            "CVE-2025-29969": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29969"
-            },
-            "CVE-2025-27468": {
-              "severity": "Important",
-              "cvss_score": 7.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27468"
-            },
-            "CVE-2025-30400": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30400"
-            },
-            "CVE-2025-32701": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32701"
-            },
-            "CVE-2025-32706": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32706"
-            },
-            "CVE-2025-32709": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32709"
-            },
-            "CVE-2025-29829": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29829"
-            },
-            "CVE-2025-29830": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29830"
-            },
-            "CVE-2025-29832": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29832"
-            },
-            "CVE-2025-29833": {
-              "severity": "Critical",
-              "cvss_score": 7.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29833"
-            },
-            "CVE-2025-29835": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29835"
-            },
-            "CVE-2025-29836": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29836"
-            },
-            "CVE-2025-29837": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29837"
-            },
-            "CVE-2025-29839": {
-              "severity": "Important",
-              "cvss_score": 4.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29839"
-            },
-            "CVE-2025-29840": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29840"
-            },
-            "CVE-2025-29841": {
-              "severity": "Important",
-              "cvss_score": 7.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29841"
-            },
-            "CVE-2025-29842": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29842"
-            },
-            "CVE-2025-29954": {
-              "severity": "Important",
-              "cvss_score": 5.9,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29954"
-            },
-            "CVE-2025-29956": {
-              "severity": "Important",
-              "cvss_score": 5.4,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29956"
-            },
-            "CVE-2025-29957": {
-              "severity": "Important",
-              "cvss_score": 6.2,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29957"
-            },
-            "CVE-2025-29958": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29958"
-            },
-            "CVE-2025-29961": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29961"
-            },
-            "CVE-2025-29962": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29962"
-            },
-            "CVE-2025-29963": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29963"
-            },
-            "CVE-2025-29974": {
-              "severity": "Important",
-              "cvss_score": 5.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29974"
-            },
-            "CVE-2025-30385": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30385"
-            },
-            "CVE-2025-30388": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30388"
-            },
-            "CVE-2025-30397": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30397"
-            },
-            "CVE-2025-24063": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-24063"
-            }
-          },
-          "ActivelyExploitedCVEs": [
-            "CVE-2025-30397",
-            "CVE-2025-30400",
-            "CVE-2025-32701",
-            "CVE-2025-32706",
-            "CVE-2025-32709"
-          ],
-          "UniqueCVEsCount": 34,
-          "DaysSincePreviousRelease": 928,
-          "Supersedes": "5055518",
-          "PatchTuesdayRelease": true
         },
         {
           "UpdateName": "Windows 10 21H2 - October 2022 Out-of-Band (KB5020953)",
@@ -38290,13 +36749,6 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32177"
-            },
-            "CVE-2026-21530": {
-              "severity": "Important",
-              "cvss_score": 6.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             },
             "CVE-2026-33834": {
               "severity": "Important",
@@ -38759,6 +37211,13 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45585"
+            },
+            "CVE-2026-21530": {
+              "severity": "Important",
+              "cvss_score": 6.7,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -44165,300 +42624,8 @@
             "CVE-2025-33073"
           ],
           "UniqueCVEsCount": 42,
-          "DaysSincePreviousRelease": 28,
-          "Supersedes": "5058411",
-          "PatchTuesdayRelease": true
-        },
-        {
-          "UpdateName": "Windows Server 2025 - May 2025 Security Update (KB5058411)",
-          "ReleaseDate": "2025-05-13",
-          "ProductVersion": "10.0.26100.4061",
-          "SecurityInfo": "https://support.microsoft.com/help/5058411",
-          "CVEs": {
-            "CVE-2025-29959": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29959"
-            },
-            "CVE-2025-29960": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29960"
-            },
-            "CVE-2025-29964": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29964"
-            },
-            "CVE-2025-29966": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29966"
-            },
-            "CVE-2025-29967": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29967"
-            },
-            "CVE-2025-29969": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29969"
-            },
-            "CVE-2025-29970": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29970"
-            },
-            "CVE-2025-27468": {
-              "severity": "Important",
-              "cvss_score": 7.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27468"
-            },
-            "CVE-2025-30394": {
-              "severity": "Important",
-              "cvss_score": 5.9,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30394"
-            },
-            "CVE-2025-30400": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30400"
-            },
-            "CVE-2025-32701": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32701"
-            },
-            "CVE-2025-32706": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32706"
-            },
-            "CVE-2025-32709": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32709"
-            },
-            "CVE-2025-26677": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-26677"
-            },
-            "CVE-2025-27488": {
-              "severity": "Important",
-              "cvss_score": 6.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27488"
-            },
-            "CVE-2025-29829": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29829"
-            },
-            "CVE-2025-29830": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29830"
-            },
-            "CVE-2025-29831": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29831"
-            },
-            "CVE-2025-29832": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29832"
-            },
-            "CVE-2025-29833": {
-              "severity": "Critical",
-              "cvss_score": 7.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29833"
-            },
-            "CVE-2025-29835": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29835"
-            },
-            "CVE-2025-29836": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29836"
-            },
-            "CVE-2025-29837": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29837"
-            },
-            "CVE-2025-29838": {
-              "severity": "Important",
-              "cvss_score": 7.4,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29838"
-            },
-            "CVE-2025-29839": {
-              "severity": "Important",
-              "cvss_score": 4.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29839"
-            },
-            "CVE-2025-29841": {
-              "severity": "Important",
-              "cvss_score": 7.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29841"
-            },
-            "CVE-2025-29842": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29842"
-            },
-            "CVE-2025-29955": {
-              "severity": "Important",
-              "cvss_score": 6.2,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29955"
-            },
-            "CVE-2025-29956": {
-              "severity": "Important",
-              "cvss_score": 5.4,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29956"
-            },
-            "CVE-2025-29957": {
-              "severity": "Important",
-              "cvss_score": 6.2,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29957"
-            },
-            "CVE-2025-29958": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29958"
-            },
-            "CVE-2025-29961": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29961"
-            },
-            "CVE-2025-29962": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29962"
-            },
-            "CVE-2025-29963": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29963"
-            },
-            "CVE-2025-29974": {
-              "severity": "Important",
-              "cvss_score": 5.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29974"
-            },
-            "CVE-2025-30385": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30385"
-            },
-            "CVE-2025-30388": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30388"
-            },
-            "CVE-2025-30397": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30397"
-            },
-            "CVE-2025-24063": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-24063"
-            }
-          },
-          "ActivelyExploitedCVEs": [
-            "CVE-2025-30397",
-            "CVE-2025-30400",
-            "CVE-2025-32701",
-            "CVE-2025-32706",
-            "CVE-2025-32709"
-          ],
-          "UniqueCVEsCount": 39,
           "DaysSincePreviousRelease": null,
-          "Supersedes": "5055523",
+          "Supersedes": "5058411",
           "PatchTuesdayRelease": true
         }
       ],
@@ -44494,13 +42661,6 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32177"
-            },
-            "CVE-2026-21530": {
-              "severity": "Important",
-              "cvss_score": 6.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             },
             "CVE-2026-33834": {
               "severity": "Important",
@@ -44914,6 +43074,13 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
+            },
+            "CVE-2026-21530": {
+              "severity": "Important",
+              "cvss_score": 6.7,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -50123,314 +48290,8 @@
             "CVE-2025-33073"
           ],
           "UniqueCVEsCount": 41,
-          "DaysSincePreviousRelease": 28,
-          "Supersedes": "5058385",
-          "PatchTuesdayRelease": true
-        },
-        {
-          "UpdateName": "Windows Server 2022 - May 2025 Security Update (KB5058384)",
-          "ReleaseDate": "2025-05-13",
-          "ProductVersion": "10.0.25398.1611",
-          "SecurityInfo": "https://support.microsoft.com/help/5058384",
-          "CVEs": {
-            "CVE-2025-29959": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29959"
-            },
-            "CVE-2025-29960": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29960"
-            },
-            "CVE-2025-29964": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29964"
-            },
-            "CVE-2025-29966": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29966"
-            },
-            "CVE-2025-29967": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29967"
-            },
-            "CVE-2025-29968": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29968"
-            },
-            "CVE-2025-29969": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29969"
-            },
-            "CVE-2025-29970": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29970"
-            },
-            "CVE-2025-27468": {
-              "severity": "Important",
-              "cvss_score": 7.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27468"
-            },
-            "CVE-2025-30394": {
-              "severity": "Important",
-              "cvss_score": 5.9,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30394"
-            },
-            "CVE-2025-30400": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30400"
-            },
-            "CVE-2025-32701": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32701"
-            },
-            "CVE-2025-32706": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32706"
-            },
-            "CVE-2025-32709": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32709"
-            },
-            "CVE-2025-26677": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-26677"
-            },
-            "CVE-2025-27488": {
-              "severity": "Important",
-              "cvss_score": 6.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27488"
-            },
-            "CVE-2025-29829": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29829"
-            },
-            "CVE-2025-29830": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29830"
-            },
-            "CVE-2025-29831": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29831"
-            },
-            "CVE-2025-29832": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29832"
-            },
-            "CVE-2025-29833": {
-              "severity": "Critical",
-              "cvss_score": 7.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29833"
-            },
-            "CVE-2025-29835": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29835"
-            },
-            "CVE-2025-29836": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29836"
-            },
-            "CVE-2025-29837": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29837"
-            },
-            "CVE-2025-29839": {
-              "severity": "Important",
-              "cvss_score": 4.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29839"
-            },
-            "CVE-2025-29840": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29840"
-            },
-            "CVE-2025-29841": {
-              "severity": "Important",
-              "cvss_score": 7.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29841"
-            },
-            "CVE-2025-29842": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29842"
-            },
-            "CVE-2025-29954": {
-              "severity": "Important",
-              "cvss_score": 5.9,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29954"
-            },
-            "CVE-2025-29955": {
-              "severity": "Important",
-              "cvss_score": 6.2,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29955"
-            },
-            "CVE-2025-29956": {
-              "severity": "Important",
-              "cvss_score": 5.4,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29956"
-            },
-            "CVE-2025-29957": {
-              "severity": "Important",
-              "cvss_score": 6.2,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29957"
-            },
-            "CVE-2025-29958": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29958"
-            },
-            "CVE-2025-29961": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29961"
-            },
-            "CVE-2025-29962": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29962"
-            },
-            "CVE-2025-29963": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29963"
-            },
-            "CVE-2025-29974": {
-              "severity": "Important",
-              "cvss_score": 5.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29974"
-            },
-            "CVE-2025-30385": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30385"
-            },
-            "CVE-2025-30388": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30388"
-            },
-            "CVE-2025-30397": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30397"
-            },
-            "CVE-2025-24063": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-24063"
-            }
-          },
-          "ActivelyExploitedCVEs": [
-            "CVE-2025-30397",
-            "CVE-2025-30400",
-            "CVE-2025-32701",
-            "CVE-2025-32706",
-            "CVE-2025-32709"
-          ],
-          "UniqueCVEsCount": 41,
           "DaysSincePreviousRelease": null,
-          "Supersedes": "5055527",
+          "Supersedes": "5058385",
           "PatchTuesdayRelease": true
         }
       ],
@@ -50466,13 +48327,6 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32177"
-            },
-            "CVE-2026-21530": {
-              "severity": "Important",
-              "cvss_score": 6.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             },
             "CVE-2026-33834": {
               "severity": "Important",
@@ -50851,6 +48705,13 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
+            },
+            "CVE-2026-21530": {
+              "severity": "Important",
+              "cvss_score": 6.7,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -55493,300 +53354,8 @@
             "CVE-2025-33073"
           ],
           "UniqueCVEsCount": 40,
-          "DaysSincePreviousRelease": 28,
-          "Supersedes": "5058392",
-          "PatchTuesdayRelease": true
-        },
-        {
-          "UpdateName": "Windows Server 2019 - May 2025 Security Update (KB5058392)",
-          "ReleaseDate": "2025-05-13",
-          "ProductVersion": "10.0.17763.7314",
-          "SecurityInfo": "https://support.microsoft.com/help/5058392",
-          "CVEs": {
-            "CVE-2025-29959": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29959"
-            },
-            "CVE-2025-29960": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29960"
-            },
-            "CVE-2025-29964": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29964"
-            },
-            "CVE-2025-29966": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29966"
-            },
-            "CVE-2025-29967": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29967"
-            },
-            "CVE-2025-29968": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29968"
-            },
-            "CVE-2025-29969": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29969"
-            },
-            "CVE-2025-27468": {
-              "severity": "Important",
-              "cvss_score": 7.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27468"
-            },
-            "CVE-2025-30394": {
-              "severity": "Important",
-              "cvss_score": 5.9,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30394"
-            },
-            "CVE-2025-30400": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30400"
-            },
-            "CVE-2025-32701": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32701"
-            },
-            "CVE-2025-32706": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32706"
-            },
-            "CVE-2025-32709": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32709"
-            },
-            "CVE-2025-26677": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-26677"
-            },
-            "CVE-2025-27488": {
-              "severity": "Important",
-              "cvss_score": 6.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27488"
-            },
-            "CVE-2025-29829": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29829"
-            },
-            "CVE-2025-29830": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29830"
-            },
-            "CVE-2025-29831": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29831"
-            },
-            "CVE-2025-29832": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29832"
-            },
-            "CVE-2025-29833": {
-              "severity": "Critical",
-              "cvss_score": 7.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29833"
-            },
-            "CVE-2025-29835": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29835"
-            },
-            "CVE-2025-29836": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29836"
-            },
-            "CVE-2025-29837": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29837"
-            },
-            "CVE-2025-29839": {
-              "severity": "Important",
-              "cvss_score": 4.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29839"
-            },
-            "CVE-2025-29840": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29840"
-            },
-            "CVE-2025-29842": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29842"
-            },
-            "CVE-2025-29954": {
-              "severity": "Important",
-              "cvss_score": 5.9,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29954"
-            },
-            "CVE-2025-29956": {
-              "severity": "Important",
-              "cvss_score": 5.4,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29956"
-            },
-            "CVE-2025-29957": {
-              "severity": "Important",
-              "cvss_score": 6.2,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29957"
-            },
-            "CVE-2025-29958": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29958"
-            },
-            "CVE-2025-29961": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29961"
-            },
-            "CVE-2025-29962": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29962"
-            },
-            "CVE-2025-29963": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29963"
-            },
-            "CVE-2025-29974": {
-              "severity": "Important",
-              "cvss_score": 5.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29974"
-            },
-            "CVE-2025-30385": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30385"
-            },
-            "CVE-2025-30388": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30388"
-            },
-            "CVE-2025-30397": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30397"
-            },
-            "CVE-2025-32707": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32707"
-            },
-            "CVE-2025-24063": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-24063"
-            }
-          },
-          "ActivelyExploitedCVEs": [
-            "CVE-2025-30397",
-            "CVE-2025-30400",
-            "CVE-2025-32701",
-            "CVE-2025-32706",
-            "CVE-2025-32709"
-          ],
-          "UniqueCVEsCount": 39,
           "DaysSincePreviousRelease": null,
-          "Supersedes": "5055519",
+          "Supersedes": "5058392",
           "PatchTuesdayRelease": true
         }
       ],
@@ -55822,13 +53391,6 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32177"
-            },
-            "CVE-2026-21530": {
-              "severity": "Important",
-              "cvss_score": 6.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             },
             "CVE-2026-33834": {
               "severity": "Important",
@@ -56158,6 +53720,13 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
+            },
+            "CVE-2026-21530": {
+              "severity": "Important",
+              "cvss_score": 6.7,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -60054,271 +57623,8 @@
             "CVE-2025-33073"
           ],
           "UniqueCVEsCount": 38,
-          "DaysSincePreviousRelease": 28,
-          "Supersedes": "5058383",
-          "PatchTuesdayRelease": true
-        },
-        {
-          "UpdateName": "Windows Server 2016 - May 2025 Security Update (KB5058383)",
-          "ReleaseDate": "2025-05-13",
-          "ProductVersion": "10.0.14393.8066",
-          "SecurityInfo": "https://support.microsoft.com/help/5058383",
-          "CVEs": {
-            "CVE-2025-29959": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29959"
-            },
-            "CVE-2025-29960": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29960"
-            },
-            "CVE-2025-29966": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29966"
-            },
-            "CVE-2025-29967": {
-              "severity": "Critical",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29967"
-            },
-            "CVE-2025-29968": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29968"
-            },
-            "CVE-2025-29969": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29969"
-            },
-            "CVE-2025-27468": {
-              "severity": "Important",
-              "cvss_score": 7.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27468"
-            },
-            "CVE-2025-30394": {
-              "severity": "Important",
-              "cvss_score": 5.9,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30394"
-            },
-            "CVE-2025-32701": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32701"
-            },
-            "CVE-2025-32706": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32706"
-            },
-            "CVE-2025-32709": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32709"
-            },
-            "CVE-2025-26677": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-26677"
-            },
-            "CVE-2025-29829": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29829"
-            },
-            "CVE-2025-29830": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29830"
-            },
-            "CVE-2025-29831": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29831"
-            },
-            "CVE-2025-29832": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29832"
-            },
-            "CVE-2025-29833": {
-              "severity": "Critical",
-              "cvss_score": 7.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29833"
-            },
-            "CVE-2025-29835": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29835"
-            },
-            "CVE-2025-29836": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29836"
-            },
-            "CVE-2025-29837": {
-              "severity": "Important",
-              "cvss_score": 5.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29837"
-            },
-            "CVE-2025-29839": {
-              "severity": "Important",
-              "cvss_score": 4.0,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29839"
-            },
-            "CVE-2025-29840": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29840"
-            },
-            "CVE-2025-29842": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29842"
-            },
-            "CVE-2025-29954": {
-              "severity": "Important",
-              "cvss_score": 5.9,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29954"
-            },
-            "CVE-2025-29956": {
-              "severity": "Important",
-              "cvss_score": 5.4,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29956"
-            },
-            "CVE-2025-29957": {
-              "severity": "Important",
-              "cvss_score": 6.2,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29957"
-            },
-            "CVE-2025-29958": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29958"
-            },
-            "CVE-2025-29961": {
-              "severity": "Important",
-              "cvss_score": 6.5,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29961"
-            },
-            "CVE-2025-29962": {
-              "severity": "Important",
-              "cvss_score": 8.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29962"
-            },
-            "CVE-2025-29974": {
-              "severity": "Important",
-              "cvss_score": 5.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29974"
-            },
-            "CVE-2025-30385": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30385"
-            },
-            "CVE-2025-30388": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30388"
-            },
-            "CVE-2025-30397": {
-              "severity": "Important",
-              "cvss_score": 7.5,
-              "actively_exploited": true,
-              "in_kev": true,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30397"
-            },
-            "CVE-2025-32707": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32707"
-            },
-            "CVE-2025-24063": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-24063"
-            }
-          },
-          "ActivelyExploitedCVEs": [
-            "CVE-2025-30397",
-            "CVE-2025-32701",
-            "CVE-2025-32706",
-            "CVE-2025-32709"
-          ],
-          "UniqueCVEsCount": 35,
           "DaysSincePreviousRelease": null,
-          "Supersedes": "5055521",
+          "Supersedes": "5058383",
           "PatchTuesdayRelease": true
         }
       ],
@@ -60354,13 +57660,6 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32177"
-            },
-            "CVE-2026-21530": {
-              "severity": "Important",
-              "cvss_score": 6.7,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             },
             "CVE-2026-33834": {
               "severity": "Important",
@@ -60655,6 +57954,13 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40413"
+            },
+            "CVE-2026-21530": {
+              "severity": "Important",
+              "cvss_score": 6.7,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21530"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -61602,6 +58908,6 @@
       "NonSecurityReleases": []
     }
   ],
-  "UpdateHash": "82bcdd0f27c0cf728cc0d738d0a3161f9eaa030f1552a0bfa6d447c870faffa7",
-  "LastCheck": "2026-05-20T01:23:43.420917+00:00"
+  "UpdateHash": "b99d676a661a1274a64c81be1eafd1edaebe411af16c58963b9b258b2ec0a823",
+  "LastCheck": "2026-05-20T07:45:04.091928+00:00"
 }
