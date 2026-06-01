@@ -277,6 +277,13 @@
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40415"
             },
+            "CVE-2026-41088": {
+              "severity": "Important",
+              "cvss_score": 7.8,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41088"
+            },
             "CVE-2026-41096": {
               "severity": "Critical",
               "cvss_score": 9.8,
@@ -458,13 +465,6 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
-            },
-            "CVE-2026-41088": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41088"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -2170,6 +2170,13 @@
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40415"
             },
+            "CVE-2026-41088": {
+              "severity": "Important",
+              "cvss_score": 7.8,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41088"
+            },
             "CVE-2026-41096": {
               "severity": "Critical",
               "cvss_score": 9.8,
@@ -2351,13 +2358,6 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
-            },
-            "CVE-2026-41088": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41088"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -6037,6 +6037,13 @@
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40415"
             },
+            "CVE-2026-41088": {
+              "severity": "Important",
+              "cvss_score": 7.8,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41088"
+            },
             "CVE-2026-41096": {
               "severity": "Critical",
               "cvss_score": 9.8,
@@ -6218,13 +6225,6 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
-            },
-            "CVE-2026-41088": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41088"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -11773,6 +11773,13 @@
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40415"
             },
+            "CVE-2026-41088": {
+              "severity": "Important",
+              "cvss_score": 7.8,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41088"
+            },
             "CVE-2026-41096": {
               "severity": "Critical",
               "cvss_score": 9.8,
@@ -11940,13 +11947,6 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
-            },
-            "CVE-2026-41088": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41088"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -26939,6 +26939,13 @@
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40415"
             },
+            "CVE-2026-41088": {
+              "severity": "Important",
+              "cvss_score": 7.8,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41088"
+            },
             "CVE-2026-32161": {
               "severity": "Critical",
               "cvss_score": 7.5,
@@ -27092,13 +27099,6 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
-            },
-            "CVE-2026-41088": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41088"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -31834,6 +31834,13 @@
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40415"
             },
+            "CVE-2026-41088": {
+              "severity": "Important",
+              "cvss_score": 7.8,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41088"
+            },
             "CVE-2026-32161": {
               "severity": "Critical",
               "cvss_score": 7.5,
@@ -31987,13 +31994,6 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
-            },
-            "CVE-2026-41088": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41088"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -37009,6 +37009,13 @@
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40415"
             },
+            "CVE-2026-41088": {
+              "severity": "Important",
+              "cvss_score": 7.8,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41088"
+            },
             "CVE-2026-41089": {
               "severity": "Critical",
               "cvss_score": 9.8,
@@ -37211,13 +37218,6 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
-            },
-            "CVE-2026-41088": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41088"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -42893,6 +42893,13 @@
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40415"
             },
+            "CVE-2026-41088": {
+              "severity": "Important",
+              "cvss_score": 7.8,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41088"
+            },
             "CVE-2026-41089": {
               "severity": "Critical",
               "cvss_score": 9.8,
@@ -43074,13 +43081,6 @@
               "actively_exploited": false,
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
-            },
-            "CVE-2026-41088": {
-              "severity": "Important",
-              "cvss_score": 7.8,
-              "actively_exploited": false,
-              "in_kev": false,
-              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41088"
             }
           },
           "ActivelyExploitedCVEs": [],
@@ -58909,5 +58909,5 @@
     }
   ],
   "UpdateHash": "b99d676a661a1274a64c81be1eafd1edaebe411af16c58963b9b258b2ec0a823",
-  "LastCheck": "2026-06-01T14:31:36.662885+00:00"
+  "LastCheck": "2026-06-01T20:00:47.653337+00:00"
 }
