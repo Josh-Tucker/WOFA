@@ -2,12 +2,15 @@
 Central configuration for WOFA pipeline.
 """
 
+import os
+
 # How many months of MSRC history to include in the feed
 MONTHS_TO_FETCH = 12
 
 # Public URL of the deployed site (no trailing slash).
 # Used in code examples and feed endpoint references.
-SITE_URL = "https://wofa.jtucker.me.uk"
+# Override with the WOFA_SITE_URL environment variable at build time.
+SITE_URL = os.environ.get("WOFA_SITE_URL", "https://wofa.jtucker.me.uk")
 
 # Output directory for generated feed files
 OUTPUT_DIR = "output"

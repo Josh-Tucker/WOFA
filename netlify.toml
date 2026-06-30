@@ -1,0 +1,7 @@
+[build]
+  command   = "pip install -r requirements.txt && python pipeline.py"
+  publish   = "output/"
+
+[build.environment]
+  PYTHON_VERSION = "3.12"
+  WOFA_SITE_URL  = "https://wofa.dev"

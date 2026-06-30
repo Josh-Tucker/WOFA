@@ -40,7 +40,7 @@
 <!-- ── Feed Endpoints ── -->
 <section class="mb-12">
   <h2 class="text-lg font-semibold mb-4 pb-2 border-b border-base-300">Feed Endpoints</h2>
-  <div class="flex flex-col gap-3" x-data="{ base: location.origin + location.pathname.replace(/[^/]*$/, '') }">
+  <div class="flex flex-col gap-3" x-data="{ base: '{{ site_url }}/' }">
 
     <div class="card bg-base-200 border border-base-300">
       <div class="card-body p-5 gap-1">
