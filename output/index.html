@@ -242,7 +242,7 @@
             RSS
           </a>
         </div>
-        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 30 Jun 2026 07:45 UTC</span>
+        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 30 Jun 2026 12:19 UTC</span>
         <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
           <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -263,6 +263,36 @@
 <div class="mb-8">
   <h1 class="text-2xl font-bold mb-2">Windows Organized Feed for Admins</h1>
   <p class="text-base-content/60 max-w-2xl text-sm">Machine-readable Windows security update data — CVEs, exploitation status, and build versions per OS release. Sourced from MSRC and CISA KEV.</p>
+  <div class="flex flex-wrap items-center gap-2 mt-4">
+    <a href="https://github.com/Josh-Tucker/WOFA" target="_blank" rel="noopener"
+       class="btn btn-sm bg-base-200 border border-base-300 hover:bg-base-300 gap-2 font-normal text-base-content/70 hover:text-base-content hover:no-underline">
+      <svg class="w-3.5 h-3.5" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/>
+      </svg>
+      Star
+      <span class="font-mono text-base-content/40" id="gh-star-count"></span>
+    </a>
+    <a href="https://buymeacoffee.com/joshtucker" target="_blank" rel="noopener"
+       class="btn btn-sm bg-base-200 border border-base-300 hover:bg-base-300 gap-2 font-normal text-base-content/70 hover:text-base-content hover:no-underline">
+      <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+        <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+        <line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/>
+      </svg>
+      Buy me a coffee
+    </a>
+  </div>
+  <script>
+    fetch('https://api.github.com/repos/Josh-Tucker/WOFA')
+      .then(function(r) { return r.json(); })
+      .then(function(d) {
+        var el = document.getElementById('gh-star-count');
+        if (el && typeof d.stargazers_count === 'number') {
+          el.textContent = d.stargazers_count.toLocaleString();
+        }
+      })
+      .catch(function() {});
+  </script>
 </div>
 
 <!-- Feed metadata widgets -->
@@ -270,7 +300,7 @@
 
   <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
     <span class="text-xs text-base-content/50 uppercase tracking-wide">Last Updated</span>
-    <span class="font-semibold text-sm">30 Jun 2026 07:45 UTC</span>
+    <span class="font-semibold text-sm">30 Jun 2026 12:19 UTC</span>
   </div>
 
   <div class="bg-base-200 border border-base-300 rounded-lg px-4 py-3 flex flex-col gap-0.5">
