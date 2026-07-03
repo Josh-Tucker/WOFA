@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 02 Jul 2026 19:58:30 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 04:14:57 +0000</lastBuildDate>
     <item>
       <title>Windows Server 2012 - May 2026 Security Update (KB5087067)</title>
       <link>https://support.microsoft.com/help/5087067</link>
@@ -16,95 +16,88 @@
       <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows Server 2016 - June 2026 Security Update (KB5094122)</title>
-      <link>https://support.microsoft.com/help/5094122</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2016 - June 2026 Security Update (KB5094122)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.9234&lt;/p&gt;&lt;p&gt;CVEs addressed: 76&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5094122"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5094122</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <title>Windows Server 2016 - May 2026 Security Update (KB5087537)</title>
+      <link>https://support.microsoft.com/help/5087537</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2016 - May 2026 Security Update (KB5087537)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.9140&lt;/p&gt;&lt;p&gt;CVEs addressed: 49&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5087537"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5087537</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows Server 2019 - June 2026 Security Update (KB5094123)</title>
-      <link>https://support.microsoft.com/help/5094123</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2019 - June 2026 Security Update (KB5094123)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.8880&lt;/p&gt;&lt;p&gt;CVEs addressed: 89&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5094123"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5094123</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <title>Windows Server 2019 - May 2026 Security Update (KB5087538)</title>
+      <link>https://support.microsoft.com/help/5087538</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2019 - May 2026 Security Update (KB5087538)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.8755&lt;/p&gt;&lt;p&gt;CVEs addressed: 56&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5087538"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5087538</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows Server 2022 - June 2026 Security Update (KB5094128)</title>
-      <link>https://support.microsoft.com/help/5094128</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2022 - June 2026 Security Update (KB5094128)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.20348.5256&lt;/p&gt;&lt;p&gt;CVEs addressed: 105&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5094128"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5094128</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <title>Windows Server 2022 - May 2026 Security Update (KB5087545)</title>
+      <link>https://support.microsoft.com/help/5087545</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2022 - May 2026 Security Update (KB5087545)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.20348.5139&lt;/p&gt;&lt;p&gt;CVEs addressed: 61&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5087545"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5087545</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows Server 2025 - June 2026 Security Update (KB5094125)</title>
-      <link>https://support.microsoft.com/help/5094125</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2025 - June 2026 Security Update (KB5094125)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.32995&lt;/p&gt;&lt;p&gt;CVEs addressed: 110&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5094125"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5094125</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <title>Windows Server 2025 - May 2026 Security Update (KB5087539)</title>
+      <link>https://support.microsoft.com/help/5087539</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2025 - May 2026 Security Update (KB5087539)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.32860&lt;/p&gt;&lt;p&gt;CVEs addressed: 68&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5087539"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5087539</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 10 21H2 - June 2026 Security Update (KB5094127)</title>
+      <title>Windows 10 21H2 - May 2026 Security Update (KB5087544)</title>
+      <link>https://support.microsoft.com/help/5087544</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 21H2 - May 2026 Security Update (KB5087544)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19044.7291&lt;/p&gt;&lt;p&gt;CVEs addressed: 56&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5087544"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5087544</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Windows 10 22H2 - May 2026 Security Update (KB5094127)</title>
       <link>https://support.microsoft.com/help/5094127</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 21H2 - June 2026 Security Update (KB5094127)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19044.7417&lt;/p&gt;&lt;p&gt;CVEs addressed: 93&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5094127"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 22H2 - May 2026 Security Update (KB5094127)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19045.7417&lt;/p&gt;&lt;p&gt;CVEs addressed: 56&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5094127"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5094127</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 10 22H2 - June 2026 Security Update (KB5094127)</title>
-      <link>https://support.microsoft.com/help/5094127</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 22H2 - June 2026 Security Update (KB5094127)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19045.7417&lt;/p&gt;&lt;p&gt;CVEs addressed: 93&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5094127"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5094127</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <title>Windows 10 1607 - May 2026 Security Update (KB5087537)</title>
+      <link>https://support.microsoft.com/help/5087537</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1607 - May 2026 Security Update (KB5087537)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.9140&lt;/p&gt;&lt;p&gt;CVEs addressed: 46&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5087537"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5087537</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 10 1607 - June 2026 Security Update (KB5094122)</title>
-      <link>https://support.microsoft.com/help/5094122</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1607 - June 2026 Security Update (KB5094122)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.9234&lt;/p&gt;&lt;p&gt;CVEs addressed: 73&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5094122"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5094122</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <title>Windows 10 1809 - May 2026 Security Update (KB5087538)</title>
+      <link>https://support.microsoft.com/help/5087538</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1809 - May 2026 Security Update (KB5087538)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.8755&lt;/p&gt;&lt;p&gt;CVEs addressed: 54&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5087538"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5087538</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 10 1809 - June 2026 Security Update (KB5094123)</title>
-      <link>https://support.microsoft.com/help/5094123</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1809 - June 2026 Security Update (KB5094123)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.8880&lt;/p&gt;&lt;p&gt;CVEs addressed: 85&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5094123"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5094123</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <title>Windows 11 23H2 - May 2026 Security Update (KB5087420)</title>
+      <link>https://support.microsoft.com/help/5087420</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 23H2 - May 2026 Security Update (KB5087420)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.22631.7079&lt;/p&gt;&lt;p&gt;CVEs addressed: 58&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5087420"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5087420</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 11 22H2 - June 2026 Security Update (KB5093998)</title>
-      <link>https://support.microsoft.com/help/5093998</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 22H2 - June 2026 Security Update (KB5093998)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.22631.7219&lt;/p&gt;&lt;p&gt;CVEs addressed: 1&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5093998"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5093998</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <title>Windows 11 24H2 - May 2026 Security Update (KB5089549)</title>
+      <link>https://support.microsoft.com/help/5089549</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 24H2 - May 2026 Security Update (KB5089549)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.8457&lt;/p&gt;&lt;p&gt;CVEs addressed: 63&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5089549"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5089549</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 11 23H2 - June 2026 Security Update (KB5093998)</title>
-      <link>https://support.microsoft.com/help/5093998</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 23H2 - June 2026 Security Update (KB5093998)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.22631.7219&lt;/p&gt;&lt;p&gt;CVEs addressed: 101&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5093998"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5093998</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <title>Windows 11 25H2 - May 2026 Security Update (KB5089549)</title>
+      <link>https://support.microsoft.com/help/5089549</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 25H2 - May 2026 Security Update (KB5089549)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26200.8457&lt;/p&gt;&lt;p&gt;CVEs addressed: 63&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5089549"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5089549</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 11 24H2 - June 2026 Security Update (KB5094126)</title>
-      <link>https://support.microsoft.com/help/5094126</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 24H2 - June 2026 Security Update (KB5094126)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.8655&lt;/p&gt;&lt;p&gt;CVEs addressed: 107&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5094126"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5094126</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Windows 11 25H2 - June 2026 Security Update (KB5094126)</title>
-      <link>https://support.microsoft.com/help/5094126</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 25H2 - June 2026 Security Update (KB5094126)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26200.8655&lt;/p&gt;&lt;p&gt;CVEs addressed: 107&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5094126"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5094126</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Windows 11 26H1 - June 2026 Security Update (KB5095051)</title>
-      <link>https://support.microsoft.com/help/5095051</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 26H1 - June 2026 Security Update (KB5095051)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.28000.2269&lt;/p&gt;&lt;p&gt;CVEs addressed: 113&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5095051"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5095051</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <title>Windows 11 26H1 - May 2026 Security Update (KB5089548)</title>
+      <link>https://support.microsoft.com/help/5089548</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 26H1 - May 2026 Security Update (KB5089548)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.28000.2113&lt;/p&gt;&lt;p&gt;CVEs addressed: 63&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5089548"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5089548</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
