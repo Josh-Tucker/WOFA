@@ -97,14 +97,6 @@
               </a>
             </li>
             
-            <li>
-              <a href="windows-11-22h2.html"
-                 class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
-                        text-base-content/60">
-                22H2
-              </a>
-            </li>
-            
           </ul>
         </div>
         
@@ -242,7 +234,7 @@
             RSS
           </a>
         </div>
-        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 14 Jul 2026 15:59 UTC</span>
+        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 14 Jul 2026 17:41 UTC</span>
         <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
           <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -294,22 +286,22 @@
         <div class="flex flex-col gap-0.5">
           <span class="text-xs text-base-content/50 uppercase tracking-wide">KB Article</span>
           
-          <a class="font-semibold link link-hover" href="https://support.microsoft.com/help/5094128">KB5094128</a>
+          <a class="font-semibold link link-hover" href="https://support.microsoft.com/help/5099540">KB5099540</a>
           
         </div>
         <div class="flex flex-col gap-0.5">
           <span class="text-xs text-base-content/50 uppercase tracking-wide">Build</span>
-          <code class="font-mono text-sm">10.0.20348.5256</code>
+          <code class="font-mono text-sm">10.0.20348.5386</code>
         </div>
         <div class="flex flex-col gap-0.5">
           <span class="text-xs text-base-content/50 uppercase tracking-wide">Released</span>
-          <span class="font-semibold">2026-06-09</span>
+          <span class="font-semibold">2026-07-14</span>
         </div>
         <div class="flex flex-col gap-0.5">
           <span class="text-xs text-base-content/50 uppercase tracking-wide">Age</span>
           <span class="text-sm text-base-content/50">
             
-              35 days ago
+              0 days ago
             
           </span>
         </div>
@@ -319,7 +311,7 @@
             <span class="badge badge-sm
               badge-info badge-outline
               ">
-              105
+              330
             </span>
           </span>
         </div>
@@ -350,12 +342,12 @@
 
       <div class="flex flex-wrap gap-2">
         
-        <a class="btn btn-sm btn-outline gap-1.5" href="https://support.microsoft.com/help/5094128" target="_blank" rel="noopener">
+        <a class="btn btn-sm btn-outline gap-1.5" href="https://support.microsoft.com/help/5099540" target="_blank" rel="noopener">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           KB Article
         </a>
         
-        <a class="btn btn-sm btn-outline gap-1.5" href="https://msrc.microsoft.com/update-guide/releaseNote/2026-Jun" target="_blank" rel="noopener">
+        <a class="btn btn-sm btn-outline gap-1.5" href="https://msrc.microsoft.com/update-guide/releaseNote/2026-Jul" target="_blank" rel="noopener">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
           MSRC
         </a>
@@ -376,7 +368,7 @@
       <div class="mb-4">
         <h3 class="text-xs text-base-content/50 font-medium mb-2">Windows Server 2022</h3>
         <ul class="flex flex-col gap-1.5 text-sm">
-          <li><a href="https://msrc.microsoft.com/update-guide/releaseNote/2026-Jun" target="_blank" rel="noopener" class="link link-hover">Microsoft Security Update Guide</a></li>
+          <li><a href="https://msrc.microsoft.com/update-guide/releaseNote/2026-Jul" target="_blank" rel="noopener" class="link link-hover">Microsoft Security Update Guide</a></li>
           
           <li><a href="https://learn.microsoft.com/en-us/windows/release-health/windows-server-release-info" target="_blank" rel="noopener" class="link link-hover">Windows Server Release Health</a></li>
           
@@ -411,6 +403,3589 @@
   
   <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
        x-data="{ open: true }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/5099540" target="_blank" rel="noopener" @click.stop class="link link-hover">July 2026 Security Update</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2026-07-14</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.20348.5386</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-info badge-outline">Patch Tuesday</span>
+        
+        <span class="badge badge-info badge-outline">330 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+35d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      35 days since previous release &nbsp;·&nbsp; 
+      Addresses 330 security issues
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Addresses 330 security issues
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update to stay secure — security fixes available
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5099540" target="_blank" rel="noopener" class="link link-hover">KB5099540</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.20348.5386</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          330
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          35
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Supersedes</div>
+          <code class="font-mono">KB5094128</code>
+        </div>
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+      <div class="text-xs font-semibold text-base-content/50 uppercase tracking-wide mb-2.5">
+        CVEs (330)
+      </div>
+      <div class="flex flex-col gap-1.5">
+        
+        <div x-data="{ gopen: true }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2026-33xx</code>
+            <span class="text-xs text-base-content/50">(1 CVE)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-33842"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-33842
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: true }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2026-34xx</code>
+            <span class="text-xs text-base-content/50">(4 CVEs)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-34328"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-34328
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-34346"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-34346
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-34348"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-34348
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-34349"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-34349
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: true }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2026-40xx</code>
+            <span class="text-xs text-base-content/50">(3 CVEs)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-40378"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-40378
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-40400"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.0">
+              CVE-2026-40400
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-40422"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-40422
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: true }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2026-41xx</code>
+            <span class="text-xs text-base-content/50">(1 CVE)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-41087"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-41087
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: true }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2026-42xx</code>
+            <span class="text-xs text-base-content/50">(4 CVEs)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-42900"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.1">
+              CVE-2026-42900
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-42975"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.0">
+              CVE-2026-42975
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-42982"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 7.8">
+              CVE-2026-42982
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-error
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-42990"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 9.8">
+              CVE-2026-42990
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: true }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2026-44xx</code>
+            <span class="text-xs text-base-content/50">(1 CVE)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-44806"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.3">
+              CVE-2026-44806
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: true }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2026-47xx</code>
+            <span class="text-xs text-base-content/50">(1 CVE)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-47302"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-47302
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: true }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2026-48xx</code>
+            <span class="text-xs text-base-content/50">(1 CVE)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-48564"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.8">
+              CVE-2026-48564
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: true }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2026-49xx</code>
+            <span class="text-xs text-base-content/50">(37 CVEs)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49164"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.1">
+              CVE-2026-49164
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49165"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.1">
+              CVE-2026-49165
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49167"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 4.7">
+              CVE-2026-49167
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49168"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.8">
+              CVE-2026-49168
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49170"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-49170
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49171"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-49171
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-error
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49172"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 9.8">
+              CVE-2026-49172
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49174"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.1">
+              CVE-2026-49174
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49175"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-49175
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49176"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-49176
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49177"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-49177
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49178"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.8">
+              CVE-2026-49178
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49180"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-49180
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49181"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-49181
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49183"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-49183
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49184"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.4">
+              CVE-2026-49184
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49783"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-49783
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49784"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-49784
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49787"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-49787
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49788"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-49788
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49789"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.3">
+              CVE-2026-49789
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49790"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.3">
+              CVE-2026-49790
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49791"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.1">
+              CVE-2026-49791
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49792"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-49792
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49793"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-49793
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49794"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 4.6">
+              CVE-2026-49794
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49795"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.8">
+              CVE-2026-49795
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49796"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 7.8">
+              CVE-2026-49796
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49797"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-49797
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-error
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49798"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 9.3">
+              CVE-2026-49798
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49799"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-49799
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49800"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-49800
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49801"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-49801
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49803"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-49803
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49804"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.6">
+              CVE-2026-49804
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49805"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-49805
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-49807"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.2">
+              CVE-2026-49807
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: true }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2026-50xx</code>
+            <span class="text-xs text-base-content/50">(179 CVEs)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50294"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.2">
+              CVE-2026-50294
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50296"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50296
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50297"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50297
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50298"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.8">
+              CVE-2026-50298
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50299"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.8">
+              CVE-2026-50299
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50300"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50300
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50302"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 4.2">
+              CVE-2026-50302
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50303"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50303
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50304"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50304
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50306"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50306
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50307"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50307
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50308"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50308
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50309"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50309
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50310"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 4.7">
+              CVE-2026-50310
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50311"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50311
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50312"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 4.7">
+              CVE-2026-50312
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50313"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50313
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50316"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50316
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50318"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50318
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50321"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50321
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50324"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.9">
+              CVE-2026-50324
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50325"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50325
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50328"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50328
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50329"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50329
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50330"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50330
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50331"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50331
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50332"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50332
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50333"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50333
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50334"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50334
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50335"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50335
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50337"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50337
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50339"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50339
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50341"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50341
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50343"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50343
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50344"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50344
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50346"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50346
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50347"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50347
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50348"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50348
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50351"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50351
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50352"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50352
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50354"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.1">
+              CVE-2026-50354
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50355"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50355
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50356"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50356
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50357"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50357
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50358"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50358
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50359"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50359
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50360"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.8">
+              CVE-2026-50360
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50362"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50362
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50363"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50363
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50365"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.0">
+              CVE-2026-50365
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50366"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-50366
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50367"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50367
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50368"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50368
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50369"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.8">
+              CVE-2026-50369
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50370"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.8">
+              CVE-2026-50370
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50371"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50371
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50372"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50372
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50373"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50373
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50374"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.3">
+              CVE-2026-50374
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50375"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.3">
+              CVE-2026-50375
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50376"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-50376
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50377"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50377
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50378"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50378
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-error
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50380"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 9.6">
+              CVE-2026-50380
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50381"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50381
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50382"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.8">
+              CVE-2026-50382
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50383"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.1">
+              CVE-2026-50383
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50384"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50384
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50386"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50386
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50387"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50387
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50388"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50388
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50389"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50389
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50390"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50390
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50391"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50391
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50394"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50394
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50397"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50397
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50399"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50399
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50400"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50400
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50401"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50401
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50402"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50402
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50405"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50405
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50407"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50407
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50409"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50409
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50410"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50410
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50411"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50411
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50412"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50412
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50415"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.3">
+              CVE-2026-50415
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50417"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50417
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50418"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.1">
+              CVE-2026-50418
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-success
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50419"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 3.3">
+              CVE-2026-50419
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50421"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50421
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50422"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50422
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50423"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50423
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50426"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.8">
+              CVE-2026-50426
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50429"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.2">
+              CVE-2026-50429
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50430"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50430
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50431"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50431
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50432"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.3">
+              CVE-2026-50432
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50433"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50433
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50434"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50434
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50435"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50435
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50437"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50437
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50439"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.1">
+              CVE-2026-50439
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50441"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50441
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50442"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50442
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50444"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.8">
+              CVE-2026-50444
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50445"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-50445
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-error
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50447"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 9.8">
+              CVE-2026-50447
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50448"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50448
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50449"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50449
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50450"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50450
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50451"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.1">
+              CVE-2026-50451
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50452"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50452
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50453"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.1">
+              CVE-2026-50453
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50455"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50455
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50456"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50456
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50459"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50459
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50460"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.1">
+              CVE-2026-50460
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50461"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50461
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50462"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50462
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50463"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50463
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50469"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50469
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50470"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50470
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50471"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50471
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50473"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50473
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50474"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.8">
+              CVE-2026-50474
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50475"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50475
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50476"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50476
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50477"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.8">
+              CVE-2026-50477
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50478"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50478
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50479"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50479
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50482"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.3">
+              CVE-2026-50482
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50484"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50484
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50485"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 4.5">
+              CVE-2026-50485
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50489"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.8">
+              CVE-2026-50489
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50490"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50490
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50491"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50491
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50492"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.8">
+              CVE-2026-50492
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50493"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50493
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50494"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50494
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50495"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.1">
+              CVE-2026-50495
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50496"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50496
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50497"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-50497
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50498"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50498
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50499"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50499
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50500"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50500
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50502"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.0">
+              CVE-2026-50502
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50504"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-50504
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50505"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50505
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-error
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50518"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 9.8">
+              CVE-2026-50518
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50527"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50527
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50646"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50646
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50647"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50647
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50648"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50648
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50650"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50650
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50655"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 7.8">
+              CVE-2026-50655
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50661"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.1">
+              CVE-2026-50661
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50666"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.8">
+              CVE-2026-50666
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50667"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50667
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50668"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.8">
+              CVE-2026-50668
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50669"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50669
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50670"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.8">
+              CVE-2026-50670
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50672"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-50672
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50673"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50673
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50680"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.2">
+              CVE-2026-50680
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50681"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50681
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50682"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.1">
+              CVE-2026-50682
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50683"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.0">
+              CVE-2026-50683
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50684"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 4.8">
+              CVE-2026-50684
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50685"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50685
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50686"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.1">
+              CVE-2026-50686
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50688"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50688
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50689"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50689
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50690"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-50690
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50692"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.8">
+              CVE-2026-50692
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50694"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.1">
+              CVE-2026-50694
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50695"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50695
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50696"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50696
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50697"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50697
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: true }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2026-54xx</code>
+            <span class="text-xs text-base-content/50">(24 CVEs)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54107"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.8">
+              CVE-2026-54107
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54109"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-54109
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54112"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-54112
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54114"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-54114
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54115"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-54115
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54119"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-54119
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54121"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.8">
+              CVE-2026-54121
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54122"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.4">
+              CVE-2026-54122
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54124"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-54124
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54125"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-54125
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54126"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-54126
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54127"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 7.4">
+              CVE-2026-54127
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54128"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.4">
+              CVE-2026-54128
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54129"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-54129
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54982"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.8">
+              CVE-2026-54982
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54983"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-54983
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54986"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-54986
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54987"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-54987
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54989"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-54989
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54992"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.4">
+              CVE-2026-54992
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54993"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-54993
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54995"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.1">
+              CVE-2026-54995
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54997"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-54997
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-54999"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.8">
+              CVE-2026-54999
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: true }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2026-55xx</code>
+            <span class="text-xs text-base-content/50">(4 CVEs)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-55001"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-55001
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-55003"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-55003
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-55004"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-55004
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-55144"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.1">
+              CVE-2026-55144
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: true }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2026-56xx</code>
+            <span class="text-xs text-base-content/50">(19 CVEs)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56155"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-56155
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-error
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56159"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 9.8">
+              CVE-2026-56159
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56168"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-56168
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56173"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-56173
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56175"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-56175
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56176"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-56176
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56182"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-56182
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56184"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-56184
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56186"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.1">
+              CVE-2026-56186
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-error
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56188"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 9.8">
+              CVE-2026-56188
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56189"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 7.8">
+              CVE-2026-56189
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-error
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56190"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 9.8">
+              CVE-2026-56190
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56194"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.8">
+              CVE-2026-56194
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56643"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-56643
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56644"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-56644
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56647"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.8">
+              CVE-2026-56647
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56648"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-56648
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56649"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.9">
+              CVE-2026-56649
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-56650"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-56650
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: true }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2026-57xx</code>
+            <span class="text-xs text-base-content/50">(17 CVEs)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57083"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-57083
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57084"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-57084
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57085"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-57085
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57087"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.8">
+              CVE-2026-57087
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57088"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-57088
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57089"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-57089
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57090"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.8">
+              CVE-2026-57090
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57091"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-57091
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-error
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57092"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 9.9">
+              CVE-2026-57092
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57093"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-57093
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57094"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.8">
+              CVE-2026-57094
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57095"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.2">
+              CVE-2026-57095
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57096"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-57096
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57097"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.4">
+              CVE-2026-57097
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57976"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-57976
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57979"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-57979
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-57982"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-57982
+            </a>
+            
+          </div>
+        </div>
+        
+        <div x-data="{ gopen: true }">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
+               @click="gopen = !gopen">
+            <code class="font-mono font-semibold text-sm">CVE-2026-58xx</code>
+            <span class="text-xs text-base-content/50">(34 CVEs)</span>
+            <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
+          </div>
+          <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58526"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-58526
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58527"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-58527
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58528"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.8">
+              CVE-2026-58528
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58530"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-58530
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58531"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-58531
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58532"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-58532
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58533"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-58533
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58534"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.8">
+              CVE-2026-58534
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58535"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-58535
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58536"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-58536
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58538"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-58538
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58539"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-58539
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58540"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-58540
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58541"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-58541
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58545"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-58545
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58546"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-58546
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58547"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-58547
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58594"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.8">
+              CVE-2026-58594
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58601"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-58601
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58608"
+               target="_blank" rel="noopener"
+               title="Critical · CVSS 8.8">
+              CVE-2026-58608
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58609"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-58609
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58610"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-58610
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58613"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-58613
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58614"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 5.5">
+              CVE-2026-58614
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58619"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-58619
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58626"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.8">
+              CVE-2026-58626
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58627"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-58627
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58628"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-58628
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58629"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-58629
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58632"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-58632
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58635"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-58635
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58637"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.0">
+              CVE-2026-58637
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58638"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.0">
+              CVE-2026-58638
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-58640"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.3">
+              CVE-2026-58640
+            </a>
+            
+          </div>
+        </div>
+        
+      </div>
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
        @expand-all.window="open = true"
        @collapse-all.window="open = false">
 
@@ -506,7 +4081,7 @@
       </div>
       <div class="flex flex-col gap-1.5">
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-33xx</code>
@@ -528,7 +4103,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-34xx</code>
@@ -550,7 +4125,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-40xx</code>
@@ -582,7 +4157,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-41xx</code>
@@ -614,7 +4189,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-42xx</code>
@@ -996,7 +4571,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-44xx</code>
@@ -1088,7 +4663,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-45xx</code>
@@ -1430,7 +5005,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-47xx</code>
@@ -1522,7 +5097,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-48xx</code>
@@ -1624,7 +5199,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-49xx</code>
@@ -1646,7 +5221,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-50xx</code>
@@ -1678,7 +5253,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-88xx</code>
@@ -11165,14 +14740,6 @@
                class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
                       text-base-content/60">
               23H2
-            </a>
-          </li>
-          
-          <li>
-            <a href="windows-11-22h2.html"
-               class="block px-3 py-1.5 rounded-md text-sm hover:bg-base-300 hover:no-underline
-                      text-base-content/60">
-              22H2
             </a>
           </li>
           
