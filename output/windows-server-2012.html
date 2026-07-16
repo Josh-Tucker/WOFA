@@ -234,7 +234,7 @@
             RSS
           </a>
         </div>
-        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 15 Jul 2026 19:43 UTC</span>
+        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 16 Jul 2026 03:45 UTC</span>
         <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
           <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -300,7 +300,7 @@
         <div class="flex flex-col gap-0.5">
           <span class="text-xs text-base-content/50 uppercase tracking-wide">KB Article</span>
           
-          <a class="font-semibold link link-hover" href="https://support.microsoft.com/help/5087069">KB5087069</a>
+          <a class="font-semibold link link-hover" href="https://support.microsoft.com/help/5101011">KB5101011</a>
           
         </div>
         <div class="flex flex-col gap-0.5">
@@ -315,7 +315,7 @@
           <span class="text-xs text-base-content/50 uppercase tracking-wide">Age</span>
           <span class="text-sm text-base-content/50">
             
-              1 day ago
+              2 days ago
             
           </span>
         </div>
@@ -325,7 +325,7 @@
             <span class="badge badge-sm
               badge-error
               ">
-              192
+              196
             </span>
           </span>
         </div>
@@ -358,7 +358,7 @@
 
       <div class="flex flex-wrap gap-2">
         
-        <a class="btn btn-sm btn-outline gap-1.5" href="https://support.microsoft.com/help/5087069" target="_blank" rel="noopener">
+        <a class="btn btn-sm btn-outline gap-1.5" href="https://support.microsoft.com/help/5101011" target="_blank" rel="noopener">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           KB Article
         </a>
@@ -427,7 +427,7 @@
          @click="open = !open">
       <span class="font-semibold text-sm">
         
-        <a href="https://support.microsoft.com/help/5087069" target="_blank" rel="noopener" @click.stop class="link link-hover">July 2026 Security Update</a>
+        <a href="https://support.microsoft.com/help/5101011" target="_blank" rel="noopener" @click.stop class="link link-hover">July 2026 Security Update</a>
         
       </span>
       <span class="text-base-content/30 text-xs">•</span>
@@ -444,7 +444,7 @@
         
         <span class="badge badge-info badge-outline">Patch Tuesday</span>
         
-        <span class="badge badge-info badge-outline">192 CVEs</span>
+        <span class="badge badge-info badge-outline">196 CVEs</span>
         
         <span class="badge badge-warning">1 KEV</span>
         
@@ -486,7 +486,7 @@
       <div class="flex flex-wrap gap-6 mb-4 text-sm">
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
-          <a href="https://support.microsoft.com/help/5087069" target="_blank" rel="noopener" class="link link-hover">KB5087069</a>
+          <a href="https://support.microsoft.com/help/5101011" target="_blank" rel="noopener" class="link link-hover">KB5101011</a>
           
         </div>
         
@@ -497,7 +497,7 @@
         
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
-          192
+          196
         </div>
         
         <div>
@@ -517,7 +517,7 @@
       <!-- CVE groups -->
       
       <div class="text-xs font-semibold text-base-content/50 uppercase tracking-wide mb-2.5">
-        CVEs (192)
+        CVEs (196)
       </div>
       <div class="flex flex-col gap-1.5">
         
@@ -655,7 +655,7 @@
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-47xx</code>
-            <span class="text-xs text-base-content/50">(1 CVE)</span>
+            <span class="text-xs text-base-content/50">(2 CVEs)</span>
             <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
           </div>
           <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
@@ -668,6 +668,16 @@
                target="_blank" rel="noopener"
                title="Important · CVSS 7.5">
               CVE-2026-47302
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-47304"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 8.1">
+              CVE-2026-47304
             </a>
             
           </div>
@@ -891,7 +901,7 @@
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-50xx</code>
-            <span class="text-xs text-base-content/50">(105 CVEs)</span>
+            <span class="text-xs text-base-content/50">(108 CVEs)</span>
             <span class="ml-auto text-xs text-base-content/40 transition-transform inline-block" :class="{ 'rotate-180': gopen }">▼</span>
           </div>
           <div class="px-2 py-2 flex flex-wrap gap-1.5" x-show="gopen" x-transition>
@@ -1770,6 +1780,16 @@
                       badge-warning
                       
                       badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50525"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.5">
+              CVE-2026-50525
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2026-50527"
                target="_blank" rel="noopener"
                title="Important · CVSS 7.5">
@@ -1810,10 +1830,30 @@
                       badge-warning
                       
                       badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50649"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 7.8">
+              CVE-2026-50649
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-warning
+                      
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2026-50650"
                target="_blank" rel="noopener"
                title="Important · CVSS 7.8">
               CVE-2026-50650
+            </a>
+            
+            <a class="badge font-mono hover:no-underline
+                      badge-info
+                      
+                      badge-outline"
+               href="https://nvd.nist.gov/vuln/detail/CVE-2026-50659"
+               target="_blank" rel="noopener"
+               title="Important · CVSS 6.5">
+              CVE-2026-50659
             </a>
             
             <a class="badge font-mono hover:no-underline

@@ -7,95 +7,95 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Jul 2026 19:43:31 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 03:45:10 +0000</lastBuildDate>
     <item>
-      <title>Windows Server 2012 - July 2026 Security Update (KB5087069)</title>
-      <link>https://support.microsoft.com/help/5087069</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2012 - July 2026 Security Update (KB5087069)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 4.8.4803.0&lt;/p&gt;&lt;p&gt;CVEs addressed: 192&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5087069"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5087069</guid>
+      <title>Windows Server 2012 - July 2026 Security Update (KB5101011)</title>
+      <link>https://support.microsoft.com/help/5101011</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2012 - July 2026 Security Update (KB5101011)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 4.8.4803.0&lt;/p&gt;&lt;p&gt;CVEs addressed: 196&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5101011"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5101011</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows Server 2016 - July 2026 Security Update (KB5099535)</title>
       <link>https://support.microsoft.com/help/5099535</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2016 - July 2026 Security Update (KB5099535)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.9339&lt;/p&gt;&lt;p&gt;CVEs addressed: 253&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099535"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2016 - July 2026 Security Update (KB5099535)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.9339&lt;/p&gt;&lt;p&gt;CVEs addressed: 257&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099535"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5099535</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows Server 2019 - July 2026 Security Update (KB5099538)</title>
       <link>https://support.microsoft.com/help/5099538</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2019 - July 2026 Security Update (KB5099538)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.9020&lt;/p&gt;&lt;p&gt;CVEs addressed: 316&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099538"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2019 - July 2026 Security Update (KB5099538)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.9020&lt;/p&gt;&lt;p&gt;CVEs addressed: 320&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099538"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5099538</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows Server 2022 - July 2026 Security Update (KB5099540)</title>
       <link>https://support.microsoft.com/help/5099540</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2022 - July 2026 Security Update (KB5099540)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.20348.5386&lt;/p&gt;&lt;p&gt;CVEs addressed: 330&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099540"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2022 - July 2026 Security Update (KB5099540)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.20348.5386&lt;/p&gt;&lt;p&gt;CVEs addressed: 334&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099540"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5099540</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows Server 2025 - July 2026 Security Update (KB5099536)</title>
       <link>https://support.microsoft.com/help/5099536</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2025 - July 2026 Security Update (KB5099536)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.33158&lt;/p&gt;&lt;p&gt;CVEs addressed: 393&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099536"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2025 - July 2026 Security Update (KB5099536)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.33158&lt;/p&gt;&lt;p&gt;CVEs addressed: 397&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099536"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5099536</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 10 21H2 - July 2026 Security Update (KB5099539)</title>
       <link>https://support.microsoft.com/help/5099539</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 21H2 - July 2026 Security Update (KB5099539)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19044.7548&lt;/p&gt;&lt;p&gt;CVEs addressed: 317&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099539"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 21H2 - July 2026 Security Update (KB5099539)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19044.7548&lt;/p&gt;&lt;p&gt;CVEs addressed: 321&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099539"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5099539</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 10 22H2 - July 2026 Security Update (KB5099539)</title>
       <link>https://support.microsoft.com/help/5099539</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 22H2 - July 2026 Security Update (KB5099539)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19045.7548&lt;/p&gt;&lt;p&gt;CVEs addressed: 317&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099539"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 22H2 - July 2026 Security Update (KB5099539)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19045.7548&lt;/p&gt;&lt;p&gt;CVEs addressed: 321&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099539"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5099539</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 10 1607 - July 2026 Security Update (KB5099535)</title>
       <link>https://support.microsoft.com/help/5099535</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1607 - July 2026 Security Update (KB5099535)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.9339&lt;/p&gt;&lt;p&gt;CVEs addressed: 253&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099535"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1607 - July 2026 Security Update (KB5099535)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.9339&lt;/p&gt;&lt;p&gt;CVEs addressed: 257&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099535"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5099535</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 10 1809 - July 2026 Security Update (KB5099538)</title>
       <link>https://support.microsoft.com/help/5099538</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1809 - July 2026 Security Update (KB5099538)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.9020&lt;/p&gt;&lt;p&gt;CVEs addressed: 316&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099538"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1809 - July 2026 Security Update (KB5099538)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.9020&lt;/p&gt;&lt;p&gt;CVEs addressed: 320&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099538"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5099538</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 11 23H2 - July 2026 Security Update (KB5099414)</title>
       <link>https://support.microsoft.com/help/5099414</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 23H2 - July 2026 Security Update (KB5099414)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.22631.7376&lt;/p&gt;&lt;p&gt;CVEs addressed: 21&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099414"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 23H2 - July 2026 Security Update (KB5099414)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.22631.7376&lt;/p&gt;&lt;p&gt;CVEs addressed: 25&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099414"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5099414</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 11 24H2 - July 2026 Security Update (KB5101650)</title>
       <link>https://support.microsoft.com/help/5101650</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 24H2 - July 2026 Security Update (KB5101650)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.8875&lt;/p&gt;&lt;p&gt;CVEs addressed: 383&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5101650"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 24H2 - July 2026 Security Update (KB5101650)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.8875&lt;/p&gt;&lt;p&gt;CVEs addressed: 387&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5101650"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5101650</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 11 25H2 - July 2026 Security Update (KB5101650)</title>
       <link>https://support.microsoft.com/help/5101650</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 25H2 - July 2026 Security Update (KB5101650)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26200.8875&lt;/p&gt;&lt;p&gt;CVEs addressed: 383&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5101650"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 25H2 - July 2026 Security Update (KB5101650)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26200.8875&lt;/p&gt;&lt;p&gt;CVEs addressed: 387&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5101650"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5101650</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 11 26H1 - July 2026 Security Update (KB5101649)</title>
       <link>https://support.microsoft.com/help/5101649</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 26H1 - July 2026 Security Update (KB5101649)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.28000.2525&lt;/p&gt;&lt;p&gt;CVEs addressed: 386&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5101649"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 26H1 - July 2026 Security Update (KB5101649)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.28000.2525&lt;/p&gt;&lt;p&gt;CVEs addressed: 390&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5101649"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5101649</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
     </item>
