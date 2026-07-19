@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 18 Jul 2026 19:38:53 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 04:01:55 +0000</lastBuildDate>
     <item>
       <title>Windows Server 2012 - July 2026 Security Update (KB5101011)</title>
       <link>https://support.microsoft.com/help/5101011</link>
@@ -79,11 +79,11 @@
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 11 24H2 - July 2026 Security Update (KB5101650)</title>
-      <link>https://support.microsoft.com/help/5101650</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 24H2 - July 2026 Security Update (KB5101650)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.8875&lt;/p&gt;&lt;p&gt;CVEs addressed: 394&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5101650"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5101650</guid>
-      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <title>Windows 11 24H2 - July 2026 Out-of-Band (KB5121767)</title>
+      <link>https://support.microsoft.com/help/5121767</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 24H2 - July 2026 Out-of-Band (KB5121767)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.8894&lt;/p&gt;&lt;p&gt;CVEs addressed: 0&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5121767"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5121767</guid>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 11 25H2 - July 2026 Security Update (KB5101650)</title>

@@ -12894,14 +12894,26 @@
         "EnterpriseEducation": "2027-10-12"
       },
       "Latest": {
-        "UpdateName": "Windows 11 24H2 - July 2026 Security Update (KB5101650)",
-        "ProductVersion": "10.0.26100.8875",
-        "ReleaseDate": "2026-07-14",
-        "SecurityInfo": "https://support.microsoft.com/help/5101650",
+        "UpdateName": "Windows 11 24H2 - July 2026 Out-of-Band (KB5121767)",
+        "ProductVersion": "10.0.26100.8894",
+        "ReleaseDate": "2026-07-18",
+        "SecurityInfo": "https://support.microsoft.com/help/5121767",
         "ActivelyExploitedCVEs": [],
-        "UniqueCVEsCount": 394
+        "UniqueCVEsCount": 0
       },
       "SecurityReleases": [
+        {
+          "UpdateName": "Windows 11 24H2 - July 2026 Out-of-Band (KB5121767)",
+          "ReleaseDate": "2026-07-18",
+          "ProductVersion": "10.0.26100.8894",
+          "SecurityInfo": "https://support.microsoft.com/help/5121767",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 4,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
         {
           "UpdateName": "Windows 11 24H2 - July 2026 Security Update (KB5101650)",
           "ReleaseDate": "2026-07-14",
@@ -86482,6 +86494,6 @@
       "NonSecurityReleases": []
     }
   ],
-  "UpdateHash": "47a335e4bcc0fea535305b74c519c647aa841a48a46cf87d7bf20dc10e37ad36",
-  "LastCheck": "2026-07-18T19:38:53.125472+00:00"
+  "UpdateHash": "cdc550e5d51a53f96f703e9cc3747ab303f45a7416371b6a04a35071e960431c",
+  "LastCheck": "2026-07-19T04:01:55.556631+00:00"
 }
