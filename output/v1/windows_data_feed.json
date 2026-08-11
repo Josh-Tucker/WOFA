@@ -15,9 +15,7 @@
         "ProductVersion": "10.0.28000.2704",
         "ReleaseDate": "2026-08-11",
         "SecurityInfo": "https://support.microsoft.com/help/5121000",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-68820"
-        ],
+        "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 201
       },
       "SecurityReleases": [
@@ -751,8 +749,8 @@
             "CVE-2026-68820": {
               "severity": "Important",
               "cvss_score": 7.0,
-              "actively_exploited": true,
-              "in_kev": true,
+              "actively_exploited": false,
+              "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68820"
             },
             "CVE-2026-70307": {
@@ -1435,9 +1433,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62738"
             }
           },
-          "ActivelyExploitedCVEs": [
-            "CVE-2026-68820"
-          ],
+          "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 201,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5101649",
@@ -6949,9 +6945,7 @@
         "ProductVersion": "10.0.26200.9168",
         "ReleaseDate": "2026-08-11",
         "SecurityInfo": "https://support.microsoft.com/help/5121003",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-68820"
-        ],
+        "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 198
       },
       "SecurityReleases": [
@@ -7671,8 +7665,8 @@
             "CVE-2026-68820": {
               "severity": "Important",
               "cvss_score": 7.0,
-              "actively_exploited": true,
-              "in_kev": true,
+              "actively_exploited": false,
+              "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68820"
             },
             "CVE-2026-70307": {
@@ -8348,9 +8342,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62738"
             }
           },
-          "ActivelyExploitedCVEs": [
-            "CVE-2026-68820"
-          ],
+          "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 198,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5101650",
@@ -15732,9 +15724,7 @@
         "ProductVersion": "10.0.26100.9168",
         "ReleaseDate": "2026-08-11",
         "SecurityInfo": "https://support.microsoft.com/help/5121003",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-68820"
-        ],
+        "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 198
       },
       "SecurityReleases": [
@@ -16454,8 +16444,8 @@
             "CVE-2026-68820": {
               "severity": "Important",
               "cvss_score": 7.0,
-              "actively_exploited": true,
-              "in_kev": true,
+              "actively_exploited": false,
+              "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68820"
             },
             "CVE-2026-70307": {
@@ -17131,9 +17121,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62738"
             }
           },
-          "ActivelyExploitedCVEs": [
-            "CVE-2026-68820"
-          ],
+          "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 198,
           "DaysSincePreviousRelease": 24,
           "Supersedes": "5101650",
@@ -25603,9 +25591,7 @@
         "ProductVersion": "10.0.22631.7517",
         "ReleaseDate": "2026-08-11",
         "SecurityInfo": "https://support.microsoft.com/help/5120240",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-68820"
-        ],
+        "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 173
       },
       "SecurityReleases": [
@@ -26255,8 +26241,8 @@
             "CVE-2026-68820": {
               "severity": "Important",
               "cvss_score": 7.0,
-              "actively_exploited": true,
-              "in_kev": true,
+              "actively_exploited": false,
+              "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68820"
             },
             "CVE-2026-70307": {
@@ -26827,9 +26813,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62738"
             }
           },
-          "ActivelyExploitedCVEs": [
-            "CVE-2026-68820"
-          ],
+          "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 173,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5099414",
@@ -32365,9 +32349,7 @@
         "ProductVersion": "10.0.17763.9115",
         "ReleaseDate": "2026-08-11",
         "SecurityInfo": "https://support.microsoft.com/help/5120238",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-68820"
-        ],
+        "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 186
       },
       "SecurityReleases": [
@@ -33073,8 +33055,8 @@
             "CVE-2026-68820": {
               "severity": "Important",
               "cvss_score": 7.0,
-              "actively_exploited": true,
-              "in_kev": true,
+              "actively_exploited": false,
+              "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68820"
             },
             "CVE-2026-70307": {
@@ -33680,9 +33662,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62738"
             }
           },
-          "ActivelyExploitedCVEs": [
-            "CVE-2026-68820"
-          ],
+          "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 186,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5082123",
@@ -41086,9 +41066,7 @@
         "ProductVersion": "10.0.14393.9418",
         "ReleaseDate": "2026-08-11",
         "SecurityInfo": "https://support.microsoft.com/help/5120418",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-68820"
-        ],
+        "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 169
       },
       "SecurityReleases": [
@@ -41703,8 +41681,8 @@
             "CVE-2026-68820": {
               "severity": "Important",
               "cvss_score": 7.0,
-              "actively_exploited": true,
-              "in_kev": true,
+              "actively_exploited": false,
+              "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68820"
             },
             "CVE-2026-70307": {
@@ -42282,9 +42260,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62738"
             }
           },
-          "ActivelyExploitedCVEs": [
-            "CVE-2026-68820"
-          ],
+          "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 169,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5082198",
@@ -48368,9 +48344,7 @@
         "ProductVersion": "10.0.19045.7663",
         "ReleaseDate": "2026-08-11",
         "SecurityInfo": "https://support.microsoft.com/help/5120249",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-68820"
-        ],
+        "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 163
       },
       "SecurityReleases": [
@@ -48985,8 +48959,8 @@
             "CVE-2026-68820": {
               "severity": "Important",
               "cvss_score": 7.0,
-              "actively_exploited": true,
-              "in_kev": true,
+              "actively_exploited": false,
+              "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68820"
             },
             "CVE-2026-70307": {
@@ -49522,9 +49496,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62738"
             }
           },
-          "ActivelyExploitedCVEs": [
-            "CVE-2026-68820"
-          ],
+          "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 163,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5087544",
@@ -56602,9 +56574,7 @@
         "ProductVersion": "10.0.19044.7663",
         "ReleaseDate": "2026-08-11",
         "SecurityInfo": "https://support.microsoft.com/help/5120249",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-68820"
-        ],
+        "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 162
       },
       "SecurityReleases": [
@@ -57219,8 +57189,8 @@
             "CVE-2026-68820": {
               "severity": "Important",
               "cvss_score": 7.0,
-              "actively_exploited": true,
-              "in_kev": true,
+              "actively_exploited": false,
+              "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68820"
             },
             "CVE-2026-70307": {
@@ -57749,9 +57719,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62738"
             }
           },
-          "ActivelyExploitedCVEs": [
-            "CVE-2026-68820"
-          ],
+          "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 162,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5087544",
@@ -65074,9 +65042,7 @@
         "ProductVersion": "10.0.26100.33296",
         "ReleaseDate": "2026-08-11",
         "SecurityInfo": "https://support.microsoft.com/help/5120233",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-68820"
-        ],
+        "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 217
       },
       "SecurityReleases": [
@@ -65873,8 +65839,8 @@
             "CVE-2026-68820": {
               "severity": "Important",
               "cvss_score": 7.0,
-              "actively_exploited": true,
-              "in_kev": true,
+              "actively_exploited": false,
+              "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68820"
             },
             "CVE-2026-70307": {
@@ -66606,9 +66572,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62738"
             }
           },
-          "ActivelyExploitedCVEs": [
-            "CVE-2026-68820"
-          ],
+          "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 217,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5099536",
@@ -75020,9 +74984,7 @@
         "ProductVersion": "10.0.20348.5499",
         "ReleaseDate": "2026-08-11",
         "SecurityInfo": "https://support.microsoft.com/help/5120242",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-68820"
-        ],
+        "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 197
       },
       "SecurityReleases": [
@@ -75749,8 +75711,8 @@
             "CVE-2026-68820": {
               "severity": "Important",
               "cvss_score": 7.0,
-              "actively_exploited": true,
-              "in_kev": true,
+              "actively_exploited": false,
+              "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68820"
             },
             "CVE-2026-70307": {
@@ -76412,9 +76374,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62738"
             }
           },
-          "ActivelyExploitedCVEs": [
-            "CVE-2026-68820"
-          ],
+          "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 197,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5082142",
@@ -84202,9 +84162,7 @@
         "ProductVersion": "10.0.17763.9115",
         "ReleaseDate": "2026-08-11",
         "SecurityInfo": "https://support.microsoft.com/help/5120238",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-68820"
-        ],
+        "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 185
       },
       "SecurityReleases": [
@@ -84903,8 +84861,8 @@
             "CVE-2026-68820": {
               "severity": "Important",
               "cvss_score": 7.0,
-              "actively_exploited": true,
-              "in_kev": true,
+              "actively_exploited": false,
+              "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68820"
             },
             "CVE-2026-70307": {
@@ -85510,9 +85468,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62738"
             }
           },
-          "ActivelyExploitedCVEs": [
-            "CVE-2026-68820"
-          ],
+          "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 185,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5082123",
@@ -92537,9 +92493,7 @@
         "ProductVersion": "10.0.14393.9418",
         "ReleaseDate": "2026-08-11",
         "SecurityInfo": "https://support.microsoft.com/help/5120418",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-68820"
-        ],
+        "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 167
       },
       "SecurityReleases": [
@@ -93147,8 +93101,8 @@
             "CVE-2026-68820": {
               "severity": "Important",
               "cvss_score": 7.0,
-              "actively_exploited": true,
-              "in_kev": true,
+              "actively_exploited": false,
+              "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68820"
             },
             "CVE-2026-70307": {
@@ -93719,9 +93673,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62738"
             }
           },
-          "ActivelyExploitedCVEs": [
-            "CVE-2026-68820"
-          ],
+          "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 167,
           "DaysSincePreviousRelease": 28,
           "Supersedes": "5082198",
@@ -99475,9 +99427,7 @@
         "ProductVersion": "4.8.4805.0",
         "ReleaseDate": "2026-08-11",
         "SecurityInfo": "https://support.microsoft.com/help/5120706",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-68820"
-        ],
+        "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 147
       },
       "SecurityReleases": [
@@ -99980,8 +99930,8 @@
             "CVE-2026-68820": {
               "severity": "Important",
               "cvss_score": 7.0,
-              "actively_exploited": true,
-              "in_kev": true,
+              "actively_exploited": false,
+              "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68820"
             },
             "CVE-2026-70307": {
@@ -100517,9 +100467,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62738"
             }
           },
-          "ActivelyExploitedCVEs": [
-            "CVE-2026-68820"
-          ],
+          "ActivelyExploitedCVEs": [],
           "UniqueCVEsCount": 147,
           "DaysSincePreviousRelease": 28,
           "Supersedes": null,
@@ -103186,6 +103134,6 @@
       "NonSecurityReleases": []
     }
   ],
-  "UpdateHash": "99f73638185812cf0bd14301b71845128b9cbe786343c4a02495114945654502",
-  "LastCheck": "2026-08-11T19:31:25.510739+00:00"
+  "UpdateHash": "8fbaff4274e7fd9607cd9dd71eb7c8bd26940d0946a9fdf308023eb5dfa4a768",
+  "LastCheck": "2026-08-11T19:36:35.820081+00:00"
 }
