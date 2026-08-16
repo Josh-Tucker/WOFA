@@ -32362,7 +32362,7 @@
       },
       "Latest": {
         "UpdateName": "Windows 10 1809 - August 2026 Security Update (KB5120238)",
-        "ProductVersion": "10.0.17763.9115",
+        "ProductVersion": "10.0.17763.9121",
         "ReleaseDate": "2026-08-11",
         "SecurityInfo": "https://support.microsoft.com/help/5120238",
         "ActivelyExploitedCVEs": [
@@ -32374,7 +32374,7 @@
         {
           "UpdateName": "Windows 10 1809 - August 2026 Security Update (KB5120238)",
           "ReleaseDate": "2026-08-11",
-          "ProductVersion": "10.0.17763.9115",
+          "ProductVersion": "10.0.17763.9121",
           "SecurityInfo": "https://support.microsoft.com/help/5120238",
           "CVEs": {
             "CVE-2026-50472": {
@@ -84199,7 +84199,7 @@
       },
       "Latest": {
         "UpdateName": "Windows Server 2019 - August 2026 Security Update (KB5120238)",
-        "ProductVersion": "10.0.17763.9115",
+        "ProductVersion": "10.0.17763.9121",
         "ReleaseDate": "2026-08-11",
         "SecurityInfo": "https://support.microsoft.com/help/5120238",
         "ActivelyExploitedCVEs": [
@@ -84211,7 +84211,7 @@
         {
           "UpdateName": "Windows Server 2019 - August 2026 Security Update (KB5120238)",
           "ReleaseDate": "2026-08-11",
-          "ProductVersion": "10.0.17763.9115",
+          "ProductVersion": "10.0.17763.9121",
           "SecurityInfo": "https://support.microsoft.com/help/5120238",
           "CVEs": {
             "CVE-2026-50472": {
@@ -103186,6 +103186,6 @@
       "NonSecurityReleases": []
     }
   ],
-  "UpdateHash": "53e0b828242a7bdbe7dd3e905321fc1d20b78cf148b25b4edad5495ff9714414",
-  "LastCheck": "2026-08-16T13:07:01.402074+00:00"
+  "UpdateHash": "65ce21b3082612294c2ca981595c173c1b58cdd7fd53d152968dbbc7ea32aaed",
+  "LastCheck": "2026-08-16T18:52:19.711870+00:00"
 }
