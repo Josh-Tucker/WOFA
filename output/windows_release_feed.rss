@@ -7,95 +7,95 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Aug 2026 18:59:52 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 01:56:41 +0000</lastBuildDate>
     <item>
       <title>Windows Server 2012 - August 2026 Security Update (KB5120706)</title>
       <link>https://support.microsoft.com/help/5120706</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2012 - August 2026 Security Update (KB5120706)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 4.8.4805.0&lt;/p&gt;&lt;p&gt;CVEs addressed: 147&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120706"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2012 - August 2026 Security Update (KB5120706)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 4.8.4805.0&lt;/p&gt;&lt;p&gt;CVEs addressed: 148&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120706"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5120706</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows Server 2016 - August 2026 Security Update (KB5120418)</title>
       <link>https://support.microsoft.com/help/5120418</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2016 - August 2026 Security Update (KB5120418)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.9418&lt;/p&gt;&lt;p&gt;CVEs addressed: 167&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120418"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2016 - August 2026 Security Update (KB5120418)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.9418&lt;/p&gt;&lt;p&gt;CVEs addressed: 168&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120418"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5120418</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows Server 2019 - August 2026 Security Update (KB5120238)</title>
       <link>https://support.microsoft.com/help/5120238</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2019 - August 2026 Security Update (KB5120238)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.9121&lt;/p&gt;&lt;p&gt;CVEs addressed: 185&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120238"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2019 - August 2026 Security Update (KB5120238)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.9121&lt;/p&gt;&lt;p&gt;CVEs addressed: 186&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120238"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5120238</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows Server 2022 - August 2026 Security Update (KB5120242)</title>
       <link>https://support.microsoft.com/help/5120242</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2022 - August 2026 Security Update (KB5120242)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.20348.5499&lt;/p&gt;&lt;p&gt;CVEs addressed: 197&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120242"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2022 - August 2026 Security Update (KB5120242)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.20348.5499&lt;/p&gt;&lt;p&gt;CVEs addressed: 198&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120242"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5120242</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows Server 2025 - August 2026 Security Update (KB5120233)</title>
       <link>https://support.microsoft.com/help/5120233</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2025 - August 2026 Security Update (KB5120233)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.33296&lt;/p&gt;&lt;p&gt;CVEs addressed: 217&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120233"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2025 - August 2026 Security Update (KB5120233)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.33296&lt;/p&gt;&lt;p&gt;CVEs addressed: 218&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120233"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5120233</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 10 21H2 - August 2026 Security Update (KB5120249)</title>
       <link>https://support.microsoft.com/help/5120249</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 21H2 - August 2026 Security Update (KB5120249)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19044.7663&lt;/p&gt;&lt;p&gt;CVEs addressed: 162&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120249"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 21H2 - August 2026 Security Update (KB5120249)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19044.7663&lt;/p&gt;&lt;p&gt;CVEs addressed: 163&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120249"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5120249</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 10 22H2 - August 2026 Security Update (KB5120249)</title>
       <link>https://support.microsoft.com/help/5120249</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 22H2 - August 2026 Security Update (KB5120249)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19045.7663&lt;/p&gt;&lt;p&gt;CVEs addressed: 163&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120249"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 22H2 - August 2026 Security Update (KB5120249)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19045.7663&lt;/p&gt;&lt;p&gt;CVEs addressed: 164&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120249"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5120249</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 10 1607 - August 2026 Security Update (KB5120418)</title>
       <link>https://support.microsoft.com/help/5120418</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1607 - August 2026 Security Update (KB5120418)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.9418&lt;/p&gt;&lt;p&gt;CVEs addressed: 169&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120418"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1607 - August 2026 Security Update (KB5120418)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.9418&lt;/p&gt;&lt;p&gt;CVEs addressed: 170&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120418"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5120418</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 10 1809 - August 2026 Security Update (KB5120238)</title>
       <link>https://support.microsoft.com/help/5120238</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1809 - August 2026 Security Update (KB5120238)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.9121&lt;/p&gt;&lt;p&gt;CVEs addressed: 186&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120238"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1809 - August 2026 Security Update (KB5120238)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.9121&lt;/p&gt;&lt;p&gt;CVEs addressed: 187&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120238"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5120238</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 11 23H2 - August 2026 Security Update (KB5120240)</title>
       <link>https://support.microsoft.com/help/5120240</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 23H2 - August 2026 Security Update (KB5120240)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.22631.7517&lt;/p&gt;&lt;p&gt;CVEs addressed: 173&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120240"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 23H2 - August 2026 Security Update (KB5120240)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.22631.7517&lt;/p&gt;&lt;p&gt;CVEs addressed: 174&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5120240"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5120240</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 11 24H2 - August 2026 Security Update (KB5121003)</title>
       <link>https://support.microsoft.com/help/5121003</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 24H2 - August 2026 Security Update (KB5121003)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.9168&lt;/p&gt;&lt;p&gt;CVEs addressed: 198&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5121003"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 24H2 - August 2026 Security Update (KB5121003)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.9168&lt;/p&gt;&lt;p&gt;CVEs addressed: 199&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5121003"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5121003</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 11 25H2 - August 2026 Security Update (KB5121003)</title>
       <link>https://support.microsoft.com/help/5121003</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 25H2 - August 2026 Security Update (KB5121003)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26200.9168&lt;/p&gt;&lt;p&gt;CVEs addressed: 198&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5121003"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 25H2 - August 2026 Security Update (KB5121003)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26200.9168&lt;/p&gt;&lt;p&gt;CVEs addressed: 199&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5121003"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5121003</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 11 26H1 - August 2026 Security Update (KB5121000)</title>
       <link>https://support.microsoft.com/help/5121000</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 26H1 - August 2026 Security Update (KB5121000)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.28000.2704&lt;/p&gt;&lt;p&gt;CVEs addressed: 201&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5121000"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 26H1 - August 2026 Security Update (KB5121000)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.28000.2704&lt;/p&gt;&lt;p&gt;CVEs addressed: 202&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-68820&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5121000"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
       <guid isPermaLink="false">https://support.microsoft.com/help/5121000</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
     </item>
