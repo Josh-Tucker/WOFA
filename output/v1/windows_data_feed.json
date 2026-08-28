@@ -6900,6 +6900,13 @@
       ],
       "NonSecurityReleases": [
         {
+          "UpdateType": "2026-08 D",
+          "ReleaseDate": "2026-08-27",
+          "ProductVersion": "28000.2804",
+          "KB": "5120996",
+          "SecurityInfo": "https://support.microsoft.com/help/5120996"
+        },
+        {
           "UpdateType": "2026-07 D",
           "ReleaseDate": "2026-07-28",
           "ProductVersion": "28000.2608",
@@ -25087,6 +25094,13 @@
         }
       ],
       "NonSecurityReleases": [
+        {
+          "UpdateType": "2026-08 D",
+          "ReleaseDate": "2026-08-27",
+          "ProductVersion": "26100.9278",
+          "KB": "5120998",
+          "SecurityInfo": "https://support.microsoft.com/help/5120998"
+        },
         {
           "UpdateType": "2026-07 D",
           "ReleaseDate": "2026-07-28",
@@ -99421,6 +99435,6 @@
       "NonSecurityReleases": []
     }
   ],
-  "UpdateHash": "6cee9d04b5cc77c9ea441dd2cea931f78a8546dd812f8c5400190fa0491d37d3",
-  "LastCheck": "2026-08-27T22:27:22.666297+00:00"
+  "UpdateHash": "81d63b779852a2a1b12b0aca6f9cf807ed5eec3330da8d0231d7119d9eca455d",
+  "LastCheck": "2026-08-28T11:34:52.842833+00:00"
 }
