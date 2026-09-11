@@ -234,7 +234,7 @@
             RSS
           </a>
         </div>
-        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 11 Sep 2026 04:55 UTC</span>
+        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 11 Sep 2026 11:36 UTC</span>
         <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
           <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -285,8 +285,6 @@
     <span class="indicator-item badge badge-error ">End of Life</span>
     
     
-    <span class="indicator-item badge badge-error indicator-middle">1 KEV</span>
-    
   <div class="card bg-base-200 border border-base-300 w-full">
     <div class="card-body p-5 gap-0">
       <h2 class="text-xs font-semibold text-base-content/50 uppercase tracking-widest flex items-center gap-2 mb-4">
@@ -323,7 +321,7 @@
           <span class="text-xs text-base-content/50 uppercase tracking-wide">CVEs Fixed</span>
           <span class="font-semibold">
             <span class="badge badge-sm
-              badge-error
+              badge-info badge-outline
               ">
               632
             </span>
@@ -331,10 +329,8 @@
         </div>
         <div class="flex flex-col gap-0.5">
           <span class="text-xs text-base-content/50 uppercase tracking-wide">Exploited</span>
-          <span class="font-semibold text-error">
-            1
-            
-            <span class="badge badge-warning ml-1">1 KEV</span>
+          <span class="font-semibold ">
+            0
             
           </span>
         </div>
@@ -450,10 +446,6 @@
         
         <span class="badge badge-info badge-outline">632 CVEs</span>
         
-        <span class="badge badge-warning">1 KEV</span>
-        
-        
-        <span class="badge badge-error">Critical Risk</span>
         
       </div>
       <div class="flex-1"></div>
@@ -467,7 +459,7 @@
     <!-- collapsed hint -->
     <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
       28 days since previous release &nbsp;·&nbsp; 
-      Contains 1 actively exploited vulnerability
+      Addresses 632 security issues
     </div>
 
     <!-- expanded body -->
@@ -475,14 +467,13 @@
 
       <!-- summary banner -->
       <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
-                  border-error
-                  ">
+                  border-neutral">
         <div class="mb-1">
-          ⚠️
-          Contains 1 actively exploited vulnerability
+          ℹ️
+          Addresses 632 security issues
         </div>
         <div class="text-xs text-base-content/50">
-          <strong class="text-base-content/70">Recommendation:</strong> Update immediately — contains known-exploited vulnerabilities (CISA KEV)
+          <strong class="text-base-content/70">Recommendation:</strong> Update to stay secure — security fixes available
         </div>
       </div>
 
@@ -502,11 +493,6 @@
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
           632
-        </div>
-        
-        <div>
-          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">CISA KEV</div>
-          <span class="text-warning">1</span>
         </div>
         
         
@@ -6608,11 +6594,11 @@
             <a class="badge font-mono hover:no-underline
                       badge-warning
                       
-                      "
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2026-81963"
                target="_blank" rel="noopener"
-               title="Important · CVSS 7.8 · CISA KEV">
-              ⚑ CVE-2026-81963
+               title="Important · CVSS 7.8">
+              CVE-2026-81963
             </a>
             
           </div>
@@ -7089,10 +7075,6 @@
         
         <span class="badge badge-info badge-outline">199 CVEs</span>
         
-        <span class="badge badge-warning">1 KEV</span>
-        
-        
-        <span class="badge badge-error">Critical Risk</span>
         
       </div>
       <div class="flex-1"></div>
@@ -7106,7 +7088,7 @@
     <!-- collapsed hint -->
     <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
       28 days since previous release &nbsp;·&nbsp; 
-      Contains 1 actively exploited vulnerability
+      Addresses 199 security issues
     </div>
 
     <!-- expanded body -->
@@ -7114,14 +7096,13 @@
 
       <!-- summary banner -->
       <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
-                  border-error
-                  ">
+                  border-neutral">
         <div class="mb-1">
-          ⚠️
-          Contains 1 actively exploited vulnerability
+          ℹ️
+          Addresses 199 security issues
         </div>
         <div class="text-xs text-base-content/50">
-          <strong class="text-base-content/70">Recommendation:</strong> Update immediately — contains known-exploited vulnerabilities (CISA KEV)
+          <strong class="text-base-content/70">Recommendation:</strong> Update to stay secure — security fixes available
         </div>
       </div>
 
@@ -7141,11 +7122,6 @@
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
           199
-        </div>
-        
-        <div>
-          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">CISA KEV</div>
-          <span class="text-warning">1</span>
         </div>
         
         
@@ -9203,11 +9179,11 @@
             <a class="badge font-mono hover:no-underline
                       badge-warning
                       
-                      "
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2026-68820"
                target="_blank" rel="noopener"
-               title="Important · CVSS 7.0 · CISA KEV">
-              ⚑ CVE-2026-68820
+               title="Important · CVSS 7.0">
+              CVE-2026-68820
             </a>
             
           </div>
@@ -15760,10 +15736,6 @@
         
         <span class="badge badge-info badge-outline">123 CVEs</span>
         
-        <span class="badge badge-warning">2 KEV</span>
-        
-        
-        <span class="badge badge-error">Critical Risk</span>
         
       </div>
       <div class="flex-1"></div>
@@ -15777,7 +15749,7 @@
     <!-- collapsed hint -->
     <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
       35 days since previous release &nbsp;·&nbsp; 
-      Contains 2 actively exploited vulnerabilities
+      Addresses 123 security issues
     </div>
 
     <!-- expanded body -->
@@ -15785,14 +15757,13 @@
 
       <!-- summary banner -->
       <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
-                  border-error
-                  ">
+                  border-neutral">
         <div class="mb-1">
-          ⚠️
-          Contains 2 actively exploited vulnerabilities
+          ℹ️
+          Addresses 123 security issues
         </div>
         <div class="text-xs text-base-content/50">
-          <strong class="text-base-content/70">Recommendation:</strong> Update immediately — contains known-exploited vulnerabilities (CISA KEV)
+          <strong class="text-base-content/70">Recommendation:</strong> Update to stay secure — security fixes available
         </div>
       </div>
 
@@ -15812,11 +15783,6 @@
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
           123
-        </div>
-        
-        <div>
-          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">CISA KEV</div>
-          <span class="text-warning">2</span>
         </div>
         
         
@@ -16924,11 +16890,11 @@
             <a class="badge font-mono hover:no-underline
                       badge-info
                       
-                      "
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2026-32202"
                target="_blank" rel="noopener"
-               title="Important · CVSS 4.3 · CISA KEV">
-              ⚑ CVE-2026-32202
+               title="Important · CVSS 4.3">
+              CVE-2026-32202
             </a>
             
             <a class="badge font-mono hover:no-underline
@@ -17136,11 +17102,11 @@
             <a class="badge font-mono hover:no-underline
                       badge-error
                       
-                      "
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2026-33824"
                target="_blank" rel="noopener"
-               title="Critical · CVSS 9.8 · CISA KEV">
-              ⚑ CVE-2026-33824
+               title="Critical · CVSS 9.8">
+              CVE-2026-33824
             </a>
             
             <a class="badge font-mono hover:no-underline
@@ -17764,10 +17730,6 @@
         
         <span class="badge badge-info badge-outline">26 CVEs</span>
         
-        <span class="badge badge-warning">5 KEV</span>
-        
-        
-        <span class="badge badge-error">Critical Risk</span>
         
       </div>
       <div class="flex-1"></div>
@@ -17781,7 +17743,7 @@
     <!-- collapsed hint -->
     <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
       28 days since previous release &nbsp;·&nbsp; 
-      Contains 5 actively exploited vulnerabilities
+      Addresses 26 security issues
     </div>
 
     <!-- expanded body -->
@@ -17789,14 +17751,13 @@
 
       <!-- summary banner -->
       <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
-                  border-error
-                  ">
+                  border-neutral">
         <div class="mb-1">
-          ⚠️
-          Contains 5 actively exploited vulnerabilities
+          ℹ️
+          Addresses 26 security issues
         </div>
         <div class="text-xs text-base-content/50">
-          <strong class="text-base-content/70">Recommendation:</strong> Update immediately — contains known-exploited vulnerabilities (CISA KEV)
+          <strong class="text-base-content/70">Recommendation:</strong> Update to stay secure — security fixes available
         </div>
       </div>
 
@@ -17816,11 +17777,6 @@
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
           26
-        </div>
-        
-        <div>
-          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">CISA KEV</div>
-          <span class="text-warning">5</span>
         </div>
         
         
@@ -18078,51 +18034,51 @@
             <a class="badge font-mono hover:no-underline
                       badge-warning
                       
-                      "
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2026-21510"
                target="_blank" rel="noopener"
-               title="Important · CVSS 8.8 · CISA KEV">
-              ⚑ CVE-2026-21510
+               title="Important · CVSS 8.8">
+              CVE-2026-21510
             </a>
             
             <a class="badge font-mono hover:no-underline
                       badge-warning
                       
-                      "
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2026-21513"
                target="_blank" rel="noopener"
-               title="Important · CVSS 8.8 · CISA KEV">
-              ⚑ CVE-2026-21513
+               title="Important · CVSS 8.8">
+              CVE-2026-21513
             </a>
             
             <a class="badge font-mono hover:no-underline
                       badge-warning
                       
-                      "
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2026-21519"
                target="_blank" rel="noopener"
-               title="Important · CVSS 7.8 · CISA KEV">
-              ⚑ CVE-2026-21519
+               title="Important · CVSS 7.8">
+              CVE-2026-21519
             </a>
             
             <a class="badge font-mono hover:no-underline
                       badge-info
                       
-                      "
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2026-21525"
                target="_blank" rel="noopener"
-               title="Moderate · CVSS 6.2 · CISA KEV">
-              ⚑ CVE-2026-21525
+               title="Moderate · CVSS 6.2">
+              CVE-2026-21525
             </a>
             
             <a class="badge font-mono hover:no-underline
                       badge-warning
                       
-                      "
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2026-21533"
                target="_blank" rel="noopener"
-               title="Important · CVSS 7.8 · CISA KEV">
-              ⚑ CVE-2026-21533
+               title="Important · CVSS 7.8">
+              CVE-2026-21533
             </a>
             
           </div>
@@ -18163,10 +18119,6 @@
         
         <span class="badge badge-info badge-outline">85 CVEs</span>
         
-        <span class="badge badge-warning">1 KEV</span>
-        
-        
-        <span class="badge badge-error">Critical Risk</span>
         
       </div>
       <div class="flex-1"></div>
@@ -18180,7 +18132,7 @@
     <!-- collapsed hint -->
     <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
       35 days since previous release &nbsp;·&nbsp; 
-      Contains 1 actively exploited vulnerability
+      Addresses 85 security issues
     </div>
 
     <!-- expanded body -->
@@ -18188,14 +18140,13 @@
 
       <!-- summary banner -->
       <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
-                  border-error
-                  ">
+                  border-neutral">
         <div class="mb-1">
-          ⚠️
-          Contains 1 actively exploited vulnerability
+          ℹ️
+          Addresses 85 security issues
         </div>
         <div class="text-xs text-base-content/50">
-          <strong class="text-base-content/70">Recommendation:</strong> Update immediately — contains known-exploited vulnerabilities (CISA KEV)
+          <strong class="text-base-content/70">Recommendation:</strong> Update to stay secure — security fixes available
         </div>
       </div>
 
@@ -18215,11 +18166,6 @@
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
           85
-        </div>
-        
-        <div>
-          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">CISA KEV</div>
-          <span class="text-warning">1</span>
         </div>
         
         
@@ -18309,11 +18255,11 @@
             <a class="badge font-mono hover:no-underline
                       badge-info
                       
-                      "
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2026-20805"
                target="_blank" rel="noopener"
-               title="Important · CVSS 5.5 · CISA KEV">
-              ⚑ CVE-2026-20805
+               title="Important · CVSS 5.5">
+              CVE-2026-20805
             </a>
             
             <a class="badge font-mono hover:no-underline
@@ -19176,10 +19122,6 @@
         
         <span class="badge badge-info badge-outline">36 CVEs</span>
         
-        <span class="badge badge-warning">1 KEV</span>
-        
-        
-        <span class="badge badge-error">Critical Risk</span>
         
       </div>
       <div class="flex-1"></div>
@@ -19193,7 +19135,7 @@
     <!-- collapsed hint -->
     <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
       28 days since previous release &nbsp;·&nbsp; 
-      Contains 1 actively exploited vulnerability
+      Addresses 36 security issues
     </div>
 
     <!-- expanded body -->
@@ -19201,14 +19143,13 @@
 
       <!-- summary banner -->
       <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
-                  border-error
-                  ">
+                  border-neutral">
         <div class="mb-1">
-          ⚠️
-          Contains 1 actively exploited vulnerability
+          ℹ️
+          Addresses 36 security issues
         </div>
         <div class="text-xs text-base-content/50">
-          <strong class="text-base-content/70">Recommendation:</strong> Update immediately — contains known-exploited vulnerabilities (CISA KEV)
+          <strong class="text-base-content/70">Recommendation:</strong> Update to stay secure — security fixes available
         </div>
       </div>
 
@@ -19228,11 +19169,6 @@
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
           36
-        </div>
-        
-        <div>
-          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">CISA KEV</div>
-          <span class="text-warning">1</span>
         </div>
         
         
@@ -19344,11 +19280,11 @@
             <a class="badge font-mono hover:no-underline
                       badge-warning
                       
-                      "
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2025-62221"
                target="_blank" rel="noopener"
-               title="Important · CVSS 7.8 · CISA KEV">
-              ⚑ CVE-2025-62221
+               title="Important · CVSS 7.8">
+              CVE-2025-62221
             </a>
             
             <a class="badge font-mono hover:no-underline
@@ -19711,10 +19647,6 @@
         
         <span class="badge badge-info badge-outline">38 CVEs</span>
         
-        <span class="badge badge-warning">2 KEV</span>
-        
-        
-        <span class="badge badge-error">Critical Risk</span>
         
       </div>
       <div class="flex-1"></div>
@@ -19728,7 +19660,7 @@
     <!-- collapsed hint -->
     <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
       28 days since previous release &nbsp;·&nbsp; 
-      Contains 2 actively exploited vulnerabilities
+      Addresses 38 security issues
     </div>
 
     <!-- expanded body -->
@@ -19736,14 +19668,13 @@
 
       <!-- summary banner -->
       <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
-                  border-error
-                  ">
+                  border-neutral">
         <div class="mb-1">
-          ⚠️
-          Contains 2 actively exploited vulnerabilities
+          ℹ️
+          Addresses 38 security issues
         </div>
         <div class="text-xs text-base-content/50">
-          <strong class="text-base-content/70">Recommendation:</strong> Update immediately — contains known-exploited vulnerabilities (CISA KEV)
+          <strong class="text-base-content/70">Recommendation:</strong> Update to stay secure — security fixes available
         </div>
       </div>
 
@@ -19763,11 +19694,6 @@
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
           38
-        </div>
-        
-        <div>
-          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">CISA KEV</div>
-          <span class="text-warning">2</span>
         </div>
         
         
@@ -19995,11 +19921,11 @@
             <a class="badge font-mono hover:no-underline
                       badge-warning
                       
-                      "
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2025-60710"
                target="_blank" rel="noopener"
-               title="Important · CVSS 7.8 · CISA KEV">
-              ⚑ CVE-2025-60710
+               title="Important · CVSS 7.8">
+              CVE-2025-60710
             </a>
             
             <a class="badge font-mono hover:no-underline
@@ -20137,11 +20063,11 @@
             <a class="badge font-mono hover:no-underline
                       badge-warning
                       
-                      "
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2025-62215"
                target="_blank" rel="noopener"
-               title="Important · CVSS 7.0 · CISA KEV">
-              ⚑ CVE-2025-62215
+               title="Important · CVSS 7.0">
+              CVE-2025-62215
             </a>
             
             <a class="badge font-mono hover:no-underline
@@ -20266,10 +20192,6 @@
         
         <span class="badge badge-info badge-outline">117 CVEs</span>
         
-        <span class="badge badge-warning">3 KEV</span>
-        
-        
-        <span class="badge badge-error">Critical Risk</span>
         
       </div>
       <div class="flex-1"></div>
@@ -20281,7 +20203,7 @@
     <!-- collapsed hint -->
     <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
       
-      Contains 3 actively exploited vulnerabilities
+      Addresses 117 security issues
     </div>
 
     <!-- expanded body -->
@@ -20289,14 +20211,13 @@
 
       <!-- summary banner -->
       <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
-                  border-error
-                  ">
+                  border-neutral">
         <div class="mb-1">
-          ⚠️
-          Contains 3 actively exploited vulnerabilities
+          ℹ️
+          Addresses 117 security issues
         </div>
         <div class="text-xs text-base-content/50">
-          <strong class="text-base-content/70">Recommendation:</strong> Update immediately — contains known-exploited vulnerabilities (CISA KEV)
+          <strong class="text-base-content/70">Recommendation:</strong> Update to stay secure — security fixes available
         </div>
       </div>
 
@@ -20316,11 +20237,6 @@
         <div>
           <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
           117
-        </div>
-        
-        <div>
-          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">CISA KEV</div>
-          <span class="text-warning">3</span>
         </div>
         
         
@@ -20378,11 +20294,11 @@
             <a class="badge font-mono hover:no-underline
                       badge-warning
                       
-                      "
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2025-24990"
                target="_blank" rel="noopener"
-               title="Important · CVSS 7.8 · CISA KEV">
-              ⚑ CVE-2025-24990
+               title="Important · CVSS 7.8">
+              CVE-2025-24990
             </a>
             
           </div>
@@ -20444,11 +20360,11 @@
             <a class="badge font-mono hover:no-underline
                       badge-info
                       
-                      "
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2025-47827"
                target="_blank" rel="noopener"
-               title="Important · CVSS 4.6 · CISA KEV">
-              ⚑ CVE-2025-47827
+               title="Important · CVSS 4.6">
+              CVE-2025-47827
             </a>
             
           </div>
@@ -21520,11 +21436,11 @@
             <a class="badge font-mono hover:no-underline
                       badge-warning
                       
-                      "
+                      badge-outline"
                href="https://nvd.nist.gov/vuln/detail/CVE-2025-59230"
                target="_blank" rel="noopener"
-               title="Important · CVSS 7.8 · CISA KEV">
-              ⚑ CVE-2025-59230
+               title="Important · CVSS 7.8">
+              CVE-2025-59230
             </a>
             
             <a class="badge font-mono hover:no-underline
