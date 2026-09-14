@@ -234,7 +234,7 @@
             RSS
           </a>
         </div>
-        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 14 Sep 2026 13:06 UTC</span>
+        <span class="text-xs text-base-content/40 mr-3 hidden md:inline">Updated 14 Sep 2026 21:56 UTC</span>
         <button class="btn btn-ghost btn-sm btn-square" @click="dark = !dark" :title="dark ? 'Switch to light mode' : 'Switch to dark mode'">
           <svg x-show="dark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -273,8 +273,6 @@
     
     
     
-    <span class="indicator-item badge badge-error ">1 KEV</span>
-    
   <div class="card bg-base-200 border border-base-300 w-full">
     <div class="card-body p-5 gap-0">
       <h2 class="text-xs font-semibold text-base-content/50 uppercase tracking-widest flex items-center gap-2 mb-4">
@@ -288,22 +286,22 @@
         <div class="flex flex-col gap-0.5">
           <span class="text-xs text-base-content/50 uppercase tracking-wide">KB Article</span>
           
-          <a class="font-semibold link link-hover" href="https://support.microsoft.com/help/5123099">KB5123099</a>
+          <a class="font-semibold link link-hover" href="https://support.microsoft.com/help/5129239">KB5129239</a>
           
         </div>
         <div class="flex flex-col gap-0.5">
           <span class="text-xs text-base-content/50 uppercase tracking-wide">Build</span>
-          <code class="font-mono text-sm">10.0.14393.9512</code>
+          <code class="font-mono text-sm">10.0.14393.9514</code>
         </div>
         <div class="flex flex-col gap-0.5">
           <span class="text-xs text-base-content/50 uppercase tracking-wide">Released</span>
-          <span class="font-semibold">2026-09-08</span>
+          <span class="font-semibold">2026-09-14</span>
         </div>
         <div class="flex flex-col gap-0.5">
           <span class="text-xs text-base-content/50 uppercase tracking-wide">Age</span>
           <span class="text-sm text-base-content/50">
             
-              6 days ago
+              0 days ago
             
           </span>
         </div>
@@ -311,18 +309,15 @@
           <span class="text-xs text-base-content/50 uppercase tracking-wide">CVEs Fixed</span>
           <span class="font-semibold">
             <span class="badge badge-sm
-              badge-error
-              ">
-              551
+              badge-ghost">
+              0
             </span>
           </span>
         </div>
         <div class="flex flex-col gap-0.5">
           <span class="text-xs text-base-content/50 uppercase tracking-wide">Exploited</span>
-          <span class="font-semibold text-error">
-            1
-            
-            <span class="badge badge-warning ml-1">1 KEV</span>
+          <span class="font-semibold ">
+            0
             
           </span>
         </div>
@@ -330,7 +325,7 @@
         <div class="flex flex-col gap-0.5 col-span-2">
           <span class="text-xs text-base-content/50 uppercase tracking-wide">Release Type</span>
           
-          <span class="badge badge-info badge-outline w-fit">Patch Tuesday</span>
+          <span class="badge badge-warning badge-outline w-fit">Out of Band</span>
           
         </div>
         
@@ -350,7 +345,7 @@
 
       <div class="flex flex-wrap gap-2">
         
-        <a class="btn btn-sm btn-outline gap-1.5" href="https://support.microsoft.com/help/5123099" target="_blank" rel="noopener">
+        <a class="btn btn-sm btn-outline gap-1.5" href="https://support.microsoft.com/help/5129239" target="_blank" rel="noopener">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           KB Article
         </a>
@@ -411,6 +406,97 @@
   
   <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
        x-data="{ open: true }"
+       @expand-all.window="open = true"
+       @collapse-all.window="open = false">
+
+    <!-- header -->
+    <div class="bg-base-200 px-4 py-3.5 flex items-center gap-2.5 flex-wrap cursor-pointer select-none hover:bg-base-300/30"
+         @click="open = !open">
+      <span class="font-semibold text-sm">
+        
+        <a href="https://support.microsoft.com/help/5129239" target="_blank" rel="noopener" @click.stop class="link link-hover">September 2026 Out-of-Band</a>
+        
+      </span>
+      <span class="text-base-content/30 text-xs">•</span>
+      <span class="text-xs text-base-content/50 whitespace-nowrap">2026-09-14</span>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <code class="font-mono text-xs text-base-content/50">10.0.14393.9514</code>
+      
+      <span class="text-base-content/30 text-xs">•</span>
+      <div class="flex gap-1.5 items-center flex-wrap">
+        
+        
+        <span class="badge badge-warning badge-outline">Out of Band</span>
+        
+        <span class="badge badge-ghost">0 CVEs</span>
+        
+        
+      </div>
+      <div class="flex-1"></div>
+      
+      <span class="text-xs text-base-content/40 whitespace-nowrap">+6d</span>
+      
+      <span class="text-xs text-base-content/40 transition-transform duration-150 inline-block"
+            :class="{ 'rotate-180': open }">▼</span>
+    </div>
+
+    <!-- collapsed hint -->
+    <div class="px-4 pb-3 pt-1 text-xs text-base-content/50" x-show="!open">
+      6 days since previous release &nbsp;·&nbsp; 
+      Maintenance update with no published CVE entries
+    </div>
+
+    <!-- expanded body -->
+    <div class="px-4 pb-4 border-t border-base-300" x-show="open" x-transition>
+
+      <!-- summary banner -->
+      <div class="mt-3.5 mb-3 p-3 rounded-lg bg-base-300 border-l-2 text-sm
+                  border-neutral">
+        <div class="mb-1">
+          ℹ️
+          Maintenance update with no published CVE entries
+        </div>
+        <div class="text-xs text-base-content/50">
+          <strong class="text-base-content/70">Recommendation:</strong> Update recommended — may include unpublished security improvements
+        </div>
+      </div>
+
+      <!-- meta row -->
+      <div class="flex flex-wrap gap-6 mb-4 text-sm">
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">KB Article</div>
+          <a href="https://support.microsoft.com/help/5129239" target="_blank" rel="noopener" class="link link-hover">KB5129239</a>
+          
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Build</div>
+          <code class="font-mono">10.0.14393.9514</code>
+        </div>
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Vulnerabilities</div>
+          0
+        </div>
+        
+        
+        <div>
+          <div class="text-xs text-base-content/50 uppercase tracking-wide mb-0.5">Days to Prev.</div>
+          6
+        </div>
+        
+        
+      </div>
+
+      <!-- CVE groups -->
+      
+
+    </div>
+  </div>
+  
+  <div class="border border-base-300 rounded-lg mb-2.5 overflow-hidden"
+       x-data="{ open: false }"
        @expand-all.window="open = true"
        @collapse-all.window="open = false">
 
@@ -516,7 +602,7 @@
       </div>
       <div class="flex flex-col gap-1.5">
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-50xx</code>
@@ -538,7 +624,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-56xx</code>
@@ -560,7 +646,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-62xx</code>
@@ -642,7 +728,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-68xx</code>
@@ -1064,7 +1150,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-69xx</code>
@@ -4226,7 +4312,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-70xx</code>
@@ -4488,7 +4574,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-71xx</code>
@@ -4690,7 +4776,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-72xx</code>
@@ -5162,7 +5248,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-73xx</code>
@@ -5394,7 +5480,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-77xx</code>
@@ -5676,7 +5762,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-78xx</code>
@@ -5788,7 +5874,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-80xx</code>
@@ -5820,7 +5906,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-81xx</code>
@@ -5852,7 +5938,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-83xx</code>
@@ -6154,7 +6240,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-84xx</code>
@@ -6186,7 +6272,7 @@
           </div>
         </div>
         
-        <div x-data="{ gopen: true }">
+        <div x-data="{ gopen: false }">
           <div class="flex items-center gap-2 px-3 py-1.5 bg-base-300 border border-base-300 rounded-md cursor-pointer text-sm hover:bg-base-300/60"
                @click="gopen = !gopen">
             <code class="font-mono font-semibold text-sm">CVE-2026-85xx</code>
