@@ -44108,10 +44108,10 @@
           "PatchTuesdayRelease": true
         },
         {
-          "UpdateName": "Windows 11 23H2 - July 2026 Security Update (KB5101004)",
+          "UpdateName": "Windows 11 23H2 - July 2026 Security Update (KB5099414)",
           "ReleaseDate": "2026-07-14",
-          "ProductVersion": "2.0.50727.9182 & 3.0.30729.9168 & 4.8.9339.0",
-          "SecurityInfo": "https://support.microsoft.com/help/5101004",
+          "ProductVersion": "10.0.22631.7376",
+          "SecurityInfo": "https://support.microsoft.com/help/5099414",
           "CVEs": {
             "CVE-2026-33842": {
               "severity": "Important",
@@ -44316,6 +44316,13 @@
               "in_kev": false,
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50659"
             },
+            "CVE-2026-50696": {
+              "severity": "Important",
+              "cvss_score": 7.5,
+              "actively_exploited": false,
+              "in_kev": false,
+              "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50696"
+            },
             "CVE-2026-56173": {
               "severity": "Important",
               "cvss_score": 7.0,
@@ -44346,9 +44353,9 @@
             }
           },
           "ActivelyExploitedCVEs": [],
-          "UniqueCVEsCount": 33,
+          "UniqueCVEsCount": 34,
           "DaysSincePreviousRelease": 35,
-          "Supersedes": null,
+          "Supersedes": "5093998",
           "PatchTuesdayRelease": true
         },
         {
@@ -153597,6 +153604,6 @@
       "NonSecurityReleases": []
     }
   ],
-  "UpdateHash": "a18ce6cd71154d8a467cc0d981822340e9079c8a5924ff95a0a1dc5cbad690ab",
-  "LastCheck": "2026-09-15T11:56:01.009441+00:00"
+  "UpdateHash": "79ae1c95fb5332ec6d463e6069f478aea3ccd7d56ce3e307f76cec6357e26aea",
+  "LastCheck": "2026-09-15T17:10:23.996173+00:00"
 }
