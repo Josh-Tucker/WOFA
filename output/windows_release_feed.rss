@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Sep 2026 13:10:30 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 19:34:48 +0000</lastBuildDate>
     <item>
       <title>Windows Server 2012 - September 2026 Security Update (KB5126049)</title>
       <link>https://support.microsoft.com/help/5126049</link>
@@ -86,11 +86,11 @@
       <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 11 25H2 - September 2026 Security Update (KB5124008)</title>
-      <link>https://support.microsoft.com/help/5124008</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 25H2 - September 2026 Security Update (KB5124008)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26200.9445&lt;/p&gt;&lt;p&gt;CVEs addressed: 632&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-81963&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5124008"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5124008</guid>
-      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+      <title>Windows 11 25H2 - September 2026 Out-of-Band (KB5129195)</title>
+      <link>https://support.microsoft.com/help/5129195</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 25H2 - September 2026 Out-of-Band (KB5129195)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26200.9457&lt;/p&gt;&lt;p&gt;CVEs addressed: 0&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5129195"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5129195</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 11 26H1 - September 2026 Out-of-Band (KB5129194)</title>
