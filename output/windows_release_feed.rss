@@ -7,41 +7,41 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 02 Oct 2026 05:56:08 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 12:55:46 +0000</lastBuildDate>
     <item>
-      <title>Windows Server 2012 - July 2026 Security Update (KB5101011)</title>
-      <link>https://support.microsoft.com/help/5101011</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2012 - July 2026 Security Update (KB5101011)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 4.8.4803.0&lt;/p&gt;&lt;p&gt;CVEs addressed: 198&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5101011"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5101011</guid>
-      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <title>Windows Server 2012 - September 2026 Security Update (KB5126049)</title>
+      <link>https://support.microsoft.com/help/5126049</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2012 - September 2026 Security Update (KB5126049)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 4.8.4806.0&lt;/p&gt;&lt;p&gt;CVEs addressed: 420&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-85880&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5126049"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5126049</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows Server 2016 - July 2026 Security Update (KB5099535)</title>
-      <link>https://support.microsoft.com/help/5099535</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2016 - July 2026 Security Update (KB5099535)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.9339&lt;/p&gt;&lt;p&gt;CVEs addressed: 259&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099535"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5099535</guid>
-      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <title>Windows Server 2016 - September 2026 Security Update (KB5123099)</title>
+      <link>https://support.microsoft.com/help/5123099</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2016 - September 2026 Security Update (KB5123099)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.14393.9512&lt;/p&gt;&lt;p&gt;CVEs addressed: 555&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-85880&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5123099"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5123099</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows Server 2019 - July 2026 Security Update (KB5099538)</title>
-      <link>https://support.microsoft.com/help/5099538</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2019 - July 2026 Security Update (KB5099538)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.9020&lt;/p&gt;&lt;p&gt;CVEs addressed: 322&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099538"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5099538</guid>
-      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <title>Windows Server 2019 - September 2026 Security Update (KB5122876)</title>
+      <link>https://support.microsoft.com/help/5122876</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2019 - September 2026 Security Update (KB5122876)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.9245&lt;/p&gt;&lt;p&gt;CVEs addressed: 619&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-85880&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5122876"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5122876</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows Server 2022 - July 2026 Security Update (KB5099540)</title>
-      <link>https://support.microsoft.com/help/5099540</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2022 - July 2026 Security Update (KB5099540)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.20348.5386&lt;/p&gt;&lt;p&gt;CVEs addressed: 336&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099540"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5099540</guid>
-      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <title>Windows Server 2022 - September 2026 Security Update (KB5122882)</title>
+      <link>https://support.microsoft.com/help/5122882</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2022 - September 2026 Security Update (KB5122882)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.20348.5622&lt;/p&gt;&lt;p&gt;CVEs addressed: 644&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-85880&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5122882"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5122882</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows Server 2025 - July 2026 Security Update (KB5099536)</title>
-      <link>https://support.microsoft.com/help/5099536</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2025 - July 2026 Security Update (KB5099536)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.33158&lt;/p&gt;&lt;p&gt;CVEs addressed: 389&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-56155&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099536"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5099536</guid>
-      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <title>Windows Server 2025 - September 2026 Security Update (KB5122871)</title>
+      <link>https://support.microsoft.com/help/5122871</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows Server 2025 - September 2026 Security Update (KB5122871)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26100.33438&lt;/p&gt;&lt;p&gt;CVEs addressed: 682&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-81963&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5122871"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5122871</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 10 21H2 - September 2026 Out-of-Band (KB5129236)</title>
@@ -51,11 +51,11 @@
       <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 10 22H2 - July 2026 Security Update (KB5099539)</title>
-      <link>https://support.microsoft.com/help/5099539</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 22H2 - July 2026 Security Update (KB5099539)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19045.7548&lt;/p&gt;&lt;p&gt;CVEs addressed: 328&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5099539"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5099539</guid>
-      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <title>Windows 10 22H2 - September 2026 Security Update (KB5122878)</title>
+      <link>https://support.microsoft.com/help/5122878</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 22H2 - September 2026 Security Update (KB5122878)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19045.7725&lt;/p&gt;&lt;p&gt;CVEs addressed: 573&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Actively exploited CVEs (1):&lt;/strong&gt; CVE-2026-85880&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5122878"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5122878</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 10 1607 - September 2026 Out-of-Band (KB5129239)</title>
