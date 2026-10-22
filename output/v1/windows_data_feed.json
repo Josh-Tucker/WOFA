@@ -222360,10 +222360,10 @@
         "EnterpriseEducation": "10/11/2023"
       },
       "Latest": {
-        "UpdateName": "Windows Server 2012 - October 2026 Security Update (KB5126836)",
-        "ProductVersion": "6.3.9600.23470",
+        "UpdateName": "Windows Server 2012 - October 2026 Security Update (KB5126835)",
+        "ProductVersion": "6.2.9200.26434",
         "ReleaseDate": "2026-10-13",
-        "SecurityInfo": "https://support.microsoft.com/help/5126836",
+        "SecurityInfo": "https://support.microsoft.com/help/5126835",
         "ActivelyExploitedCVEs": [
           "CVE-2026-96951"
         ],
@@ -222371,10 +222371,10 @@
       },
       "SecurityReleases": [
         {
-          "UpdateName": "Windows Server 2012 - October 2026 Security Update (KB5126836)",
+          "UpdateName": "Windows Server 2012 - October 2026 Security Update (KB5126835)",
           "ReleaseDate": "2026-10-13",
-          "ProductVersion": "6.3.9600.23470",
-          "SecurityInfo": "https://support.microsoft.com/help/5126836",
+          "ProductVersion": "6.2.9200.26434",
+          "SecurityInfo": "https://support.microsoft.com/help/5126835",
           "CVEs": {
             "CVE-2026-100202": {
               "severity": "Critical",
@@ -227121,7 +227121,7 @@
           ],
           "UniqueCVEsCount": 677,
           "DaysSincePreviousRelease": 35,
-          "Supersedes": "5123066",
+          "Supersedes": "5123065",
           "PatchTuesdayRelease": true
         },
         {
@@ -233381,6 +233381,6 @@
       "NonSecurityReleases": []
     }
   ],
-  "UpdateHash": "8f7978d2583319c224f200d5648ae4be10bec54857415c864056ee3264f9a8e7",
-  "LastCheck": "2026-10-22T17:25:21.383664+00:00"
+  "UpdateHash": "2112cb1a1c9e1ce8352e5845b02fbf86d99fea2224c63d62f74eccb50eb4f96b",
+  "LastCheck": "2026-10-22T21:47:33.589110+00:00"
 }
