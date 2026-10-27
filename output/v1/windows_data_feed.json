@@ -7265,16 +7265,26 @@
         "EnterpriseEducation": "3/14/2029 "
       },
       "Latest": {
-        "UpdateName": "Windows 11 26H1 - October 2026 Security Update (KB5127646)",
-        "ProductVersion": "10.0.28000.3231",
-        "ReleaseDate": "2026-10-13",
-        "SecurityInfo": "https://support.microsoft.com/help/5127646",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-96951"
-        ],
-        "UniqueCVEsCount": 1027
+        "UpdateName": "Windows 11 26H1 - October 2026 Out-of-Band (KB5134134)",
+        "ProductVersion": "10.0.28000.3237",
+        "ReleaseDate": "2026-10-26",
+        "SecurityInfo": "https://support.microsoft.com/help/5134134",
+        "ActivelyExploitedCVEs": [],
+        "UniqueCVEsCount": 0
       },
       "SecurityReleases": [
+        {
+          "UpdateName": "Windows 11 26H1 - October 2026 Out-of-Band (KB5134134)",
+          "ReleaseDate": "2026-10-26",
+          "ProductVersion": "10.0.28000.3237",
+          "SecurityInfo": "https://support.microsoft.com/help/5134134",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 13,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
         {
           "UpdateName": "Windows 11 26H1 - October 2026 Security Update (KB5127646)",
           "ReleaseDate": "2026-10-13",
@@ -25793,16 +25803,26 @@
         "EnterpriseEducation": "10/11/2028"
       },
       "Latest": {
-        "UpdateName": "Windows 11 25H2 - October 2026 Security Update (KB5127648)",
-        "ProductVersion": "10.0.26200.9711",
-        "ReleaseDate": "2026-10-13",
-        "SecurityInfo": "https://support.microsoft.com/help/5127648",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-96951"
-        ],
-        "UniqueCVEsCount": 1039
+        "UpdateName": "Windows 11 25H2 - October 2026 Out-of-Band (KB5134133)",
+        "ProductVersion": "10.0.26200.9725",
+        "ReleaseDate": "2026-10-26",
+        "SecurityInfo": "https://support.microsoft.com/help/5134133",
+        "ActivelyExploitedCVEs": [],
+        "UniqueCVEsCount": 0
       },
       "SecurityReleases": [
+        {
+          "UpdateName": "Windows 11 25H2 - October 2026 Out-of-Band (KB5134133)",
+          "ReleaseDate": "2026-10-26",
+          "ProductVersion": "10.0.26200.9725",
+          "SecurityInfo": "https://support.microsoft.com/help/5134133",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 13,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
         {
           "UpdateName": "Windows 11 25H2 - October 2026 Security Update (KB5127648)",
           "ReleaseDate": "2026-10-13",
@@ -45567,16 +45587,26 @@
         "EnterpriseEducation": "10/13/2027"
       },
       "Latest": {
-        "UpdateName": "Windows 11 24H2 - October 2026 Security Update (KB5127648)",
-        "ProductVersion": "10.0.26100.9711",
-        "ReleaseDate": "2026-10-13",
-        "SecurityInfo": "https://support.microsoft.com/help/5127648",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-96951"
-        ],
-        "UniqueCVEsCount": 1039
+        "UpdateName": "Windows 11 24H2 - October 2026 Out-of-Band (KB5134133)",
+        "ProductVersion": "10.0.26100.9725",
+        "ReleaseDate": "2026-10-26",
+        "SecurityInfo": "https://support.microsoft.com/help/5134133",
+        "ActivelyExploitedCVEs": [],
+        "UniqueCVEsCount": 0
       },
       "SecurityReleases": [
+        {
+          "UpdateName": "Windows 11 24H2 - October 2026 Out-of-Band (KB5134133)",
+          "ReleaseDate": "2026-10-26",
+          "ProductVersion": "10.0.26100.9725",
+          "SecurityInfo": "https://support.microsoft.com/help/5134133",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 13,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
         {
           "UpdateName": "Windows 11 24H2 - October 2026 Security Update (KB5127648)",
           "ReleaseDate": "2026-10-13",
@@ -65504,16 +65534,26 @@
         "EnterpriseEducation": "11/11/2026"
       },
       "Latest": {
-        "UpdateName": "Windows 11 23H2 - October 2026 Security Update (KB5126653)",
-        "ProductVersion": "10.0.22631.7652",
-        "ReleaseDate": "2026-10-13",
-        "SecurityInfo": "https://support.microsoft.com/help/5126653",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-96951"
-        ],
-        "UniqueCVEsCount": 994
+        "UpdateName": "Windows 11 23H2 - October 2026 Out-of-Band (KB5134130)",
+        "ProductVersion": "10.0.22631.7654",
+        "ReleaseDate": "2026-10-26",
+        "SecurityInfo": "https://support.microsoft.com/help/5134130",
+        "ActivelyExploitedCVEs": [],
+        "UniqueCVEsCount": 0
       },
       "SecurityReleases": [
+        {
+          "UpdateName": "Windows 11 23H2 - October 2026 Out-of-Band (KB5134130)",
+          "ReleaseDate": "2026-10-26",
+          "ProductVersion": "10.0.22631.7654",
+          "SecurityInfo": "https://support.microsoft.com/help/5134130",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 13,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
         {
           "UpdateName": "Windows 11 23H2 - October 2026 Security Update (KB5126653)",
           "ReleaseDate": "2026-10-13",
@@ -81989,16 +82029,26 @@
         "EnterpriseEducation": null
       },
       "Latest": {
-        "UpdateName": "Windows 10 1809 - October 2026 Security Update (KB5126651)",
-        "ProductVersion": "10.0.17763.9376",
-        "ReleaseDate": "2026-10-13",
-        "SecurityInfo": "https://support.microsoft.com/help/5126651",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-96951"
-        ],
-        "UniqueCVEsCount": 920
+        "UpdateName": "Windows 10 1809 - October 2026 Out-of-Band (KB5134124)",
+        "ProductVersion": "10.0.17763.9378",
+        "ReleaseDate": "2026-10-26",
+        "SecurityInfo": "https://support.microsoft.com/help/5134124",
+        "ActivelyExploitedCVEs": [],
+        "UniqueCVEsCount": 0
       },
       "SecurityReleases": [
+        {
+          "UpdateName": "Windows 10 1809 - October 2026 Out-of-Band (KB5134124)",
+          "ReleaseDate": "2026-10-26",
+          "ProductVersion": "10.0.17763.9378",
+          "SecurityInfo": "https://support.microsoft.com/help/5134124",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 13,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
         {
           "UpdateName": "Windows 10 1809 - October 2026 Security Update (KB5126651)",
           "ReleaseDate": "2026-10-13",
@@ -100041,16 +100091,26 @@
         "EnterpriseEducation": null
       },
       "Latest": {
-        "UpdateName": "Windows 10 1607 - October 2026 Security Update (KB5126868)",
-        "ProductVersion": "10.0.14393.9612",
-        "ReleaseDate": "2026-10-13",
-        "SecurityInfo": "https://support.microsoft.com/help/5126868",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-96951"
-        ],
-        "UniqueCVEsCount": 760
+        "UpdateName": "Windows 10 1607 - October 2026 Out-of-Band (KB5134123)",
+        "ProductVersion": "10.0.14393.9615",
+        "ReleaseDate": "2026-10-26",
+        "SecurityInfo": "https://support.microsoft.com/help/5134123",
+        "ActivelyExploitedCVEs": [],
+        "UniqueCVEsCount": 0
       },
       "SecurityReleases": [
+        {
+          "UpdateName": "Windows 10 1607 - October 2026 Out-of-Band (KB5134123)",
+          "ReleaseDate": "2026-10-26",
+          "ProductVersion": "10.0.14393.9615",
+          "SecurityInfo": "https://support.microsoft.com/help/5134123",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 13,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
         {
           "UpdateName": "Windows 10 1607 - October 2026 Security Update (KB5126868)",
           "ReleaseDate": "2026-10-13",
@@ -132674,16 +132734,26 @@
         "EnterpriseEducation": "6/12/2024 "
       },
       "Latest": {
-        "UpdateName": "Windows 10 21H2 - October 2026 Security Update (KB5126657)",
-        "ProductVersion": "10.0.19044.7807",
-        "ReleaseDate": "2026-10-13",
-        "SecurityInfo": "https://support.microsoft.com/help/5126657",
-        "ActivelyExploitedCVEs": [
-          "CVE-2026-96951"
-        ],
-        "UniqueCVEsCount": 929
+        "UpdateName": "Windows 10 21H2 - October 2026 Out-of-Band (KB5134125)",
+        "ProductVersion": "10.0.19044.7811",
+        "ReleaseDate": "2026-10-26",
+        "SecurityInfo": "https://support.microsoft.com/help/5134125",
+        "ActivelyExploitedCVEs": [],
+        "UniqueCVEsCount": 0
       },
       "SecurityReleases": [
+        {
+          "UpdateName": "Windows 10 21H2 - October 2026 Out-of-Band (KB5134125)",
+          "ReleaseDate": "2026-10-26",
+          "ProductVersion": "10.0.19044.7811",
+          "SecurityInfo": "https://support.microsoft.com/help/5134125",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 13,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
         {
           "UpdateName": "Windows 10 21H2 - October 2026 Security Update (KB5126657)",
           "ReleaseDate": "2026-10-13",
@@ -233381,6 +233451,6 @@
       "NonSecurityReleases": []
     }
   ],
-  "UpdateHash": "ad9c9c05a92251586438dd1a82cfc4a77f4f68e0d09176dd5b00e3496e60ac85",
-  "LastCheck": "2026-10-26T22:47:57.216884+00:00"
+  "UpdateHash": "f6493f15c69b221453d315625b920a0d8e10805714714458ba71e7dae4bad655",
+  "LastCheck": "2026-10-27T05:19:56.482521+00:00"
 }
