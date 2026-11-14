@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Nov 2026 19:54:54 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 06:48:52 +0000</lastBuildDate>
     <item>
       <title>Windows Server 2012 - November 2026 Security Update (KB5126835)</title>
       <link>https://support.microsoft.com/help/5126835</link>
@@ -44,11 +44,11 @@
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 10 21H2 - November 2026 Security Update (KB5131096)</title>
-      <link>https://support.microsoft.com/help/5131096</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 21H2 - November 2026 Security Update (KB5131096)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19044.7846&lt;/p&gt;&lt;p&gt;CVEs addressed: 610&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5131096"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5131096</guid>
-      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Windows 10 21H2 - November 2026 Out-of-Band (KB5136493)</title>
+      <link>https://support.microsoft.com/help/5136493</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 21H2 - November 2026 Out-of-Band (KB5136493)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.19044.7850&lt;/p&gt;&lt;p&gt;CVEs addressed: 0&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5136493"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5136493</guid>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 10 22H2 - November 2026 Security Update (KB5131096)</title>
@@ -65,11 +65,11 @@
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 10 1809 - November 2026 Security Update (KB5131085)</title>
-      <link>https://support.microsoft.com/help/5131085</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1809 - November 2026 Security Update (KB5131085)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.9487&lt;/p&gt;&lt;p&gt;CVEs addressed: 585&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5131085"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5131085</guid>
-      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <title>Windows 10 1809 - November 2026 Out-of-Band (KB5136490)</title>
+      <link>https://support.microsoft.com/help/5136490</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 10 1809 - November 2026 Out-of-Band (KB5136490)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.17763.9488&lt;/p&gt;&lt;p&gt;CVEs addressed: 0&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5136490"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5136490</guid>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Windows 11 23H2 - November 2026 Security Update (KB5131087)</title>

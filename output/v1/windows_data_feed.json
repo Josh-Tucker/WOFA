@@ -2875,7 +2875,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121680"
             },
             "CVE-2026-121681": {
-              "severity": "Low",
+              "severity": "Important",
               "cvss_score": 7.8,
               "actively_exploited": false,
               "in_kev": false,
@@ -14803,7 +14803,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121680"
             },
             "CVE-2026-121681": {
-              "severity": "Low",
+              "severity": "Important",
               "cvss_score": 7.8,
               "actively_exploited": false,
               "in_kev": false,
@@ -38080,7 +38080,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121680"
             },
             "CVE-2026-121681": {
-              "severity": "Low",
+              "severity": "Important",
               "cvss_score": 7.8,
               "actively_exploited": false,
               "in_kev": false,
@@ -62631,7 +62631,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121680"
             },
             "CVE-2026-121681": {
-              "severity": "Low",
+              "severity": "Important",
               "cvss_score": 7.8,
               "actively_exploited": false,
               "in_kev": false,
@@ -105512,14 +105512,26 @@
         "EnterpriseEducation": null
       },
       "Latest": {
-        "UpdateName": "Windows 10 1809 - November 2026 Security Update (KB5131085)",
-        "ProductVersion": "10.0.17763.9487",
-        "ReleaseDate": "2026-11-10",
-        "SecurityInfo": "https://support.microsoft.com/help/5131085",
+        "UpdateName": "Windows 10 1809 - November 2026 Out-of-Band (KB5136490)",
+        "ProductVersion": "10.0.17763.9488",
+        "ReleaseDate": "2026-11-13",
+        "SecurityInfo": "https://support.microsoft.com/help/5136490",
         "ActivelyExploitedCVEs": [],
-        "UniqueCVEsCount": 585
+        "UniqueCVEsCount": 0
       },
       "SecurityReleases": [
+        {
+          "UpdateName": "Windows 10 1809 - November 2026 Out-of-Band (KB5136490)",
+          "ReleaseDate": "2026-11-13",
+          "ProductVersion": "10.0.17763.9488",
+          "SecurityInfo": "https://support.microsoft.com/help/5136490",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 3,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
         {
           "UpdateName": "Windows 10 1809 - November 2026 Security Update (KB5131085)",
           "ReleaseDate": "2026-11-10",
@@ -168086,14 +168098,26 @@
         "EnterpriseEducation": "6/12/2024 "
       },
       "Latest": {
-        "UpdateName": "Windows 10 21H2 - November 2026 Security Update (KB5131096)",
-        "ProductVersion": "10.0.19044.7846",
-        "ReleaseDate": "2026-11-10",
-        "SecurityInfo": "https://support.microsoft.com/help/5131096",
+        "UpdateName": "Windows 10 21H2 - November 2026 Out-of-Band (KB5136493)",
+        "ProductVersion": "10.0.19044.7850",
+        "ReleaseDate": "2026-11-13",
+        "SecurityInfo": "https://support.microsoft.com/help/5136493",
         "ActivelyExploitedCVEs": [],
-        "UniqueCVEsCount": 610
+        "UniqueCVEsCount": 0
       },
       "SecurityReleases": [
+        {
+          "UpdateName": "Windows 10 21H2 - November 2026 Out-of-Band (KB5136493)",
+          "ReleaseDate": "2026-11-13",
+          "ProductVersion": "10.0.19044.7850",
+          "SecurityInfo": "https://support.microsoft.com/help/5136493",
+          "CVEs": {},
+          "ActivelyExploitedCVEs": [],
+          "UniqueCVEsCount": 0,
+          "DaysSincePreviousRelease": 3,
+          "Supersedes": null,
+          "PatchTuesdayRelease": false
+        },
         {
           "UpdateName": "Windows 10 21H2 - November 2026 Security Update (KB5131096)",
           "ReleaseDate": "2026-11-10",
@@ -192935,7 +192959,7 @@
               "nist_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121680"
             },
             "CVE-2026-121681": {
-              "severity": "Low",
+              "severity": "Important",
               "cvss_score": 7.8,
               "actively_exploited": false,
               "in_kev": false,
@@ -290981,6 +291005,6 @@
       "NonSecurityReleases": []
     }
   ],
-  "UpdateHash": "21bb0787ed4f8a24260551225edf906cdc2ecaf1e42e573d24d0d0bed155c81f",
-  "LastCheck": "2026-11-13T19:54:54.281540+00:00"
+  "UpdateHash": "6a576641a33aac238cbc70576a38452b5b818e20cd7caf9d0259f1876380ebda",
+  "LastCheck": "2026-11-14T06:48:52.688042+00:00"
 }
