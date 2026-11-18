@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2026 07:47:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 20:45:52 +0000</lastBuildDate>
     <item>
       <title>Windows Server 2012 - November 2026 Security Update (KB5126835)</title>
       <link>https://support.microsoft.com/help/5126835</link>
@@ -86,10 +86,10 @@
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 11 25H2 - November 2026 Security Update (KB5132043)</title>
-      <link>https://support.microsoft.com/help/5132043</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 25H2 - November 2026 Security Update (KB5132043)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26200.9911&lt;/p&gt;&lt;p&gt;CVEs addressed: 667&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5132043"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5132043</guid>
+      <title>Windows 11 25H2 - November 2026 Security Update (KB5132061)</title>
+      <link>https://support.microsoft.com/help/5132061</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 25H2 - November 2026 Security Update (KB5132061)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26200.9974&lt;/p&gt;&lt;p&gt;CVEs addressed: 667&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5132061"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5132061</guid>
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -100,10 +100,10 @@
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Windows 11 26H2 - November 2026 Security Update (KB5132043)</title>
-      <link>https://support.microsoft.com/help/5132043</link>
-      <description>&lt;p&gt;&lt;strong&gt;Windows 11 26H2 - November 2026 Security Update (KB5132043)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26300.9911&lt;/p&gt;&lt;p&gt;CVEs addressed: 662&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5132043"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
-      <guid isPermaLink="false">https://support.microsoft.com/help/5132043</guid>
+      <title>Windows 11 26H2 - November 2026 Security Update (KB5132061)</title>
+      <link>https://support.microsoft.com/help/5132061</link>
+      <description>&lt;p&gt;&lt;strong&gt;Windows 11 26H2 - November 2026 Security Update (KB5132061)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Build: 10.0.26300.9974&lt;/p&gt;&lt;p&gt;CVEs addressed: 662&lt;/p&gt;&lt;p&gt;&lt;a href="https://support.microsoft.com/help/5132061"&gt;KB article&lt;/a&gt;&lt;/p&gt;</description>
+      <guid isPermaLink="false">https://support.microsoft.com/help/5132061</guid>
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
