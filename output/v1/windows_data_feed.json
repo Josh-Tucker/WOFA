@@ -35101,6 +35101,13 @@
       ],
       "NonSecurityReleases": [
         {
+          "UpdateType": "2026-11 D",
+          "ReleaseDate": "2026-11-19",
+          "ProductVersion": "28000.3620",
+          "KB": "5132265",
+          "SecurityInfo": "https://support.microsoft.com/help/5132265"
+        },
+        {
           "UpdateType": "2026-10 D",
           "ReleaseDate": "2026-10-28",
           "ProductVersion": "28000.3365",
@@ -59349,6 +59356,13 @@
       ],
       "NonSecurityReleases": [
         {
+          "UpdateType": "2026-11 D",
+          "ReleaseDate": "2026-11-19",
+          "ProductVersion": "26200.10075",
+          "KB": "5132057",
+          "SecurityInfo": "https://support.microsoft.com/help/5132057"
+        },
+        {
           "UpdateType": "2026-10 D",
           "ReleaseDate": "2026-10-28",
           "ProductVersion": "26200.9818",
@@ -59444,19 +59458,19 @@
         "EnterpriseEducation": "10/13/2027"
       },
       "Latest": {
-        "UpdateName": "Windows 11 24H2 - November 2026 Security Update (KB5132043)",
-        "ProductVersion": "10.0.26100.9911",
+        "UpdateName": "Windows 11 24H2 - November 2026 Security Update (KB5132061)",
+        "ProductVersion": "10.0.26100.9974",
         "ReleaseDate": "2026-11-10",
-        "SecurityInfo": "https://support.microsoft.com/help/5132043",
+        "SecurityInfo": "https://support.microsoft.com/help/5132061",
         "ActivelyExploitedCVEs": [],
         "UniqueCVEsCount": 667
       },
       "SecurityReleases": [
         {
-          "UpdateName": "Windows 11 24H2 - November 2026 Security Update (KB5132043)",
+          "UpdateName": "Windows 11 24H2 - November 2026 Security Update (KB5132061)",
           "ReleaseDate": "2026-11-10",
-          "ProductVersion": "10.0.26100.9911",
-          "SecurityInfo": "https://support.microsoft.com/help/5132043",
+          "ProductVersion": "10.0.26100.9974",
+          "SecurityInfo": "https://support.microsoft.com/help/5132061",
           "CVEs": {
             "CVE-2026-100204": {
               "severity": "Important",
@@ -288154,6 +288168,6 @@
       "NonSecurityReleases": []
     }
   ],
-  "UpdateHash": "ecd2812161f55a3f3f617fa318d4bf3490e235f39bab6f5759db3a1c0b59a5f8",
-  "LastCheck": "2026-11-19T07:42:49.880562+00:00"
+  "UpdateHash": "ef42334b1d974595c3292f886ca492f273ab25015ff8ac1d7b9b1ca38bec8c38",
+  "LastCheck": "2026-11-19T20:51:32.780971+00:00"
 }
